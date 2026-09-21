@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T03:19:40Z",
+  "scoreMethod": "velocity_v1",
+  "sources": {
+    "bangumi": {
+      "status": "ok",
+      "fetchedAt": "2026-09-21T03:19:42Z",
+      "error": null
+    },
+    "bilibili": {
+      "status": "ok",
+      "fetchedAt": "2026-09-21T03:20:26Z",
+      "error": null
+    },
+    "weibo": {
+      "status": "ok",
+      "fetchedAt": "2026-09-21T03:21:00Z",
+      "error": null
+    },
+    "nanoka": {
+      "status": "ok",
+      "fetchedAt": "2026-09-21T03:21:07Z",
+      "error": null
+    },
+    "pixiv": {
+      "status": "skipped",
+      "fetchedAt": null,
+      "error": "needs PIXIV_REFRESH_TOKEN; deferred"
+    }
+  },
+  "characters": [
+    {
+      "name": "锁暝",
+      "work": "鸣潮 3.7",
+      "kind": "GAME",
+      "heatScore": 67,
+      "heatComponents": {
+        "bilibili": 85,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 214565,
+          "characterName": "锁暝",
+          "collects": 2,
+          "comments": 2,
+          "subjectId": 385208,
+          "subjectName": "鸣潮",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "锁暝",
+          "fetchedAt": "2026-09-21T03:19:42Z"
+        },
+        "bilibili": {
+          "keyword": "锁暝 鸣潮",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 65,
+          "recentPlaySum7d": 1391669,
+          "sampledVideos": 70,
+          "windowSaturated": false,
+          "fetchedAt": "2026-09-21T03:20:26Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-09-21T03:21:00Z"
+        }
+      }
+    },
+    {
+      "name": "洛克茜",
+      "work": "绝区零 3.2",
+      "kind": "GAME",
+      "heatScore": 66,
+      "heatComponents": {
+        "bilibili": 88,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 210065,
+          "characterName": "洛克茜",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 380974,
+          "subjectName": "绝区零",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "洛克茜",
+          "fetchedAt": "2026-09-21T03:19:42Z"
+        },
+        "bilibili": {
+          "keyword": "洛克茜 绝区零",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 100,
+          "recentPlaySum7d": 367511,
+          "sampledVideos": 100,
+          "windowSaturated": true,
+          "fetchedAt": "2026-09-21T03:20:26Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-09-21T03:21:00Z"
+        }
+      }
+    },
+    {
+      "name": "心月狐",
+      "work": "鸣潮 3.7",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatComponents": {
+        "bilibili": 88,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 214568,
+          "characterName": "心",
+          "collects": 7,
+          "comments": 4,
+          "subjectId": 385208,
+          "subjectName": "鸣潮",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "心",
+          "fetchedAt": "2026-09-21T03:19:42Z"
+        },
+        "bilibili": {
+          "keyword": "心月狐 鸣潮",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 100,
+          "recentPlaySum7d": 298308,
+          "sampledVideos": 100,
+          "windowSaturated": true,
+          "fetchedAt": "2026-09-21T03:20:26Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-09-21T03:21:00Z"
+        }
+      }
+    },
+    {
+      "name": "Lucy",
+      "work": "边缘行者 2",
+      "kind": "ANIME",
+      "heatScore": 77,
+      "heatComponents": {
+        "bilibili": 72,
+        "bangumi": 93
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 116353,
+          "characterName": "Lucy",
+          "collects": 1064,
+          "comments": 235,
+          "subjectId": 309311,
+          "subjectName": "赛博浪客",
+          "subjectCollect": 50248,
+          "airing": false,
+          "matchedBy": "Lucy",
+          "fetchedAt": "2026-09-21T03:19:42Z"
+        },
+        "bilibili": {
+          "keyword": "露西 边缘行者",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 34,
+          "recentPlaySum7d": 189369,
+          "sampledVideos": 100,
+          "windowSaturated": false,
+          "fetchedAt": "2026-09-21T03:20:26Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-09-21T03:21:00Z"
+        }
+      }
+    },
+    {
+      "name": "沃雅妮莎",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 72,
+      "heatComponents": {
+        "bilibili": 86,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 215023,
+          "characterName": "沃雅妮莎",
+          "collects": 7,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "沃雅妮莎",
+          "fetchedAt": "2026-09-21T03:19:42Z"
+        },
+        "bilibili": {
+          "keyword": "沃雅妮莎 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 66,
+          "recentPlaySum7d": 5200690,
+          "sampledVideos": 70,
+          "windowSaturated": false,
+          "fetchedAt": "2026-09-21T03:20:26Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-09-21T03:21:00Z"
+        }
+      }
+    },
+    {
+      "name": "猫猫",
+      "work": "药师少女 S3",
+      "kind": "ANIME",
+      "heatScore": 72,
+      "heatComponents": {
+        "bilibili": 72,
+        "bangumi": 70
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 61330,
+          "characterName": "猫猫",
+          "collects": 566,
+          "comments": 167,
+          "subjectId": 568244,
+          "subjectName": "药屋少女的呢喃 第三季",
+          "subjectCollect": 1928,
+          "airing": false,
+          "matchedBy": "猫猫",
+          "fetchedAt": "2026-09-21T03:19:42Z"
+        },
+        "bilibili": {
+          "keyword": "猫猫 药屋少女",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 34,
+          "recentPlaySum7d": 209204,
+          "sampledVideos": 100,
+          "windowSaturated": false,
+          "fetchedAt": "2026-09-21T03:20:26Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-09-21T03:21:00Z"
+        }
+      }
+    }
+  ],
+  "discoveries": [
+    {
+      "game": "gi",
+      "work": "原神",
+      "id": "10000143",
+      "nameZh": "薇斯纳",
+      "nameEn": "Vesna",
+      "source": "nanoka",
+      "indexVersion": "7.0.54"
+    },
+    {
+      "game": "hsr",
+      "work": "崩铁",
+      "id": "1503",
+      "nameZh": "真珠",
+      "nameEn": "Pearl",
+      "source": "nanoka",
+      "indexVersion": "4.5.54"
+    }
+  ],
+  "history": []
+}
