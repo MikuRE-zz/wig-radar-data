@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T03:19:40Z",
+  "generatedAt": "2026-09-21T03:54:16Z",
   "scoreMethod": "velocity_v1",
   "sources": {
     "bangumi": {
       "status": "ok",
-      "fetchedAt": "2026-09-21T03:19:42Z",
+      "fetchedAt": "2026-09-21T03:54:17Z",
       "error": null
     },
     "bilibili": {
       "status": "ok",
-      "fetchedAt": "2026-09-21T03:20:26Z",
+      "fetchedAt": "2026-09-21T03:55:00Z",
       "error": null
     },
     "weibo": {
       "status": "ok",
-      "fetchedAt": "2026-09-21T03:21:00Z",
+      "fetchedAt": "2026-09-21T03:55:37Z",
       "error": null
     },
     "nanoka": {
       "status": "ok",
-      "fetchedAt": "2026-09-21T03:21:07Z",
+      "fetchedAt": "2026-09-21T03:55:44Z",
       "error": null
     },
     "pixiv": {
@@ -34,10 +34,11 @@
       "name": "锁暝",
       "work": "鸣潮 3.7",
       "kind": "GAME",
-      "heatScore": 67,
+      "heatScore": 59,
       "heatComponents": {
-        "bilibili": 85,
-        "bangumi": 14
+        "bilibili": 89,
+        "bangumi": 14,
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -50,21 +51,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "锁暝",
-          "fetchedAt": "2026-09-21T03:19:42Z"
+          "fetchedAt": "2026-09-21T03:54:17Z"
         },
         "bilibili": {
           "keyword": "锁暝 鸣潮",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 65,
-          "recentPlaySum7d": 1391669,
-          "sampledVideos": 70,
-          "windowSaturated": false,
-          "fetchedAt": "2026-09-21T03:20:26Z"
+          "recentVideos7d": 100,
+          "recentPlaySum7d": 628203,
+          "sampledVideos": 100,
+          "windowSaturated": true,
+          "fetchedAt": "2026-09-21T03:55:00Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-09-21T03:21:00Z"
+          "fetchedAt": "2026-09-21T03:55:37Z"
         }
       }
     },
@@ -72,10 +73,11 @@
       "name": "洛克茜",
       "work": "绝区零 3.2",
       "kind": "GAME",
-      "heatScore": 66,
+      "heatScore": 56,
       "heatComponents": {
         "bilibili": 88,
-        "bangumi": 0
+        "bangumi": 0,
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -88,21 +90,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "洛克茜",
-          "fetchedAt": "2026-09-21T03:19:42Z"
+          "fetchedAt": "2026-09-21T03:54:17Z"
         },
         "bilibili": {
           "keyword": "洛克茜 绝区零",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 100,
-          "recentPlaySum7d": 367511,
+          "recentPlaySum7d": 360329,
           "sampledVideos": 100,
           "windowSaturated": true,
-          "fetchedAt": "2026-09-21T03:20:26Z"
+          "fetchedAt": "2026-09-21T03:55:00Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-09-21T03:21:00Z"
+          "fetchedAt": "2026-09-21T03:55:37Z"
         }
       }
     },
@@ -110,10 +112,11 @@
       "name": "心月狐",
       "work": "鸣潮 3.7",
       "kind": "GAME",
-      "heatScore": 73,
+      "heatScore": 60,
       "heatComponents": {
-        "bilibili": 88,
-        "bangumi": 27
+        "bilibili": 87,
+        "bangumi": 27,
+        "growth": 35
       },
       "metrics": {
         "bangumi": {
@@ -126,21 +129,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "心",
-          "fetchedAt": "2026-09-21T03:19:42Z"
+          "fetchedAt": "2026-09-21T03:54:17Z"
         },
         "bilibili": {
           "keyword": "心月狐 鸣潮",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 100,
-          "recentPlaySum7d": 298308,
+          "recentPlaySum7d": 237510,
           "sampledVideos": 100,
           "windowSaturated": true,
-          "fetchedAt": "2026-09-21T03:20:26Z"
+          "fetchedAt": "2026-09-21T03:55:00Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-09-21T03:21:00Z"
+          "fetchedAt": "2026-09-21T03:55:37Z"
         }
       }
     },
@@ -148,10 +151,11 @@
       "name": "Lucy",
       "work": "边缘行者 2",
       "kind": "ANIME",
-      "heatScore": 77,
+      "heatScore": 58,
       "heatComponents": {
-        "bilibili": 72,
-        "bangumi": 93
+        "bilibili": 50,
+        "bangumi": 93,
+        "growth": 47
       },
       "metrics": {
         "bangumi": {
@@ -164,21 +168,21 @@
           "subjectCollect": 50248,
           "airing": false,
           "matchedBy": "Lucy",
-          "fetchedAt": "2026-09-21T03:19:42Z"
+          "fetchedAt": "2026-09-21T03:54:17Z"
         },
         "bilibili": {
-          "keyword": "露西 边缘行者",
-          "resultCount": 1000,
-          "resultCountCapped": true,
-          "recentVideos7d": 34,
-          "recentPlaySum7d": 189369,
-          "sampledVideos": 100,
+          "keyword": "Lucy Edgerunners",
+          "resultCount": 78,
+          "resultCountCapped": false,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 640860,
+          "sampledVideos": 48,
           "windowSaturated": false,
-          "fetchedAt": "2026-09-21T03:20:26Z"
+          "fetchedAt": "2026-09-21T03:55:00Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-09-21T03:21:00Z"
+          "fetchedAt": "2026-09-21T03:55:37Z"
         }
       }
     },
@@ -186,10 +190,11 @@
       "name": "沃雅妮莎",
       "work": "原神 7.1",
       "kind": "GAME",
-      "heatScore": 72,
+      "heatScore": 60,
       "heatComponents": {
-        "bilibili": 86,
-        "bangumi": 27
+        "bilibili": 88,
+        "bangumi": 27,
+        "growth": 34
       },
       "metrics": {
         "bangumi": {
@@ -202,21 +207,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "沃雅妮莎",
-          "fetchedAt": "2026-09-21T03:19:42Z"
+          "fetchedAt": "2026-09-21T03:54:17Z"
         },
         "bilibili": {
           "keyword": "沃雅妮莎 原神",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 66,
-          "recentPlaySum7d": 5200690,
-          "sampledVideos": 70,
-          "windowSaturated": false,
-          "fetchedAt": "2026-09-21T03:20:26Z"
+          "recentVideos7d": 100,
+          "recentPlaySum7d": 381383,
+          "sampledVideos": 100,
+          "windowSaturated": true,
+          "fetchedAt": "2026-09-21T03:55:00Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-09-21T03:21:00Z"
+          "fetchedAt": "2026-09-21T03:55:37Z"
         }
       }
     },
@@ -224,10 +229,11 @@
       "name": "猫猫",
       "work": "药师少女 S3",
       "kind": "ANIME",
-      "heatScore": 72,
+      "heatScore": 62,
       "heatComponents": {
         "bilibili": 72,
-        "bangumi": 70
+        "bangumi": 70,
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -240,21 +246,21 @@
           "subjectCollect": 1928,
           "airing": false,
           "matchedBy": "猫猫",
-          "fetchedAt": "2026-09-21T03:19:42Z"
+          "fetchedAt": "2026-09-21T03:54:17Z"
         },
         "bilibili": {
           "keyword": "猫猫 药屋少女",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 34,
-          "recentPlaySum7d": 209204,
+          "recentPlaySum7d": 209515,
           "sampledVideos": 100,
           "windowSaturated": false,
-          "fetchedAt": "2026-09-21T03:20:26Z"
+          "fetchedAt": "2026-09-21T03:55:00Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-09-21T03:21:00Z"
+          "fetchedAt": "2026-09-21T03:55:37Z"
         }
       }
     }
@@ -267,7 +273,7 @@
       "nameZh": "薇斯纳",
       "nameEn": "Vesna",
       "source": "nanoka",
-      "indexVersion": "7.0.54"
+      "indexVersion": "7.1"
     },
     {
       "game": "hsr",
@@ -279,5 +285,59 @@
       "indexVersion": "4.5.54"
     }
   ],
-  "history": []
+  "history": [
+    {
+      "capturedAt": "2026-09-21T03:19:40Z",
+      "characters": [
+        {
+          "name": "锁暝",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 65,
+          "bilibiliRecentPlaySum7d": 1391669,
+          "heatScore": 67
+        },
+        {
+          "name": "洛克茜",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 100,
+          "bilibiliRecentPlaySum7d": 367511,
+          "heatScore": 66
+        },
+        {
+          "name": "心月狐",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 100,
+          "bilibiliRecentPlaySum7d": 298308,
+          "heatScore": 73
+        },
+        {
+          "name": "Lucy",
+          "bangumiCollects": 1064,
+          "bangumiSubjectCollect": 50248,
+          "bilibiliRecentVideos7d": 34,
+          "bilibiliRecentPlaySum7d": 189369,
+          "heatScore": 77
+        },
+        {
+          "name": "沃雅妮莎",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 66,
+          "bilibiliRecentPlaySum7d": 5200690,
+          "heatScore": 72
+        },
+        {
+          "name": "猫猫",
+          "bangumiCollects": 566,
+          "bangumiSubjectCollect": 1928,
+          "bilibiliRecentVideos7d": 34,
+          "bilibiliRecentPlaySum7d": 209204,
+          "heatScore": 72
+        }
+      ]
+    }
+  ]
 }
