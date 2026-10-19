@@ -1,16 +1,17 @@
-"""Portrait vs sample cross-check. No network."""
+"""Sample-file dedupe. A portrait/sample color gap is diagnostic only. No network."""
 
 from __future__ import annotations
 
+import hashlib
+import io
 import unittest
 from unittest.mock import patch
 
 from PIL import Image
 
 from scripts.catalog_lib import (
-    HAIR_CROSSCHECK,
-    HAIR_MISMATCH_DELTA_E,
     build_checked_hair,
+    flag_duplicate_samples,
     hair_can_reuse,
     hair_is_settled,
 )
@@ -33,12 +34,17 @@ def _row(key: str = "zzz:1621") -> dict:
     }
 
 
+def _png() -> bytes:
+    buffer = io.BytesIO()
+    Image.new("RGBA", (8, 8), (249, 187, 189, 255)).save(buffer, format="PNG")
+    return buffer.getvalue()
+
+
 class HairCrossCheckTest(unittest.TestCase):
-    def test_large_delta_is_low_and_has_no_primary(self) -> None:
+    def test_large_delta_stays_high(self) -> None:
         sample = parse_hex("#F9BBBD")
         display = parse_hex("#6B9F9D")
-        distance = delta_e(sample, display)
-        self.assertGreater(distance, HAIR_MISMATCH_DELTA_E)
+        self.assertGreater(delta_e(sample, display), 45)
         hair = build_checked_hair(
             sample,
             None,
@@ -46,33 +52,16 @@ class HairCrossCheckTest(unittest.TestCase):
             "https://example.test/sample.webp",
             display,
             display_is_portrait=True,
+            sample_sha1="abc",
         )
-        self.assertIsNone(hair["primary"])
-        self.assertIsNone(hair["secondary"])
-        self.assertEqual("LOW", hair["confidence"])
-        self.assertEqual("sample-mismatch", hair["reason"])
-        self.assertEqual("#F9BBBD", hair["sampleColor"])
-        self.assertEqual("#6B9F9D", hair["displayColor"])
-        self.assertEqual(HAIR_CROSSCHECK, hair["crossCheck"])
-        self.assertTrue(hair_is_settled({"artKind": "PORTRAIT", "hair": hair}))
-
-    def test_small_delta_keeps_the_sample_primary(self) -> None:
-        sample = parse_hex("#F6C2BF")
-        display = parse_hex("#F4BEBB")
-        self.assertLessEqual(delta_e(sample, display), HAIR_MISMATCH_DELTA_E)
-        hair = build_checked_hair(
-            sample,
-            parse_hex("#FFFFFF"),
-            "HIGH",
-            "https://example.test/sample.webp",
-            display,
-            display_is_portrait=True,
-        )
-        self.assertEqual("#F6C2BF", hair["primary"])
-        self.assertEqual("#FFFFFF", hair["secondary"])
+        self.assertEqual("#F9BBBD", hair["primary"])
         self.assertEqual("HIGH", hair["confidence"])
         self.assertNotIn("reason", hair)
-        self.assertEqual(HAIR_CROSSCHECK, hair["crossCheck"])
+        self.assertEqual("#F9BBBD", hair["sampleColor"])
+        self.assertEqual("#6B9F9D", hair["displayColor"])
+        self.assertGreater(hair["deltaE"], 45)
+        self.assertEqual("abc", hair["sampleSha1"])
+        self.assertNotIn("crossCheck", hair)
 
     def test_non_portrait_display_is_not_compared(self) -> None:
         hair = build_checked_hair(
@@ -85,55 +74,82 @@ class HairCrossCheckTest(unittest.TestCase):
         )
         self.assertEqual("#F9BBBD", hair["primary"])
         self.assertEqual("HIGH", hair["confidence"])
+        self.assertNotIn("deltaE", hair)
+        self.assertNotIn("sampleSha1", hair)
 
-    def test_extract_one_uses_the_cross_check(self) -> None:
+    def test_duplicate_group_is_low_without_a_primary(self) -> None:
+        shared = "f8e2e6e310"
+        rows = [
+            {"key": "zzz:1581", "hair": {"primary": "#F9BBBD", "secondary": "#FFFFFF", "confidence": "HIGH", "sampleSha1": shared, "deltaE": 23.8}},
+            {"key": "zzz:1621", "hair": {"primary": "#F9BBBD", "secondary": None, "confidence": "HIGH", "sampleSha1": shared, "deltaE": 52.9}},
+            {"key": "zzz:1011", "hair": {"primary": "#DADCDE", "secondary": None, "confidence": "HIGH", "sampleSha1": "unique", "deltaE": 52.4}},
+            {"key": "gi:1", "hair": {"primary": "#112233", "secondary": None, "confidence": "HIGH"}},
+        ]
+        groups = flag_duplicate_samples(rows)
+        self.assertEqual([["zzz:1581", "zzz:1621"]], groups)
+        for row in rows[:2]:
+            self.assertIsNone(row["hair"]["primary"])
+            self.assertIsNone(row["hair"]["secondary"])
+            self.assertEqual("LOW", row["hair"]["confidence"])
+            self.assertEqual("sample-duplicate", row["hair"]["reason"])
+            self.assertEqual(shared, row["hair"]["sampleSha1"])
+            self.assertTrue(hair_is_settled(row))
+        self.assertEqual("#DADCDE", rows[2]["hair"]["primary"])
+        self.assertEqual("HIGH", rows[2]["hair"]["confidence"])
+        self.assertNotIn("reason", rows[2]["hair"])
+        self.assertEqual("#112233", rows[3]["hair"]["primary"])
+        self.assertEqual("HIGH", rows[3]["hair"]["confidence"])
+
+    def test_same_key_is_not_a_duplicate_group(self) -> None:
+        rows = [
+            {"key": "zzz:1", "hair": {"primary": "#112233", "confidence": "HIGH", "sampleSha1": "only"}},
+            {"key": "zzz:1", "hair": {"primary": "#112233", "confidence": "HIGH", "sampleSha1": "only"}},
+        ]
+        self.assertEqual([], flag_duplicate_samples(rows))
+        self.assertEqual("#112233", rows[0]["hair"]["primary"])
+
+    def test_extract_one_keeps_high_and_records_the_sample_sha1(self) -> None:
         pink = parse_hex("#F9BBBD")
         green = parse_hex("#6B9F9D")
+        raw = _png()
         character = _row()
-        image = Image.new("RGBA", (32, 48), (249, 187, 189, 255))
         with (
-            patch("scripts.fetch_catalog.load_image", return_value=image),
+            patch("scripts.fetch_catalog.read_image_bytes", return_value=raw),
             patch("scripts.fetch_catalog.extract_hair", return_value=ExtractedHair(pink, None, "HIGH")),
             patch("scripts.fetch_catalog.classify_art", return_value=ArtKindVerdict(PORTRAIT, 1.0, 0.0)),
             patch("scripts.fetch_catalog.inspect_image", return_value=(PORTRAIT, green)),
         ):
             extract_one(None, character)  # type: ignore[arg-type]
-        self.assertIsNone(character["hair"]["primary"])
-        self.assertEqual("LOW", character["hair"]["confidence"])
-        self.assertEqual("sample-mismatch", character["hair"]["reason"])
-
-        close = _row()
-        with (
-            patch("scripts.fetch_catalog.load_image", return_value=image),
-            patch("scripts.fetch_catalog.extract_hair", return_value=ExtractedHair(pink, None, "HIGH")),
-            patch("scripts.fetch_catalog.classify_art", return_value=ArtKindVerdict(PORTRAIT, 1.0, 0.0)),
-            patch("scripts.fetch_catalog.inspect_image", return_value=(PORTRAIT, pink)),
-        ):
-            extract_one(None, close)  # type: ignore[arg-type]
-        self.assertEqual("#F9BBBD", close["hair"]["primary"])
-        self.assertEqual("HIGH", close["hair"]["confidence"])
-        self.assertNotIn("reason", close["hair"])
+        self.assertEqual("#F9BBBD", character["hair"]["primary"])
+        self.assertEqual("HIGH", character["hair"]["confidence"])
+        self.assertNotIn("reason", character["hair"])
+        self.assertEqual(hashlib.sha1(raw).hexdigest(), character["hair"]["sampleSha1"])
+        self.assertGreater(character["hair"]["deltaE"], 45)
 
     def test_poster_display_does_not_reject_the_sample(self) -> None:
         pink = parse_hex("#F9BBBD")
         character = _row()
-        image = Image.new("RGBA", (32, 48), (249, 187, 189, 255))
         with (
-            patch("scripts.fetch_catalog.load_image", return_value=image),
+            patch("scripts.fetch_catalog.read_image_bytes", return_value=_png()),
             patch("scripts.fetch_catalog.extract_hair", return_value=ExtractedHair(pink, None, "HIGH")),
             patch("scripts.fetch_catalog.classify_art", return_value=ArtKindVerdict(PORTRAIT, 1.0, 0.0)),
             patch("scripts.fetch_catalog.inspect_image", return_value=(POSTER, None)),
         ):
             extract_one(None, character)  # type: ignore[arg-type]
         self.assertEqual("#F9BBBD", character["hair"]["primary"])
+        self.assertIn("sampleSha1", character["hair"])
 
-    def test_zzz_without_cross_check_is_not_reused(self) -> None:
+    def test_settled_zzz_swatch_is_reused_without_a_cross_check(self) -> None:
         fresh = _row()
         previous = _row()
-        previous["hair"] = {"primary": "#F9BBBD", "secondary": None, "confidence": "HIGH", "sampledFrom": fresh["hairSampleUrl"]}
+        previous["hair"] = {
+            "primary": "#F9BBBD",
+            "secondary": None,
+            "confidence": "HIGH",
+            "sampledFrom": fresh["hairSampleUrl"],
+            "sampleSha1": "abc",
+        }
         previous["artKind"] = "PORTRAIT"
-        self.assertFalse(hair_can_reuse(previous, fresh))
-        previous["hair"]["crossCheck"] = HAIR_CROSSCHECK
         self.assertTrue(hair_can_reuse(previous, fresh))
 
     def test_other_games_keep_a_settled_swatch(self) -> None:

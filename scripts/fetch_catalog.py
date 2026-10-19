@@ -37,10 +37,10 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.catalog_lib import (  # noqa: E402
     BEIJING,
-    HAIR_CROSSCHECK,
     beijing_today,
     build_checked_hair,
     dedupe_aliases,
+    flag_duplicate_samples,
     merge_characters,
     search_keys,
     status_from_release,
@@ -1143,15 +1143,19 @@ def prepare_image(image: Image.Image, max_edge: int = 768) -> Image.Image:
     return rgba
 
 
-def load_image(http: Http, url: str) -> Image.Image:
+def read_image_bytes(http: Http, url: str) -> bytes:
     digest = hashlib.sha1(url.encode()).hexdigest()
     path = CACHE / "img" / digest
     if path.exists() and path.stat().st_size > 32:
-        data = path.read_bytes()
-    else:
-        data = http.bytes(url)
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_bytes(data)
+        return path.read_bytes()
+    data = http.bytes(url)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+    return data
+
+
+def load_image(http: Http, url: str) -> Image.Image:
+    data = read_image_bytes(http, url)
     image = Image.open(io.BytesIO(data))
     image.load()
     return image
@@ -1174,8 +1178,6 @@ def inspect_image(http: Http, url: str) -> tuple[str, int | None] | None:
 
 
 def _store_hair(character: dict, hair: dict) -> dict:
-    if not hair.get("retry"):
-        hair["crossCheck"] = HAIR_CROSSCHECK
     character["hair"] = hair
     return character
 
@@ -1198,7 +1200,10 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
     last_permanent: str | None = None
     for url in sample_urls:
         try:
-            image = prepare_image(load_image(http, url))
+            raw = read_image_bytes(http, url)
+            image = Image.open(io.BytesIO(raw))
+            image.load()
+            image = prepare_image(image)
         except PermanentError as error:
             last_permanent = str(error)
             if display_url and display_url != url:
@@ -1213,6 +1218,7 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
                 "retry": True,
                 "error": str(error),
             })
+        sample_sha1 = hashlib.sha1(raw).hexdigest()
         pixels, width, height = pixels_from_rgba(image)
         verdict = classify_art(pixels, width, height)
         display_kind = verdict.kind
@@ -1228,6 +1234,7 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
                 "secondary": None,
                 "confidence": "LOW",
                 "sampledFrom": None,
+                "sampleSha1": sample_sha1,
             })
         extracted = extract_hair(pixels, width, height)
         if extracted is None:
@@ -1243,6 +1250,7 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
             url,
             display_color,
             display_is_portrait=display_kind == PORTRAIT and bool(display_url) and display_url != url,
+            sample_sha1=sample_sha1,
         )
         return character
     character["artKind"] = character.get("artKind") or UNKNOWN
@@ -1421,6 +1429,11 @@ def main() -> int:
     hair_stats = {"attempted": 0, "ok": 0, "poster": 0, "failed": 0, "seconds": 0, "skipped": True}
     if not args.skip_hair:
         hair_stats = apply_hair(characters, args.hair_limit)
+    duplicate_groups = flag_duplicate_samples(characters)
+    if duplicate_groups:
+        print(f"hair: {len(duplicate_groups)} sample-duplicate groups")
+        for keys in duplicate_groups:
+            print("hair sample-duplicate: " + ", ".join(keys))
     characters.sort(key=lambda row: (str(row.get("game") or ""), str(row.get("name") or ""), str(row.get("key") or "")))
     stats = summarize(characters)
     stats["hairRun"] = hair_stats

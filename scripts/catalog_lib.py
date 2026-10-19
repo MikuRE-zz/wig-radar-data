@@ -113,21 +113,14 @@ def status_from_release(
     return "EVERGREEN"
 
 
-# Portrait-vs-sample CIE76. Pink circle #F9BBBD vs green #6B9F9D is about 46,
-# and the extracted 洛克茜 pair is about 53. Same-character highlight shifts
-# stay under 30 when both sides actually hit hair. 45 is below that mismatch
-# and above the highlight band.
-HAIR_MISMATCH_DELTA_E = 45.0
-HAIR_CROSSCHECK = "sample-delta-v1"
-
-
 def hair_is_settled(character: dict) -> bool:
     hair = character.get("hair") or {}
     if hair.get("retry"):
         return False
     if hair.get("primary"):
         return True
-    if hair.get("reason") == "sample-mismatch":
+    # Shared avatar bytes: neither character keeps a color, and the row is done.
+    if hair.get("reason") == "sample-duplicate":
         return True
     if character.get("artKind") == "POSTER" and hair.get("confidence") == "LOW":
         return True
@@ -144,11 +137,6 @@ def hair_can_reuse(previous: dict, fresh: dict) -> bool:
         fresh.get("hairSampleUrl"),
     ):
         return False
-    # ZZZ circle files are numbered apart from the portrait and have pointed at
-    # the wrong face. Old swatches are reused only after that comparison.
-    if str(fresh.get("key") or "").startswith("zzz:"):
-        if (previous.get("hair") or {}).get("crossCheck") != HAIR_CROSSCHECK:
-            return False
     return hair_is_settled(previous)
 
 
@@ -160,35 +148,59 @@ def build_checked_hair(
     display_color: int | None,
     *,
     display_is_portrait: bool,
+    sample_sha1: str | None = None,
 ) -> dict:
-    """Hair record for one sample image, after the portrait cross-check.
+    """Hair record for one sample image.
 
-    A different file that is itself a portrait and disagrees by more than
-    HAIR_MISMATCH_DELTA_E is not written as a primary. The swatch stays empty
-    and confidence is LOW so the app shows 发色待确认.
+    A portrait/sample color gap is recorded for diagnosis only. It does not
+    change confidence; a shared sample file is handled later, across the catalog.
     """
-    if (
-        display_is_portrait
-        and display_color is not None
-        and delta_e(primary, display_color) > HAIR_MISMATCH_DELTA_E
-    ):
-        return {
-            "primary": None,
-            "secondary": None,
-            "confidence": "LOW",
-            "sampledFrom": sampled_from,
-            "reason": "sample-mismatch",
-            "sampleColor": hex_color(primary),
-            "displayColor": hex_color(display_color),
-            "crossCheck": HAIR_CROSSCHECK,
-        }
-    return {
+    hair = {
         "primary": hex_color(primary),
         "secondary": None if secondary is None else hex_color(secondary),
         "confidence": confidence,
         "sampledFrom": sampled_from,
-        "crossCheck": HAIR_CROSSCHECK,
     }
+    if sample_sha1:
+        hair["sampleSha1"] = sample_sha1
+    if display_is_portrait and display_color is not None:
+        hair["sampleColor"] = hex_color(primary)
+        hair["displayColor"] = hex_color(display_color)
+        hair["deltaE"] = round(delta_e(primary, display_color), 1)
+    return hair
+
+
+def flag_duplicate_samples(characters: list[dict]) -> list[list[str]]:
+    """Drop the primary when two keys sampled the same image bytes.
+
+    Rows with no sampleSha1 are left alone: older extracts were not hashed.
+    The group keeps no color, because the file does not say which face is real.
+    """
+    groups: dict[str, list[dict]] = {}
+    for row in characters:
+        if not isinstance(row, dict) or not row.get("key"):
+            continue
+        hair = row.get("hair")
+        if not isinstance(hair, dict):
+            continue
+        digest = hair.get("sampleSha1")
+        if not isinstance(digest, str) or not digest:
+            continue
+        groups.setdefault(digest, []).append(row)
+    flagged: list[list[str]] = []
+    for rows in groups.values():
+        keys = list(dict.fromkeys(str(row.get("key")) for row in rows))
+        if len(keys) < 2:
+            continue
+        flagged.append(keys)
+        for row in rows:
+            hair = dict(row.get("hair") or {})
+            hair["primary"] = None
+            hair["secondary"] = None
+            hair["confidence"] = "LOW"
+            hair["reason"] = "sample-duplicate"
+            row["hair"] = hair
+    return flagged
 
 
 def merge_characters(
