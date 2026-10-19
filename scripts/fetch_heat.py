@@ -40,6 +40,8 @@ RECENT_DAYS = 7
 HISTORY_KEEP = 30
 # Radar candidates and evergreen rotation share this cap.
 DAILY_CAP = 120
+# Evergreen slots the radar may not take, so a full anime season cannot stop the rotation.
+EVERGREEN_FLOOR = 20
 # Shared by the Bangumi and Bilibili stages, measured from process start.
 # Leave headroom so one in-flight character still ends the run inside 15 minutes.
 TIME_BUDGET_SECONDS = 840
@@ -280,22 +282,28 @@ def build_queue(
     previous_by_key: dict[str, dict[str, Any]] | None = None,
     *,
     daily_cap: int = DAILY_CAP,
+    evergreen_floor: int = EVERGREEN_FLOOR,
 ) -> dict[str, Any]:
-    """Order today's fetches. Evergreen slots are whatever the cap has left."""
+    """Order today's fetches. Evergreen gets the floor plus whatever the radar leaves."""
     previous_by_key = previous_by_key or {}
     buckets: dict[str, list[tuple[int, dict[str, Any]]]] = {tier: [] for tier in TIER_ORDER}
     for index, row in enumerate(characters):
         if not isinstance(row, dict) or not row.get("key"):
             continue
         buckets[character_tier(row)].append((index, row))
-    ordered: list[tuple[str, dict[str, Any]]] = []
-    ordered.extend((TIER_GAME_LEAKED, row) for _, row in buckets[TIER_GAME_LEAKED])
-    ordered.extend((TIER_GAME_LIVE, row) for _, row in buckets[TIER_GAME_LIVE])
-    ordered.extend((TIER_ANIME, row) for row in _anime_ordered(buckets[TIER_ANIME]))
-    ordered.extend((TIER_EVERGREEN, row) for row in _evergreen_ordered(buckets[TIER_EVERGREEN], previous_by_key))
+    radar: list[tuple[str, dict[str, Any]]] = []
+    radar.extend((TIER_GAME_LEAKED, row) for _, row in buckets[TIER_GAME_LEAKED])
+    radar.extend((TIER_GAME_LIVE, row) for _, row in buckets[TIER_GAME_LIVE])
+    radar.extend((TIER_ANIME, row) for row in _anime_ordered(buckets[TIER_ANIME]))
+    evergreen = [
+        (TIER_EVERGREEN, row) for row in _evergreen_ordered(buckets[TIER_EVERGREEN], previous_by_key)
+    ]
     cap = max(0, int(daily_cap))
-    chosen = ordered[:cap]
-    delayed = ordered[cap:]
+    reserved = min(max(0, int(evergreen_floor)), len(evergreen), cap)
+    radar_chosen = radar[: cap - reserved]
+    evergreen_chosen = evergreen[: cap - len(radar_chosen)]
+    chosen = radar_chosen + evergreen_chosen
+    delayed = radar[len(radar_chosen):] + evergreen[len(evergreen_chosen):]
     stats = {tier: {"queued": 0, "deferred": 0} for tier in TIER_ORDER}
     for tier, _row in chosen:
         stats[tier]["queued"] += 1

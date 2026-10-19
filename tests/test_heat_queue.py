@@ -121,6 +121,31 @@ class HeatQueueTest(unittest.TestCase):
         self.assertEqual([f"e:{i:03d}" for i in range(115)], [row["key"] for row in plan["selected"][5:]])
         self.assertEqual([f"e:{i:03d}" for i in range(115, 200)], [row["key"] for row in plan["deferred"]])
 
+    def test_evergreen_floor_holds_when_radar_overflows(self) -> None:
+        characters = [_character(f"g:{i}", "LEAKED") for i in range(5)]
+        characters.extend(
+            _character(f"bgm:{i:03d}", "LIVE", kind="ANIME", game="anime", work=f"w{i}", heat=1000 - i, subject=i)
+            for i in range(130)
+        )
+        characters.extend(_character(f"e:{i:03d}", "EVERGREEN") for i in range(50))
+        plan = build_queue(characters, {}, daily_cap=120, evergreen_floor=20)
+        self.assertEqual(120, len(plan["selected"]))
+        self.assertEqual({"queued": 5, "deferred": 0}, plan["stats"]["game-leaked"])
+        self.assertEqual({"queued": 95, "deferred": 35}, plan["stats"]["anime"])
+        self.assertEqual({"queued": 20, "deferred": 30}, plan["stats"]["evergreen"])
+        anime_kept = [row["key"] for row in plan["selected"] if row["key"].startswith("bgm:")]
+        self.assertEqual([f"bgm:{i:03d}" for i in range(95)], anime_kept)
+
+    def test_unused_evergreen_floor_goes_back_to_the_radar(self) -> None:
+        characters = [
+            _character(f"bgm:{i:03d}", "LIVE", kind="ANIME", game="anime", work=f"w{i}", heat=1000 - i, subject=i)
+            for i in range(130)
+        ]
+        characters.extend(_character(f"e:{i}", "EVERGREEN") for i in range(3))
+        plan = build_queue(characters, {}, daily_cap=120, evergreen_floor=20)
+        self.assertEqual({"queued": 117, "deferred": 13}, plan["stats"]["anime"])
+        self.assertEqual({"queued": 3, "deferred": 0}, plan["stats"]["evergreen"])
+
     def test_never_fetched_evergreen_comes_before_stale_rows(self) -> None:
         characters = [
             _character("e:b", "EVERGREEN"),
