@@ -93,6 +93,24 @@ class AnimeSelectionTest(unittest.TestCase):
         self.assertEqual([1, 2, 3, 4], [row["id"] for row in pick_cast(listed)])
         self.assertEqual([], pick_cast([{"relation": "配角", "id": 1}]))
 
+    def test_mecha_leads_do_not_take_cast_slots(self) -> None:
+        listed = [
+            {"relation": "主角", "id": 1, "type": 1, "name": "シン・アスカ"},
+            {"relation": "主角", "id": 2, "type": 2, "name": "ストライクフリーダムガンダム"},
+            {"relation": "主角", "id": 3, "type": 3, "name": "ミレニアム"},
+            {"relation": "主角", "id": 4, "type": 1, "name": "ルナマリア・ホーク"},
+            {"relation": "主角", "id": 5, "type": 4, "name": "コンパス"},
+        ]
+        self.assertEqual([1, 4], [row["id"] for row in pick_cast(listed)])
+        show = {"id": 9, "name": "作品", "release": date(2026, 10, 4), "workHeat": 10}
+        mecha = build_bangumi_character(
+            {"id": 2, "name": "ストライクフリーダムガンダム", "images": {}},
+            show,
+            date(2026, 10, 19),
+            {"name": "ストライクフリーダムガンダム", "type": 2},
+        )
+        self.assertIsNone(mecha)
+
     def test_numeric_names_are_dropped_real_names_stay(self) -> None:
         self.assertTrue(numeric_only_name("556", "556"))
         self.assertTrue(numeric_only_name("", "556"))

@@ -68,6 +68,7 @@ BANGUMI = "https://api.bgm.tv"
 CURRENT_SEASON_KEEP = 20
 NEXT_SEASON_KEEP = 10
 MAIN_CAST_KEEP = 4
+BANGUMI_PERSON = 1
 BANGUMI_SELECTION = "top-works-v1"
 COLLECTION_KEYS = ("wish", "collect", "doing", "on_hold", "dropped")
 
@@ -1011,8 +1012,16 @@ def list_subjects_between(http: Http, start: date, end: date) -> list[dict[str, 
     return found
 
 
+def is_person(row: dict[str, Any] | None) -> bool:
+    """Bangumi character type: 1 person, 2 mecha, 3 ship, 4 organization. Missing counts as person."""
+    if not isinstance(row, dict):
+        return True
+    kind = row.get("type")
+    return kind is None or kind == BANGUMI_PERSON
+
+
 def pick_cast(listed: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    mains = [row for row in listed if row.get("relation") == "主角"]
+    mains = [row for row in listed if row.get("relation") == "主角" and is_person(row)]
     return mains[:MAIN_CAST_KEEP]
 
 
@@ -1024,6 +1033,8 @@ def build_bangumi_character(
 ) -> dict[str, Any] | None:
     cid = item.get("id")
     if not isinstance(cid, int):
+        return None
+    if not is_person(item) or not is_person(detail):
         return None
     images = item.get("images") or {}
     list_name = clean_label(item.get("name"))
