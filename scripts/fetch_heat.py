@@ -138,6 +138,18 @@ def iso(dt: datetime) -> str:
     return dt.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
+BEIJING = timezone(timedelta(hours=8))
+
+
+def parse_instant(value: str) -> datetime:
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def beijing_day(value: str) -> str:
+    """Calendar date in Beijing (UTC+8). Growth and history dedupe use this, not the UTC date."""
+    return parse_instant(value).astimezone(BEIJING).date().isoformat()
+
+
 def log_score(value: float, ref: float) -> float:
     value = max(0.0, float(value))
     ref = max(1.0, float(ref))
@@ -496,27 +508,57 @@ def bili_component(metrics: dict[str, Any] | None) -> float | None:
     return 0.72 * video_score + 0.28 * play_score
 
 
-def previous_metrics(previous: dict[str, Any] | None, name: str) -> dict[str, Any] | None:
+def flatten_character(ch: dict[str, Any]) -> dict[str, Any]:
+    bangumi = (ch.get("metrics") or {}).get("bangumi") or {}
+    bili = (ch.get("metrics") or {}).get("bilibili") or {}
+    if "metrics" not in ch and "bilibiliRecentVideos7d" in ch:
+        return ch
+    return {
+        "name": ch.get("name"),
+        "bangumiCollects": bangumi.get("collects"),
+        "bangumiSubjectCollect": bangumi.get("subjectCollect"),
+        "bilibiliRecentVideos7d": bili.get("recentVideos7d"),
+        "bilibiliRecentPlaySum7d": bili.get("recentPlaySum7d"),
+        "heatScore": ch.get("heatScore"),
+    }
+
+
+def previous_metrics(previous: dict[str, Any] | None, name: str, generated_at: str) -> dict[str, Any] | None:
+    """Baseline for day-over-day growth.
+
+    A second run on the same Beijing date must not be compared with the earlier
+    run that day — a half-hour delta is ~0 and the score collapses. Use the
+    newest snapshot from a previous Beijing date, or nothing.
+    """
     if not previous:
         return None
-    for ch in previous.get("characters") or []:
-        if ch.get("name") != name:
-            continue
-        bangumi = (ch.get("metrics") or {}).get("bangumi") or {}
-        bili = (ch.get("metrics") or {}).get("bilibili") or {}
-        return {
-            "name": name,
-            "bangumiCollects": bangumi.get("collects"),
-            "bangumiSubjectCollect": bangumi.get("subjectCollect"),
-            "bilibiliRecentVideos7d": bili.get("recentVideos7d"),
-            "bilibiliRecentPlaySum7d": bili.get("recentPlaySum7d"),
-            "heatScore": ch.get("heatScore"),
-        }
+    today = beijing_day(generated_at)
+    best_at = ""
+    best: dict[str, Any] | None = None
+
+    def consider(captured_at: str | None, row: dict[str, Any] | None) -> None:
+        nonlocal best_at, best
+        if not captured_at or not row or row.get("name") != name:
+            return
+        if beijing_day(captured_at) >= today:
+            return
+        if captured_at > best_at:
+            best_at = captured_at
+            best = row
+
+    prev_at = previous.get("generatedAt")
+    if isinstance(prev_at, str) and beijing_day(prev_at) < today:
+        for ch in previous.get("characters") or []:
+            if isinstance(ch, dict):
+                consider(prev_at, flatten_character(ch))
     for entry in previous.get("history") or []:
+        if not isinstance(entry, dict):
+            continue
+        captured_at = entry.get("capturedAt")
         for row in entry.get("characters") or []:
-            if row.get("name") == name:
-                return row
-    return None
+            if isinstance(row, dict):
+                consider(captured_at if isinstance(captured_at, str) else None, row)
+    return best
 
 
 def build_history(previous: dict[str, Any] | None, generated_at: str) -> list[dict[str, Any]]:
@@ -528,28 +570,28 @@ def build_history(previous: dict[str, Any] | None, generated_at: str) -> list[di
                 {
                     "capturedAt": prev_at,
                     "characters": [
-                        {
-                            "name": ch.get("name"),
-                            "bangumiCollects": ((ch.get("metrics") or {}).get("bangumi") or {}).get("collects"),
-                            "bangumiSubjectCollect": ((ch.get("metrics") or {}).get("bangumi") or {}).get("subjectCollect"),
-                            "bilibiliRecentVideos7d": ((ch.get("metrics") or {}).get("bilibili") or {}).get("recentVideos7d"),
-                            "bilibiliRecentPlaySum7d": ((ch.get("metrics") or {}).get("bilibili") or {}).get("recentPlaySum7d"),
-                            "heatScore": ch.get("heatScore"),
-                        }
+                        flatten_character(ch)
                         for ch in previous.get("characters") or []
+                        if isinstance(ch, dict)
                     ],
                 }
             )
         entries.extend(previous.get("history") or [])
-    seen: set[str] = set()
-    uniq: list[dict[str, Any]] = []
+    # One row per Beijing date. A delayed second cron run the same day replaces
+    # the earlier snapshot instead of stacking a near-zero growth step.
+    by_day: dict[str, dict[str, Any]] = {}
     for entry in entries:
-        key = str(entry.get("capturedAt") or "")
-        if not key or key in seen:
+        if not isinstance(entry, dict):
             continue
-        seen.add(key)
-        uniq.append(entry)
-    return uniq[:HISTORY_KEEP]
+        captured_at = entry.get("capturedAt")
+        if not isinstance(captured_at, str) or not captured_at:
+            continue
+        day = beijing_day(captured_at)
+        current = by_day.get(day)
+        if current is None or captured_at > str(current.get("capturedAt") or ""):
+            by_day[day] = entry
+    ordered = sorted(by_day.values(), key=lambda entry: str(entry.get("capturedAt") or ""), reverse=True)
+    return ordered[:HISTORY_KEEP]
 
 
 def fetch_nanoka_discoveries(http: Http, watch_names: set[str]) -> list[dict[str, Any]]:
@@ -705,7 +747,7 @@ def run(out_path: Path, write_assets: bool) -> int:
         kind = item["kind"]
         bangumi_m = bangumi_by_name.get(name)
         bili_m = bili_by_name.get(name)
-        prev = previous_metrics(previous, name)
+        prev = previous_metrics(previous, name, generated_at)
         bili_score = bili_component(bili_m)
         bgm_score = bangumi_component(kind, bangumi_m)
         video_growth = growth_score(
@@ -779,12 +821,85 @@ def run(out_path: Path, write_assets: bool) -> int:
     return 0
 
 
+def check_dedupe() -> int:
+    """Local check: same Beijing date keeps the later snapshot, and growth skips that day."""
+    def row(name: str, videos: int) -> dict[str, Any]:
+        return {
+            "name": name,
+            "bangumiCollects": 1,
+            "bangumiSubjectCollect": None,
+            "bilibiliRecentVideos7d": videos,
+            "bilibiliRecentPlaySum7d": 10,
+            "heatScore": videos,
+        }
+
+    def live(name: str, videos: int) -> dict[str, Any]:
+        return {
+            "name": name,
+            "heatScore": videos,
+            "metrics": {
+                "bangumi": {"collects": 1, "subjectCollect": None},
+                "bilibili": {"recentVideos7d": videos, "recentPlaySum7d": 10},
+            },
+        }
+
+    previous = {
+        "generatedAt": "2026-10-13T04:00:00Z",
+        "characters": [live("锁暝", 2)],
+        "history": [
+            {"capturedAt": "2026-10-13T01:00:00Z", "characters": [row("锁暝", 1)]},
+            {"capturedAt": "2026-10-12T03:00:00Z", "characters": [row("锁暝", 50)]},
+        ],
+    }
+    history = build_history(previous, "2026-10-13T06:00:00Z")
+    days = [beijing_day(entry["capturedAt"]) for entry in history]
+    if days != ["2026-10-13", "2026-10-12"]:
+        print("dedupe days", days)
+        return 1
+    today = history[0]
+    if today["capturedAt"] != "2026-10-13T04:00:00Z":
+        print("kept", today["capturedAt"], "expected the later Oct 13 snapshot")
+        return 1
+    if today["characters"][0]["bilibiliRecentVideos7d"] != 2:
+        print("later snapshot was not the one kept", today["characters"])
+        return 1
+    keys = set(today["characters"][0])
+    expected = {
+        "name",
+        "bangumiCollects",
+        "bangumiSubjectCollect",
+        "bilibiliRecentVideos7d",
+        "bilibiliRecentPlaySum7d",
+        "heatScore",
+    }
+    if keys != expected:
+        print("history schema changed", keys)
+        return 1
+    baseline = previous_metrics(previous, "锁暝", "2026-10-13T06:00:00Z")
+    if baseline is None or baseline["bilibiliRecentVideos7d"] != 50:
+        print("growth baseline", baseline)
+        return 1
+    only_today = {
+        "generatedAt": "2026-10-13T04:00:00Z",
+        "characters": [live("锁暝", 2)],
+        "history": [{"capturedAt": "2026-10-13T01:00:00Z", "characters": [row("锁暝", 1)]}],
+    }
+    if previous_metrics(only_today, "锁暝", "2026-10-13T06:00:00Z") is not None:
+        print("same-day-only history should not be a growth baseline")
+        return 1
+    print("dedupe ok: Oct 13 kept 04:00Z, growth baseline is Oct 12 (videos=50)")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Fetch heat signals for wig-radar")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
     parser.add_argument("--write-assets", action="store_true", default=True)
     parser.add_argument("--no-write-assets", action="store_false", dest="write_assets")
+    parser.add_argument("--check-dedupe", action="store_true", help="Run the local history-dedupe check and exit")
     args = parser.parse_args()
+    if args.check_dedupe:
+        return check_dedupe()
     try:
         return run(args.out, args.write_assets)
     except Exception as e:
