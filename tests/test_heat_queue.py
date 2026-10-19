@@ -7,10 +7,15 @@ import tempfile
 import unittest
 from datetime import date, timedelta
 from pathlib import Path
+from unittest.mock import patch
 
 from scripts.fetch_heat import (
+    BILI_SOFT_BLOCK_BACKOFF_SECONDS,
+    BILI_SOFT_BLOCK_LIMIT,
     DAILY_CAP,
     HISTORY_KEEP,
+    BilibiliClient,
+    BilibiliSoftBlock,
     beijing_day,
     build_history,
     build_queue,
@@ -350,6 +355,202 @@ class HeatHistoryTest(unittest.TestCase):
         self.assertIsNotNone(carried)
         assert carried is not None
         self.assertEqual(9, carried["bilibiliRecentVideos7d"])
+
+
+class BilibiliSoftBlockTest(unittest.TestCase):
+    def test_empty_search_response_is_a_soft_block(self) -> None:
+        class FakeHttp:
+            def __init__(self) -> None:
+                self.extra_headers: dict[str, str] = {}
+                self.payload = {"code": 0, "data": {"numResults": 0, "result": []}}
+
+            def request(self, url: str, **kwargs):
+                return self.payload
+
+        client = BilibiliClient(FakeHttp())
+        client.mixin_key = "a" * 32
+        with self.assertRaises(BilibiliSoftBlock):
+            client.search_videos("洛克茜 绝区零", pages=1)
+
+    def test_empty_response_is_carried_and_stays_out_of_history(self) -> None:
+        name = "洛克茜"
+        previous = {
+            "schemaVersion": 1,
+            "generatedAt": "2026-10-18T04:00:00Z",
+            "characters": [_live(name, 40, "2026-10-18T04:00:00Z", key="zzz:1621")],
+            "history": [{"capturedAt": "2026-10-17T04:00:00Z", "characters": [_flat(name, 30)]}],
+        }
+        characters = [_character("zzz:1621", "EVERGREEN", game="zzz", work="绝区零", name=name)]
+
+        def fetch_bilibili(character, fetched_name, fetched_at):
+            raise BilibiliSoftBlock("empty search")
+
+        with tempfile.TemporaryDirectory() as tmp, patch("scripts.fetch_heat.time.sleep") as slept:
+            root = Path(tmp)
+            catalog_path = root / "catalog.json"
+            heat_path = root / "heat.json"
+            catalog_path.write_text(json.dumps({"characters": characters}, ensure_ascii=False), encoding="utf-8")
+            heat_path.write_text(json.dumps(previous, ensure_ascii=False), encoding="utf-8")
+            code = run(
+                heat_path,
+                False,
+                catalog_path,
+                daily_cap=10,
+                time_budget_seconds=840,
+                fetch_bangumi=lambda character, fetched_name, fetched_at: {
+                    "collects": 1,
+                    "subjectCollect": None,
+                    "airing": False,
+                    "fetchedAt": fetched_at,
+                },
+                fetch_bilibili=fetch_bilibili,
+                weibo_fetcher=lambda names: {"hotHits": [], "hotCount": 0},
+            )
+            self.assertEqual(0, code)
+            feed = json.loads(heat_path.read_text(encoding="utf-8"))
+        row = feed["characters"][0]
+        self.assertEqual("2026-10-18T04:00:00Z", row["heatFetchedAt"])
+        self.assertNotEqual(feed["generatedAt"], row["heatFetchedAt"])
+        self.assertEqual(40, row["heatScore"])
+        self.assertEqual(40, row["metrics"]["bilibili"]["recentVideos7d"])
+        self.assertNotIn(feed["generatedAt"], [entry["capturedAt"] for entry in feed["history"]])
+        for entry in feed["history"]:
+            for historic in entry["characters"]:
+                if historic["name"] == name:
+                    self.assertNotEqual(0, historic["bilibiliRecentVideos7d"])
+        source = feed["sources"]["bilibili"]
+        self.assertEqual("partial", source["status"])
+        self.assertEqual(1, source["softBlocked"])
+        self.assertIn("empty search", source["error"])
+        slept.assert_called_with(BILI_SOFT_BLOCK_BACKOFF_SECONDS)
+
+    def test_soft_block_streak_stops_and_a_real_response_resets_it(self) -> None:
+        names = [f"角色{index}" for index in range(BILI_SOFT_BLOCK_LIMIT + 4)]
+        # Two empties, one real response, then a full streak of empties, then one more.
+        real = names[2]
+        calls: list[str] = []
+
+        def fetch_bilibili(character, fetched_name, fetched_at):
+            calls.append(fetched_name)
+            if fetched_name == real:
+                return {
+                    "recentVideos7d": 4,
+                    "recentPlaySum7d": 100,
+                    "resultCount": 20,
+                    "sampledVideos": 5,
+                    "fetchedAt": fetched_at,
+                }
+            raise BilibiliSoftBlock("empty search")
+
+        characters = [
+            _character(f"e:{index}", "EVERGREEN", name=name) for index, name in enumerate(names)
+        ]
+        previous_characters = [
+            _live(name, 11, "2026-10-17T04:00:00Z", key=f"e:{index}") for index, name in enumerate(names)
+        ]
+        previous = {
+            "schemaVersion": 1,
+            "generatedAt": "2026-10-18T04:00:00Z",
+            "characters": previous_characters,
+            "history": [],
+        }
+        with tempfile.TemporaryDirectory() as tmp, patch("scripts.fetch_heat.time.sleep"):
+            root = Path(tmp)
+            catalog_path = root / "catalog.json"
+            heat_path = root / "heat.json"
+            catalog_path.write_text(json.dumps({"characters": characters}, ensure_ascii=False), encoding="utf-8")
+            heat_path.write_text(json.dumps(previous, ensure_ascii=False), encoding="utf-8")
+            code = run(
+                heat_path,
+                False,
+                catalog_path,
+                daily_cap=20,
+                time_budget_seconds=840,
+                fetch_bangumi=lambda character, fetched_name, fetched_at: {
+                    "collects": 1,
+                    "subjectCollect": None,
+                    "airing": False,
+                    "fetchedAt": fetched_at,
+                },
+                fetch_bilibili=fetch_bilibili,
+                weibo_fetcher=lambda names: {"hotHits": [], "hotCount": 0},
+            )
+            self.assertEqual(0, code)
+            feed = json.loads(heat_path.read_text(encoding="utf-8"))
+        # names[0], names[1] empty, real, then LIMIT empties. The last name is not called.
+        self.assertEqual(names[: 3 + BILI_SOFT_BLOCK_LIMIT], calls)
+        self.assertNotIn(names[-1], calls)
+        by_key = {row["key"]: row for row in feed["characters"]}
+        self.assertEqual(feed["generatedAt"], by_key["e:2"]["heatFetchedAt"])
+        self.assertEqual("2026-10-17T04:00:00Z", by_key["e:0"]["heatFetchedAt"])
+        self.assertEqual("2026-10-17T04:00:00Z", by_key[f"e:{len(names) - 1}"]["heatFetchedAt"])
+        source = feed["sources"]["bilibili"]
+        self.assertEqual("partial", source["status"])
+        self.assertEqual(2 + BILI_SOFT_BLOCK_LIMIT, source["softBlocked"])
+        self.assertIn("consecutive empty searches", source["error"])
+
+
+class PollutedBilibiliSampleTest(unittest.TestCase):
+    def test_empty_sample_sorts_as_never_fetched(self) -> None:
+        characters = [
+            _character("e:real", "EVERGREEN"),
+            _character("e:empty", "EVERGREEN"),
+            _character("e:never", "EVERGREEN"),
+        ]
+        previous = {
+            "e:real": {
+                "heatFetchedAt": "2026-10-01T00:00:00Z",
+                "metrics": {"bilibili": {"resultCount": 10, "sampledVideos": 5}},
+            },
+            "e:empty": {
+                "heatFetchedAt": "2026-10-18T00:00:00Z",
+                "metrics": {"bilibili": {"resultCount": 0, "sampledVideos": 0}},
+            },
+        }
+        plan = build_queue(characters, previous, daily_cap=10)
+        self.assertEqual(["e:empty", "e:never", "e:real"], [row["key"] for row in plan["selected"]])
+
+    def test_empty_sample_is_not_a_growth_baseline(self) -> None:
+        polluted = _live("洛克茜", 0, "2026-10-19T04:09:53Z", key="zzz:1621")
+        polluted["metrics"]["bilibili"].update(
+            {"resultCount": 0, "sampledVideos": 0, "recentVideos7d": 0, "recentPlaySum7d": 0}
+        )
+        zero = _flat("洛克茜", 0)
+        zero["bilibiliRecentPlaySum7d"] = 0
+        previous = {
+            "generatedAt": "2026-10-19T07:11:56Z",
+            "characters": [polluted],
+            "history": [
+                {"capturedAt": "2026-10-19T07:11:56Z", "characters": [zero]},
+                {"capturedAt": "2026-10-17T22:21:33Z", "characters": [_flat("洛克茜", 100)]},
+            ],
+        }
+        baseline = previous_metrics(previous, "洛克茜", "2026-10-20T06:00:00Z")
+        self.assertIsNotNone(baseline)
+        assert baseline is not None
+        self.assertEqual(100, baseline["bilibiliRecentVideos7d"])
+
+        only_polluted = {
+            "generatedAt": "2026-10-19T07:11:56Z",
+            "characters": [polluted],
+            "history": [{"capturedAt": "2026-10-19T07:11:56Z", "characters": [zero]}],
+        }
+        self.assertIsNone(previous_metrics(only_polluted, "洛克茜", "2026-10-20T06:00:00Z"))
+
+    def test_real_quiet_week_is_still_a_baseline(self) -> None:
+        quiet = _live("路人", 0, "2026-10-19T04:00:00Z", key="e:1")
+        quiet["metrics"]["bilibili"].update(
+            {"resultCount": 40, "sampledVideos": 20, "recentVideos7d": 0, "recentPlaySum7d": 0}
+        )
+        previous = {
+            "generatedAt": "2026-10-19T04:00:00Z",
+            "characters": [quiet],
+            "history": [],
+        }
+        baseline = previous_metrics(previous, "路人", "2026-10-20T06:00:00Z")
+        self.assertIsNotNone(baseline)
+        assert baseline is not None
+        self.assertEqual(0, baseline["bilibiliRecentVideos7d"])
 
 
 if __name__ == "__main__":

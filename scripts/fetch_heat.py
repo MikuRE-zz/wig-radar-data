@@ -45,6 +45,12 @@ EVERGREEN_FLOOR = 20
 # Shared by the Bangumi and Bilibili stages, measured from process start.
 # Leave headroom so one in-flight character still ends the run inside 15 minutes.
 TIME_BUDGET_SECONDS = 840
+# code 0 + numResults 0 + an empty result list is a silent throttle, not a real zero.
+# Counted on the same risk_streak as HTTP 412/429, but this streak is allowed to
+# run longer. Each empty response waits a few seconds; five of them must stay
+# well inside the shared 840s budget.
+BILI_SOFT_BLOCK_LIMIT = 5
+BILI_SOFT_BLOCK_BACKOFF_SECONDS = 3
 TIER_GAME_LEAKED = "game-leaked"
 TIER_GAME_LIVE = "game-live"
 TIER_ANIME = "anime"
@@ -261,6 +267,13 @@ def _anime_ordered(indexed: list[tuple[int, dict[str, Any]]]) -> list[dict[str, 
     return ordered
 
 
+def bili_sample_is_empty(metrics: Any) -> bool:
+    """An empty search sample. Do not treat it as 'nobody uploaded this character'."""
+    if not isinstance(metrics, dict):
+        return False
+    return metrics.get("resultCount") == 0 and metrics.get("sampledVideos") == 0
+
+
 def _evergreen_ordered(
     indexed: list[tuple[int, dict[str, Any]]],
     previous_by_key: dict[str, dict[str, Any]],
@@ -271,6 +284,9 @@ def _evergreen_ordered(
         fetched = ""
         if isinstance(previous, dict) and isinstance(previous.get("heatFetchedAt"), str):
             fetched = previous["heatFetchedAt"]
+        # A stored 0/0 search is the silent throttle, so this row was never really fetched.
+        if isinstance(previous, dict) and bili_sample_is_empty((previous.get("metrics") or {}).get("bilibili")):
+            fetched = ""
         missing = 0 if not fetched else 1
         return (missing, fetched, str(row.get("key") or ""))
 
@@ -391,6 +407,21 @@ def source_run(status: str, fetched_at: str | None = None, error: str | None = N
     return {"status": status, "fetchedAt": fetched_at, "error": error}
 
 
+def record_soft_blocks(source: dict[str, Any], count: int, *, stopped: bool) -> None:
+    """Empty searches are a partial Bilibili run, even when some characters succeeded."""
+    source["softBlocked"] = count
+    if count <= 0:
+        return
+    if stopped:
+        reason = f"stopped after {BILI_SOFT_BLOCK_LIMIT} consecutive empty searches"
+    else:
+        reason = f"suspected rate limit: {count} empty searches"
+    existing = source.get("error")
+    source["error"] = f"{reason}; {existing}" if existing else reason
+    source["status"] = "partial"
+    print(f"bilibili softBlocked={count} ({source['error']})")
+
+
 class BangumiClient:
     def __init__(self, http: Http):
         self.http = http
@@ -435,6 +466,10 @@ class BangumiClient:
     def character(self, character_id: int) -> dict[str, Any] | None:
         payload = self.http.request(f"https://api.bgm.tv/v0/characters/{character_id}")
         return payload if isinstance(payload, dict) else None
+
+
+class BilibiliSoftBlock(RuntimeError):
+    """Search returned code 0 with numResults 0 and no videos."""
 
 
 class BilibiliClient:
@@ -496,10 +531,14 @@ class BilibiliClient:
             if payload.get("code") not in (0, None):
                 raise RuntimeError(f"bilibili code={payload.get('code')} {payload.get('message')} keyword={keyword}")
             data = payload.get("data") or {}
-            result_count = int(data.get("numResults") or result_count or 0)
             chunk = data.get("result") or []
             if not isinstance(chunk, list):
-                break
+                chunk = []
+            # A name-plus-work query fuzzy-matches. Zero hits with an empty list
+            # is Bilibili dropping the response, not an unpopular character.
+            if page == 1 and data.get("numResults") == 0 and not chunk:
+                raise BilibiliSoftBlock(f"empty search for {keyword}")
+            result_count = int(data.get("numResults") or result_count or 0)
             videos.extend(item for item in chunk if isinstance(item, dict))
             if len(chunk) < 10:
                 break
@@ -753,16 +792,37 @@ def flatten_character(ch: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _empty_bili_days(previous: dict[str, Any]) -> set[tuple[str, str]]:
+    """(name, Beijing day) whose stored Bilibili sample is an empty search."""
+    found: set[tuple[str, str]] = set()
+    for ch in previous.get("characters") or []:
+        if not isinstance(ch, dict):
+            continue
+        if not bili_sample_is_empty((ch.get("metrics") or {}).get("bilibili")):
+            continue
+        captured = ch.get("heatFetchedAt")
+        if not isinstance(captured, str) or not captured:
+            captured = previous.get("generatedAt") if isinstance(previous.get("generatedAt"), str) else None
+        ch_name = ch.get("name")
+        if isinstance(captured, str) and isinstance(ch_name, str) and ch_name:
+            found.add((ch_name, beijing_day(captured)))
+    return found
+
+
 def previous_metrics(previous: dict[str, Any] | None, name: str, generated_at: str) -> dict[str, Any] | None:
     """Baseline for day-over-day growth.
 
     A second run on the same Beijing date must not be compared with the earlier
     run that day — a half-hour delta is ~0 and the score collapses. Use the
     newest snapshot from a previous Beijing date, or nothing.
+
+    An empty Bilibili search stored as 0 videos / 0 plays is not a baseline.
+    Skip that Beijing day and use the newest real sample before it.
     """
     if not previous:
         return None
     today = beijing_day(generated_at)
+    empty_days = _empty_bili_days(previous)
     best_at = ""
     best: dict[str, Any] | None = None
 
@@ -772,6 +832,11 @@ def previous_metrics(previous: dict[str, Any] | None, name: str, generated_at: s
             return
         if beijing_day(captured_at) >= today:
             return
+        if (name, beijing_day(captured_at)) in empty_days:
+            videos = row.get("bilibiliRecentVideos7d") or 0
+            plays = row.get("bilibiliRecentPlaySum7d") or 0
+            if videos == 0 and plays == 0:
+                return
         if captured_at > best_at:
             best_at = captured_at
             best = row
@@ -1016,6 +1081,9 @@ def run(
     bili_by_key: dict[str, dict[str, Any] | None] = {}
     weibo_raw: dict[str, Any] | None = None
     bili_aborted = False
+    bili_soft_stopped = False
+    soft_blocked_keys: set[str] = set()
+    soft_blocked_count = 0
     bangumi_budget_stopped = False
     bili_budget_stopped = False
     bangumi_started_pairs: list[tuple[dict[str, Any], str]] = []
@@ -1096,6 +1164,20 @@ def run(
             try:
                 bili_by_key[key] = fetch_bili_one(character, name, fetched_at)
                 risk_streak = 0
+            except BilibiliSoftBlock as e:
+                print(f"bilibili soft block {name}: {e}", file=sys.stderr)
+                bili_by_key[key] = None
+                soft_blocked_keys.add(key)
+                soft_blocked_count += 1
+                risk_streak += 1
+                time.sleep(BILI_SOFT_BLOCK_BACKOFF_SECONDS)
+                if risk_streak >= BILI_SOFT_BLOCK_LIMIT:
+                    bili_aborted = True
+                    bili_soft_stopped = True
+                    print(
+                        f"bilibili soft-block streak {risk_streak}; stopped the rest of this run",
+                        file=sys.stderr,
+                    )
             except Exception as e:
                 print(f"bilibili {name} failed: {e}", file=sys.stderr)
                 bili_by_key[key] = None
@@ -1109,20 +1191,25 @@ def run(
             bili_started_pairs.append((character, name))
         completed_keys = {str(character["key"]) for character, _name in bili_started_pairs}
         fetched_any = any(bili_by_key.get(key) for key in completed_keys)
-        if bili_aborted and fetched_any:
+        if bili_aborted and not bili_soft_stopped and (fetched_any or soft_blocked_count):
             sources["bilibili"] = source_run("partial", fetched_at, error="stopped after HTTP 412/429")
             bili_ok = True
         elif bili_budget_stopped or (bangumi_budget_stopped and not fetched_any):
             sources["bilibili"] = source_run("partial", fetched_at, error="time budget exhausted")
             bili_ok = True
-        elif fetched_any:
+        elif fetched_any or soft_blocked_count:
             bili_ok = True
-            sources["bilibili"] = source_run("ok", fetched_at)
+            sources["bilibili"] = source_run(
+                "ok" if fetched_any and soft_blocked_count == 0 else "partial",
+                fetched_at,
+            )
         else:
             sources["bilibili"] = source_run("failed", fetched_at, error="no character returned videos")
+        record_soft_blocks(sources["bilibili"], soft_blocked_count, stopped=bili_soft_stopped)
     except Exception as e:
         print(f"bilibili source failed: {e}", file=sys.stderr)
         sources["bilibili"] = source_run("failed", error=str(e))
+        sources["bilibili"]["softBlocked"] = soft_blocked_count
 
     weibo_names = [
         name
@@ -1175,7 +1262,9 @@ def run(
             named_prev = previous_by_name.get(name)
             if named_prev and (name == character.get("name") or work_compatible(character, named_prev)):
                 previous_row = named_prev
-        if key not in completed_keys:
+        if key not in completed_keys or key in soft_blocked_keys:
+            # Soft-blocked rows stay on the previous sample: no new heatFetchedAt,
+            # and build_history will not archive this run for them.
             if previous_row:
                 characters.append(carry_heat(previous_row, character, name, previous.get("generatedAt") if previous else None))
                 carried_count += 1
