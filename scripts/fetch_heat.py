@@ -25,7 +25,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 WATCHLIST_PATH = Path(__file__).resolve().parent / "watchlist.json"
-DEFAULT_OUT = ROOT / "data" / "heat.json"
+CATALOG_PATH = ROOT / "catalog.json"
+DEFAULT_OUT = ROOT / "heat.json"
 ASSETS_OUT = ROOT / "app" / "src" / "main" / "assets" / "heat.json"
 
 SCHEMA_VERSION = 1
@@ -182,6 +183,91 @@ def weighted_blend(parts: dict[str, float | None], weights: dict[str, float]) ->
 def load_watchlist() -> list[dict[str, Any]]:
     payload = json.loads(WATCHLIST_PATH.read_text(encoding="utf-8"))
     return list(payload["characters"])
+
+
+GAME_SYNONYMS = {
+    "genshin": ["原神", "Genshin"],
+    "hsr": ["崩坏：星穹铁道", "星穹铁道", "崩坏星穹铁道"],
+    "zzz": ["绝区零", "Zenless Zone Zero", "绝区零"],
+    "wuwa": ["鸣潮", "Wuthering Waves"],
+    "arknights": ["明日方舟", "Arknights", "明日方舟"],
+    "bluearchive": ["碧蓝档案", "Blue Archive"],
+    "anime": [],
+}
+
+
+def load_catalog(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        raise SystemExit(f"missing {path}; run scripts/fetch_catalog.py first")
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload.get("characters"), list) or not payload["characters"]:
+        raise SystemExit(f"{path} has no characters")
+    return payload
+
+
+def weekday_bucket(key: str) -> int:
+    return int(hashlib.md5(key.encode("utf-8")).hexdigest()[:8], 16) % 7
+
+
+def is_due(character: dict[str, Any], today: str) -> bool:
+    """Radar candidates every day; evergreen characters one weekday out of seven."""
+    status = character.get("status")
+    if status in {"LEAKED", "LIVE"}:
+        return True
+    if status == "EVERGREEN" and character.get("key"):
+        weekday = datetime.fromisoformat(today).date().weekday()
+        return weekday_bucket(str(character["key"])) == weekday
+    return False
+
+
+def work_compatible(character: dict[str, Any], previous_row: dict[str, Any]) -> bool:
+    """Legacy heat rows are matched by name only. An alias may be reused across works."""
+    new = short_work(str(character.get("work") or ""))
+    old = short_work(str(previous_row.get("work") or ""))
+    if not new or not old:
+        return False
+    return new == old or new in old or old in new
+
+
+def display_name(character: dict[str, Any], previous_by_name: dict[str, dict[str, Any]]) -> str:
+    """Keep a legacy heat name only when the alias belongs to the same work.
+
+    心月狐 is the name already shipped for 鸣潮的「心」. Lucy on a different
+    game is not that Edgerunners row.
+    """
+    for alias in character.get("aliases") or []:
+        previous = previous_by_name.get(str(alias))
+        if previous and work_compatible(character, previous):
+            return str(alias)
+    return str(character.get("name") or "")
+
+
+def short_work(work: str) -> str:
+    text = (work or "").strip()
+    if not text:
+        return ""
+    return text.split()[0]
+
+
+def as_watch_item(character: dict[str, Any], name: str) -> dict[str, Any]:
+    work = short_work(str(character.get("work") or ""))
+    synonyms = list(GAME_SYNONYMS.get(str(character.get("game") or ""), []))
+    if work and work not in synonyms:
+        synonyms.insert(0, work)
+    keyword = f"{name} {work}".strip() if work and work not in name else name
+    search_names = [name]
+    for alias in character.get("aliases") or []:
+        if alias and alias not in search_names:
+            search_names.append(str(alias))
+        if len(search_names) >= 3:
+            break
+    return {
+        "name": name,
+        "kind": character.get("kind") or "GAME",
+        "searchNames": search_names,
+        "workSynonyms": synonyms,
+        "bilibiliKeywords": [keyword],
+    }
 
 
 def load_previous(path: Path) -> dict[str, Any] | None:
@@ -371,7 +457,10 @@ def fetch_bangumi_character(
             if not isinstance(cid, int):
                 continue
             subjects = client.subjects(cid)
-            matched = [s for s in subjects if subject_matches_work(s, synonyms)]
+            matched = [
+                s for s in subjects
+                if subject_matches_work(s, synonyms) and "客串" not in str(s.get("staff") or "")
+            ]
             if not matched:
                 continue
             if wanted_type and not any(s.get("type") == wanted_type for s in matched) and not any(
@@ -447,6 +536,40 @@ def summarize_bili_videos(videos: list[dict[str, Any]], now: datetime) -> dict[s
     }
 
 
+def fetch_bangumi_direct(
+    client: BangumiClient,
+    character_id: int,
+    subject_id: int | None,
+    kind: str,
+    fetched_at: str,
+) -> dict[str, Any] | None:
+    detail = client.character(character_id) or {}
+    stat = detail.get("stat") or {}
+    subject_collect = None
+    subject_name = None
+    airing = False
+    if isinstance(subject_id, int):
+        airing = subject_id in client.calendar_ids
+        if kind == "ANIME":
+            info = client.subject(subject_id)
+            if info:
+                subject_name = info.get("name_cn") or info.get("name")
+                col = info.get("collection") or {}
+                subject_collect = int(col.get("wish") or 0) + int(col.get("doing") or 0) + int(col.get("collect") or 0)
+    return {
+        "characterId": character_id,
+        "characterName": detail.get("name"),
+        "collects": int((stat or {}).get("collects") or 0),
+        "comments": int((stat or {}).get("comments") or 0),
+        "subjectId": subject_id,
+        "subjectName": subject_name,
+        "subjectCollect": subject_collect,
+        "airing": airing,
+        "matchedBy": "catalog",
+        "fetchedAt": fetched_at,
+    }
+
+
 def fetch_bilibili_character(
     client: BilibiliClient,
     item: dict[str, Any],
@@ -456,7 +579,7 @@ def fetch_bilibili_character(
     best: dict[str, Any] | None = None
     keywords = list(item.get("bilibiliKeywords") or [item["name"]])
     for keyword in keywords:
-        payload = client.search_videos(keyword, pages=2)
+        payload = client.search_videos(keyword, pages=1)
         summary = summarize_bili_videos(payload["videos"], now)
         row = {
             "keyword": keyword,
@@ -640,6 +763,24 @@ def fetch_nanoka_discoveries(http: Http, watch_names: set[str]) -> list[dict[str
     return found
 
 
+def carry_heat(
+    previous_row: dict[str, Any],
+    character: dict[str, Any],
+    name: str,
+    generated_fallback: str | None,
+) -> dict[str, Any]:
+    return {
+        "key": character.get("key"),
+        "name": name,
+        "work": character.get("work") or previous_row.get("work") or "",
+        "kind": character.get("kind") or previous_row.get("kind") or "",
+        "heatScore": previous_row.get("heatScore") or 0,
+        "heatFetchedAt": previous_row.get("heatFetchedAt") or generated_fallback,
+        "heatComponents": previous_row.get("heatComponents") or {},
+        "metrics": previous_row.get("metrics"),
+    }
+
+
 def fetch_weibo(http: Http, names: list[str]) -> dict[str, Any]:
     payload = http.request("https://weibo.com/ajax/side/hotSearch")
     if isinstance(payload, str):
@@ -658,40 +799,73 @@ def fetch_weibo(http: Http, names: list[str]) -> dict[str, Any]:
     return {"hotHits": hits, "hotCount": len(band)}
 
 
-def run(out_path: Path, write_assets: bool) -> int:
+def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
     generated = now_utc()
     generated_at = iso(generated)
-    watchlist = load_watchlist()
+    today = generated.astimezone(BEIJING).date().isoformat()
+    catalog = load_catalog(catalog_path)
+    catalog_characters = [row for row in catalog["characters"] if isinstance(row, dict) and row.get("key")]
     previous = load_previous(out_path)
+    previous_by_key: dict[str, dict[str, Any]] = {}
+    previous_by_name: dict[str, dict[str, Any]] = {}
+    if previous:
+        for row in previous.get("characters") or []:
+            if not isinstance(row, dict):
+                continue
+            if row.get("key"):
+                previous_by_key[str(row["key"])] = row
+            if row.get("name"):
+                previous_by_name[str(row["name"])] = row
+    previous_names = set(previous_by_name)
+    named = []
+    for character in catalog_characters:
+        key = str(character["key"])
+        named.append((character, display_name(character, previous_by_name), is_due(character, today)))
+    due = [(character, name) for character, name, wanted in named if wanted]
+    print(f"catalog {len(catalog_characters)} due {len(due)} on {today}")
 
     sources = {
         "bangumi": source_run("failed"),
         "bilibili": source_run("failed"),
         "weibo": source_run("skipped", error="not wired as a scoring source this round"),
-        "nanoka": source_run("failed"),
+        "nanoka": source_run("skipped", error="character index is read from catalog.json"),
         "pixiv": source_run("skipped", error="needs PIXIV_REFRESH_TOKEN; deferred"),
     }
 
-    bangumi_http = Http(USER_AGENT, min_interval=0.7)
-    bili_http = Http(BILI_UA, min_interval=1.0)
-    extra_http = Http(USER_AGENT, min_interval=0.5)
+    bangumi_http = Http(USER_AGENT, min_interval=0.55)
+    bili_http = Http(BILI_UA, min_interval=1.25)
 
-    bangumi_by_name: dict[str, dict[str, Any] | None] = {}
-    bili_by_name: dict[str, dict[str, Any] | None] = {}
-    discoveries: list[dict[str, Any]] = []
+    bangumi_by_key: dict[str, dict[str, Any] | None] = {}
+    bili_by_key: dict[str, dict[str, Any] | None] = {}
     weibo_raw: dict[str, Any] | None = None
+    bili_aborted = False
 
     bangumi_ok = False
     try:
         bangumi = BangumiClient(bangumi_http)
         bangumi.load_calendar()
         fetched_at = iso(now_utc())
-        for item in watchlist:
+        for character, name in due:
+            key = str(character["key"])
             try:
-                bangumi_by_name[item["name"]] = fetch_bangumi_character(bangumi, item, fetched_at)
+                subject_id = character.get("bangumiSubjectId")
+                if str(key).startswith("bgm:") and str(key).split(":", 1)[1].isdigit():
+                    bangumi_by_key[key] = fetch_bangumi_direct(
+                        bangumi,
+                        int(key.split(":", 1)[1]),
+                        subject_id if isinstance(subject_id, int) else None,
+                        str(character.get("kind") or "ANIME"),
+                        fetched_at,
+                    )
+                else:
+                    bangumi_by_key[key] = fetch_bangumi_character(
+                        bangumi,
+                        as_watch_item(character, name),
+                        fetched_at,
+                    )
             except Exception as e:
-                print(f"bangumi {item['name']} failed: {e}", file=sys.stderr)
-                bangumi_by_name[item["name"]] = None
+                print(f"bangumi {name} failed: {e}", file=sys.stderr)
+                bangumi_by_key[key] = None
         bangumi_ok = True
         sources["bangumi"] = source_run("ok", fetched_at)
     except Exception as e:
@@ -702,13 +876,34 @@ def run(out_path: Path, write_assets: bool) -> int:
     try:
         bili = BilibiliClient(bili_http)
         fetched_at = iso(now_utc())
-        for item in watchlist:
+        risk_streak = 0
+        for character, name in due:
+            key = str(character["key"])
+            if bili_aborted:
+                break
             try:
-                bili_by_name[item["name"]] = fetch_bilibili_character(bili, item, generated, fetched_at)
+                bili_by_key[key] = fetch_bilibili_character(
+                    bili,
+                    as_watch_item(character, name),
+                    generated,
+                    fetched_at,
+                )
+                risk_streak = 0
             except Exception as e:
-                print(f"bilibili {item['name']} failed: {e}", file=sys.stderr)
-                bili_by_name[item["name"]] = None
-        if any(bili_by_name.get(item["name"]) for item in watchlist):
+                print(f"bilibili {name} failed: {e}", file=sys.stderr)
+                bili_by_key[key] = None
+                text = str(e)
+                if "412" in text or "429" in text:
+                    risk_streak += 1
+                    time.sleep(12 * risk_streak)
+                    if risk_streak >= 2:
+                        bili_aborted = True
+                        print("bilibili rate limit; stopped the rest of this run", file=sys.stderr)
+        fetched_any = any(bili_by_key.get(str(character["key"])) for character, _name in due)
+        if bili_aborted and fetched_any:
+            sources["bilibili"] = source_run("partial", fetched_at, error="stopped after HTTP 412/429")
+            bili_ok = True
+        elif fetched_any:
             bili_ok = True
             sources["bilibili"] = source_run("ok", fetched_at)
         else:
@@ -717,36 +912,62 @@ def run(out_path: Path, write_assets: bool) -> int:
         print(f"bilibili source failed: {e}", file=sys.stderr)
         sources["bilibili"] = source_run("failed", error=str(e))
 
+    weibo_names = [name for _character, name in due if len(name) >= 2]
     try:
         weibo_http = Http(
             "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
             min_interval=0.8,
             extra_headers={"Referer": "https://weibo.com/"},
         )
-        weibo_raw = fetch_weibo(weibo_http, [item["name"] for item in watchlist])
+        weibo_raw = fetch_weibo(weibo_http, weibo_names)
         sources["weibo"] = source_run("ok", iso(now_utc()))
     except Exception as e:
         print(f"weibo source failed: {e}", file=sys.stderr)
         sources["weibo"] = source_run("failed", error=str(e))
 
-    try:
-        watch_names = {item["name"] for item in watchlist}
-        for item in watchlist:
-            watch_names.update(item.get("searchNames") or [])
-        discoveries = fetch_nanoka_discoveries(extra_http, watch_names)
-        sources["nanoka"] = source_run("ok", iso(now_utc()))
-    except Exception as e:
-        print(f"nanoka source failed: {e}", file=sys.stderr)
-        sources["nanoka"] = source_run("failed", error=str(e))
+    discoveries = [
+        {
+            "key": character.get("key"),
+            "nameZh": character.get("name"),
+            "nameEn": next((alias for alias in character.get("aliases") or [] if alias), ""),
+            "work": character.get("work"),
+            "game": character.get("game"),
+            "source": character.get("source"),
+            "firstSeenAt": character.get("firstSeenAt"),
+            "status": character.get("status"),
+        }
+        for character in catalog_characters
+        if character.get("baseline") is False and character.get("status") == "LEAKED"
+    ]
 
     characters: list[dict[str, Any]] = []
+    fresh_count = 0
+    carried_count = 0
     print()
-    print(f"{'角色':<8} {'B站7日投稿':>10} {'7日播放':>10} {'BGM收藏':>8} {'热度':>6} {'原假值':>6} {'差值':>6}")
-    for item in watchlist:
-        name = item["name"]
-        kind = item["kind"]
-        bangumi_m = bangumi_by_name.get(name)
-        bili_m = bili_by_name.get(name)
+    print(f"{'角色':<12} {'B站7日投稿':>10} {'7日播放':>10} {'BGM收藏':>8} {'热度':>6}")
+    for character, name, wanted in named:
+        key = str(character["key"])
+        previous_row = previous_by_key.get(key)
+        if previous_row is None:
+            named_prev = previous_by_name.get(name)
+            if named_prev and (name == character.get("name") or work_compatible(character, named_prev)):
+                previous_row = named_prev
+        if not wanted:
+            if previous_row:
+                characters.append(carry_heat(previous_row, character, name, previous.get("generatedAt") if previous else None))
+                carried_count += 1
+            continue
+        bangumi_m = bangumi_by_key.get(key)
+        bili_m = bili_by_key.get(key)
+        if bili_aborted and not bili_m and previous_row:
+            characters.append(carry_heat(previous_row, character, name, previous.get("generatedAt") if previous else None))
+            carried_count += 1
+            continue
+        if bangumi_m is None and bili_m is None and previous_row:
+            characters.append(carry_heat(previous_row, character, name, previous.get("generatedAt") if previous else None))
+            carried_count += 1
+            continue
+        kind = character.get("kind") or "GAME"
         prev = previous_metrics(previous, name, generated_at)
         bili_score = bili_component(bili_m)
         bgm_score = bangumi_component(kind, bangumi_m)
@@ -762,7 +983,7 @@ def run(out_path: Path, write_assets: bool) -> int:
         )
         growth = None
         if video_growth is not None or play_growth is not None:
-            growth_parts = [p for p in (video_growth, play_growth) if p is not None]
+            growth_parts = [part for part in (video_growth, play_growth) if part is not None]
             growth = sum(growth_parts) / len(growth_parts)
         weights = {"bilibili": 0.50, "bangumi": 0.20, "growth": 0.30} if growth is not None else {"bilibili": 0.75, "bangumi": 0.25}
         heat, components = weighted_blend(
@@ -773,10 +994,12 @@ def run(out_path: Path, write_assets: bool) -> int:
             heat = min(100, heat + 6)
             components = dict(components)
         row = {
+            "key": key,
             "name": name,
-            "work": item["work"],
+            "work": character.get("work") or "",
             "kind": kind,
             "heatScore": heat,
+            "heatFetchedAt": generated_at,
             "heatComponents": components,
             "metrics": {
                 "bangumi": bangumi_m,
@@ -788,12 +1011,12 @@ def run(out_path: Path, write_assets: bool) -> int:
             },
         }
         characters.append(row)
-        seed = SEED_HEAT.get(name)
+        fresh_count += 1
         videos = "-" if bili_m is None else bili_m.get("recentVideos7d")
         plays = "-" if bili_m is None else bili_m.get("recentPlaySum7d")
         collects = "-" if bangumi_m is None else bangumi_m.get("collects")
-        delta = "-" if seed is None else heat - seed
-        print(f"{name:<8} {str(videos):>10} {str(plays):>10} {str(collects):>8} {heat:>6} {str(seed):>6} {str(delta):>6}")
+        print(f"{name:<12} {str(videos):>10} {str(plays):>10} {str(collects):>8} {heat:>6}")
+    print(f"fetched {fresh_count}, carried {carried_count}, bili_aborted={bili_aborted}")
 
     history = build_history(previous, generated_at)
     feed = {
@@ -894,14 +1117,16 @@ def check_dedupe() -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Fetch heat signals for wig-radar")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
-    parser.add_argument("--write-assets", action="store_true", default=True)
+    parser.add_argument("--catalog", type=Path, default=CATALOG_PATH)
+    parser.add_argument("--write-assets", action="store_true", dest="write_assets")
     parser.add_argument("--no-write-assets", action="store_false", dest="write_assets")
+    parser.set_defaults(write_assets=False)
     parser.add_argument("--check-dedupe", action="store_true", help="Run the local history-dedupe check and exit")
     args = parser.parse_args()
     if args.check_dedupe:
         return check_dedupe()
     try:
-        return run(args.out, args.write_assets)
+        return run(args.out, args.write_assets, args.catalog)
     except Exception as e:
         print(f"fatal: {e}", file=sys.stderr)
         return 1
