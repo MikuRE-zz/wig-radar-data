@@ -9,9 +9,12 @@ from __future__ import annotations
 import re
 from datetime import date, datetime, timedelta, timezone
 
+from pypinyin import Style, pinyin
+
 BEIJING = timezone(timedelta(hours=8))
 GAME_WINDOW_DAYS = 40
 ANIME_WINDOW_DAYS = 21
+SEARCH_KEY_COMBOS = 16
 
 RUBY_MARKUP = re.compile(r"\{RUBY_[BE]#[^}]*\}")
 
@@ -38,6 +41,40 @@ def dedupe_aliases(name: str, values: list[str]) -> list[str]:
         seen.add(key)
         aliases.append(text)
     return aliases
+
+
+def _has_han(text: str) -> bool:
+    return any("\u4e00" <= ch <= "\u9fff" or "\u3400" <= ch <= "\u4dbf" for ch in text)
+
+
+def pinyin_keys(text: str, limit: int = SEARCH_KEY_COMBOS) -> list[str]:
+    """Full pinyin and initials for every reading combination, capped at `limit` each.
+
+    Heteronyms matter: 洛克茜 is luokexi, 长离 is changli, 重云 is chongyun, and
+    the default reading gets all three wrong.
+    """
+    if not _has_han(text):
+        return []
+    syllables: list[list[str]] = []
+    for ch in text:
+        if _has_han(ch):
+            readings = [r for r in pinyin(ch, style=Style.NORMAL, heteronym=True)[0] if r.isascii()]
+            syllables.append(sorted(set(readings)) or [ch])
+        elif ch.isascii() and ch.isalnum():
+            syllables.append([ch.lower()])
+    combos: list[list[str]] = [[]]
+    for options in syllables:
+        combos = [prefix + [option] for prefix in combos for option in options][:limit]
+    full = ["".join(parts) for parts in combos]
+    initials = ["".join(part[0] for part in parts if part) for parts in combos]
+    return list(dict.fromkeys(full + initials))
+
+
+def search_keys(name: str, aliases: list[str]) -> list[str]:
+    keys: list[str] = []
+    for text in [name, *aliases]:
+        keys.extend(pinyin_keys(str(text or "")))
+    return list(dict.fromkeys(keys))
 
 
 def _junk_alias(text: str) -> bool:

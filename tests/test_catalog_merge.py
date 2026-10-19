@@ -5,7 +5,7 @@ from __future__ import annotations
 import unittest
 from datetime import date
 
-from scripts.catalog_lib import merge_characters, status_from_release
+from scripts.catalog_lib import merge_characters, pinyin_keys, search_keys, status_from_release
 
 
 def _row(key: str, source: str = "nanoka-gi") -> dict:
@@ -76,6 +76,31 @@ class CatalogMergeTest(unittest.TestCase):
         self.assertEqual("EVERGREEN", status_from_release("ANIME", date(2026, 9, 1), today))
         self.assertEqual("LIVE", status_from_release("GAME", date(2026, 9, 20), today))
         self.assertEqual("EVERGREEN", status_from_release("GAME", date(2026, 8, 1), today))
+
+
+class SearchKeyTest(unittest.TestCase):
+    def test_heteronyms_cover_the_real_reading(self) -> None:
+        self.assertIn("luokexi", pinyin_keys("洛克茜"))
+        self.assertIn("lkx", pinyin_keys("洛克茜"))
+        self.assertIn("changli", pinyin_keys("长离"))
+        self.assertIn("cl", pinyin_keys("长离"))
+        self.assertIn("chongyun", pinyin_keys("重云"))
+
+    def test_non_han_names_have_no_keys_and_mixed_names_keep_letters(self) -> None:
+        self.assertEqual([], pinyin_keys("Lucy"))
+        self.assertEqual([], pinyin_keys("ニケ"))
+        self.assertIn("xingshenaxi", pinyin_keys("星神★阿希"))
+        self.assertIn("d2hao", pinyin_keys("D2号"))
+        self.assertIn("d2h", pinyin_keys("D2号"))
+
+    def test_combinations_are_capped(self) -> None:
+        keys = pinyin_keys("长长长长长长")
+        self.assertLessEqual(len(keys), 32)
+
+    def test_search_keys_include_chinese_aliases(self) -> None:
+        keys = search_keys("心", ["心月狐", "Xin"])
+        self.assertIn("xin", keys)
+        self.assertIn("xyh", keys)
 
 
 if __name__ == "__main__":

@@ -40,6 +40,7 @@ from scripts.catalog_lib import (  # noqa: E402
     beijing_today,
     dedupe_aliases,
     merge_characters,
+    search_keys,
     status_from_release,
     strip_ruby,
 )
@@ -1399,6 +1400,8 @@ def main() -> int:
             sources[source]["count"] = kept
             sources[source]["keptPrevious"] = True
     settle_unattempted(characters)
+    for row in characters:
+        row["searchKeys"] = search_keys(str(row.get("name") or ""), list(row.get("aliases") or []))
     hair_stats = {"attempted": 0, "ok": 0, "poster": 0, "failed": 0, "seconds": 0, "skipped": True}
     if not args.skip_hair:
         hair_stats = apply_hair(characters, args.hair_limit)
