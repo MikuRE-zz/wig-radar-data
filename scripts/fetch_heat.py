@@ -832,20 +832,30 @@ def build_history(
             cloned = dict(entry)
             cloned["characters"] = rows
             entries.append(cloned)
-    # One row per Beijing date. A delayed second cron run the same day replaces
-    # the earlier snapshot instead of stacking a near-zero growth step.
-    by_day: dict[str, dict[str, Any]] = {}
+    # One entry per Beijing date. A second run the same day overrides the earlier
+    # rows instead of stacking a near-zero growth step. Entries only hold the rows
+    # fetched that run, so same-day runs are merged by name, later rows winning.
+    by_day: dict[str, list[dict[str, Any]]] = {}
     for entry in entries:
         if not isinstance(entry, dict):
             continue
         captured_at = entry.get("capturedAt")
         if not isinstance(captured_at, str) or not captured_at:
             continue
-        day = beijing_day(captured_at)
-        current = by_day.get(day)
-        if current is None or captured_at > str(current.get("capturedAt") or ""):
-            by_day[day] = entry
-    ordered = sorted(by_day.values(), key=lambda entry: str(entry.get("capturedAt") or ""), reverse=True)
+        by_day.setdefault(beijing_day(captured_at), []).append(entry)
+    merged_days: list[dict[str, Any]] = []
+    for same_day in by_day.values():
+        same_day.sort(key=lambda entry: str(entry.get("capturedAt") or ""))
+        latest = same_day[-1]
+        rows_by_name: dict[Any, dict[str, Any]] = {}
+        for entry in same_day:
+            for row in entry.get("characters") or []:
+                if isinstance(row, dict):
+                    rows_by_name[row.get("name")] = row
+        merged = dict(latest)
+        merged["characters"] = list(rows_by_name.values())
+        merged_days.append(merged)
+    ordered = sorted(merged_days, key=lambda entry: str(entry.get("capturedAt") or ""), reverse=True)
     anchor = parse_instant(generated_at).astimezone(BEIJING).date()
     kept: list[dict[str, Any]] = []
     for entry in ordered:

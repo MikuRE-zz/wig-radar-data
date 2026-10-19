@@ -287,6 +287,23 @@ class HeatHistoryTest(unittest.TestCase):
         self.assertEqual("2026-10-13T04:00:00Z", history[0]["capturedAt"])
         self.assertEqual(2, history[0]["characters"][0]["bilibiliRecentVideos7d"])
 
+    def test_same_day_runs_merge_rows_fetched_in_either_run(self) -> None:
+        previous = {
+            "generatedAt": "2026-10-13T04:00:00Z",
+            "characters": [
+                _live("锁暝", 2, "2026-10-13T04:00:00Z", key="a"),
+                _live("常青乙", 7, "2026-10-13T04:00:00Z", key="c"),
+            ],
+            "history": [
+                {"capturedAt": "2026-10-13T01:00:00Z", "characters": [_flat("锁暝", 1), _flat("常青甲", 5)]},
+            ],
+        }
+        history = build_history(previous, "2026-10-14T06:00:00Z")
+        self.assertEqual(1, len(history))
+        self.assertEqual("2026-10-13T04:00:00Z", history[0]["capturedAt"])
+        rows = {row["name"]: row["bilibiliRecentVideos7d"] for row in history[0]["characters"]}
+        self.assertEqual({"锁暝": 2, "常青甲": 5, "常青乙": 7}, rows)
+
     def test_growth_baseline_uses_real_fetch_time(self) -> None:
         stale = _live("锁暝", 100, "2026-10-01T00:00:00Z", key="a")
         previous = {
