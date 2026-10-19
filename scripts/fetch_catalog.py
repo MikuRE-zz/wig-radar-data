@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import html
 import io
 import json
 import random
@@ -22,6 +23,7 @@ import threading
 import time
 import urllib.error
 import urllib.parse
+import unicodedata
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, datetime, timezone
@@ -62,6 +64,12 @@ AK_TABLE = (
 )
 SCHALE_STUDENTS = "https://schaledb.com/data/cn/students.json"
 BANGUMI = "https://api.bgm.tv"
+# This season's hottest shows, then next season. A short side is filled from the other.
+CURRENT_SEASON_KEEP = 20
+NEXT_SEASON_KEEP = 10
+MAIN_CAST_KEEP = 4
+BANGUMI_SELECTION = "top-works-v1"
+COLLECTION_KEYS = ("wish", "collect", "doing", "on_hold", "dropped")
 
 AK_PROFESSIONS = {
     "PIONEER",
@@ -297,14 +305,136 @@ def source_run(status: str, endpoint: str, *, count: int = 0, error: str | None 
     return row
 
 
-def shrink_guard(source: str, rows: list[dict] | None, previous: dict | None) -> list[dict] | None:
+def shrink_guard(
+    source: str,
+    rows: list[dict] | None,
+    previous: dict | None,
+    *,
+    selection: str | None = None,
+) -> list[dict] | None:
     if rows is None or not previous:
         return rows
+    # A new bangumi selection rule is allowed to cut the list in half once.
+    # The same version keeps the guard so a broken fetch cannot wipe the source.
+    if source == "bangumi":
+        prev_meta = ((previous.get("sources") or {}).get("bangumi") or {})
+        if not isinstance(prev_meta, dict):
+            prev_meta = {}
+        if prev_meta.get("selection") != selection:
+            print(
+                f"bangumi: selection {prev_meta.get('selection')!r} -> {selection!r}; shrink guard skipped",
+                file=sys.stderr,
+            )
+            return rows
     old = [row for row in previous.get("characters") or [] if isinstance(row, dict) and row.get("source") == source]
     if len(old) >= 20 and len(rows) < len(old) * 0.5:
         print(f"{source}: new list {len(rows)} is under half of previous {len(old)}; keeping previous", file=sys.stderr)
         return None
     return rows
+
+
+def clean_label(value: Any) -> str:
+    return html.unescape(str(value or "")).strip()
+
+
+def collection_total(payload: Any) -> int:
+    if not isinstance(payload, dict):
+        return 0
+    collection = payload.get("collection")
+    if not isinstance(collection, dict):
+        return 0
+    total = 0
+    for key in COLLECTION_KEYS:
+        value = collection.get(key)
+        if value is None:
+            continue
+        try:
+            total += int(value)
+        except (TypeError, ValueError):
+            continue
+    return total
+
+
+def work_heats(show_ids: list[int], fetch_subject) -> dict[int, int]:
+    """Sum subject collection counts. One failed subject scores 0 and does not abort."""
+    heats: dict[int, int] = {}
+    for sid in show_ids:
+        try:
+            heats[sid] = collection_total(fetch_subject(sid))
+        except Exception as error:
+            print(f"bangumi subject {sid} heat failed: {error}", file=sys.stderr)
+            heats[sid] = 0
+    return heats
+
+
+def select_shows(
+    current: list[dict[str, Any]],
+    upcoming: list[dict[str, Any]],
+    heats: dict[int, int],
+    *,
+    current_keep: int = CURRENT_SEASON_KEEP,
+    next_keep: int = NEXT_SEASON_KEEP,
+) -> list[dict[str, Any]]:
+    """Keep the hottest current-season and next-season shows, filling to current_keep + next_keep."""
+    target = current_keep + next_keep
+
+    def ranked(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+        def sort_key(row: dict[str, Any]) -> tuple[int, int]:
+            sid = row.get("id")
+            heat = heats.get(sid, 0) if isinstance(sid, int) else 0
+            try:
+                heat = int(heat or 0)
+            except (TypeError, ValueError):
+                heat = 0
+            return (-heat, sid if isinstance(sid, int) else 0)
+
+        return sorted(rows, key=sort_key)
+
+    current_ranked = ranked(current)
+    next_ranked = ranked(upcoming)
+    picked_current = current_ranked[:current_keep]
+    picked_next = next_ranked[:next_keep]
+    picked = list(picked_current) + list(picked_next)
+    if len(picked) < target:
+        if len(picked_current) < current_keep:
+            filler = next_ranked[next_keep:]
+        elif len(picked_next) < next_keep:
+            filler = current_ranked[current_keep:]
+        else:
+            filler = []
+        picked.extend(filler[: target - len(picked)])
+    chosen: list[dict[str, Any]] = []
+    for row in picked:
+        copied = dict(row)
+        sid = copied.get("id")
+        heat = heats.get(sid, 0) if isinstance(sid, int) else 0
+        try:
+            copied["workHeat"] = int(heat or 0)
+        except (TypeError, ValueError):
+            copied["workHeat"] = 0
+        chosen.append(copied)
+    return chosen
+
+
+def _numeric_token(text: str) -> bool:
+    compact = text.strip()
+    if not compact:
+        return True
+    for ch in compact:
+        if ch.isspace() or ch.isdigit():
+            continue
+        if unicodedata.category(ch).startswith("P"):
+            continue
+        return False
+    return True
+
+
+def numeric_only_name(cn_name: str, original_name: str) -> bool:
+    """True when every present name is only digits, whitespace, and punctuation."""
+    labels = [text.strip() for text in (cn_name, original_name) if text and str(text).strip()]
+    if not labels:
+        return False
+    return all(_numeric_token(text) for text in labels)
 
 
 def _skip_traveler_form(cid: str, name: str) -> bool:
@@ -744,13 +874,16 @@ def fetch_bangumi(http: Http, today: date) -> tuple[list[dict] | None, dict[str,
                 premier = parse_day(item.get("air_date") or item.get("date"))
                 if not isinstance(sid, int) or premier is None:
                     continue
+                if item.get("nsfw"):
+                    continue
                 if not (start <= premier < end):
                     continue
                 kept_shows += 1
                 shows[sid] = {
                     "id": sid,
-                    "name": item.get("name_cn") or item.get("name") or "",
+                    "name": clean_label(item.get("name_cn") or item.get("name") or ""),
                     "release": premier,
+                    "season": "current",
                 }
         print(f"bangumi calendar: {airing} airing, {kept_shows} in {start.isoformat()}..{end.isoformat()}")
     except Exception as error:
@@ -770,8 +903,9 @@ def fetch_bangumi(http: Http, today: date) -> tuple[list[dict] | None, dict[str,
                 continue
             shows[sid] = {
                 "id": sid,
-                "name": item.get("name_cn") or item.get("nameCN") or item.get("name") or "",
+                "name": clean_label(item.get("name_cn") or item.get("nameCN") or item.get("name") or ""),
                 "release": premier,
+                "season": "next",
             }
             added += 1
         print(f"bangumi next season {nxt_start.isoformat()}..{nxt_end.isoformat()}: {added}")
@@ -779,10 +913,26 @@ def fetch_bangumi(http: Http, today: date) -> tuple[list[dict] | None, dict[str,
         errors.append(f"next season: {error}")
         print(f"bangumi next season failed: {error}", file=sys.stderr)
 
+    current_rows = [row for row in shows.values() if row.get("season") == "current"]
+    next_rows = [row for row in shows.values() if row.get("season") == "next"]
+    heats = work_heats(
+        [row["id"] for row in shows.values() if isinstance(row.get("id"), int)],
+        lambda sid: get_json(http, f"{BANGUMI}/v0/subjects/{sid}", timeout=40),
+    )
+    kept = select_shows(current_rows, next_rows, heats)
+    kept_current = sum(1 for row in kept if row.get("season") == "current")
+    kept_next = sum(1 for row in kept if row.get("season") == "next")
+    print(
+        f"bangumi keep {len(kept)} works "
+        f"(candidates {len(shows)}, current {kept_current}, next {kept_next})"
+    )
+    for show in kept:
+        print(f"bangumi work {show.get('season')} {show.get('workHeat')} {show.get('name')}")
+
     characters: dict[str, dict] = {}
     empty_shows = 0
     show_errors = 0
-    for show in shows.values():
+    for show in kept:
         try:
             listed = get_json(http, f"{BANGUMI}/v0/subjects/{show['id']}/characters", timeout=40)
         except Exception as error:
@@ -813,12 +963,19 @@ def fetch_bangumi(http: Http, today: date) -> tuple[list[dict] | None, dict[str,
         count=len(characters),
         error="; ".join(errors) or None,
         extra={
+            "selection": BANGUMI_SELECTION,
             "shows": len(shows),
+            "keptWorks": len(kept),
+            "keptCurrent": kept_current,
+            "keptNext": kept_next,
             "showsWithoutCast": empty_shows,
             "nextSeason": f"{nxt_start.isoformat()}/{nxt_end.isoformat()}",
         },
     )
-    print(f"bangumi: {len(characters)} characters from {len(shows)} shows ({empty_shows} without a kept cast)")
+    print(
+        f"bangumi: {len(characters)} characters from {len(kept)} works "
+        f"({empty_shows} without a kept cast)"
+    )
     return list(characters.values()), meta
 
 
@@ -856,53 +1013,76 @@ def list_subjects_between(http: Http, start: date, end: date) -> list[dict[str, 
 
 def pick_cast(listed: list[dict[str, Any]]) -> list[dict[str, Any]]:
     mains = [row for row in listed if row.get("relation") == "主角"]
-    supports = [row for row in listed if row.get("relation") == "配角"]
-    if len(supports) > 12:
-        supports = supports[:8]
-    return mains + supports
+    return mains[:MAIN_CAST_KEEP]
 
 
-def bangumi_character(http: Http, item: dict[str, Any], show: dict[str, Any], today: date) -> dict[str, Any] | None:
+def build_bangumi_character(
+    item: dict[str, Any],
+    show: dict[str, Any],
+    today: date,
+    detail: dict[str, Any] | None,
+) -> dict[str, Any] | None:
     cid = item.get("id")
     if not isinstance(cid, int):
         return None
     images = item.get("images") or {}
-    list_name = str(item.get("name") or "").strip()
+    list_name = clean_label(item.get("name"))
+    original = list_name
     name = list_name
-    aliases = [list_name]
-    try:
-        detail = get_json(http, f"{BANGUMI}/v0/characters/{cid}", timeout=40)
-    except Exception as error:
-        print(f"bangumi character {cid} detail failed: {error}", file=sys.stderr)
-        detail = None
+    aliases = [list_name] if list_name else []
+    cn_name = ""
     if isinstance(detail, dict):
         infobox = detail.get("infobox")
         cn_names = infobox_values(infobox, "简体中文名")
         if cn_names:
-            name = cn_names[0]
+            cn_name = cn_names[0]
+            name = cn_name
         for key in ("别名", "英文名", "日文名", "纯假名", "罗马字", "第二中文名"):
             aliases.extend(infobox_values(infobox, key))
         if detail.get("name"):
-            aliases.append(str(detail.get("name")))
+            original = clean_label(detail.get("name"))
+            aliases.append(original)
     if not name:
         return None
+    if numeric_only_name(cn_name or name, original):
+        return None
+    try:
+        work_heat = int(show.get("workHeat") or 0)
+    except (TypeError, ValueError):
+        work_heat = 0
     release: date = show["release"]
     status = status_from_release("ANIME", release, today)
     return base_character(
         key=f"bgm:{cid}",
         name=name,
         aliases=aliases,
-        work=str(show.get("name") or ""),
+        work=clean_label(show.get("name")),
         game="anime",
         version=None,
         kind="ANIME",
         status=status,
         releaseDate=release.isoformat(),
-        artUrl=usable_image(images.get("large")),
-        hairSampleUrl=usable_image(images.get("grid") or images.get("medium")),
+        artUrl=usable_image(images.get("large") if isinstance(images, dict) else None),
+        hairSampleUrl=usable_image(
+            (images.get("grid") or images.get("medium")) if isinstance(images, dict) else None
+        ),
         bangumiSubjectId=show["id"],
+        workHeat=work_heat,
         source="bangumi",
     )
+
+
+def bangumi_character(http: Http, item: dict[str, Any], show: dict[str, Any], today: date) -> dict[str, Any] | None:
+    cid = item.get("id")
+    detail = None
+    if isinstance(cid, int):
+        try:
+            loaded = get_json(http, f"{BANGUMI}/v0/characters/{cid}", timeout=40)
+            detail = loaded if isinstance(loaded, dict) else None
+        except Exception as error:
+            print(f"bangumi character {cid} detail failed: {error}", file=sys.stderr)
+            detail = None
+    return build_bangumi_character(item, show, today, detail)
 
 
 def infobox_values(infobox: Any, key: str) -> list[str]:
@@ -923,7 +1103,7 @@ def infobox_values(infobox: Any, key: str) -> list[str]:
                     text = part.get("v") or part.get("value") or ""
                     if str(text).strip():
                         found.append(str(text).strip())
-    return [text for text in found if text]
+    return [clean_label(text) for text in found if text and clean_label(text)]
 
 
 def prefer_character(left: dict, right: dict) -> dict:
@@ -1196,7 +1376,7 @@ def main() -> int:
     ba_rows, sources["bluearchive"] = fetch_blue_archive(http, today_date)
     fetched["bluearchive"] = shrink_guard("bluearchive", ba_rows, previous)
     bgm_rows, sources["bangumi"] = fetch_bangumi(bangumi_http, today_date)
-    fetched["bangumi"] = shrink_guard("bangumi", bgm_rows, previous)
+    fetched["bangumi"] = shrink_guard("bangumi", bgm_rows, previous, selection=BANGUMI_SELECTION)
     if fetched["bangumi"] is None and bgm_rows is not None:
         sources["bangumi"]["status"] = "failed"
         sources["bangumi"]["error"] = (sources["bangumi"].get("error") or "") + "; result shrank; kept previous"

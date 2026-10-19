@@ -38,6 +38,22 @@ BILI_UA = (
 )
 RECENT_DAYS = 7
 HISTORY_KEEP = 30
+# Radar candidates and evergreen rotation share this cap.
+DAILY_CAP = 120
+# Shared by the Bangumi and Bilibili stages, measured from process start.
+# Leave headroom so one in-flight character still ends the run inside 15 minutes.
+TIME_BUDGET_SECONDS = 840
+TIER_GAME_LEAKED = "game-leaked"
+TIER_GAME_LIVE = "game-live"
+TIER_ANIME = "anime"
+TIER_EVERGREEN = "evergreen"
+TIER_ORDER = (TIER_GAME_LEAKED, TIER_GAME_LIVE, TIER_ANIME, TIER_EVERGREEN)
+TIER_LABELS = {
+    TIER_GAME_LEAKED: "游戏LEAKED",
+    TIER_GAME_LIVE: "游戏LIVE",
+    TIER_ANIME: "番剧",
+    TIER_EVERGREEN: "常青",
+}
 
 # Bilibili WBI mixin table (public algorithm).
 MIXIN_KEY_ENC_TAB = [
@@ -205,19 +221,102 @@ def load_catalog(path: Path) -> dict[str, Any]:
     return payload
 
 
-def weekday_bucket(key: str) -> int:
-    return int(hashlib.md5(key.encode("utf-8")).hexdigest()[:8], 16) % 7
-
-
-def is_due(character: dict[str, Any], today: str) -> bool:
-    """Radar candidates every day; evergreen characters one weekday out of seven."""
+def character_tier(character: dict[str, Any]) -> str:
     status = character.get("status")
-    if status in {"LEAKED", "LIVE"}:
-        return True
-    if status == "EVERGREEN" and character.get("key"):
-        weekday = datetime.fromisoformat(today).date().weekday()
-        return weekday_bucket(str(character["key"])) == weekday
-    return False
+    is_anime = character.get("kind") == "ANIME" or character.get("game") == "anime"
+    if is_anime and status in {"LEAKED", "LIVE"}:
+        return TIER_ANIME
+    if status == "LEAKED":
+        return TIER_GAME_LEAKED
+    if status == "LIVE":
+        return TIER_GAME_LIVE
+    return TIER_EVERGREEN
+
+
+def _work_heat(character: dict[str, Any]) -> int:
+    try:
+        return int(character.get("workHeat") or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _anime_ordered(indexed: list[tuple[int, dict[str, Any]]]) -> list[dict[str, Any]]:
+    groups: dict[Any, list[tuple[int, dict[str, Any]]]] = {}
+    for index, row in indexed:
+        subject_id = row.get("bangumiSubjectId")
+        group_id: Any = subject_id if isinstance(subject_id, int) else ("work", str(row.get("work") or ""))
+        groups.setdefault(group_id, []).append((index, row))
+
+    def group_key(group_id: Any) -> tuple[int, int]:
+        members = groups[group_id]
+        heat = max(_work_heat(row) for _, row in members)
+        return (-heat, members[0][0])
+
+    ordered: list[dict[str, Any]] = []
+    for group_id in sorted(groups, key=group_key):
+        members = sorted(groups[group_id], key=lambda pair: pair[0])
+        ordered.extend(row for _, row in members)
+    return ordered
+
+
+def _evergreen_ordered(
+    indexed: list[tuple[int, dict[str, Any]]],
+    previous_by_key: dict[str, dict[str, Any]],
+) -> list[dict[str, Any]]:
+    def sort_key(pair: tuple[int, dict[str, Any]]) -> tuple[int, str, str]:
+        _index, row = pair
+        previous = previous_by_key.get(str(row.get("key") or ""))
+        fetched = ""
+        if isinstance(previous, dict) and isinstance(previous.get("heatFetchedAt"), str):
+            fetched = previous["heatFetchedAt"]
+        missing = 0 if not fetched else 1
+        return (missing, fetched, str(row.get("key") or ""))
+
+    return [row for _, row in sorted(indexed, key=sort_key)]
+
+
+def build_queue(
+    characters: list[dict[str, Any]],
+    previous_by_key: dict[str, dict[str, Any]] | None = None,
+    *,
+    daily_cap: int = DAILY_CAP,
+) -> dict[str, Any]:
+    """Order today's fetches. Evergreen slots are whatever the cap has left."""
+    previous_by_key = previous_by_key or {}
+    buckets: dict[str, list[tuple[int, dict[str, Any]]]] = {tier: [] for tier in TIER_ORDER}
+    for index, row in enumerate(characters):
+        if not isinstance(row, dict) or not row.get("key"):
+            continue
+        buckets[character_tier(row)].append((index, row))
+    ordered: list[tuple[str, dict[str, Any]]] = []
+    ordered.extend((TIER_GAME_LEAKED, row) for _, row in buckets[TIER_GAME_LEAKED])
+    ordered.extend((TIER_GAME_LIVE, row) for _, row in buckets[TIER_GAME_LIVE])
+    ordered.extend((TIER_ANIME, row) for row in _anime_ordered(buckets[TIER_ANIME]))
+    ordered.extend((TIER_EVERGREEN, row) for row in _evergreen_ordered(buckets[TIER_EVERGREEN], previous_by_key))
+    cap = max(0, int(daily_cap))
+    chosen = ordered[:cap]
+    delayed = ordered[cap:]
+    stats = {tier: {"queued": 0, "deferred": 0} for tier in TIER_ORDER}
+    for tier, _row in chosen:
+        stats[tier]["queued"] += 1
+    for tier, _row in delayed:
+        stats[tier]["deferred"] += 1
+    return {
+        "selected": [row for _tier, row in chosen],
+        "deferred": [row for _tier, row in delayed],
+        "stats": stats,
+    }
+
+
+def take_within_budget(items: list, expired, consume) -> tuple[list, list]:
+    """Run consume until the shared budget is gone. Do not start the next item after that."""
+    taken: list = []
+    for index, item in enumerate(items):
+        if expired():
+            return taken, items[index:]
+        consume(item)
+        taken.append(item)
+    return taken, []
 
 
 def work_compatible(character: dict[str, Any], previous_row: dict[str, Any]) -> bool:
@@ -669,11 +768,16 @@ def previous_metrics(previous: dict[str, Any] | None, name: str, generated_at: s
             best_at = captured_at
             best = row
 
-    prev_at = previous.get("generatedAt")
-    if isinstance(prev_at, str) and beijing_day(prev_at) < today:
-        for ch in previous.get("characters") or []:
-            if isinstance(ch, dict):
-                consider(prev_at, flatten_character(ch))
+    # Carried rows keep the day they were actually fetched. The file's generatedAt
+    # is only a fallback for snapshots that predate heatFetchedAt.
+    prev_at = previous.get("generatedAt") if isinstance(previous.get("generatedAt"), str) else None
+    for ch in previous.get("characters") or []:
+        if not isinstance(ch, dict):
+            continue
+        captured = ch.get("heatFetchedAt")
+        if not isinstance(captured, str) or not captured:
+            captured = prev_at
+        consider(captured, flatten_character(ch))
     for entry in previous.get("history") or []:
         if not isinstance(entry, dict):
             continue
@@ -684,22 +788,50 @@ def previous_metrics(previous: dict[str, Any] | None, name: str, generated_at: s
     return best
 
 
-def build_history(previous: dict[str, Any] | None, generated_at: str) -> list[dict[str, Any]]:
+def _filter_history_rows(rows: list, allowed_names: set[str] | None) -> list[dict[str, Any]]:
+    kept: list[dict[str, Any]] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        if allowed_names is not None and row.get("name") not in allowed_names:
+            continue
+        kept.append(row)
+    return kept
+
+
+def build_history(
+    previous: dict[str, Any] | None,
+    generated_at: str,
+    allowed_names: set[str] | None = None,
+) -> list[dict[str, Any]]:
     entries: list[dict[str, Any]] = []
     if previous:
         prev_at = previous.get("generatedAt")
-        if prev_at and prev_at != generated_at:
-            entries.append(
-                {
-                    "capturedAt": prev_at,
-                    "characters": [
-                        flatten_character(ch)
-                        for ch in previous.get("characters") or []
-                        if isinstance(ch, dict)
-                    ],
-                }
-            )
-        entries.extend(previous.get("history") or [])
+        if isinstance(prev_at, str) and prev_at and prev_at != generated_at:
+            fresh_rows: list[dict[str, Any]] = []
+            for ch in previous.get("characters") or []:
+                if not isinstance(ch, dict):
+                    continue
+                # Rows without heatFetchedAt are legacy snapshots: they belong to generatedAt.
+                # Carried rows keep an older heatFetchedAt and must not be archived again.
+                fetched_at = ch.get("heatFetchedAt")
+                if not isinstance(fetched_at, str) or not fetched_at:
+                    fetched_at = prev_at
+                if fetched_at != prev_at:
+                    continue
+                fresh_rows.append(flatten_character(ch))
+            fresh_rows = _filter_history_rows(fresh_rows, allowed_names)
+            if fresh_rows:
+                entries.append({"capturedAt": prev_at, "characters": fresh_rows})
+        for entry in previous.get("history") or []:
+            if not isinstance(entry, dict):
+                continue
+            rows = _filter_history_rows(list(entry.get("characters") or []), allowed_names)
+            if not rows:
+                continue
+            cloned = dict(entry)
+            cloned["characters"] = rows
+            entries.append(cloned)
     # One row per Beijing date. A delayed second cron run the same day replaces
     # the earlier snapshot instead of stacking a near-zero growth step.
     by_day: dict[str, dict[str, Any]] = {}
@@ -714,7 +846,16 @@ def build_history(previous: dict[str, Any] | None, generated_at: str) -> list[di
         if current is None or captured_at > str(current.get("capturedAt") or ""):
             by_day[day] = entry
     ordered = sorted(by_day.values(), key=lambda entry: str(entry.get("capturedAt") or ""), reverse=True)
-    return ordered[:HISTORY_KEEP]
+    anchor = parse_instant(generated_at).astimezone(BEIJING).date()
+    kept: list[dict[str, Any]] = []
+    for entry in ordered:
+        captured_at = entry.get("capturedAt")
+        if not isinstance(captured_at, str):
+            continue
+        delta = (anchor - parse_instant(captured_at).astimezone(BEIJING).date()).days
+        if 0 <= delta <= HISTORY_KEEP:
+            kept.append(entry)
+    return kept
 
 
 def fetch_nanoka_discoveries(http: Http, watch_names: set[str]) -> list[dict[str, Any]]:
@@ -799,10 +940,27 @@ def fetch_weibo(http: Http, names: list[str]) -> dict[str, Any]:
     return {"hotHits": hits, "hotCount": len(band)}
 
 
-def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
+def run(
+    out_path: Path,
+    write_assets: bool,
+    catalog_path: Path,
+    *,
+    daily_cap: int = DAILY_CAP,
+    time_budget_seconds: float = TIME_BUDGET_SECONDS,
+    monotonic=None,
+    fetch_bangumi=None,
+    fetch_bilibili=None,
+    weibo_fetcher=None,
+) -> int:
     generated = now_utc()
     generated_at = iso(generated)
     today = generated.astimezone(BEIJING).date().isoformat()
+    clock = monotonic or time.monotonic
+    started = clock()
+
+    def budget_expired() -> bool:
+        return (clock() - started) >= time_budget_seconds
+
     catalog = load_catalog(catalog_path)
     catalog_characters = [row for row in catalog["characters"] if isinstance(row, dict) and row.get("key")]
     previous = load_previous(out_path)
@@ -816,13 +974,17 @@ def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
                 previous_by_key[str(row["key"])] = row
             if row.get("name"):
                 previous_by_name[str(row["name"])] = row
-    previous_names = set(previous_by_name)
     named = []
     for character in catalog_characters:
-        key = str(character["key"])
-        named.append((character, display_name(character, previous_by_name), is_due(character, today)))
-    due = [(character, name) for character, name, wanted in named if wanted]
-    print(f"catalog {len(catalog_characters)} due {len(due)} on {today}")
+        named.append((character, display_name(character, previous_by_name)))
+    plan = build_queue(catalog_characters, previous_by_key, daily_cap=daily_cap)
+    queue = plan["selected"]
+    name_by_key = {str(character["key"]): name for character, name in named}
+    queue_pairs = [(character, name_by_key[str(character["key"])]) for character in queue]
+    print(f"catalog {len(catalog_characters)} cap {daily_cap} queued {len(queue)} on {today}")
+    for tier in TIER_ORDER:
+        stat = plan["stats"][tier]
+        print(f"queue {TIER_LABELS[tier]} 入队 {stat['queued']} 推迟 {stat['deferred']}")
 
     sources = {
         "bangumi": source_run("failed"),
@@ -832,62 +994,89 @@ def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
         "pixiv": source_run("skipped", error="needs PIXIV_REFRESH_TOKEN; deferred"),
     }
 
-    bangumi_http = Http(USER_AGENT, min_interval=0.55)
-    bili_http = Http(BILI_UA, min_interval=1.25)
-
     bangumi_by_key: dict[str, dict[str, Any] | None] = {}
     bili_by_key: dict[str, dict[str, Any] | None] = {}
     weibo_raw: dict[str, Any] | None = None
     bili_aborted = False
+    bangumi_budget_stopped = False
+    bili_budget_stopped = False
+    bangumi_started_pairs: list[tuple[dict[str, Any], str]] = []
+    completed_keys: set[str] = set()
 
     bangumi_ok = False
     try:
-        bangumi = BangumiClient(bangumi_http)
-        bangumi.load_calendar()
         fetched_at = iso(now_utc())
-        for character, name in due:
-            key = str(character["key"])
-            try:
+        if fetch_bangumi is None:
+            bangumi_http = Http(USER_AGENT, min_interval=0.55)
+            bangumi = BangumiClient(bangumi_http)
+            bangumi.load_calendar()
+
+            def fetch_one(character: dict[str, Any], name: str, fetched_at: str) -> dict[str, Any] | None:
+                key = str(character["key"])
                 subject_id = character.get("bangumiSubjectId")
                 if str(key).startswith("bgm:") and str(key).split(":", 1)[1].isdigit():
-                    bangumi_by_key[key] = fetch_bangumi_direct(
+                    return fetch_bangumi_direct(
                         bangumi,
                         int(key.split(":", 1)[1]),
                         subject_id if isinstance(subject_id, int) else None,
                         str(character.get("kind") or "ANIME"),
                         fetched_at,
                     )
-                else:
-                    bangumi_by_key[key] = fetch_bangumi_character(
-                        bangumi,
-                        as_watch_item(character, name),
-                        fetched_at,
-                    )
+                return fetch_bangumi_character(bangumi, as_watch_item(character, name), fetched_at)
+        else:
+            fetch_one = fetch_bangumi
+
+        def consume_bangumi(pair: tuple[dict[str, Any], str]) -> None:
+            character, name = pair
+            key = str(character["key"])
+            try:
+                bangumi_by_key[key] = fetch_one(character, name, fetched_at)
             except Exception as e:
                 print(f"bangumi {name} failed: {e}", file=sys.stderr)
                 bangumi_by_key[key] = None
+
+        bangumi_started_pairs, bangumi_rest = take_within_budget(queue_pairs, budget_expired, consume_bangumi)
+        bangumi_budget_stopped = bool(bangumi_rest)
         bangumi_ok = True
-        sources["bangumi"] = source_run("ok", fetched_at)
+        if bangumi_budget_stopped:
+            sources["bangumi"] = source_run("partial", fetched_at, error="time budget exhausted")
+        else:
+            sources["bangumi"] = source_run("ok", fetched_at)
     except Exception as e:
         print(f"bangumi source failed: {e}", file=sys.stderr)
         sources["bangumi"] = source_run("failed", error=str(e))
 
     bili_ok = False
     try:
-        bili = BilibiliClient(bili_http)
         fetched_at = iso(now_utc())
-        risk_streak = 0
-        for character, name in due:
-            key = str(character["key"])
-            if bili_aborted:
-                break
-            try:
-                bili_by_key[key] = fetch_bilibili_character(
+        if fetch_bilibili is None:
+            bili_http = Http(BILI_UA, min_interval=1.25)
+            bili = BilibiliClient(bili_http)
+
+            def fetch_bili_one(character: dict[str, Any], name: str, fetched_at: str) -> dict[str, Any] | None:
+                return fetch_bilibili_character(
                     bili,
                     as_watch_item(character, name),
                     generated,
                     fetched_at,
                 )
+        else:
+            fetch_bili_one = fetch_bilibili
+
+        risk_streak = 0
+        bili_started_pairs: list[tuple[dict[str, Any], str]] = []
+        # A Bangumi client failure must not skip Bilibili. A budget stop must:
+        # characters Bangumi never started stay carried.
+        bili_plan = bangumi_started_pairs if bangumi_ok else queue_pairs
+        for character, name in bili_plan:
+            if budget_expired():
+                bili_budget_stopped = True
+                break
+            if bili_aborted:
+                break
+            key = str(character["key"])
+            try:
+                bili_by_key[key] = fetch_bili_one(character, name, fetched_at)
                 risk_streak = 0
             except Exception as e:
                 print(f"bilibili {name} failed: {e}", file=sys.stderr)
@@ -899,9 +1088,14 @@ def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
                     if risk_streak >= 2:
                         bili_aborted = True
                         print("bilibili rate limit; stopped the rest of this run", file=sys.stderr)
-        fetched_any = any(bili_by_key.get(str(character["key"])) for character, _name in due)
+            bili_started_pairs.append((character, name))
+        completed_keys = {str(character["key"]) for character, _name in bili_started_pairs}
+        fetched_any = any(bili_by_key.get(key) for key in completed_keys)
         if bili_aborted and fetched_any:
             sources["bilibili"] = source_run("partial", fetched_at, error="stopped after HTTP 412/429")
+            bili_ok = True
+        elif bili_budget_stopped or (bangumi_budget_stopped and not fetched_any):
+            sources["bilibili"] = source_run("partial", fetched_at, error="time budget exhausted")
             bili_ok = True
         elif fetched_any:
             bili_ok = True
@@ -912,18 +1106,29 @@ def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
         print(f"bilibili source failed: {e}", file=sys.stderr)
         sources["bilibili"] = source_run("failed", error=str(e))
 
-    weibo_names = [name for _character, name in due if len(name) >= 2]
-    try:
-        weibo_http = Http(
-            "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
-            min_interval=0.8,
-            extra_headers={"Referer": "https://weibo.com/"},
-        )
-        weibo_raw = fetch_weibo(weibo_http, weibo_names)
-        sources["weibo"] = source_run("ok", iso(now_utc()))
-    except Exception as e:
-        print(f"weibo source failed: {e}", file=sys.stderr)
-        sources["weibo"] = source_run("failed", error=str(e))
+    weibo_names = [
+        name
+        for character, name in named
+        if str(character["key"]) in completed_keys and len(name) >= 2
+    ]
+    if budget_expired():
+        print("weibo skipped: time budget exhausted", file=sys.stderr)
+        sources["weibo"] = source_run("failed", error="time budget exhausted")
+    else:
+        try:
+            if weibo_fetcher is None:
+                weibo_http = Http(
+                    "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1",
+                    min_interval=0.8,
+                    extra_headers={"Referer": "https://weibo.com/"},
+                )
+                weibo_raw = fetch_weibo(weibo_http, weibo_names)
+            else:
+                weibo_raw = weibo_fetcher(weibo_names)
+            sources["weibo"] = source_run("ok", iso(now_utc()))
+        except Exception as e:
+            print(f"weibo source failed: {e}", file=sys.stderr)
+            sources["weibo"] = source_run("failed", error=str(e))
 
     discoveries = [
         {
@@ -945,14 +1150,14 @@ def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
     carried_count = 0
     print()
     print(f"{'角色':<12} {'B站7日投稿':>10} {'7日播放':>10} {'BGM收藏':>8} {'热度':>6}")
-    for character, name, wanted in named:
+    for character, name in named:
         key = str(character["key"])
         previous_row = previous_by_key.get(key)
         if previous_row is None:
             named_prev = previous_by_name.get(name)
             if named_prev and (name == character.get("name") or work_compatible(character, named_prev)):
                 previous_row = named_prev
-        if not wanted:
+        if key not in completed_keys:
             if previous_row:
                 characters.append(carry_heat(previous_row, character, name, previous.get("generatedAt") if previous else None))
                 carried_count += 1
@@ -1016,9 +1221,13 @@ def run(out_path: Path, write_assets: bool, catalog_path: Path) -> int:
         plays = "-" if bili_m is None else bili_m.get("recentPlaySum7d")
         collects = "-" if bangumi_m is None else bangumi_m.get("collects")
         print(f"{name:<12} {str(videos):>10} {str(plays):>10} {str(collects):>8} {heat:>6}")
-    print(f"fetched {fresh_count}, carried {carried_count}, bili_aborted={bili_aborted}")
+    print(
+        f"fetched {fresh_count}, carried {carried_count}, bili_aborted={bili_aborted}, "
+        f"budget 入队 {len(queue)} 实抓 {len(completed_keys)} 推迟 {len(queue) - len(completed_keys)}"
+    )
 
-    history = build_history(previous, generated_at)
+    allowed_names = {name for _character, name in named}
+    history = build_history(previous, generated_at, allowed_names=allowed_names)
     feed = {
         "schemaVersion": SCHEMA_VERSION,
         "generatedAt": generated_at,
@@ -1121,12 +1330,20 @@ def main() -> int:
     parser.add_argument("--write-assets", action="store_true", dest="write_assets")
     parser.add_argument("--no-write-assets", action="store_false", dest="write_assets")
     parser.set_defaults(write_assets=False)
+    parser.add_argument("--daily-cap", type=int, default=DAILY_CAP)
+    parser.add_argument("--time-budget-seconds", type=float, default=TIME_BUDGET_SECONDS)
     parser.add_argument("--check-dedupe", action="store_true", help="Run the local history-dedupe check and exit")
     args = parser.parse_args()
     if args.check_dedupe:
         return check_dedupe()
     try:
-        return run(args.out, args.write_assets, args.catalog)
+        return run(
+            args.out,
+            args.write_assets,
+            args.catalog,
+            daily_cap=args.daily_cap,
+            time_budget_seconds=args.time_budget_seconds,
+        )
     except Exception as e:
         print(f"fatal: {e}", file=sys.stderr)
         return 1
