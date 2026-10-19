@@ -11,6 +11,8 @@ from datetime import date, datetime, timedelta, timezone
 
 from pypinyin import Style, pinyin
 
+from scripts.haircolor import delta_e, hex_color
+
 BEIJING = timezone(timedelta(hours=8))
 GAME_WINDOW_DAYS = 40
 ANIME_WINDOW_DAYS = 21
@@ -111,11 +113,21 @@ def status_from_release(
     return "EVERGREEN"
 
 
+# Portrait-vs-sample CIE76. Pink circle #F9BBBD vs green #6B9F9D is about 46,
+# and the extracted 洛克茜 pair is about 53. Same-character highlight shifts
+# stay under 30 when both sides actually hit hair. 45 is below that mismatch
+# and above the highlight band.
+HAIR_MISMATCH_DELTA_E = 45.0
+HAIR_CROSSCHECK = "sample-delta-v1"
+
+
 def hair_is_settled(character: dict) -> bool:
     hair = character.get("hair") or {}
     if hair.get("retry"):
         return False
     if hair.get("primary"):
+        return True
+    if hair.get("reason") == "sample-mismatch":
         return True
     if character.get("artKind") == "POSTER" and hair.get("confidence") == "LOW":
         return True
@@ -132,7 +144,51 @@ def hair_can_reuse(previous: dict, fresh: dict) -> bool:
         fresh.get("hairSampleUrl"),
     ):
         return False
+    # ZZZ circle files are numbered apart from the portrait and have pointed at
+    # the wrong face. Old swatches are reused only after that comparison.
+    if str(fresh.get("key") or "").startswith("zzz:"):
+        if (previous.get("hair") or {}).get("crossCheck") != HAIR_CROSSCHECK:
+            return False
     return hair_is_settled(previous)
+
+
+def build_checked_hair(
+    primary: int,
+    secondary: int | None,
+    confidence: str,
+    sampled_from: str,
+    display_color: int | None,
+    *,
+    display_is_portrait: bool,
+) -> dict:
+    """Hair record for one sample image, after the portrait cross-check.
+
+    A different file that is itself a portrait and disagrees by more than
+    HAIR_MISMATCH_DELTA_E is not written as a primary. The swatch stays empty
+    and confidence is LOW so the app shows 发色待确认.
+    """
+    if (
+        display_is_portrait
+        and display_color is not None
+        and delta_e(primary, display_color) > HAIR_MISMATCH_DELTA_E
+    ):
+        return {
+            "primary": None,
+            "secondary": None,
+            "confidence": "LOW",
+            "sampledFrom": sampled_from,
+            "reason": "sample-mismatch",
+            "sampleColor": hex_color(primary),
+            "displayColor": hex_color(display_color),
+            "crossCheck": HAIR_CROSSCHECK,
+        }
+    return {
+        "primary": hex_color(primary),
+        "secondary": None if secondary is None else hex_color(secondary),
+        "confidence": confidence,
+        "sampledFrom": sampled_from,
+        "crossCheck": HAIR_CROSSCHECK,
+    }
 
 
 def merge_characters(

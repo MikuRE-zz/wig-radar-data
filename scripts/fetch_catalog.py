@@ -37,7 +37,9 @@ sys.path.insert(0, str(ROOT))
 
 from scripts.catalog_lib import (  # noqa: E402
     BEIJING,
+    HAIR_CROSSCHECK,
     beijing_today,
+    build_checked_hair,
     dedupe_aliases,
     merge_characters,
     search_keys,
@@ -50,7 +52,6 @@ from scripts.haircolor import (  # noqa: E402
     UNKNOWN,
     classify_art,
     extract_hair,
-    hex_color,
     pixels_from_rgba,
 )
 
@@ -1156,13 +1157,27 @@ def load_image(http: Http, url: str) -> Image.Image:
     return image
 
 
-def classify_url(http: Http, url: str) -> str | None:
+def inspect_image(http: Http, url: str) -> tuple[str, int | None] | None:
+    """Art kind, and the portrait primary when the image is a portrait."""
     try:
         image = prepare_image(load_image(http, url))
     except (PermanentError, TransientError):
         return None
     pixels, width, height = pixels_from_rgba(image)
-    return classify_art(pixels, width, height).kind
+    kind = classify_art(pixels, width, height).kind
+    if kind != PORTRAIT:
+        return kind, None
+    extracted = extract_hair(pixels, width, height)
+    if extracted is None:
+        return kind, None
+    return kind, extracted.primary
+
+
+def _store_hair(character: dict, hair: dict) -> dict:
+    if not hair.get("retry"):
+        hair["crossCheck"] = HAIR_CROSSCHECK
+    character["hair"] = hair
+    return character
 
 
 def extract_one(http: Http, character: dict) -> dict[str, Any]:
@@ -1173,13 +1188,12 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
         sample_urls.append(character["artUrl"])
     if not sample_urls and not character.get("artUrl"):
         character["artKind"] = UNKNOWN
-        character["hair"] = {
+        return _store_hair(character, {
             "primary": None,
             "secondary": None,
             "confidence": "UNKNOWN",
             "sampledFrom": None,
-        }
-        return character
+        })
     display_url = character.get("artUrl")
     last_permanent: str | None = None
     for url in sample_urls:
@@ -1191,29 +1205,30 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
                 sample_urls.append(display_url)
             continue
         except TransientError as error:
-            character["hair"] = {
+            return _store_hair(character, {
                 "primary": None,
                 "secondary": None,
                 "confidence": "UNKNOWN",
                 "sampledFrom": None,
                 "retry": True,
                 "error": str(error),
-            }
-            return character
+            })
         pixels, width, height = pixels_from_rgba(image)
         verdict = classify_art(pixels, width, height)
         display_kind = verdict.kind
+        display_color = None
         if display_url and display_url != url:
-            display_kind = classify_url(http, display_url) or verdict.kind
+            inspected = inspect_image(http, display_url)
+            if inspected is not None:
+                display_kind, display_color = inspected
         if verdict.kind == POSTER:
             character["artKind"] = display_kind if display_kind == POSTER else POSTER
-            character["hair"] = {
+            return _store_hair(character, {
                 "primary": None,
                 "secondary": None,
                 "confidence": "LOW",
                 "sampledFrom": None,
-            }
-            return character
+            })
         extracted = extract_hair(pixels, width, height)
         if extracted is None:
             last_permanent = "no hair color"
@@ -1221,22 +1236,23 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
                 sample_urls.append(display_url)
             continue
         character["artKind"] = display_kind
-        character["hair"] = {
-            "primary": hex_color(extracted.primary),
-            "secondary": None if extracted.secondary is None else hex_color(extracted.secondary),
-            "confidence": extracted.confidence,
-            "sampledFrom": url,
-        }
+        character["hair"] = build_checked_hair(
+            extracted.primary,
+            extracted.secondary,
+            extracted.confidence,
+            url,
+            display_color,
+            display_is_portrait=display_kind == PORTRAIT and bool(display_url) and display_url != url,
+        )
         return character
     character["artKind"] = character.get("artKind") or UNKNOWN
-    character["hair"] = {
+    return _store_hair(character, {
         "primary": None,
         "secondary": None,
         "confidence": "UNKNOWN",
         "sampledFrom": None,
         "error": last_permanent or "image unavailable",
-    }
-    return character
+    })
 
 
 def apply_hair(characters: list[dict], limit: int) -> dict[str, int]:
