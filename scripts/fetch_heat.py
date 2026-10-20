@@ -724,8 +724,18 @@ def fetch_bilibili_character(
 ) -> dict[str, Any] | None:
     best: dict[str, Any] | None = None
     keywords = list(item.get("bilibiliKeywords") or [item["name"]])
+    fallback = str(item.get("name") or "")
     for keyword in keywords:
-        payload = client.search_videos(keyword, pages=1)
+        try:
+            payload = client.search_videos(keyword, pages=1)
+        except BilibiliSoftBlock:
+            # Long anime titles make "name + work" match nothing at all. Only an
+            # empty name-only search counts as a rate limit; one-letter names are
+            # too generic to search alone.
+            if keyword == fallback or len(fallback) < 2:
+                raise
+            keyword = fallback
+            payload = client.search_videos(keyword, pages=1)
         summary = summarize_bili_videos(payload["videos"], now)
         row = {
             "keyword": keyword,

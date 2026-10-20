@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import tempfile
 import unittest
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from unittest.mock import patch
 
@@ -19,6 +19,7 @@ from scripts.fetch_heat import (
     beijing_day,
     build_history,
     build_queue,
+    fetch_bilibili_character,
     previous_metrics,
     run,
     take_within_budget,
@@ -371,6 +372,36 @@ class BilibiliSoftBlockTest(unittest.TestCase):
         client.mixin_key = "a" * 32
         with self.assertRaises(BilibiliSoftBlock):
             client.search_videos("洛克茜 绝区零", pages=1)
+
+    def test_long_work_title_falls_back_to_the_name_alone(self) -> None:
+        class FakeClient:
+            def __init__(self, hits: set[str]) -> None:
+                self.hits = hits
+                self.asked: list[str] = []
+
+            def search_videos(self, keyword: str, pages: int = 1):
+                self.asked.append(keyword)
+                if keyword not in self.hits:
+                    raise BilibiliSoftBlock(f"empty search for {keyword}")
+                return {"resultCount": 277, "videos": []}
+
+        now = datetime(2026, 10, 20, tzinfo=timezone.utc)
+        long_title = {"name": "米拉贝尔", "bilibiliKeywords": ["米拉贝尔 被放逐的作弊赋予魔术师享受随心所欲的第二人生。"]}
+        client = FakeClient({"米拉贝尔"})
+        row = fetch_bilibili_character(client, long_title, now, "2026-10-20T00:00:00Z")
+        assert row is not None
+        self.assertEqual("米拉贝尔", row["keyword"])
+        self.assertEqual(277, row["resultCount"])
+
+        nothing = FakeClient(set())
+        with self.assertRaises(BilibiliSoftBlock):
+            fetch_bilibili_character(nothing, long_title, now, "2026-10-20T00:00:00Z")
+        self.assertEqual(["米拉贝尔 被放逐的作弊赋予魔术师享受随心所欲的第二人生。", "米拉贝尔"], nothing.asked)
+
+        one_letter = FakeClient(set())
+        with self.assertRaises(BilibiliSoftBlock):
+            fetch_bilibili_character(one_letter, {"name": "D", "bilibiliKeywords": ["D 赛博朋克：边缘行者"]}, now, "x")
+        self.assertEqual(["D 赛博朋克：边缘行者"], one_letter.asked)
 
     def test_empty_response_is_carried_and_stays_out_of_history(self) -> None:
         name = "洛克茜"
