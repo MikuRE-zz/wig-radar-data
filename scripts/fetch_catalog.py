@@ -37,6 +37,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
+from scripts.art_thumbs import ART_BUDGET_SECONDS, ART_DAILY_LIMIT, refresh_display_art  # noqa: E402
 from scripts.catalog_lib import (  # noqa: E402
     AUTO_TAG_BATCH_LIMIT,
     BEIJING,
@@ -1780,6 +1781,19 @@ def main() -> int:
     parser.add_argument("--hair-limit", type=int, default=0, help="Max images to extract this run; 0 means all pending")
     parser.add_argument("--skip-hair", action="store_true", help="Write the catalog without downloading images")
     parser.add_argument(
+        "--art-limit",
+        type=int,
+        default=ART_DAILY_LIMIT,
+        help="Max new display thumbnails this run; 0 means no cap",
+    )
+    parser.add_argument(
+        "--art-budget",
+        type=float,
+        default=ART_BUDGET_SECONDS,
+        help="Seconds for new display thumbnails; 0 means no cap",
+    )
+    parser.add_argument("--skip-art", action="store_true", help="Do not download or relink display thumbnails")
+    parser.add_argument(
         "--auto-tag-limit",
         type=int,
         default=AUTO_TAG_BATCH_LIMIT,
@@ -1891,9 +1905,24 @@ def main() -> int:
         print(f"hair: {len(duplicate_groups)} sample-duplicate groups")
         for keys in duplicate_groups:
             print("hair sample-duplicate: " + ", ".join(keys))
+    art_stats: dict[str, Any] = {"skipped": True}
+    if not args.skip_art:
+        art_stats = refresh_display_art(
+            characters,
+            previous,
+            ROOT,
+            limit=args.art_limit,
+            budget_seconds=args.art_budget,
+        )
+        print(
+            "art thumbs "
+            f"linked {art_stats['linked']} built {art_stats['built']} "
+            f"failed {art_stats['failed']} pending {art_stats['pending']}"
+        )
     characters.sort(key=lambda row: (str(row.get("game") or ""), str(row.get("name") or ""), str(row.get("key") or "")))
     stats = summarize(characters)
     stats["hairRun"] = hair_stats
+    stats["artThumbs"] = art_stats
     stats["autoTags"] = auto_summary
     stats["elapsedSeconds"] = round(time.monotonic() - started, 1)
     document = {

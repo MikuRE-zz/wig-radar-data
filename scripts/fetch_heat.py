@@ -300,8 +300,12 @@ def build_queue(
     *,
     daily_cap: int = DAILY_CAP,
     evergreen_floor: int = EVERGREEN_FLOOR,
+    evergreen_only: bool = False,
 ) -> dict[str, Any]:
-    """Order today's fetches. Evergreen gets the floor plus whatever the radar leaves."""
+    """Order today's fetches. Evergreen gets the floor plus whatever the radar leaves.
+
+    evergreen_only does not fetch radar rows. Callers keep those previous scores.
+    """
     previous_by_key = previous_by_key or {}
     buckets: dict[str, list[tuple[int, dict[str, Any]]]] = {tier: [] for tier in TIER_ORDER}
     for index, row in enumerate(characters):
@@ -316,11 +320,15 @@ def build_queue(
         (TIER_EVERGREEN, row) for row in _evergreen_ordered(buckets[TIER_EVERGREEN], previous_by_key)
     ]
     cap = max(0, int(daily_cap))
-    reserved = min(max(0, int(evergreen_floor)), len(evergreen), cap)
-    radar_chosen = radar[: cap - reserved]
-    evergreen_chosen = evergreen[: cap - len(radar_chosen)]
-    chosen = radar_chosen + evergreen_chosen
-    delayed = radar[len(radar_chosen):] + evergreen[len(evergreen_chosen):]
+    if evergreen_only:
+        chosen = evergreen[:cap]
+        delayed = radar + evergreen[cap:]
+    else:
+        reserved = min(max(0, int(evergreen_floor)), len(evergreen), cap)
+        radar_chosen = radar[: cap - reserved]
+        evergreen_chosen = evergreen[: cap - len(radar_chosen)]
+        chosen = radar_chosen + evergreen_chosen
+        delayed = radar[len(radar_chosen):] + evergreen[len(evergreen_chosen):]
     stats = {tier: {"queued": 0, "deferred": 0} for tier in TIER_ORDER}
     for tier, _row in chosen:
         stats[tier]["queued"] += 1
@@ -1045,6 +1053,7 @@ def run(
     fetch_bangumi=None,
     fetch_bilibili=None,
     weibo_fetcher=None,
+    evergreen_only: bool = False,
 ) -> int:
     generated = now_utc()
     generated_at = iso(generated)
@@ -1071,11 +1080,17 @@ def run(
     named = []
     for character in catalog_characters:
         named.append((character, display_name(character, previous_by_name)))
-    plan = build_queue(catalog_characters, previous_by_key, daily_cap=daily_cap)
+    plan = build_queue(
+        catalog_characters,
+        previous_by_key,
+        daily_cap=daily_cap,
+        evergreen_only=evergreen_only,
+    )
     queue = plan["selected"]
     name_by_key = {str(character["key"]): name for character, name in named}
     queue_pairs = [(character, name_by_key[str(character["key"])]) for character in queue]
-    print(f"catalog {len(catalog_characters)} cap {daily_cap} queued {len(queue)} on {today}")
+    mode = " evergreen-only" if evergreen_only else ""
+    print(f"catalog {len(catalog_characters)} cap {daily_cap} queued {len(queue)} on {today}{mode}")
     for tier in TIER_ORDER:
         stat = plan["stats"][tier]
         print(f"queue {TIER_LABELS[tier]} 入队 {stat['queued']} 推迟 {stat['deferred']}")
@@ -1451,6 +1466,11 @@ def main() -> int:
     parser.add_argument("--daily-cap", type=int, default=DAILY_CAP)
     parser.add_argument("--time-budget-seconds", type=float, default=TIME_BUDGET_SECONDS)
     parser.add_argument("--check-dedupe", action="store_true", help="Run the local history-dedupe check and exit")
+    parser.add_argument(
+        "--evergreen-only",
+        action="store_true",
+        help="Queue evergreen rows only; radar rows keep their previous heat",
+    )
     args = parser.parse_args()
     if args.check_dedupe:
         return check_dedupe()
@@ -1461,6 +1481,7 @@ def main() -> int:
             args.catalog,
             daily_cap=args.daily_cap,
             time_budget_seconds=args.time_budget_seconds,
+            evergreen_only=args.evergreen_only,
         )
     except Exception as e:
         print(f"fatal: {e}", file=sys.stderr)

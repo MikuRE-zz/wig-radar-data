@@ -141,9 +141,18 @@ def hair_is_settled(character: dict) -> bool:
     return False
 
 
+def art_sample_identity(character: dict) -> str | None:
+    """Upstream picture. A display thumbnail's artUrl is not a new sample."""
+    source = character.get("artSourceUrl")
+    if isinstance(source, str) and source:
+        return source
+    art = character.get("artUrl")
+    return art if isinstance(art, str) and art else None
+
+
 def hair_can_reuse(previous: dict, fresh: dict) -> bool:
-    if (previous.get("artUrl"), previous.get("hairSampleUrl")) != (
-        fresh.get("artUrl"),
+    if (art_sample_identity(previous), previous.get("hairSampleUrl")) != (
+        art_sample_identity(fresh),
         fresh.get("hairSampleUrl"),
     ):
         return False

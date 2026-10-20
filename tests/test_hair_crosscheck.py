@@ -207,6 +207,14 @@ class HairCrossCheckTest(unittest.TestCase):
         changed = _row()
         changed["hairSampleUrl"] = "https://example.test/other.webp"
         self.assertFalse(hair_can_reuse(previous, changed))
+        thumb = _row()
+        thumb["artSourceUrl"] = thumb["artUrl"]
+        thumb["artUrl"] = "https://raw.githubusercontent.com/MikuRE-zz/wig-radar-data/main/art/zzz/zzz_1621.webp"
+        thumb["hair"] = previous["hair"]
+        self.assertTrue(hair_can_reuse(thumb, _row()))
+        new_art = _row()
+        new_art["artUrl"] = "https://example.test/other-art.webp"
+        self.assertFalse(hair_can_reuse(thumb, new_art))
         poster = _row("ak:1")
         poster["artKind"] = "POSTER"
         poster["hair"] = {"primary": None, "confidence": "LOW", "sampledFrom": None}

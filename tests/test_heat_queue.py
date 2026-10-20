@@ -521,6 +521,101 @@ class BilibiliSoftBlockTest(unittest.TestCase):
         self.assertIn("consecutive empty searches", source["error"])
 
 
+class EvergreenOnlyTest(unittest.TestCase):
+    def test_queue_is_evergreen_only_and_polluted_rows_stay_first(self) -> None:
+        characters = [
+            _character("e:old", "EVERGREEN"),
+            _character("g:leak", "LEAKED"),
+            _character("e:zero", "EVERGREEN"),
+            _character("e:never", "EVERGREEN"),
+            _character("bgm:1", "LIVE", kind="ANIME", game="anime", work="番", heat=9, subject=1),
+        ]
+        previous = {
+            "e:old": {
+                "heatFetchedAt": "2026-10-01T00:00:00Z",
+                "metrics": {"bilibili": {"resultCount": 4, "sampledVideos": 2}},
+            },
+            "e:zero": {
+                "heatFetchedAt": "2026-10-19T00:00:00Z",
+                "metrics": {"bilibili": {"resultCount": 0, "sampledVideos": 0}},
+            },
+            "g:leak": {"heatFetchedAt": "2026-10-19T00:00:00Z", "heatScore": 40},
+        }
+        plan = build_queue(characters, previous, daily_cap=10, evergreen_only=True)
+        self.assertEqual(["e:never", "e:zero", "e:old"], [row["key"] for row in plan["selected"]])
+        self.assertEqual(["g:leak", "bgm:1"], [row["key"] for row in plan["deferred"]])
+        self.assertEqual({"queued": 0, "deferred": 1}, plan["stats"]["game-leaked"])
+        self.assertEqual({"queued": 0, "deferred": 1}, plan["stats"]["anime"])
+        self.assertEqual({"queued": 3, "deferred": 0}, plan["stats"]["evergreen"])
+
+    def test_cap_is_120_and_radar_is_not_queued(self) -> None:
+        characters = [_character(f"g:{index}", "LEAKED") for index in range(3)]
+        characters.extend(_character(f"e:{index:03d}", "EVERGREEN") for index in range(150))
+        plan = build_queue(characters, {}, daily_cap=120, evergreen_only=True)
+        self.assertEqual(120, len(plan["selected"]))
+        self.assertTrue(all(row["status"] == "EVERGREEN" for row in plan["selected"]))
+        self.assertEqual([f"e:{index:03d}" for index in range(120)], [row["key"] for row in plan["selected"]])
+        self.assertEqual({"queued": 0, "deferred": 3}, plan["stats"]["game-leaked"])
+        self.assertEqual({"queued": 120, "deferred": 30}, plan["stats"]["evergreen"])
+
+    def test_run_keeps_radar_heat_and_fetches_evergreen(self) -> None:
+        characters = [
+            _character("g:leak", "LEAKED", name="卫星甲"),
+            _character("e:1", "EVERGREEN", name="常青甲"),
+        ]
+        previous = {
+            "schemaVersion": 1,
+            "generatedAt": "2026-10-18T04:00:00Z",
+            "characters": [
+                _live("卫星甲", 41, "2026-10-18T04:00:00Z", key="g:leak"),
+                _live("常青甲", 5, "2026-09-01T00:00:00Z", key="e:1"),
+            ],
+            "history": [],
+        }
+        calls: list[str] = []
+
+        def fetch_bilibili(character: dict, name: str, fetched_at: str) -> dict:
+            calls.append(str(character["key"]))
+            return {
+                "recentVideos7d": 4,
+                "recentPlaySum7d": 100,
+                "resultCount": 8,
+                "sampledVideos": 4,
+                "fetchedAt": fetched_at,
+            }
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            catalog_path = root / "catalog.json"
+            heat_path = root / "heat.json"
+            catalog_path.write_text(json.dumps({"characters": characters}, ensure_ascii=False), encoding="utf-8")
+            heat_path.write_text(json.dumps(previous, ensure_ascii=False), encoding="utf-8")
+            code = run(
+                heat_path,
+                False,
+                catalog_path,
+                daily_cap=120,
+                time_budget_seconds=840,
+                evergreen_only=True,
+                fetch_bangumi=lambda character, name, fetched_at: {
+                    "collects": 3,
+                    "subjectCollect": None,
+                    "airing": False,
+                    "fetchedAt": fetched_at,
+                },
+                fetch_bilibili=fetch_bilibili,
+                weibo_fetcher=lambda names: {"hotHits": [], "hotCount": 0},
+            )
+            self.assertEqual(0, code)
+            feed = json.loads(heat_path.read_text(encoding="utf-8"))
+        by_key = {row["key"]: row for row in feed["characters"]}
+        self.assertEqual(["e:1"], calls)
+        self.assertEqual(41, by_key["g:leak"]["heatScore"])
+        self.assertEqual("2026-10-18T04:00:00Z", by_key["g:leak"]["heatFetchedAt"])
+        self.assertEqual(feed["generatedAt"], by_key["e:1"]["heatFetchedAt"])
+        self.assertNotEqual(5, by_key["e:1"]["heatScore"])
+
+
 class PollutedBilibiliSampleTest(unittest.TestCase):
     def test_empty_sample_sorts_as_never_fetched(self) -> None:
         characters = [

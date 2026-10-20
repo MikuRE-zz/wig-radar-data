@@ -1,0 +1,48 @@
+name: Fetch evergreen heat
+
+on:
+  schedule:
+    # 12:20 and 18:20 Beijing (UTC+8). The 04:20 full run stays in fetch-heat.yml.
+    - cron: "20 4 * * *"
+    - cron: "20 10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fetch-heat
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scrape evergreen heat
+        timeout-minutes: 20
+        run: python scripts/fetch_heat.py --out heat.json --no-write-assets --evergreen-only
+
+      - name: Commit heat
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main
+          git add heat.json
+          if git diff --staged --quiet; then
+            echo "No heat changes"
+          else
+            git commit -m "chore: backfill evergreen heat"
+            git push
+          fi
