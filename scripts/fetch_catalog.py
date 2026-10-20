@@ -36,16 +36,19 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from scripts.catalog_lib import (  # noqa: E402
+    AUTO_TAG_BATCH_LIMIT,
     BEIJING,
     beijing_today,
     build_checked_hair,
     dedupe_aliases,
     flag_duplicate_samples,
     merge_characters,
+    restore_previous_auto_tags,
     search_keys,
     status_from_release,
     strip_ruby,
 )
+from scripts.danbooru_tags import DanbooruClient, refresh_auto_tags  # noqa: E402
 from scripts.haircolor import (  # noqa: E402
     PORTRAIT,
     POSTER,
@@ -1366,6 +1369,13 @@ def main() -> int:
     parser.add_argument("--out", type=Path, default=ROOT / "catalog.json")
     parser.add_argument("--hair-limit", type=int, default=0, help="Max images to extract this run; 0 means all pending")
     parser.add_argument("--skip-hair", action="store_true", help="Write the catalog without downloading images")
+    parser.add_argument(
+        "--auto-tag-limit",
+        type=int,
+        default=AUTO_TAG_BATCH_LIMIT,
+        help="Max Danbooru character lookups this run",
+    )
+    parser.add_argument("--skip-auto-tags", action="store_true", help="Keep previous autoTags and do not call Danbooru")
     args = parser.parse_args()
     started = time.monotonic()
     today = beijing_today()
@@ -1426,6 +1436,21 @@ def main() -> int:
     settle_unattempted(characters)
     for row in characters:
         row["searchKeys"] = search_keys(str(row.get("name") or ""), list(row.get("aliases") or []))
+    restore_previous_auto_tags(characters, previous)
+    auto_summary: dict[str, Any] = {"status": "skipped", "attempted": 0}
+    if not args.skip_auto_tags:
+        try:
+            auto_summary = refresh_auto_tags(
+                characters,
+                previous,
+                DanbooruClient(USER_AGENT),
+                today,
+                limit=args.auto_tag_limit,
+            )
+        except Exception as error:
+            print(f"autoTags failed: {error}; keeping previous autoTags", file=sys.stderr)
+            restore_previous_auto_tags(characters, previous)
+            auto_summary = {"status": "skipped", "error": str(error), "attempted": 0}
     hair_stats = {"attempted": 0, "ok": 0, "poster": 0, "failed": 0, "seconds": 0, "skipped": True}
     if not args.skip_hair:
         hair_stats = apply_hair(characters, args.hair_limit)
@@ -1437,6 +1462,7 @@ def main() -> int:
     characters.sort(key=lambda row: (str(row.get("game") or ""), str(row.get("name") or ""), str(row.get("key") or "")))
     stats = summarize(characters)
     stats["hairRun"] = hair_stats
+    stats["autoTags"] = auto_summary
     stats["elapsedSeconds"] = round(time.monotonic() - started, 1)
     document = {
         "schemaVersion": 1,
