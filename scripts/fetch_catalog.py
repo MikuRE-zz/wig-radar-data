@@ -45,11 +45,15 @@ from scripts.catalog_lib import (  # noqa: E402
     build_checked_hair,
     dedupe_aliases,
     flag_duplicate_samples,
+    has_markup,
+    keep_one_named,
     merge_characters,
+    rover_name,
     restore_previous_auto_tags,
     search_keys,
     status_from_release,
     strip_ruby,
+    trailblazer_name,
 )
 from scripts.danbooru_tags import DanbooruClient, refresh_auto_tags  # noqa: E402
 from scripts.haircolor import (  # noqa: E402
@@ -520,6 +524,7 @@ def fetch_nanoka_game(http: Http, code: str, game: str, work_name: str) -> tuple
             built = nanoka_character(code, game, work_name, str(cid), row, str(cid) in live_ids, latest, live, today)
             if built:
                 characters.append(built)
+        characters = keep_one_named(characters, {"开拓者·星", "开拓者·穹"})
         meta = source_run(
             "ok",
             latest_url,
@@ -544,9 +549,18 @@ def nanoka_character(
     live: str,
     today: date,
 ) -> dict[str, Any] | None:
-    zh = str(row.get("zh") or "").strip()
+    raw_zh = str(row.get("zh") or "").strip()
     en = str(row.get("en") or "").strip()
+    if has_markup(raw_zh) or has_markup(en):
+        return None
+    zh = raw_zh
     name = zh or en
+    if name == "{NICKNAME}":
+        renamed = trailblazer_name(str(row.get("icon") or ""))
+        if renamed is None:
+            return None
+        name = renamed
+        en = "Trailblazer"
     leaked = False
     release: date | None = None
     if code == "zzz":
@@ -568,6 +582,8 @@ def nanoka_character(
         str(row.get("nickname") or ""),
         str(row.get("code") or ""),
     ]
+    if name.startswith("开拓者·"):
+        aliases.extend(["开拓者", "星" if name.endswith("星") else "穹"])
     return base_character(
         key=f"{code}:{cid}",
         name=name,
@@ -669,7 +685,10 @@ def fetch_wuwa(http: Http, nanoka_rows: list[dict] | None, today: date) -> tuple
             if nanoka:
                 used_nanoka.add(nanoka["key"])
             role = details.get(entry_id)
-            characters.append(wuwa_character(name, entry_id, role, nanoka, version, today))
+            built = wuwa_character(name, entry_id, role, nanoka, version, today)
+            if built is not None:
+                characters.append(built)
+        characters = keep_one_named(characters, {"漂泊者·女", "漂泊者·男"})
         for row in nanoka_by_name.values():
             if row["key"] in used_nanoka:
                 continue
@@ -735,10 +754,16 @@ def wuwa_character(
     nanoka: dict[str, Any] | None,
     version: str | None,
     today: date,
-) -> dict[str, Any]:
+) -> dict[str, Any] | None:
+    shown = rover_name(name)
+    if shown is None:
+        return None
+    name = shown
     aliases = list((nanoka or {}).get("aliases") or [])
     if name == "心":
         aliases.append("心月狐")
+    if name.startswith("漂泊者"):
+        aliases.append("漂泊者")
     figures = []
     subtitle = ""
     if isinstance(role, dict):
@@ -809,6 +834,9 @@ def fetch_arknights(http: Http) -> tuple[list[dict] | None, dict[str, Any]]:
             if row.get("profession") not in AK_PROFESSIONS:
                 continue
             if row.get("isNotObtainable"):
+                continue
+            # 支援机械 are robots (Castle-3, Lancet-2), not a wig.
+            if "支援机械" in (row.get("tagList") or []):
                 continue
             name = str(row.get("name") or "").strip()
             if not name or name.startswith("预备干员") or name.startswith("盟约"):
@@ -1144,6 +1172,13 @@ def build_endfield_character(
     if identity is None:
         return None
     name, aliases = identity
+    if name == "管理员":
+        gender = endfield_gender(detail)
+        if gender == "Female":
+            name = "管理员·女"
+        elif gender == "Male":
+            name = "管理员·男"
+        aliases = ["管理员", *aliases]
     images = item.get("images") if isinstance(item.get("images"), dict) else {}
     art = usable_image(images.get("large"))
     sample = usable_image(images.get("grid") or images.get("medium"))

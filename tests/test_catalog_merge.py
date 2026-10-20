@@ -5,7 +5,16 @@ from __future__ import annotations
 import unittest
 from datetime import date
 
-from scripts.catalog_lib import merge_characters, pinyin_keys, search_keys, status_from_release
+from scripts.catalog_lib import (
+    has_markup,
+    keep_one_named,
+    merge_characters,
+    pinyin_keys,
+    rover_name,
+    search_keys,
+    status_from_release,
+    trailblazer_name,
+)
 
 
 def _row(key: str, source: str = "nanoka-gi") -> dict:
@@ -101,6 +110,27 @@ class SearchKeyTest(unittest.TestCase):
         keys = search_keys("心", ["心月狐", "Xin"])
         self.assertIn("xin", keys)
         self.assertIn("xyh", keys)
+
+
+class RosterCleanupTest(unittest.TestCase):
+    def test_trailblazer_rover_and_markup(self) -> None:
+        self.assertEqual("开拓者·星", trailblazer_name("playergirl2"))
+        self.assertEqual("开拓者·穹", trailblazer_name("playerboy"))
+        self.assertIsNone(trailblazer_name("silverwolf"))
+        self.assertIsNone(rover_name("漂泊者·导电"))
+        self.assertEqual("漂泊者·女", rover_name("漂泊者-女-气动"))
+        self.assertTrue(has_markup("银狼LV.<unbreak>999</unbreak>"))
+        self.assertFalse(has_markup("银狼"))
+
+    def test_keep_one_form_prefers_art_then_lowest_id(self) -> None:
+        rows = [
+            {"key": "hsr:8004", "name": "开拓者·星", "artUrl": None},
+            {"key": "hsr:8002", "name": "开拓者·星", "artUrl": "https://example/a.webp"},
+            {"key": "hsr:8006", "name": "开拓者·星", "artUrl": "https://example/b.webp"},
+            {"key": "gi:1", "name": "胡桃", "artUrl": None},
+        ]
+        kept = {row["key"]: row["name"] for row in keep_one_named(rows, {"开拓者·星"})}
+        self.assertEqual({"hsr:8002", "gi:1"}, set(kept))
 
 
 if __name__ == "__main__":

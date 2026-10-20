@@ -20,6 +20,7 @@ ANIME_WINDOW_DAYS = 21
 SEARCH_KEY_COMBOS = 16
 
 RUBY_MARKUP = re.compile(r"\{RUBY_[BE]#[^}]*\}")
+TAG_MARKUP = re.compile(r"<[^>]+>")
 
 
 def beijing_today(now: datetime | None = None) -> str:
@@ -29,6 +30,57 @@ def beijing_today(now: datetime | None = None) -> str:
 
 def strip_ruby(value: str | None) -> str:
     return RUBY_MARKUP.sub("", value or "").strip()
+
+
+def has_markup(value: str | None) -> bool:
+    """Nanoka sometimes ships a skin whose name still contains wiki tags."""
+    return bool(TAG_MARKUP.search(value or ""))
+
+
+def trailblazer_name(icon: str | None) -> str | None:
+    """Star Rail stores the player as {NICKNAME}; the icon says which one."""
+    text = icon or ""
+    if "playergirl" in text:
+        return "开拓者·星"
+    if "playerboy" in text:
+        return "开拓者·穹"
+    return None
+
+
+def rover_name(name: str) -> str | None:
+    """Wigs only differ by the rover's gender, not by element."""
+    if not str(name or "").startswith("漂泊者"):
+        return name
+    if "女" in name:
+        return "漂泊者·女"
+    if "男" in name:
+        return "漂泊者·男"
+    return None
+
+
+def keep_one_named(rows: list[dict], names: set[str]) -> list[dict]:
+    """Several forms of the same person: keep the one with art and the lowest id."""
+    chosen: dict[str, dict] = {}
+    rest: list[dict] = []
+    for row in rows:
+        label = str(row.get("name") or "")
+        if label not in names:
+            rest.append(row)
+            continue
+        current = chosen.get(label)
+        chosen[label] = row if current is None or _prefer_form(row, current) else current
+    return rest + list(chosen.values())
+
+
+def _form_id(row: dict) -> int:
+    tail = str(row.get("key") or "").rsplit(":", 1)[-1]
+    return int(tail) if tail.isdigit() else 10**9
+
+
+def _prefer_form(candidate: dict, current: dict) -> bool:
+    if bool(candidate.get("artUrl")) != bool(current.get("artUrl")):
+        return bool(candidate.get("artUrl"))
+    return _form_id(candidate) < _form_id(current)
 
 
 def dedupe_aliases(name: str, values: list[str]) -> list[str]:
