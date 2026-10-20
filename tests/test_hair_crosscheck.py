@@ -161,6 +161,58 @@ class HairCrossCheckTest(unittest.TestCase):
         previous["artKind"] = "PORTRAIT"
         self.assertTrue(hair_can_reuse(previous, fresh))
 
+    def test_art_kind_follows_the_display_image(self) -> None:
+        pink = parse_hex("#F9BBBD")
+        character = _row()
+        with (
+            patch("scripts.fetch_catalog.read_image_bytes", return_value=_png()),
+            patch("scripts.fetch_catalog.extract_hair", return_value=ExtractedHair(pink, None, "HIGH")),
+            patch("scripts.fetch_catalog.classify_art", return_value=ArtKindVerdict(POSTER, 0.0, 40.0)),
+            patch("scripts.fetch_catalog.inspect_image", return_value=(PORTRAIT, pink)),
+        ):
+            extract_one(None, character)  # type: ignore[arg-type]
+        self.assertEqual("PORTRAIT", character["artKind"])
+        self.assertEqual("#F9BBBD", character["hair"]["primary"])
+        self.assertEqual("HIGH", character["hair"]["confidence"])
+        self.assertEqual(character["hairSampleUrl"], character["hair"]["sampledFrom"])
+        self.assertIn("sampleSha1", character["hair"])
+
+    def test_poster_display_still_drops_a_poster_sample(self) -> None:
+        character = _row()
+        with (
+            patch("scripts.fetch_catalog.read_image_bytes", return_value=_png()),
+            patch("scripts.fetch_catalog.extract_hair", return_value=ExtractedHair(parse_hex("#112233"), None, "HIGH")),
+            patch("scripts.fetch_catalog.classify_art", return_value=ArtKindVerdict(POSTER, 0.0, 40.0)),
+            patch("scripts.fetch_catalog.inspect_image", return_value=(POSTER, None)),
+        ):
+            extract_one(None, character)  # type: ignore[arg-type]
+        self.assertEqual("POSTER", character["artKind"])
+        self.assertIsNone(character["hair"]["primary"])
+        self.assertEqual("LOW", character["hair"]["confidence"])
+        self.assertEqual(character["hairSampleUrl"], character["hair"]["sampledFrom"])
+        self.assertTrue(hair_is_settled(character))
+
+    def test_settled_low_sample_is_reused_until_the_sample_url_changes(self) -> None:
+        previous = _row()
+        previous["artKind"] = "PORTRAIT"
+        previous["hair"] = {
+            "primary": None,
+            "secondary": None,
+            "confidence": "LOW",
+            "sampledFrom": previous["hairSampleUrl"],
+            "sampleSha1": "abc",
+        }
+        self.assertTrue(hair_is_settled(previous))
+        self.assertTrue(hair_can_reuse(previous, _row()))
+        changed = _row()
+        changed["hairSampleUrl"] = "https://example.test/other.webp"
+        self.assertFalse(hair_can_reuse(previous, changed))
+        poster = _row("ak:1")
+        poster["artKind"] = "POSTER"
+        poster["hair"] = {"primary": None, "confidence": "LOW", "sampledFrom": None}
+        self.assertTrue(hair_is_settled(poster))
+        self.assertTrue(hair_can_reuse(poster, _row("ak:1")))
+
 
 if __name__ == "__main__":
     unittest.main()

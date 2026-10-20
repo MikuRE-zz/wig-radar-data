@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T06:21:56Z",
+  "generatedAt": "2026-10-20T06:45:26Z",
   "sources": {
     "nanoka-gi": {
       "status": "ok",
@@ -55,16 +55,6 @@
       "endpoint": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/master/zh_CN/gamedata/excel/character_table.json",
       "count": 432
     },
-    "endfield": {
-      "status": "ok",
-      "fetchedAt": "2026-10-20T06:20:31Z",
-      "error": null,
-      "endpoint": "https://api.bgm.tv/v0/subjects/374638/characters",
-      "count": 39,
-      "subjectId": 374638,
-      "wikiArt": 35,
-      "listed": 47
-    },
     "bluearchive": {
       "status": "ok",
       "fetchedAt": "2026-10-20T06:20:31Z",
@@ -85,6 +75,19 @@
       "keptNext": 10,
       "showsWithoutCast": 2,
       "nextSeason": "2027-01-01/2027-04-01"
+    },
+    "endfield": {
+      "status": "ok",
+      "fetchedAt": "2026-10-20T06:45:21Z",
+      "error": null,
+      "endpoint": "https://api.bgm.tv/v0/subjects/374638/characters",
+      "count": 39,
+      "subjectId": 374638,
+      "wikiArt": 35,
+      "wikiPortrait": 6,
+      "wikiSplash": 29,
+      "wikiIcon": 35,
+      "listed": 47
     }
   },
   "characters": [
@@ -42335,8 +42338,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Yvonne_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/91/df/169197_crt_GfiF1.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Yvonne_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:169197",
       "name": "伊冯",
       "work": "明日方舟：终末地",
@@ -42347,11 +42350,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#AF5C81",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "1391c9848f7c55f3d273777adce1aac671396405"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Yvonne_icon.png",
+        "sampleSha1": "f267bcf28c9b44f2ba1b5e93f6c885947764279b",
+        "sampleColor": "#AF5C81",
+        "displayColor": "#6B6688",
+        "deltaE": 31.7
       },
       "searchKeys": [
         "yifeng",
@@ -42407,9 +42413,9 @@
       ],
       "version": null,
       "releaseDate": null,
-      "artUrl": "https://endfield.wiki.gg/images/Ember_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/14/72/142105_crt_nwg8g.jpg",
-      "artKind": "POSTER",
+      "artUrl": "https://endfield.wiki.gg/images/Ember.png",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Ember_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:142105",
       "name": "余烬",
       "work": "明日方舟：终末地",
@@ -42420,11 +42426,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#A13F34",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "a95c53118cbfb9a4b4541e7daa290b23e2b16029"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Ember_icon.png",
+        "sampleSha1": "6d01c04232193c38326486e3aa27391cacd9880e",
+        "sampleColor": "#A13F34",
+        "displayColor": "#643735",
+        "deltaE": 29.1
       },
       "searchKeys": [
         "tujin",
@@ -42480,9 +42489,9 @@
       ],
       "version": null,
       "releaseDate": null,
-      "artUrl": "https://endfield.wiki.gg/images/Perlica_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/13/10/141265_crt_vX69F.jpg?r=1735564826",
-      "artKind": "POSTER",
+      "artUrl": "https://endfield.wiki.gg/images/Perlica.png",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Perlica_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:141265",
       "name": "佩丽卡",
       "work": "明日方舟：终末地",
@@ -42496,8 +42505,8 @@
         "primary": null,
         "secondary": null,
         "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "b2451b31635a8bc44e708bc9daf040c815d0487f"
+        "sampledFrom": "https://endfield.wiki.gg/images/Perlica_icon.png",
+        "sampleSha1": "dd44f9ddc5df32276912a460acc7c93d547b2282"
       },
       "searchKeys": [
         "peilika",
@@ -42550,8 +42559,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Last_Rite_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/fb/dd/189431_crt_88guu.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Last_Rite_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189431",
       "name": "别礼",
       "work": "明日方舟：终末地",
@@ -42562,11 +42571,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#267F9A",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "3e5eb7f19d6586fe37ddf1f3180634f85973621d"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Last_Rite_icon.png",
+        "sampleSha1": "966b7079709ad1bee6d85e014d4bcac2d7eb0dc4",
+        "sampleColor": "#267F9A",
+        "displayColor": "#1B345B",
+        "deltaE": 35.1
       },
       "searchKeys": [
         "bieli",
@@ -42624,8 +42636,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Catcher_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/d0/7b/189436_crt_X7r97.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Catcher_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189436",
       "name": "卡契尔",
       "work": "明日方舟：终末地",
@@ -42636,11 +42648,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#253965",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "d08878d023b5a3a4e6d6b9cc010b3a797fcc69f3"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Catcher_icon.png",
+        "sampleSha1": "2c9af37ad5c2f3703f772cb51dad884415e1f726",
+        "sampleColor": "#253965",
+        "displayColor": "#CBD4ED",
+        "deltaE": 62.5
       },
       "searchKeys": [
         "kajieer",
@@ -42690,8 +42705,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Camille_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/9e/bc/208374_crt_bpYgZ.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Camille_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:208374",
       "name": "卡缪",
       "work": "明日方舟：终末地",
@@ -42702,11 +42717,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#17495E",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "51a74bdb96004b1fcaed976b43d8ab85146907d7"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Camille_icon.png",
+        "sampleSha1": "10e507f7db96960b0da11cac775074fbfccc8255",
+        "sampleColor": "#17495E",
+        "displayColor": "#293045",
+        "deltaE": 15.1
       },
       "searchKeys": [
         "kamiao",
@@ -42765,8 +42783,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Purrchena_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/fe/ce/220349_crt_z4dt5.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Purrchena_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:220349",
       "name": "噗切娜",
       "work": "明日方舟：终末地",
@@ -42777,11 +42795,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#FAF7FA",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "7048213733fda6befe8169c74bcb975fda93ca06"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Purrchena_icon.png",
+        "sampleSha1": "ba412a641d4806710d172b09be038670762dda17",
+        "sampleColor": "#FAF7FA",
+        "displayColor": "#F5E4FD",
+        "deltaE": 13.4
       },
       "searchKeys": [
         "puqina",
@@ -42811,8 +42832,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Estella_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/2e/89/189437_crt_y3koH.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Estella_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189437",
       "name": "埃特拉",
       "work": "明日方舟：终末地",
@@ -42823,11 +42844,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#E0E0E7",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "12b1e31f438fb47e33472461f6f4b2027add108b"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Estella_icon.png",
+        "sampleSha1": "926f27b6c3407d34df68184555b7cad1e6ca1a3a",
+        "sampleColor": "#E0E0E7",
+        "displayColor": "#CEE5F0",
+        "deltaE": 8.0
       },
       "searchKeys": [
         "aitela",
@@ -42931,8 +42955,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Da_Pan_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/49/5f/169194_crt_67p6x.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Da_Pan_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:169194",
       "name": "大潘",
       "work": "明日方舟：终末地",
@@ -42943,11 +42967,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#D8E2E7",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "fb7c955ce9b183b2c5836044af659fb91acfd4e3"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Da_Pan_icon.png",
+        "sampleSha1": "d85f9f9b0ac40bcd757cc0b44f3b992b8e77d70a",
+        "sampleColor": "#D8E2E7",
+        "displayColor": "#D2DDDA",
+        "deltaE": 4.7
       },
       "searchKeys": [
         "dabo",
@@ -43020,8 +43047,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Antal_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/b4/33/189435_crt_37MJq.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Antal_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189435",
       "name": "安塔尔",
       "work": "明日方舟：终末地",
@@ -43032,11 +43059,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#837D69",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "faf5dbd0d570f88c441e65a47147fd29f92ec180"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Antal_icon.png",
+        "sampleSha1": "425325741f0927cc30846d1c7ef8a210d23b79b2",
+        "sampleColor": "#837D69",
+        "displayColor": "#CFAA37",
+        "deltaE": 52.8
       },
       "searchKeys": [
         "andaer",
@@ -43086,8 +43116,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Zhuang_Fangyi_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/f1/b6/190554_crt_k4bAk.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Zhuang_Fangyi_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:190554",
       "name": "庄方宜",
       "work": "明日方舟：终末地",
@@ -43098,11 +43128,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#26291E",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "37280caddbbaf2c8240f98949ba5f404e23be406"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Zhuang_Fangyi_icon.png",
+        "sampleSha1": "5aa3fd54f7d77106d6efb54d224cd5aab4207436",
+        "sampleColor": "#26291E",
+        "displayColor": "#509086",
+        "deltaE": 44.6
       },
       "searchKeys": [
         "pengfangyi",
@@ -43171,8 +43204,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Arclight_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/d4/32/169196_crt_df7tT.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Arclight_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:169196",
       "name": "弧光",
       "work": "明日方舟：终末地",
@@ -43183,11 +43216,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#365082",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "ca26d8d56886825c1e21a14f6eb57af602aed4cf"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Arclight_icon.png",
+        "sampleSha1": "bb7f63700bed12070487e44fb8e082721cbfc245",
+        "sampleColor": "#365082",
+        "displayColor": "#4F72A7",
+        "deltaE": 13.7
       },
       "searchKeys": [
         "huguang",
@@ -43240,8 +43276,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Mi_Fu_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/62/b7/190619_crt_MVH65.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Mi_Fu_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:190619",
       "name": "弭弗",
       "work": "明日方舟：终末地",
@@ -43252,11 +43288,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#E3C8CA",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "e8078b80cbd92e91f094f45d12f68f6cb6990335"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Mi_Fu_icon.png",
+        "sampleSha1": "40619b40225a1c0f012a27ced2e0fb5751ad149c",
+        "sampleColor": "#E3C8CA",
+        "displayColor": "#F4EAF9",
+        "deltaE": 14.4
       },
       "searchKeys": [
         "mifu",
@@ -43304,8 +43343,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Typhoeus_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/90/b2/216715_crt_cnN65.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Typhoeus_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:216715",
       "name": "提弗洛斯",
       "work": "明日方舟：终末地",
@@ -43316,11 +43355,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#B692CE",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "3063518bacde3ac0986d31c4051c3cb76fc3d6fd"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Typhoeus_icon.png",
+        "sampleSha1": "05603a9b87c921d23bdf93fb1abdd8877bfc53ee",
+        "sampleColor": "#B692CE",
+        "displayColor": "#3B507C",
+        "deltaE": 37.0
       },
       "searchKeys": [
         "chifuluoshi",
@@ -43375,8 +43417,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Argent_Flow_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/ee/c1/216714_crt_3WqD1.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Argent_Flow_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:216714",
       "name": "明河",
       "work": "明日方舟：终末地",
@@ -43387,11 +43429,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#EAE2CA",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "632f774b76e5f8148e488307bc6e13964fc59121"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Argent_Flow_icon.png",
+        "sampleSha1": "838d1a4969d82be5c5cc7c8bbe84e0bc4dd7ac72",
+        "sampleColor": "#EAE2CA",
+        "displayColor": "#837959",
+        "deltaE": 39.5
       },
       "searchKeys": [
         "menghe",
@@ -43418,8 +43463,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Snowshine_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/4b/18/184164_crt_GL9Vo.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Snowshine_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:184164",
       "name": "昼雪",
       "work": "明日方舟：终末地",
@@ -43430,11 +43475,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#637499",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "70dedba0f09a4522a5045d2bd8fc59ded53d4b6b"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Snowshine_icon.png",
+        "sampleSha1": "9f0634907902881e8b0f6d4eeba3bb40239f29be",
+        "sampleColor": "#637499",
+        "displayColor": "#DCD7F1",
+        "deltaE": 39.7
       },
       "searchKeys": [
         "zhouxue",
@@ -43481,8 +43529,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Liino_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/36/12/212113_crt_9Yi6j.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Liino_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:212113",
       "name": "梨诺",
       "work": "明日方舟：终末地",
@@ -43493,11 +43541,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#6B3E33",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "1b5310d59c65364020f7e73fd54cd1b659a5ca58"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Liino_icon.png",
+        "sampleSha1": "25e66cfa58d3b92c5aa6f19c852d8ace42fd085d",
+        "sampleColor": "#6B3E33",
+        "displayColor": "#D7DBFA",
+        "deltaE": 65.8
       },
       "searchKeys": [
         "linuo",
@@ -43540,8 +43591,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Tangtang_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/67/97/190912_crt_VY5yf.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Tangtang_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:190912",
       "name": "汤汤",
       "work": "明日方舟：终末地",
@@ -43552,11 +43603,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#454C5C",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "4c5fabdf328a0dc672d8b33cf78f12b65e02f3ac"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Tangtang_icon.png",
+        "sampleSha1": "45828dfb5e99acc48fbc1c826e1047320a97ba00",
+        "sampleColor": "#454C5C",
+        "displayColor": "#F2F2F0",
+        "deltaE": 64.2
       },
       "searchKeys": [
         "shangshang",
@@ -43618,8 +43672,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Gilberta_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/9f/7c/184165_crt_hZOka.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Gilberta_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:184165",
       "name": "洁尔佩塔",
       "work": "明日方舟：终末地",
@@ -43630,11 +43684,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#4F3F37",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "0ebe63dc761140e880d39c0fc25a53824331ee37"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Gilberta_icon.png",
+        "sampleSha1": "b16233f254f820cb0cac90d8285daf552cdd0891",
+        "sampleColor": "#4F3F37",
+        "displayColor": "#529FC5",
+        "deltaE": 51.6
       },
       "searchKeys": [
         "jierpeida",
@@ -43688,8 +43745,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Rossi_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/33/1f/190910_crt_Ii5kh.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Rossi_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:190910",
       "name": "洛茜",
       "work": "明日方舟：终末地",
@@ -43700,11 +43757,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#992927",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "3433f39625675564d3b8b35d7f3462c40776b73f"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Rossi_icon.png",
+        "sampleSha1": "83584857577df8e7c72d88a0e52e68b90c012a3a",
+        "sampleColor": "#992927",
+        "displayColor": "#596A8C",
+        "deltaE": 66.7
       },
       "searchKeys": [
         "luoqian",
@@ -43751,9 +43811,9 @@
       ],
       "version": null,
       "releaseDate": null,
-      "artUrl": "https://endfield.wiki.gg/images/Wulfgard_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/82/9e/141266_crt_r9h67.jpg",
-      "artKind": "POSTER",
+      "artUrl": "https://endfield.wiki.gg/images/Wulfgard.png",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Wulfgard_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:141266",
       "name": "狼卫",
       "work": "明日方舟：终末地",
@@ -43764,11 +43824,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#1C222F",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "ee6856761a378eef04978d911e77ab83d9a68843"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Wulfgard_icon.png",
+        "sampleSha1": "a8c854b712f7b07c558b39a4d46ec4833d09aba2",
+        "sampleColor": "#1C222F",
+        "displayColor": "#463832",
+        "deltaE": 19.8
       },
       "searchKeys": [
         "hangwei",
@@ -43826,8 +43889,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Si_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/cb/fa/208373_crt_MbLAl.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Si_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:208373",
       "name": "祀",
       "work": "明日方舟：终末地",
@@ -43838,11 +43901,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#D6E1CB",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "9169e544ba2c04ad29dce8ab9ba08b6f8c53e6a4"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Si_icon.png",
+        "sampleSha1": "5dcfec14ef9beeae8a09991c3ced2ccf9080087c",
+        "sampleColor": "#D6E1CB",
+        "displayColor": "#3D525D",
+        "deltaE": 57.7
       },
       "searchKeys": [
         "si",
@@ -43899,8 +43965,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Akekuri_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/55/d2/189434_crt_DrRP0.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Akekuri_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189434",
       "name": "秋栗",
       "work": "明日方舟：终末地",
@@ -43911,11 +43977,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#9C2E30",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "631ae917b3381fde9ffd544cdc9816cdf877fbbb"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Akekuri_icon.png",
+        "sampleSha1": "08535b4272c7c341d50af781860ffc88c16af07b",
+        "sampleColor": "#9C2E30",
+        "displayColor": "#97333A",
+        "deltaE": 7.2
       },
       "searchKeys": [
         "qiuli",
@@ -43988,8 +44057,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Endministrator_%28Female%29_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/23/b7/141263_crt_s65Fw.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Endministrator_%28Female%29_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:141263",
       "name": "管理员",
       "work": "明日方舟：终末地",
@@ -44000,11 +44069,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#48433A",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "36faa2700baa36952b948a20aa7059c983c04980"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Endministrator_%28Female%29_icon.png",
+        "sampleSha1": "e304c31c5defe8cd0c541b9e831523fd26cae565",
+        "sampleColor": "#48433A",
+        "displayColor": "#EFF0E9",
+        "deltaE": 66.0
       },
       "searchKeys": [
         "guanliyuan",
@@ -44064,8 +44136,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Endministrator_%28Male%29_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/70/67/141264_crt_YpWND.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Endministrator_%28Male%29_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:141264",
       "name": "管理员",
       "work": "明日方舟：终末地",
@@ -44076,11 +44148,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#302925",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "d6755a9fe830018e983b36616756a551d1f3de30"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Endministrator_%28Male%29_icon.png",
+        "sampleSha1": "89fe38e7386df6d09718b255d489c73070a77237",
+        "sampleColor": "#302925",
+        "displayColor": "#EEF0EA",
+        "deltaE": 77.4
       },
       "searchKeys": [
         "guanliyuan",
@@ -44205,8 +44280,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Ardelia_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/2a/ba/189429_crt_a8B78.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Ardelia_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189429",
       "name": "艾尔黛拉",
       "work": "明日方舟：终末地",
@@ -44217,11 +44292,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#6E473A",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "694fd5ea637ecccc6fd99caaaad8d03b7a6d4ec4"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Ardelia_icon.png",
+        "sampleSha1": "19fa1b5b0b1dcb9bd789532e0ec27fb1fe09b223",
+        "sampleColor": "#6E473A",
+        "displayColor": "#F0D0E2",
+        "deltaE": 55.8
       },
       "searchKeys": [
         "aierdaila",
@@ -44280,9 +44358,9 @@
       ],
       "version": null,
       "releaseDate": null,
-      "artUrl": "https://endfield.wiki.gg/images/Avywenna_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/7d/07/142284_crt_u9H9Y.jpg?r=1735565098",
-      "artKind": "POSTER",
+      "artUrl": "https://endfield.wiki.gg/images/Avywenna.png",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Avywenna_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:142284",
       "name": "艾维文娜",
       "work": "明日方舟：终末地",
@@ -44293,11 +44371,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#57483F",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "276dce41ffa44718cc5d58acd9a909013ef3fd7f"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Avywenna_icon.png",
+        "sampleSha1": "954d6af2fd87a9b58beb9d394a92a77a6f36f6a9",
+        "sampleColor": "#57483F",
+        "displayColor": "#484D57",
+        "deltaE": 15.0
       },
       "searchKeys": [
         "aiweiwenna",
@@ -44347,8 +44428,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Laevatain_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/89/17/184163_crt_pC7Dv.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Laevatain_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:184163",
       "name": "莱万汀",
       "work": "明日方舟：终末地",
@@ -44359,11 +44440,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#AD3734",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "4e2178ce5c55c6de0f7cf7ca03d01ee306a67e9c"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Laevatain_icon.png",
+        "sampleSha1": "e3834dd6ebdab9571e20f7bcea8312d2315b5a6f",
+        "sampleColor": "#AD3734",
+        "displayColor": "#774742",
+        "deltaE": 33.2
       },
       "searchKeys": [
         "laimoding",
@@ -44462,8 +44546,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Fluorite_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/1d/d6/189438_crt_35r0t.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Fluorite_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189438",
       "name": "萤石",
       "work": "明日方舟：终末地",
@@ -44477,8 +44561,8 @@
         "primary": null,
         "secondary": null,
         "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "23985405416bcbbe3919c1c55c96727a961ca999"
+        "sampledFrom": "https://endfield.wiki.gg/images/Fluorite_icon.png",
+        "sampleSha1": "68d03a8ee26a9e1bfde745a3674009cb704f91ca"
       },
       "searchKeys": [
         "yingdan",
@@ -44519,8 +44603,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Arcane_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/a9/31/208372_crt_MYz8t.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Arcane_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:208372",
       "name": "诀",
       "work": "明日方舟：终末地",
@@ -44531,11 +44615,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#E4E6E5",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "139564520a08766bec0fb56d4483bdcc604e7e3e"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Arcane_icon.png",
+        "sampleSha1": "c4b93c8421eb5fe0c51dfd84e543afcd3fe56e93",
+        "sampleColor": "#E4E6E5",
+        "displayColor": "#3B4258",
+        "deltaE": 64.6
       },
       "searchKeys": [
         "jue",
@@ -44589,9 +44676,9 @@
       ],
       "version": null,
       "releaseDate": null,
-      "artUrl": "https://endfield.wiki.gg/images/Xaihi_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/95/d9/141846_crt_7f9ox.jpg",
-      "artKind": "POSTER",
+      "artUrl": "https://endfield.wiki.gg/images/Xaihi.png",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Xaihi_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:141846",
       "name": "赛希",
       "work": "明日方舟：终末地",
@@ -44602,11 +44689,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#4C8390",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "96b44f7267562fa52a03e0f9be0e36b1c5cf1495"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Xaihi_icon.png",
+        "sampleSha1": "2184193021cd3beb5f8fd81b34f49a66e32f491e",
+        "sampleColor": "#4C8390",
+        "displayColor": "#3D4C55",
+        "deltaE": 23.6
       },
       "searchKeys": [
         "saixi",
@@ -44667,8 +44757,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Alesh_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/c7/87/189433_crt_5Uea4.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Alesh_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189433",
       "name": "阿列什",
       "work": "明日方舟：终末地",
@@ -44679,11 +44769,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#4A3A31",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "d70b9e64ea16d87a2999f5143a4a584c3c97ceaf"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Alesh_icon.png",
+        "sampleSha1": "8365a60fb51f263f66e779502146068f7675773f",
+        "sampleColor": "#4A3A31",
+        "displayColor": "#5C849B",
+        "deltaE": 39.2
       },
       "searchKeys": [
         "alishen",
@@ -44813,9 +44906,9 @@
       ],
       "version": null,
       "releaseDate": null,
-      "artUrl": "https://endfield.wiki.gg/images/Chen_Qianyu_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/51/b5/142397_crt_37T3e.jpg",
-      "artKind": "POSTER",
+      "artUrl": "https://endfield.wiki.gg/images/Chen_Qianyu.png",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Chen_Qianyu_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:142397",
       "name": "陈千语",
       "work": "明日方舟：终末地",
@@ -44826,11 +44919,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#24292B",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "3bdd1fa0f646432e9c2f4b9f0bd591246b6003f9"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Chen_Qianyu_icon.png",
+        "sampleSha1": "6629fe92c3a6f53177f3a312a2e9b7154807ea35",
+        "sampleColor": "#24292B",
+        "displayColor": "#2B3840",
+        "deltaE": 8.1
       },
       "searchKeys": [
         "chenqianyu",
@@ -44889,8 +44985,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Pogranichnik_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/c5/c4/189432_crt_oc8ag.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Pogranichnik_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:189432",
       "name": "骏卫",
       "work": "明日方舟：终末地",
@@ -44901,11 +44997,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#60504B",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "14d1d4c48c43e3c14e96fbf146ff2e3c68fd6c95"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Pogranichnik_icon.png",
+        "sampleSha1": "67f81264051984bfdb8feaaa47cac5e461df7529",
+        "sampleColor": "#60504B",
+        "displayColor": "#293A46",
+        "deltaE": 21.2
       },
       "searchKeys": [
         "junwei",
@@ -44970,8 +45069,8 @@
       "version": null,
       "releaseDate": null,
       "artUrl": "https://endfield.wiki.gg/images/Lifeng_Splash_Art.png",
-      "hairSampleUrl": "https://lain.bgm.tv/pic/crt/g/71/53/169195_crt_On35n.jpg",
-      "artKind": "POSTER",
+      "hairSampleUrl": "https://endfield.wiki.gg/images/Lifeng_icon.png",
+      "artKind": "PORTRAIT",
       "key": "bgm:169195",
       "name": "黎风",
       "work": "明日方舟：终末地",
@@ -44982,11 +45081,14 @@
       "firstSeenAt": "2026-10-20",
       "baseline": true,
       "hair": {
-        "primary": null,
+        "primary": "#91926D",
         "secondary": null,
-        "confidence": "LOW",
-        "sampledFrom": null,
-        "sampleSha1": "f3a187cb9a6fee22b1c20c48d4656dba763f9e03"
+        "confidence": "HIGH",
+        "sampledFrom": "https://endfield.wiki.gg/images/Lifeng_icon.png",
+        "sampleSha1": "b22fd01387f58cabb497dd8cf6ff2129bd6ab943",
+        "sampleColor": "#91926D",
+        "displayColor": "#762835",
+        "deltaE": 53.1
       },
       "searchKeys": [
         "lifeng",

@@ -125,6 +125,15 @@ def hair_is_settled(character: dict) -> bool:
         return True
     if character.get("artKind") == "POSTER" and hair.get("confidence") == "LOW":
         return True
+    # A low read of a known sample file stays put until that file changes.
+    # artKind is the display image, so a portrait card can still have a settled low sample.
+    if (
+        hair.get("confidence") == "LOW"
+        and not hair.get("primary")
+        and hair.get("sampleSha1")
+        and hair.get("sampledFrom")
+    ):
+        return True
     if hair.get("error"):
         return True
     if hair.get("confidence") == "UNKNOWN" and not character.get("artUrl") and not character.get("hairSampleUrl"):

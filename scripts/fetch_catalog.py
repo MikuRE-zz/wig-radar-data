@@ -74,6 +74,8 @@ BANGUMI = "https://api.bgm.tv"
 ENDFIELD_SUBJECT = 374638
 ENDFIELD_WORK = "明日方舟：终末地"
 ENDFIELD_WIKI = "https://endfield.wiki.gg/api.php"
+# A file named like the operator but only a bust crop is not the full-body illustration.
+ENDFIELD_PORTRAIT_MIN_EDGE = 512
 KNOWN_SOURCES = (
     "nanoka-gi",
     "nanoka-hsr",
@@ -892,34 +894,88 @@ def canonical_gender(value: str) -> str:
     return {"女": "Female", "男": "Male", "female": "Female", "male": "Male"}.get(value.strip().casefold(), "")
 
 
-def splash_file_names(operator: str, gender: str) -> list[str]:
-    names = [f"{operator} Splash Art.png"]
+def endfield_query_names(operators: list[dict]) -> list[str]:
+    counts: dict[str, int] = {}
+    rows: list[tuple[str, str]] = []
+    for row in operators:
+        if not isinstance(row, dict):
+            continue
+        operator = str(row.get("Operator") or "").strip()
+        if not operator:
+            continue
+        rows.append((operator, canonical_gender(str(row.get("Gender") or ""))))
+        counts[operator] = counts.get(operator, 0) + 1
+    names: list[str] = []
+    for operator, gender in rows:
+        for group in endfield_file_names(operator, gender, unique=counts[operator] == 1).values():
+            names.extend(group)
+    return list(dict.fromkeys(name for name in names if name))
+
+
+def endfield_file_names(operator: str, gender: str, *, unique: bool) -> dict[str, list[str]]:
+    """Wiki file titles. A shared name only uses the gendered file, so the two protagonists stay apart."""
+    portrait: list[str] = []
+    icon: list[str] = []
+    splash: list[str] = []
+    if unique:
+        portrait.append(f"{operator}.png")
+        icon.append(f"{operator} icon.png")
+        splash.append(f"{operator} Splash Art.png")
     if gender:
-        names.append(f"{operator} ({gender}) Splash Art.png")
-    return names
+        portrait.append(f"{operator} ({gender}).png")
+        icon.append(f"{operator} ({gender}) icon.png")
+        splash.append(f"{operator} ({gender}) Splash Art.png")
+    return {"portrait": portrait, "icon": icon, "splash": splash}
 
 
-def _remember_splash(index: dict[str, list[dict]], key: str, entry: dict) -> None:
+def _remember_art(index: dict[str, list[dict]], key: str, entry: dict) -> None:
     text = key.strip().casefold()
     if not text:
         return
     rows = index.setdefault(text, [])
-    if any(row.get("artUrl") == entry["artUrl"] and row.get("gender") == entry["gender"] for row in rows):
+    identity = (entry.get("portrait"), entry.get("icon"), entry.get("splash"), entry.get("gender"))
+    if any(
+        (row.get("portrait"), row.get("icon"), row.get("splash"), row.get("gender")) == identity
+        for row in rows
+    ):
         return
     rows.append(entry)
 
 
-def index_endfield_splashes(
+def _file_record(value: Any) -> dict[str, Any] | None:
+    if isinstance(value, str) and value:
+        return {"url": value, "width": 0, "height": 0}
+    if isinstance(value, dict) and value.get("url"):
+        return value
+    return None
+
+
+def _first_file_url(folded: dict[str, dict], names: list[str], *, min_edge: int = 0) -> str:
+    for name in names:
+        record = folded.get(name.casefold())
+        if not record:
+            continue
+        edge = max(int(record.get("width") or 0), int(record.get("height") or 0))
+        if min_edge and edge and edge < min_edge:
+            continue
+        url = str(record.get("url") or "")
+        if url:
+            return url
+    return ""
+
+
+def index_endfield_art(
     operators: list[dict],
-    files: dict[str, str],
+    files: dict[str, Any],
     labels: dict[str, list[str]] | None = None,
 ) -> dict[str, list[dict]]:
-    folded: dict[str, str] = {}
-    for title, url in files.items():
-        if url:
-            folded[file_title_name(title).casefold()] = url
-    labels = labels or {}
-    index: dict[str, list[dict]] = {}
+    folded: dict[str, dict] = {}
+    for title, value in files.items():
+        record = _file_record(value)
+        if record:
+            folded[file_title_name(title).casefold()] = record
+    counts: dict[str, int] = {}
+    cleaned: list[tuple[str, str]] = []
     for row in operators:
         if not isinstance(row, dict):
             continue
@@ -927,32 +983,38 @@ def index_endfield_splashes(
         if not operator:
             continue
         gender = canonical_gender(str(row.get("Gender") or ""))
-        url = ""
-        for name in splash_file_names(operator, gender):
-            url = folded.get(name.casefold(), "")
-            if url:
-                break
-        if not url:
+        cleaned.append((operator, gender))
+        counts[operator] = counts.get(operator, 0) + 1
+    labels = labels or {}
+    index: dict[str, list[dict]] = {}
+    for operator, gender in cleaned:
+        names = endfield_file_names(operator, gender, unique=counts[operator] == 1)
+        entry = {
+            "gender": gender,
+            "portrait": _first_file_url(folded, names["portrait"], min_edge=ENDFIELD_PORTRAIT_MIN_EDGE),
+            "icon": _first_file_url(folded, names["icon"]),
+            "splash": _first_file_url(folded, names["splash"]),
+        }
+        if not entry["portrait"] and not entry["icon"] and not entry["splash"]:
             continue
-        entry = {"gender": gender, "artUrl": url}
-        _remember_splash(index, operator, entry)
+        _remember_art(index, operator, entry)
         for label in labels.get(operator.casefold(), []):
-            _remember_splash(index, label, entry)
+            _remember_art(index, label, entry)
     return index
 
 
-def pick_endfield_splash(index: dict, english: str, gender: str, chinese: str = "") -> str | None:
-    """One name can be two protagonists. Do not guess which splash."""
+def pick_endfield_art(index: dict, english: str, gender: str, chinese: str = "") -> dict | None:
+    """One name can be two protagonists. Do not guess which file."""
     for text in (english, chinese):
         key = text.strip().casefold()
         rows = list(index.get(key) or [])
         if not key or not rows:
             continue
         if len(rows) == 1:
-            return str(rows[0]["artUrl"])
+            return rows[0]
         matched = [row for row in rows if gender and row.get("gender") == gender]
         if len(matched) == 1:
-            return str(matched[0]["artUrl"])
+            return matched[0]
     return None
 
 
@@ -963,8 +1025,8 @@ def stable_image_url(url: str) -> str:
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
 
 
-def wiki_file_urls(http: Http, names: list[str]) -> dict[str, str]:
-    found: dict[str, str] = {}
+def wiki_file_urls(http: Http, names: list[str]) -> dict[str, dict[str, Any]]:
+    found: dict[str, dict[str, Any]] = {}
     for start in range(0, len(names), 40):
         chunk = names[start:start + 40]
         query = urllib.parse.urlencode(
@@ -972,7 +1034,7 @@ def wiki_file_urls(http: Http, names: list[str]) -> dict[str, str]:
                 "action": "query",
                 "format": "json",
                 "prop": "imageinfo",
-                "iiprop": "url",
+                "iiprop": "url|size",
                 "titles": "|".join(f"File:{name}" for name in chunk),
             }
         )
@@ -989,7 +1051,11 @@ def wiki_file_urls(http: Http, names: list[str]) -> dict[str, str]:
             url = stable_image_url(str(info[0].get("url") or ""))
             title = str(page.get("title") or "")
             if url and title:
-                found[title] = url
+                found[title] = {
+                    "url": url,
+                    "width": int(info[0].get("width") or 0),
+                    "height": int(info[0].get("height") or 0),
+                }
     return found
 
 
@@ -1012,18 +1078,13 @@ def fetch_endfield_art_index(http: Http) -> dict[str, list[dict]]:
         title = item.get("title") if isinstance(item, dict) else None
         if isinstance(title, dict) and title.get("Operator"):
             operators.append(title)
-    names: list[str] = []
-    for row in operators:
-        names.extend(
-            splash_file_names(str(row.get("Operator") or ""), canonical_gender(str(row.get("Gender") or "")))
-        )
-    files = wiki_file_urls(http, list(dict.fromkeys(name for name in names if name)))
+    files = wiki_file_urls(http, endfield_query_names(operators))
     try:
         labels = fetch_endfield_cn_labels(http)
     except Exception as error:
         print(f"endfield wiki names failed: {error}", file=sys.stderr)
         labels = {}
-    return index_endfield_splashes(operators, files, labels)
+    return index_endfield_art(operators, files, labels)
 
 
 def fetch_endfield_cn_labels(http: Http) -> dict[str, list[str]]:
@@ -1085,16 +1146,17 @@ def build_endfield_character(
     images = item.get("images") if isinstance(item.get("images"), dict) else {}
     art = usable_image(images.get("large"))
     sample = usable_image(images.get("grid") or images.get("medium"))
-    splash = pick_endfield_splash(
+    picked = pick_endfield_art(
         art_index,
         endfield_english_name(detail),
         endfield_gender(detail),
         name,
     )
-    if splash:
-        # Splash art is the illustration. Hair stays on the Bangumi grid: the splash
-        # is a full scene, and sampling it takes the effect color instead of the hair.
-        art = splash
+    if picked:
+        # Portrait, then splash, then the Bangumi poster. The icon is the hair sample.
+        art = picked.get("portrait") or picked.get("splash") or art
+        if picked.get("icon"):
+            sample = picked["icon"]
     return base_character(
         key=f"bgm:{cid}",
         name=name,
@@ -1143,16 +1205,33 @@ def fetch_endfield(http: Http) -> tuple[list[dict] | None, dict[str, Any]]:
         if row is None:
             continue
         characters[row["key"]] = row
-    splashed = sum(1 for row in characters.values() if "endfield.wiki.gg" in str(row.get("artUrl") or ""))
+    portraits = 0
+    splashes = 0
+    icons = 0
+    for row in characters.values():
+        art_url = str(row.get("artUrl") or "")
+        if "Splash_Art" in art_url:
+            splashes += 1
+        elif "endfield.wiki.gg" in art_url:
+            portraits += 1
+        if str(row.get("hairSampleUrl") or "").endswith("icon.png"):
+            icons += 1
     error = f"{detail_errors} character details failed" if detail_errors else None
     meta = source_run(
         "partial" if detail_errors else "ok",
         endpoint,
         count=len(characters),
         error=error,
-        extra={"subjectId": ENDFIELD_SUBJECT, "wikiArt": splashed, "listed": len(listed)},
+        extra={
+            "subjectId": ENDFIELD_SUBJECT,
+            "wikiArt": portraits + splashes,
+            "wikiPortrait": portraits,
+            "wikiSplash": splashes,
+            "wikiIcon": icons,
+            "listed": len(listed),
+        },
     )
-    print(f"endfield: {len(characters)} characters, {splashed} splash art")
+    print(f"endfield: {len(characters)} characters, {portraits} portraits, {splashes} splash art, {icons} icons")
     return list(characters.values()), meta
 
 
@@ -1554,13 +1633,15 @@ def extract_one(http: Http, character: dict) -> dict[str, Any]:
             inspected = inspect_image(http, display_url)
             if inspected is not None:
                 display_kind, display_color = inspected
-        if verdict.kind == POSTER:
-            character["artKind"] = display_kind if display_kind == POSTER else POSTER
+        character["artKind"] = display_kind
+        # A poster sample has no trustworthy hair, unless the display is a separate portrait
+        # and this file is only the head shot. Bangumi grids stay low: their display is a poster too.
+        if verdict.kind == POSTER and display_kind != PORTRAIT:
             return _store_hair(character, {
                 "primary": None,
                 "secondary": None,
                 "confidence": "LOW",
-                "sampledFrom": None,
+                "sampledFrom": url,
                 "sampleSha1": sample_sha1,
             })
         extracted = extract_hair(pixels, width, height)

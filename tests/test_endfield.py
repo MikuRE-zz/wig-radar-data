@@ -7,8 +7,8 @@ import unittest
 from scripts.catalog_lib import GAME_COPYRIGHT, game_copyright_matches, merge_characters
 from scripts.fetch_catalog import (
     build_endfield_character,
-    index_endfield_splashes,
-    pick_endfield_splash,
+    index_endfield_art,
+    pick_endfield_art,
     shrink_guard,
 )
 from scripts.fetch_heat import as_watch_item
@@ -104,18 +104,27 @@ class EndfieldParseTest(unittest.TestCase):
         self.assertNotIn("&#", row["name"])
         self.assertNotIn("&amp;", " ".join(row["aliases"]))
 
-    def test_splash_is_display_and_two_protagonists_are_not_guessed(self) -> None:
-        index = index_endfield_splashes(
+    def test_portrait_then_splash_then_bangumi_and_icon_is_the_sample(self) -> None:
+        index = index_endfield_art(
             [
                 {"Operator": "Chen Qianyu", "Gender": "Female"},
                 {"Operator": "Endministrator", "Gender": "Female"},
                 {"Operator": "Endministrator", "Gender": "Male"},
+                {"Operator": "Camille", "Gender": "Female"},
             ],
             {
+                "File:Chen Qianyu.png": "https://endfield.wiki.gg/images/Chen_Qianyu.png",
+                "File:Chen Qianyu icon.png": "https://endfield.wiki.gg/images/Chen_Qianyu_icon.png",
                 "File:Chen Qianyu Splash Art.png": "https://endfield.wiki.gg/images/Chen_Qianyu_Splash_Art.png",
+                "File:Endministrator.png": "https://endfield.wiki.gg/images/Endministrator.png",
+                "File:Endministrator icon.png": "https://endfield.wiki.gg/images/Endministrator_icon.png",
+                "File:Endministrator (Female) icon.png": "https://endfield.wiki.gg/images/endmin_f_icon.png",
+                "File:Endministrator (Male) icon.png": "https://endfield.wiki.gg/images/endmin_m_icon.png",
                 "File:Endministrator (Female) Splash Art.png": "https://endfield.wiki.gg/images/endmin_f.png",
                 "File:Endministrator (Male) Splash Art.png": "https://endfield.wiki.gg/images/endmin_m.png",
+                "File:Camille Splash Art.png": "https://endfield.wiki.gg/images/Camille_Splash_Art.png",
             },
+            {"camille": ["卡缪"]},
         )
         chen = build_endfield_character(
             _item(142397, "陈"),
@@ -145,23 +154,39 @@ class EndfieldParseTest(unittest.TestCase):
             _detail("管理员", [{"key": "别名", "value": [{"k": "英文名", "v": "Endministrator"}]}]),
             index,
         )
-        assert chen is not None and female is not None and unknown is not None
+        camille = build_endfield_character(_item(208374, "卡缪"), _detail("卡缪"), index)
+        assert chen is not None and female is not None and unknown is not None and camille is not None
         self.assertEqual("陈千语", chen["name"])
-        self.assertEqual("https://endfield.wiki.gg/images/Chen_Qianyu_Splash_Art.png", chen["artUrl"])
-        self.assertEqual("https://lain.bgm.tv/pic/crt/g/142397.jpg", chen["hairSampleUrl"])
+        self.assertEqual("https://endfield.wiki.gg/images/Chen_Qianyu.png", chen["artUrl"])
+        self.assertEqual("https://endfield.wiki.gg/images/Chen_Qianyu_icon.png", chen["hairSampleUrl"])
         self.assertEqual("https://endfield.wiki.gg/images/endmin_f.png", female["artUrl"])
-        self.assertIsNone(pick_endfield_splash(index, "Endministrator", ""))
+        self.assertEqual("https://endfield.wiki.gg/images/endmin_f_icon.png", female["hairSampleUrl"])
+        self.assertIsNone(pick_endfield_art(index, "Endministrator", ""))
         self.assertEqual("https://lain.bgm.tv/pic/crt/l/141264.jpg", unknown["artUrl"])
-        labeled = index_endfield_splashes(
-            [{"Operator": "Camille", "Gender": "Female"}],
-            {"File:Camille Splash Art.png": "https://endfield.wiki.gg/images/Camille_Splash_Art.png"},
-            {"camille": ["卡缪"]},
-        )
-        camille = build_endfield_character(_item(208374, "卡缪"), _detail("卡缪"), labeled)
-        assert camille is not None
+        self.assertEqual("https://lain.bgm.tv/pic/crt/g/141264.jpg", unknown["hairSampleUrl"])
+        self.assertNotIn("Endministrator.png", unknown["artUrl"])
         self.assertEqual("https://endfield.wiki.gg/images/Camille_Splash_Art.png", camille["artUrl"])
         self.assertEqual("https://lain.bgm.tv/pic/crt/g/208374.jpg", camille["hairSampleUrl"])
-        self.assertEqual("https://lain.bgm.tv/pic/crt/g/141264.jpg", unknown["hairSampleUrl"])
+        bust = index_endfield_art(
+            [{"Operator": "Tangtang", "Gender": "Female"}],
+            {
+                "File:Tangtang.png": {
+                    "url": "https://endfield.wiki.gg/images/Tangtang.png",
+                    "width": 152,
+                    "height": 212,
+                },
+                "File:Tangtang Splash Art.png": "https://endfield.wiki.gg/images/Tangtang_Splash_Art.png",
+                "File:Tangtang icon.png": "https://endfield.wiki.gg/images/Tangtang_icon.png",
+            },
+        )
+        tangtang = build_endfield_character(
+            _item(190912, "汤汤"),
+            _detail("汤汤", [{"key": "别名", "value": [{"k": "英文名", "v": "Tangtang"}]}]),
+            bust,
+        )
+        assert tangtang is not None
+        self.assertEqual("https://endfield.wiki.gg/images/Tangtang_Splash_Art.png", tangtang["artUrl"])
+        self.assertEqual("https://endfield.wiki.gg/images/Tangtang_icon.png", tangtang["hairSampleUrl"])
 
 
 class EndfieldMergeTest(unittest.TestCase):
