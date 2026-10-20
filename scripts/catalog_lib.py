@@ -213,8 +213,10 @@ def merge_characters(
 
     `fetched[source] is None` means that source failed: keep its previous
     characters and do not treat them as disappeared. On the first import
-    (`previous is None`) every character is baseline. A key that shows up
-    later is not baseline, and an existing firstSeenAt is never rewritten.
+    (`previous is None`) every character is baseline. The first time a source
+    appears it is the same: every character from that source is baseline.
+    A key that shows up later is not baseline, and an existing firstSeenAt
+    is never rewritten.
     """
     prev_list: list[dict] = []
     if previous and isinstance(previous.get("characters"), list):
@@ -233,6 +235,7 @@ def merge_characters(
             for old in prev_by_source.get(source, []):
                 merged[old["key"]] = old
             continue
+        source_is_new = source not in prev_by_source
         for fresh in rows:
             row = dict(fresh)
             row["source"] = source
@@ -246,7 +249,7 @@ def merge_characters(
                         row["artKind"] = old.get("artKind")
             else:
                 row["firstSeenAt"] = today
-                row["baseline"] = first_import
+                row["baseline"] = first_import or source_is_new
             merged[row["key"]] = row
 
     for source, rows in prev_by_source.items():
@@ -264,6 +267,7 @@ GAME_COPYRIGHT = {
     "zzz": "zenless_zone_zero",
     "wuwa": "wuthering_waves",
     "arknights": "arknights",
+    "endfield": "arknights:_endfield",
     "bluearchive": "blue_archive",
 }
 AUTO_TAG_VERSION = "danbooru-v1"
@@ -618,7 +622,15 @@ def game_copyright_matches(game: str, pairs: list[tuple[str, float]]) -> bool:
     expected = GAME_COPYRIGHT.get(game or "")
     if not expected:
         return False
-    return expected in top_copyright_names(pairs)
+    if expected in top_copyright_names(pairs):
+        return True
+    # Endfield posts are also tagged arknights, so the parent sits at 1.0 and
+    # arknights:_endfield lands just outside the 0.005 tie. A high second place
+    # is still this game. A low one is the original work.
+    if game != "endfield" or "arknights" not in top_copyright_names(pairs):
+        return False
+    freq = {name: value for name, value in pairs}
+    return freq.get(expected, 0.0) >= 0.95
 
 
 def anime_copyright_matches(

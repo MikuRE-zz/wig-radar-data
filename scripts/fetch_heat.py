@@ -215,6 +215,7 @@ GAME_SYNONYMS = {
     "zzz": ["绝区零", "Zenless Zone Zero", "绝区零"],
     "wuwa": ["鸣潮", "Wuthering Waves"],
     "arknights": ["明日方舟", "Arknights", "明日方舟"],
+    "endfield": ["明日方舟：终末地", "终末地", "Arknights: Endfield"],
     "bluearchive": ["碧蓝档案", "Blue Archive"],
     "anime": [],
 }

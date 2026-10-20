@@ -4,10 +4,12 @@
 Run from the repo root:
 
     python scripts/fetch_catalog.py --out catalog.json
+    python scripts/fetch_catalog.py --only endfield
 
 The first import marks every character baseline. Later runs only stamp
 firstSeenAt on keys that were not in the previous file. A source that fails
-keeps that source's previous characters.
+keeps that source's previous characters. `--only` refreshes the named sources
+and leaves every other source's rows and metadata as stored.
 """
 
 from __future__ import annotations
@@ -69,6 +71,19 @@ AK_TABLE = (
 )
 SCHALE_STUDENTS = "https://schaledb.com/data/cn/students.json"
 BANGUMI = "https://api.bgm.tv"
+ENDFIELD_SUBJECT = 374638
+ENDFIELD_WORK = "明日方舟：终末地"
+ENDFIELD_WIKI = "https://endfield.wiki.gg/api.php"
+KNOWN_SOURCES = (
+    "nanoka-gi",
+    "nanoka-hsr",
+    "nanoka-zzz",
+    "wuwa",
+    "arknights",
+    "endfield",
+    "bluearchive",
+    "bangumi",
+)
 # This season's hottest shows, then next season. A short side is filled from the other.
 CURRENT_SEASON_KEEP = 20
 NEXT_SEASON_KEEP = 10
@@ -337,6 +352,14 @@ def shrink_guard(
         print(f"{source}: new list {len(rows)} is under half of previous {len(old)}; keeping previous", file=sys.stderr)
         return None
     return rows
+
+
+def parse_only(value: str) -> set[str]:
+    names = {part.strip() for part in (value or "").split(",") if part.strip()}
+    unknown = names.difference(KNOWN_SOURCES)
+    if unknown:
+        raise SystemExit("unknown source: " + ", ".join(sorted(unknown)))
+    return names
 
 
 def clean_label(value: Any) -> str:
@@ -860,6 +883,279 @@ def fetch_blue_archive(http: Http, today: date) -> tuple[list[dict] | None, dict
         return None, source_run("failed", SCHALE_STUDENTS, error=str(error))
 
 
+def file_title_name(title: str) -> str:
+    name = title[5:] if title.startswith("File:") else title
+    return " ".join(name.replace("_", " ").split())
+
+
+def canonical_gender(value: str) -> str:
+    return {"女": "Female", "男": "Male", "female": "Female", "male": "Male"}.get(value.strip().casefold(), "")
+
+
+def splash_file_names(operator: str, gender: str) -> list[str]:
+    names = [f"{operator} Splash Art.png"]
+    if gender:
+        names.append(f"{operator} ({gender}) Splash Art.png")
+    return names
+
+
+def _remember_splash(index: dict[str, list[dict]], key: str, entry: dict) -> None:
+    text = key.strip().casefold()
+    if not text:
+        return
+    rows = index.setdefault(text, [])
+    if any(row.get("artUrl") == entry["artUrl"] and row.get("gender") == entry["gender"] for row in rows):
+        return
+    rows.append(entry)
+
+
+def index_endfield_splashes(
+    operators: list[dict],
+    files: dict[str, str],
+    labels: dict[str, list[str]] | None = None,
+) -> dict[str, list[dict]]:
+    folded: dict[str, str] = {}
+    for title, url in files.items():
+        if url:
+            folded[file_title_name(title).casefold()] = url
+    labels = labels or {}
+    index: dict[str, list[dict]] = {}
+    for row in operators:
+        if not isinstance(row, dict):
+            continue
+        operator = str(row.get("Operator") or "").strip()
+        if not operator:
+            continue
+        gender = canonical_gender(str(row.get("Gender") or ""))
+        url = ""
+        for name in splash_file_names(operator, gender):
+            url = folded.get(name.casefold(), "")
+            if url:
+                break
+        if not url:
+            continue
+        entry = {"gender": gender, "artUrl": url}
+        _remember_splash(index, operator, entry)
+        for label in labels.get(operator.casefold(), []):
+            _remember_splash(index, label, entry)
+    return index
+
+
+def pick_endfield_splash(index: dict, english: str, gender: str, chinese: str = "") -> str | None:
+    """One name can be two protagonists. Do not guess which splash."""
+    for text in (english, chinese):
+        key = text.strip().casefold()
+        rows = list(index.get(key) or [])
+        if not key or not rows:
+            continue
+        if len(rows) == 1:
+            return str(rows[0]["artUrl"])
+        matched = [row for row in rows if gender and row.get("gender") == gender]
+        if len(matched) == 1:
+            return str(matched[0]["artUrl"])
+    return None
+
+
+def stable_image_url(url: str) -> str:
+    parts = urllib.parse.urlsplit(url)
+    if not parts.scheme or not parts.netloc or not parts.path:
+        return ""
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+
+
+def wiki_file_urls(http: Http, names: list[str]) -> dict[str, str]:
+    found: dict[str, str] = {}
+    for start in range(0, len(names), 40):
+        chunk = names[start:start + 40]
+        query = urllib.parse.urlencode(
+            {
+                "action": "query",
+                "format": "json",
+                "prop": "imageinfo",
+                "iiprop": "url",
+                "titles": "|".join(f"File:{name}" for name in chunk),
+            }
+        )
+        payload = get_json(http, f"{ENDFIELD_WIKI}?{query}", timeout=60)
+        pages = ((payload or {}).get("query") or {}).get("pages") or {}
+        if not isinstance(pages, dict):
+            continue
+        for page in pages.values():
+            if not isinstance(page, dict) or page.get("missing") is not None:
+                continue
+            info = page.get("imageinfo") or []
+            if not info or not isinstance(info[0], dict):
+                continue
+            url = stable_image_url(str(info[0].get("url") or ""))
+            title = str(page.get("title") or "")
+            if url and title:
+                found[title] = url
+    return found
+
+
+def fetch_endfield_art_index(http: Http) -> dict[str, list[dict]]:
+    query = urllib.parse.urlencode(
+        {
+            "action": "cargoquery",
+            "format": "json",
+            "tables": "Operators",
+            "fields": "Operator,Gender",
+            "limit": "500",
+        }
+    )
+    payload = get_json(http, f"{ENDFIELD_WIKI}?{query}", timeout=60)
+    cargo = payload.get("cargoquery") if isinstance(payload, dict) else None
+    if not isinstance(cargo, list):
+        raise RuntimeError("wiki operator list is not cargoquery")
+    operators = []
+    for item in cargo:
+        title = item.get("title") if isinstance(item, dict) else None
+        if isinstance(title, dict) and title.get("Operator"):
+            operators.append(title)
+    names: list[str] = []
+    for row in operators:
+        names.extend(
+            splash_file_names(str(row.get("Operator") or ""), canonical_gender(str(row.get("Gender") or "")))
+        )
+    files = wiki_file_urls(http, list(dict.fromkeys(name for name in names if name)))
+    try:
+        labels = fetch_endfield_cn_labels(http)
+    except Exception as error:
+        print(f"endfield wiki names failed: {error}", file=sys.stderr)
+        labels = {}
+    return index_endfield_splashes(operators, files, labels)
+
+
+def fetch_endfield_cn_labels(http: Http) -> dict[str, list[str]]:
+    """Bangumi often has no 英文名. The wiki's cn locale is the other join key."""
+    query = urllib.parse.urlencode(
+        {
+            "action": "cargoquery",
+            "format": "json",
+            "tables": "Operators,Locales",
+            "join_on": "Operators.Operator=Locales.Entity",
+            "fields": "Operators.Operator=op,Locales.Value=name",
+            "where": 'Locales.Lang="cn" AND Locales.Param="name"',
+            "limit": "500",
+        }
+    )
+    payload = get_json(http, f"{ENDFIELD_WIKI}?{query}", timeout=60)
+    cargo = payload.get("cargoquery") if isinstance(payload, dict) else None
+    if not isinstance(cargo, list):
+        raise RuntimeError("wiki names are not cargoquery")
+    labels: dict[str, list[str]] = {}
+    for item in cargo:
+        title = item.get("title") if isinstance(item, dict) else None
+        if not isinstance(title, dict):
+            continue
+        operator = str(title.get("op") or "").strip().casefold()
+        name = str(title.get("name") or "").strip()
+        if not operator or not name or name in labels.get(operator, []):
+            continue
+        labels.setdefault(operator, []).append(name)
+    return labels
+
+
+def endfield_english_name(detail: dict[str, Any] | None) -> str:
+    if not isinstance(detail, dict):
+        return ""
+    names = infobox_labeled(detail.get("infobox"), "英文名")
+    return names[0] if names else ""
+
+
+def endfield_gender(detail: dict[str, Any] | None) -> str:
+    if not isinstance(detail, dict):
+        return ""
+    values = infobox_values(detail.get("infobox"), "性别")
+    return canonical_gender(values[0]) if values else ""
+
+
+def build_endfield_character(
+    item: dict[str, Any],
+    detail: dict[str, Any] | None,
+    art_index: dict,
+) -> dict[str, Any] | None:
+    cid = item.get("id")
+    if not isinstance(cid, int):
+        return None
+    identity = bangumi_identity(item, detail)
+    if identity is None:
+        return None
+    name, aliases = identity
+    images = item.get("images") if isinstance(item.get("images"), dict) else {}
+    art = usable_image(images.get("large"))
+    sample = usable_image(images.get("grid") or images.get("medium"))
+    splash = pick_endfield_splash(
+        art_index,
+        endfield_english_name(detail),
+        endfield_gender(detail),
+        name,
+    )
+    if splash:
+        # Splash art is the illustration. Hair stays on the Bangumi grid: the splash
+        # is a full scene, and sampling it takes the effect color instead of the hair.
+        art = splash
+    return base_character(
+        key=f"bgm:{cid}",
+        name=name,
+        aliases=aliases,
+        work=ENDFIELD_WORK,
+        game="endfield",
+        version=None,
+        kind="GAME",
+        status="EVERGREEN",
+        releaseDate=None,
+        artUrl=art,
+        hairSampleUrl=sample,
+        source="endfield",
+    )
+
+
+def fetch_endfield(http: Http) -> tuple[list[dict] | None, dict[str, Any]]:
+    endpoint = f"{BANGUMI}/v0/subjects/{ENDFIELD_SUBJECT}/characters"
+    try:
+        listed = get_json(http, endpoint, timeout=40)
+        if not isinstance(listed, list):
+            raise RuntimeError("character list is not a list")
+    except Exception as error:
+        print(f"endfield failed: {error}", file=sys.stderr)
+        return None, source_run("failed", endpoint, error=str(error))
+    try:
+        art_index = fetch_endfield_art_index(http)
+    except Exception as error:
+        print(f"endfield wiki art failed: {error}", file=sys.stderr)
+        art_index = {}
+    # type 1 only. type 4 is an organization. 闲角 stays: 大山 is a named person.
+    people = [row for row in listed if isinstance(row, dict) and is_person(row)]
+    characters: dict[str, dict] = {}
+    detail_errors = 0
+    for item in people:
+        cid = item.get("id")
+        detail = None
+        if isinstance(cid, int):
+            try:
+                loaded = get_json(http, f"{BANGUMI}/v0/characters/{cid}", timeout=40)
+                detail = loaded if isinstance(loaded, dict) else None
+            except Exception as error:
+                detail_errors += 1
+                print(f"endfield character {cid} detail failed: {error}", file=sys.stderr)
+        row = build_endfield_character(item, detail, art_index)
+        if row is None:
+            continue
+        characters[row["key"]] = row
+    splashed = sum(1 for row in characters.values() if "endfield.wiki.gg" in str(row.get("artUrl") or ""))
+    error = f"{detail_errors} character details failed" if detail_errors else None
+    meta = source_run(
+        "partial" if detail_errors else "ok",
+        endpoint,
+        count=len(characters),
+        error=error,
+        extra={"subjectId": ENDFIELD_SUBJECT, "wikiArt": splashed, "listed": len(listed)},
+    )
+    print(f"endfield: {len(characters)} characters, {splashed} splash art")
+    return list(characters.values()), meta
+
+
 def fetch_bangumi(http: Http, today: date) -> tuple[list[dict] | None, dict[str, Any]]:
     endpoint = f"{BANGUMI}/calendar"
     errors: list[str] = []
@@ -1030,18 +1326,10 @@ def pick_cast(listed: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return mains[:MAIN_CAST_KEEP]
 
 
-def build_bangumi_character(
-    item: dict[str, Any],
-    show: dict[str, Any],
-    today: date,
-    detail: dict[str, Any] | None,
-) -> dict[str, Any] | None:
-    cid = item.get("id")
-    if not isinstance(cid, int):
-        return None
+def bangumi_identity(item: dict[str, Any], detail: dict[str, Any] | None) -> tuple[str, list[str]] | None:
+    """Simplified Chinese name, then the same alias list the anime source keeps."""
     if not is_person(item) or not is_person(detail):
         return None
-    images = item.get("images") or {}
     list_name = clean_label(item.get("name"))
     original = list_name
     name = list_name
@@ -1062,6 +1350,23 @@ def build_bangumi_character(
         return None
     if numeric_only_name(cn_name or name, original):
         return None
+    return name, aliases
+
+
+def build_bangumi_character(
+    item: dict[str, Any],
+    show: dict[str, Any],
+    today: date,
+    detail: dict[str, Any] | None,
+) -> dict[str, Any] | None:
+    cid = item.get("id")
+    if not isinstance(cid, int):
+        return None
+    identity = bangumi_identity(item, detail)
+    if identity is None:
+        return None
+    name, aliases = identity
+    images = item.get("images") or {}
     try:
         work_heat = int(show.get("workHeat") or 0)
     except (TypeError, ValueError):
@@ -1119,6 +1424,25 @@ def infobox_values(infobox: Any, key: str) -> list[str]:
                     text = part.get("v") or part.get("value") or ""
                     if str(text).strip():
                         found.append(str(text).strip())
+    return [clean_label(text) for text in found if text and clean_label(text)]
+
+
+def infobox_labeled(infobox: Any, label: str) -> list[str]:
+    """Top-level key or a nested `{k, v}` under 别名. Bangumi uses both."""
+    found = list(infobox_values(infobox, label))
+    if not isinstance(infobox, list):
+        return found
+    for item in infobox:
+        if not isinstance(item, dict):
+            continue
+        value = item.get("value")
+        if not isinstance(value, list):
+            continue
+        for part in value:
+            if isinstance(part, dict) and part.get("k") == label:
+                text = part.get("v") or part.get("value") or ""
+                if str(text).strip():
+                    found.append(str(text).strip())
     return [clean_label(text) for text in found if text and clean_label(text)]
 
 
@@ -1367,6 +1691,11 @@ def main() -> int:
         sys.stderr.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description="Build the wig-radar character catalog")
     parser.add_argument("--out", type=Path, default=ROOT / "catalog.json")
+    parser.add_argument(
+        "--only",
+        default="",
+        help="Comma-separated sources to refresh. Other sources stay as stored.",
+    )
     parser.add_argument("--hair-limit", type=int, default=0, help="Max images to extract this run; 0 means all pending")
     parser.add_argument("--skip-hair", action="store_true", help="Write the catalog without downloading images")
     parser.add_argument(
@@ -1385,47 +1714,69 @@ def main() -> int:
     kuro_http = Http(USER_AGENT, min_interval=0.25)
     bangumi_http = Http(USER_AGENT, min_interval=0.28)
 
+    only = parse_only(args.only)
+
+    def selected(name: str) -> bool:
+        return not only or name in only
+
     fetched: dict[str, list[dict] | None] = {}
     sources: dict[str, Any] = {}
+    if only and isinstance(previous, dict) and isinstance(previous.get("sources"), dict):
+        for name, meta in previous["sources"].items():
+            if name not in only:
+                sources[name] = meta
 
-    gi_rows, sources["nanoka-gi"] = fetch_nanoka_game(http, "gi", "genshin", "原神")
-    hsr_rows, sources["nanoka-hsr"] = fetch_nanoka_game(http, "hsr", "hsr", "崩坏：星穹铁道")
-    zzz_rows, sources["nanoka-zzz"] = fetch_nanoka_game(http, "zzz", "zzz", "绝区零")
-    ww_index, ww_index_meta = fetch_nanoka_game(http, "ww", "wuwa", "鸣潮")
-    fetched["nanoka-gi"] = shrink_guard("nanoka-gi", gi_rows, previous)
-    fetched["nanoka-hsr"] = shrink_guard("nanoka-hsr", hsr_rows, previous)
-    fetched["nanoka-zzz"] = shrink_guard("nanoka-zzz", zzz_rows, previous)
-    if fetched["nanoka-gi"] is None and gi_rows is not None:
-        sources["nanoka-gi"]["status"] = "failed"
-        sources["nanoka-gi"]["error"] = "result shrank; kept previous"
-    if fetched["nanoka-hsr"] is None and hsr_rows is not None:
-        sources["nanoka-hsr"]["status"] = "failed"
-        sources["nanoka-hsr"]["error"] = "result shrank; kept previous"
-    if fetched["nanoka-zzz"] is None and zzz_rows is not None:
-        sources["nanoka-zzz"]["status"] = "failed"
-        sources["nanoka-zzz"]["error"] = "result shrank; kept previous"
+    if selected("nanoka-gi") or selected("nanoka-hsr") or selected("nanoka-zzz") or selected("wuwa"):
+        if selected("nanoka-gi"):
+            gi_rows, sources["nanoka-gi"] = fetch_nanoka_game(http, "gi", "genshin", "原神")
+            fetched["nanoka-gi"] = shrink_guard("nanoka-gi", gi_rows, previous)
+            if fetched["nanoka-gi"] is None and gi_rows is not None:
+                sources["nanoka-gi"]["status"] = "failed"
+                sources["nanoka-gi"]["error"] = "result shrank; kept previous"
+        if selected("nanoka-hsr"):
+            hsr_rows, sources["nanoka-hsr"] = fetch_nanoka_game(http, "hsr", "hsr", "崩坏：星穹铁道")
+            fetched["nanoka-hsr"] = shrink_guard("nanoka-hsr", hsr_rows, previous)
+            if fetched["nanoka-hsr"] is None and hsr_rows is not None:
+                sources["nanoka-hsr"]["status"] = "failed"
+                sources["nanoka-hsr"]["error"] = "result shrank; kept previous"
+        if selected("nanoka-zzz"):
+            zzz_rows, sources["nanoka-zzz"] = fetch_nanoka_game(http, "zzz", "zzz", "绝区零")
+            fetched["nanoka-zzz"] = shrink_guard("nanoka-zzz", zzz_rows, previous)
+            if fetched["nanoka-zzz"] is None and zzz_rows is not None:
+                sources["nanoka-zzz"]["status"] = "failed"
+                sources["nanoka-zzz"]["error"] = "result shrank; kept previous"
+        if selected("wuwa"):
+            ww_index, ww_index_meta = fetch_nanoka_game(http, "ww", "wuwa", "鸣潮")
+            wuwa_rows, sources["wuwa"] = fetch_wuwa(kuro_http, ww_index, today_date)
+            sources["wuwa"]["nanokaIndex"] = {
+                "status": ww_index_meta.get("status"),
+                "count": ww_index_meta.get("count"),
+                "error": ww_index_meta.get("error"),
+                "endpoint": ww_index_meta.get("endpoint"),
+            }
+            fetched["wuwa"] = shrink_guard("wuwa", wuwa_rows, previous)
+            if fetched["wuwa"] is None and wuwa_rows is not None:
+                sources["wuwa"]["status"] = "failed"
+                sources["wuwa"]["error"] = "result shrank; kept previous"
 
-    wuwa_rows, sources["wuwa"] = fetch_wuwa(kuro_http, ww_index, today_date)
-    sources["wuwa"]["nanokaIndex"] = {
-        "status": ww_index_meta.get("status"),
-        "count": ww_index_meta.get("count"),
-        "error": ww_index_meta.get("error"),
-        "endpoint": ww_index_meta.get("endpoint"),
-    }
-    fetched["wuwa"] = shrink_guard("wuwa", wuwa_rows, previous)
-    if fetched["wuwa"] is None and wuwa_rows is not None:
-        sources["wuwa"]["status"] = "failed"
-        sources["wuwa"]["error"] = "result shrank; kept previous"
-
-    ak_rows, sources["arknights"] = fetch_arknights(http)
-    fetched["arknights"] = shrink_guard("arknights", ak_rows, previous)
-    ba_rows, sources["bluearchive"] = fetch_blue_archive(http, today_date)
-    fetched["bluearchive"] = shrink_guard("bluearchive", ba_rows, previous)
-    bgm_rows, sources["bangumi"] = fetch_bangumi(bangumi_http, today_date)
-    fetched["bangumi"] = shrink_guard("bangumi", bgm_rows, previous, selection=BANGUMI_SELECTION)
-    if fetched["bangumi"] is None and bgm_rows is not None:
-        sources["bangumi"]["status"] = "failed"
-        sources["bangumi"]["error"] = (sources["bangumi"].get("error") or "") + "; result shrank; kept previous"
+    if selected("arknights"):
+        ak_rows, sources["arknights"] = fetch_arknights(http)
+        fetched["arknights"] = shrink_guard("arknights", ak_rows, previous)
+    if selected("endfield"):
+        endfield_rows, sources["endfield"] = fetch_endfield(bangumi_http)
+        fetched["endfield"] = shrink_guard("endfield", endfield_rows, previous)
+        if fetched["endfield"] is None and endfield_rows is not None:
+            sources["endfield"]["status"] = "failed"
+            sources["endfield"]["error"] = "result shrank; kept previous"
+    if selected("bluearchive"):
+        ba_rows, sources["bluearchive"] = fetch_blue_archive(http, today_date)
+        fetched["bluearchive"] = shrink_guard("bluearchive", ba_rows, previous)
+    if selected("bangumi"):
+        bgm_rows, sources["bangumi"] = fetch_bangumi(bangumi_http, today_date)
+        fetched["bangumi"] = shrink_guard("bangumi", bgm_rows, previous, selection=BANGUMI_SELECTION)
+        if fetched["bangumi"] is None and bgm_rows is not None:
+            sources["bangumi"]["status"] = "failed"
+            sources["bangumi"]["error"] = (sources["bangumi"].get("error") or "") + "; result shrank; kept previous"
 
     characters = merge_characters(previous, fetched, today)
     for source, rows in fetched.items():

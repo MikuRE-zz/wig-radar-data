@@ -364,6 +364,61 @@ class ResolveTest(unittest.TestCase):
         self.assertEqual("ok", record["status"])
         self.assertEqual(["长"], record["tags"])
 
+    def test_endfield_chen_uses_its_own_copyright_not_arknights(self) -> None:
+        endfield = {
+            "key": "bgm:end-chen",
+            "name": "陈",
+            "aliases": ["Chen"],
+            "game": "endfield",
+            "work": "明日方舟：终末地",
+            "status": "EVERGREEN",
+        }
+        arknights = {
+            "key": "ak:chen",
+            "name": "陈",
+            "aliases": ["Chen"],
+            "game": "arknights",
+            "work": "明日方舟",
+            "status": "EVERGREEN",
+        }
+        fake = _FakeDanbooru()
+        ef_tag = "chen_(arknights:_endfield)"
+        ak_tag = "chen_(arknights)"
+        fake.lookup[ef_tag] = {"name": ef_tag, "post_count": 400, "category": 4}
+        fake.pages[ef_tag] = {"title": ef_tag, "other_names": ["陈", "Chen"]}
+        fake.related_map[(ef_tag, "copyright")] = (400, [("arknights:_endfield", 0.98), ("arknights", 0.04)])
+        fake.related_map[(ef_tag, "general")] = (400, [("long_hair", 0.8)])
+        fake.pages[ak_tag] = {"title": ak_tag, "other_names": ["陈", "Chen"]}
+        fake.related_map[(ak_tag, "copyright")] = (9000, [("arknights", 0.99)])
+        names, slugs = _indexes([endfield, arknights])
+        record = resolve_auto_tags(endfield, fake, TODAY, names, slugs)
+        self.assertEqual("ok", record["status"])
+        self.assertEqual(ef_tag, record["danbooruTag"])
+        self.assertEqual(["长"], record["tags"])
+        self.assertNotIn(("related", ak_tag, "copyright"), fake.calls)
+
+    def test_endfield_chen_without_its_tag_is_a_work_mismatch(self) -> None:
+        endfield = {
+            "key": "bgm:end-chen",
+            "name": "陈",
+            "aliases": ["Chen"],
+            "game": "endfield",
+            "work": "明日方舟：终末地",
+            "status": "EVERGREEN",
+        }
+        arknights = {"key": "ak:chen", "name": "陈", "aliases": ["Chen"], "game": "arknights", "status": "EVERGREEN"}
+        fake = _FakeDanbooru()
+        ak_tag = "chen_(arknights)"
+        fake.tags["chen"] = [{"name": ak_tag, "post_count": 9000, "category": 4}]
+        fake.pages[ak_tag] = {"title": ak_tag, "other_names": ["陈", "Chen"]}
+        fake.related_map[(ak_tag, "copyright")] = (9000, [("arknights", 0.99)])
+        names, slugs = _indexes([endfield, arknights])
+        record = resolve_auto_tags(endfield, fake, TODAY, names, slugs)
+        self.assertEqual("work-mismatch", record["status"])
+        self.assertEqual([], record["tags"])
+        self.assertIsNone(record["danbooruTag"])
+        self.assertNotIn(("related", ak_tag, "general"), fake.calls)
+
 
 class RefreshTest(unittest.TestCase):
     def test_outage_keeps_previous_values(self) -> None:
