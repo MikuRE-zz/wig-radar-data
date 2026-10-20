@@ -90,15 +90,13 @@ class FrequencyMapTest(unittest.TestCase):
         )
         self.assertNotIn("长", tags)
 
-    def test_color_mix_is_stats_only(self) -> None:
+    def test_color_mix_becomes_multisection_and_stays_in_stats(self) -> None:
         freq = _freq(long_hair=0.83, twintails=0.64, multicolored_hair=0.58, **{"two-tone_hair": 0.64})
         _status, tags = structure_tags_from_frequencies(freq, 100)
-        self.assertEqual(["长", "双马尾接片"], tags)
+        self.assertEqual(["长", "多段异色", "双马尾接片"], tags)
         stats = frequency_stats(freq)
         self.assertEqual(0.58, stats["multicolored_hair"])
         self.assertEqual(0.64, stats["two-tone_hair"])
-        self.assertNotIn("multicolored_hair", tags)
-        self.assertNotIn("two-tone_hair", tags)
 
     def test_pointy_and_fake_ears_are_not_animal_ears(self) -> None:
         self.assertEqual([], structure_tags_from_frequencies(_freq(pointy_ears=0.9, fake_animal_ears=0.9), 100)[1])
@@ -278,7 +276,7 @@ class ResolveTest(unittest.TestCase):
         names, slugs = _indexes([row])
         record = resolve_auto_tags(row, fake, TODAY, names, slugs)
         self.assertEqual("ok", record["status"])
-        self.assertEqual(["长", "双马尾接片"], record["tags"])
+        self.assertEqual(["长", "多段异色", "双马尾接片"], record["tags"])
         self.assertEqual(tag, record["danbooruTag"])
         self.assertEqual(14671, record["postCount"])
         self.assertEqual("alias:en", record["matchedBy"])
@@ -418,6 +416,41 @@ class RefreshTest(unittest.TestCase):
         rows = [{"key": "ak:1", "name": "阿米娅", "aliases": ["Amiya"]}]
         restore_previous_auto_tags(rows, {"characters": [{"key": "ak:1", "autoTags": old}]})
         self.assertEqual(["盘发"], rows[0]["autoTags"]["tags"])
+
+
+class MultisectionTagTest(unittest.TestCase):
+    def test_block_colors_without_finer_craft_become_multisection(self) -> None:
+        _status, tags = structure_tags_from_frequencies(
+            _freq(long_hair=0.74, braid=0.65, ahoge=0.35, multicolored_hair=0.73, **{"two-tone_hair": 0.64}),
+            3737,
+        )
+        self.assertEqual(["长", "多段异色", "编发", "呆毛"], tags)
+        _status, tags = structure_tags_from_frequencies(_freq(short_hair=0.6, **{"two-tone_hair": 0.31}), 100)
+        self.assertEqual(["短发", "多段异色"], tags)
+
+    def test_finer_color_craft_wins_and_low_frequency_is_ignored(self) -> None:
+        _status, tags = structure_tags_from_frequencies(_freq(long_hair=0.8, gradient_hair=0.4, multicolored_hair=0.9), 100)
+        self.assertEqual(["长", "渐变"], tags)
+        _status, tags = structure_tags_from_frequencies(_freq(long_hair=0.8, multicolored_hair=0.299), 100)
+        self.assertEqual(["长"], tags)
+
+    def test_reused_rows_pick_it_up_from_stored_stats(self) -> None:
+        old = {
+            "version": AUTO_TAG_VERSION,
+            "status": "ok",
+            "tags": ["超长（80cm+）", "编发"],
+            "stats": {"very_long_hair": 0.42, "braid": 0.65, "multicolored_hair": 0.73},
+            "fetchedAt": TODAY,
+        }
+        rows = [{"key": "ww:1205", "name": "长离"}]
+        restore_previous_auto_tags(rows, {"characters": [{"key": "ww:1205", "autoTags": old}]})
+        self.assertEqual(["超长（80cm+）", "多段异色", "编发"], rows[0]["autoTags"]["tags"])
+        self.assertEqual(["超长（80cm+）", "编发"], old["tags"])
+
+        missing = {"version": AUTO_TAG_VERSION, "status": "not-found", "tags": [], "fetchedAt": TODAY}
+        rows = [{"key": "ba:1"}]
+        restore_previous_auto_tags(rows, {"characters": [{"key": "ba:1", "autoTags": missing}]})
+        self.assertEqual([], rows[0]["autoTags"]["tags"])
 
 
 if __name__ == "__main__":

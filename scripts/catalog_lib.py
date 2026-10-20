@@ -287,6 +287,7 @@ STRUCTURE_TAG_ORDER = (
     "渐变",
     "挑染",
     "内层异色",
+    "多段异色",
     "编发",
     "盘发",
     "双马尾接片",
@@ -543,11 +544,25 @@ def order_structure_tags(tags: list[str]) -> list[str]:
     return [tag for tag in STRUCTURE_TAG_ORDER if tag in picked]
 
 
-def structure_tags_from_frequencies(freq: dict[str, float], post_count: int) -> tuple[str, list[str]]:
-    """One length tag, then every other family that clears TAG_FREQUENCY_MIN.
+MULTICOLOR_RAW = ("multicolored_hair", "two-tone_hair")
+_COLOR_CRAFT_TAGS = {"渐变", "挑染", "内层异色"}
 
-    multicolored_hair and two-tone_hair are not structure tags.
+
+def with_multisection(tags: list[str], freq: dict[str, float]) -> list[str]:
+    """Block-colored hair (长离's black and red) with no finer color craft is 多段异色.
+
+    multicolored_hair also fires for gradients and streaks, so it only counts when
+    none of 渐变 / 挑染 / 内层异色 was found.
     """
+    if "多段异色" in tags or _COLOR_CRAFT_TAGS & set(tags):
+        return list(tags)
+    if any(_freq(freq or {}, name) >= TAG_FREQUENCY_MIN for name in MULTICOLOR_RAW):
+        return order_structure_tags([*tags, "多段异色"])
+    return list(tags)
+
+
+def structure_tags_from_frequencies(freq: dict[str, float], post_count: int) -> tuple[str, list[str]]:
+    """One length tag, then every other family that clears TAG_FREQUENCY_MIN."""
     if post_count < AUTO_TAG_MIN_POSTS:
         return "too-few-posts", []
     tags: list[str] = []
@@ -576,7 +591,7 @@ def structure_tags_from_frequencies(freq: dict[str, float], post_count: int) -> 
         tags.append("硬定型（运输易塌）")
     if _hit(freq, is_ear_or_horn_tag):
         tags.append("兽耳等配件")
-    return "ok", order_structure_tags(tags)
+    return "ok", with_multisection(order_structure_tags(tags), freq)
 
 
 def frequency_stats(freq: dict[str, float]) -> dict[str, float]:
@@ -760,4 +775,14 @@ def restore_previous_auto_tags(characters: list[dict], previous: dict | None) ->
             continue
         old = saved.get(str(row["key"]))
         if old is not None and not isinstance(row.get("autoTags"), dict):
-            row["autoTags"] = old
+            row["autoTags"] = with_stored_multisection(old)
+
+
+def with_stored_multisection(auto: dict) -> dict:
+    """Reused rows pick up 多段异色 from their stored stats without a new Danbooru call."""
+    if auto.get("status") != "ok" or not isinstance(auto.get("stats"), dict):
+        return auto
+    tags = with_multisection(list(auto.get("tags") or []), auto["stats"])
+    if tags == list(auto.get("tags") or []):
+        return auto
+    return {**auto, "tags": tags}
