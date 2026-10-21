@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T23:14:30Z",
+  "generatedAt": "2026-10-21T09:24:25Z",
   "scoreMethod": "velocity_v1",
   "sources": {
     "bangumi": {
       "status": "ok",
-      "fetchedAt": "2026-10-20T23:14:30Z",
+      "fetchedAt": "2026-10-21T09:24:25Z",
       "error": null
     },
     "bilibili": {
-      "status": "partial",
-      "fetchedAt": "2026-10-20T23:18:24Z",
-      "error": "suspected rate limit: 1 empty searches",
-      "softBlocked": 1
+      "status": "ok",
+      "fetchedAt": "2026-10-21T09:32:01Z",
+      "error": null,
+      "softBlocked": 0
     },
     "weibo": {
       "status": "ok",
-      "fetchedAt": "2026-10-20T23:21:59Z",
+      "fetchedAt": "2026-10-21T09:35:41Z",
       "error": null
     },
     "nanoka": {
@@ -3350,6 +3350,86 @@
       }
     },
     {
+      "key": "ak:char_4198_christ",
+      "name": "Miss.Christine",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 27,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 33,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 177668,
+          "characterName": "Miss.Christine",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "Miss.Christine",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "Miss.Christine 明日方舟",
+          "resultCount": 405,
+          "resultCountCapped": false,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 1403,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4179_monstr",
+      "name": "Mon3tr",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 42
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 65915,
+          "characterName": "Mon3tr",
+          "collects": 23,
+          "comments": 4,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "Mon3tr",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "Mon3tr 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 136848,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4091_ulika",
       "name": "U-Official",
       "work": "明日方舟",
@@ -3475,38 +3555,56 @@
       "name": "三角初华",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 20,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 39,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
-        "bangumi": 78
+        "bilibili": 39,
+        "bangumi": null
       },
       "metrics": {
-        "bangumi": {
-          "characterId": 132479,
-          "characterName": "三角初華",
-          "collects": 379,
-          "comments": 526,
-          "subjectId": 225878,
-          "subjectName": "明日方舟",
-          "subjectCollect": null,
-          "airing": false,
-          "matchedBy": "三角初华",
-          "fetchedAt": "2026-10-19T04:09:54Z"
-        },
+        "bangumi": null,
         "bilibili": {
           "keyword": "三角初华 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 6199,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4182_oblvns",
+      "name": "丰川祥子",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 76,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 76,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "丰川祥子 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 39,
+          "recentPlaySum7d": 499114,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -3552,14 +3650,54 @@
       }
     },
     {
+      "key": "ak:char_4224_turdus",
+      "name": "乌啾",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 49,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 60,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 207967,
+          "characterName": "乌啾",
+          "collects": 2,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "乌啾",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "乌啾 明日方舟",
+          "resultCount": 975,
+          "resultCountCapped": false,
+          "recentVideos7d": 17,
+          "recentPlaySum7d": 50811,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4145_ulpia",
       "name": "乌尔比安",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 7,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 69,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 82,
         "bangumi": 29
       },
       "metrics": {
@@ -3573,21 +3711,61 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "乌尔比安",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "乌尔比安 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
-          "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 81044,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_455_nothin",
+      "name": "乌有",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 18,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 19,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 91344,
+          "characterName": "乌有",
+          "collects": 2,
+          "comments": 2,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "乌有",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "乌有 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 132,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -3668,6 +3846,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-19T07:06:28Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4165_ctrail",
+      "name": "云迹",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 166518,
+          "characterName": "云迹",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "云迹",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "云迹 明日方舟",
+          "resultCount": 590,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -3912,14 +4130,94 @@
       }
     },
     {
+      "key": "ak:char_491_humus",
+      "name": "休谟斯",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 127700,
+          "characterName": "休谟斯",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "休谟斯",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "休谟斯 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4223_botany",
+      "name": "伯塔尼",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 207966,
+          "characterName": "伯塔尼",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "伯塔尼",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "伯塔尼 明日方舟",
+          "resultCount": 117,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_427_vigil",
       "name": "伺夜",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 4,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 33,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 40,
         "bangumi": 14
       },
       "metrics": {
@@ -3933,21 +4231,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "伺夜",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "伺夜 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 2521,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -4076,10 +4374,10 @@
       "name": "佩德洛",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 0,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 19,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 26,
         "bangumi": 0
       },
       "metrics": {
@@ -4093,21 +4391,61 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "佩德洛",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "佩德洛 明日方舟",
-          "resultCount": 0,
+          "resultCount": 121,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 266,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4194_rmixer",
+      "name": "信仰搅拌机",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 2,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 175181,
+          "characterName": "信仰搅拌机",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "信仰搅拌机",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "信仰搅拌机 明日方舟",
+          "resultCount": 839,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -4237,10 +4575,10 @@
       "name": "克莱门莎",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 2,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 64,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 83,
         "bangumi": 9
       },
       "metrics": {
@@ -4254,21 +4592,50 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "克莱门莎",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "克莱门莎 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
-          "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 106644,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4186_tmoris",
+      "name": "八幡海铃",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "八幡海铃 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -4277,10 +4644,10 @@
       "name": "冬时",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 0,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 32,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 43,
         "bangumi": 0
       },
       "metrics": {
@@ -4294,21 +4661,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "冬时",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "冬时 明日方舟",
-          "resultCount": 0,
+          "resultCount": 520,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 50302,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -4553,6 +4920,46 @@
       }
     },
     {
+      "key": "ak:char_4162_cathy",
+      "name": "凯瑟琳",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 165704,
+          "characterName": "凯瑟琳",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "凯瑟琳",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "凯瑟琳 明日方舟",
+          "resultCount": 384,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_174_slbell",
       "name": "初雪",
       "work": "明日方舟",
@@ -4677,27 +5084,27 @@
       "name": "医生",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 6,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 52,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 52,
         "bangumi": null
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "医生 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 10,
+          "recentPlaySum7d": 28497,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
-          "onHotSearch": true,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -4826,10 +5233,10 @@
       "name": "卡涅利安",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 5,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 27,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 30,
         "bangumi": 18
       },
       "metrics": {
@@ -4843,21 +5250,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "卡涅利安",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "卡涅利安 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 2972,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -5048,6 +5455,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4228_closur",
+      "name": "可露希尔",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 72,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 84,
+        "bangumi": 37
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102043,
+          "characterName": "可露希尔",
+          "collects": 16,
+          "comments": 7,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "可露希尔",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "可露希尔 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 225356,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -5252,6 +5699,46 @@
       }
     },
     {
+      "key": "ak:char_4203_kichi",
+      "name": "吉星",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 29,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 39,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 180861,
+          "characterName": "吉星",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "吉星",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "吉星 明日方舟",
+          "resultCount": 423,
+          "resultCountCapped": false,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 34043,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_226_hmau",
       "name": "吽",
       "work": "明日方舟",
@@ -5412,6 +5899,46 @@
       }
     },
     {
+      "key": "ak:char_4214_cairn",
+      "name": "响石",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 193654,
+          "characterName": "响石",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "响石",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "响石 明日方舟",
+          "resultCount": 98,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_187_ccheal",
       "name": "嘉维尔",
       "work": "明日方舟",
@@ -5448,6 +5975,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4237_jcinta",
+      "name": "嘉辛塔",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 22,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 30,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 218411,
+          "characterName": "嘉辛塔",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "嘉辛塔",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "嘉辛塔 明日方舟",
+          "resultCount": 577,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 2622,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -5774,6 +6341,35 @@
       }
     },
     {
+      "key": "ak:char_4218_aigis",
+      "name": "埃癸斯",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 41,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 41,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "埃癸斯 明日方舟",
+          "resultCount": 445,
+          "resultCountCapped": false,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 26148,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_245_cello",
       "name": "塑心",
       "work": "明日方舟",
@@ -5894,6 +6490,46 @@
       }
     },
     {
+      "key": "ak:char_492_quercu",
+      "name": "夏栎",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 2,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 123484,
+          "characterName": "夏栎",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "夏栎",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "夏栎 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_2015_dusk",
       "name": "夕",
       "work": "明日方舟",
@@ -5970,6 +6606,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_476_blkngt",
+      "name": "夜半",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 5,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 18
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125032,
+          "characterName": "夜半",
+          "collects": 3,
+          "comments": 1,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "夜半",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "夜半 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -6137,6 +6813,46 @@
       }
     },
     {
+      "key": "ak:char_4213_skybx",
+      "name": "天空盒",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 33,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 44,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 193653,
+          "characterName": "天空盒",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "天空盒",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "天空盒 明日方舟",
+          "resultCount": 464,
+          "resultCountCapped": false,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 7754,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_346_aosta",
       "name": "奥斯塔",
       "work": "明日方舟",
@@ -6181,10 +6897,10 @@
       "name": "奥达",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 0,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 12,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 16,
         "bangumi": 0
       },
       "metrics": {
@@ -6198,21 +6914,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "奥达",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "奥达 明日方舟",
-          "resultCount": 0,
+          "resultCount": 406,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 33,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -6221,10 +6937,10 @@
       "name": "妮芙",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 7,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 54,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 63,
         "bangumi": 27
       },
       "metrics": {
@@ -6238,21 +6954,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "妮芙",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "妮芙 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 19,
+          "recentPlaySum7d": 104668,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -6261,11 +6977,12 @@
       "name": "娜仁图亚",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 2,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 51,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
-        "bangumi": 9
+        "bilibili": 44,
+        "bangumi": 9,
+        "growth": 90
       },
       "metrics": {
         "bangumi": {
@@ -6278,21 +6995,61 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "娜仁图亚",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "娜仁图亚 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 7,
+          "recentPlaySum7d": 4245,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4212_nasti",
+      "name": "娜斯提",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 2,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 193329,
+          "characterName": "娜斯提",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "娜斯提",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "娜斯提 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -6783,7 +7540,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null
@@ -6792,17 +7549,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "导火索 明日方舟",
-          "resultCount": 0,
+          "resultCount": 311,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -6811,11 +7568,12 @@
       "name": "小满",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 2,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 37,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
-        "bangumi": 9
+        "bilibili": 26,
+        "bangumi": 9,
+        "growth": 73
       },
       "metrics": {
         "bangumi": {
@@ -6828,21 +7586,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "小满",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "小满 明日方舟",
-          "resultCount": 0,
+          "resultCount": 782,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 5007,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -6883,6 +7641,35 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4219_yukari",
+      "name": "岳羽由加莉",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "岳羽由加莉 明日方舟",
+          "resultCount": 253,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -7127,6 +7914,46 @@
       }
     },
     {
+      "key": "ak:char_485_pallas",
+      "name": "帕拉斯",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 4,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125043,
+          "characterName": "帕拉斯",
+          "collects": 2,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "帕拉斯",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "帕拉斯 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_2014_nian",
       "name": "年",
       "work": "明日方舟",
@@ -7204,6 +8031,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_472_pasngr",
+      "name": "异客",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 4,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 96838,
+          "characterName": "异客",
+          "collects": 2,
+          "comments": 6,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "异客",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "异客 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -7334,10 +8201,10 @@
       "name": "录武官",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 2,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 27,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 33,
         "bangumi": 9
       },
       "metrics": {
@@ -7351,21 +8218,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "录武官",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "录武官 明日方舟",
-          "resultCount": 0,
+          "resultCount": 360,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 11020,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -7690,6 +8557,35 @@
       }
     },
     {
+      "key": "ak:char_459_tachak",
+      "name": "战车",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 48,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 48,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "战车 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 7,
+          "recentPlaySum7d": 24226,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4078_bdhkgt",
       "name": "截云",
       "work": "明日方舟",
@@ -7810,6 +8706,46 @@
       }
     },
     {
+      "key": "ak:char_4207_branch",
+      "name": "折桠",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 23,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 28,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 186641,
+          "characterName": "折桠",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "折桠",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "折桠 明日方舟",
+          "resultCount": 204,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 1025,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_140_whitew",
       "name": "拉普兰德",
       "work": "明日方舟",
@@ -7891,6 +8827,46 @@
       }
     },
     {
+      "key": "ak:char_433_windft",
+      "name": "掠风",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 20,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 110195,
+          "characterName": "掠风",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "掠风",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "掠风 明日方舟",
+          "resultCount": 386,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 303,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_112_siege",
       "name": "推进之王",
       "work": "明日方舟",
@@ -7967,6 +8943,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4166_varkis",
+      "name": "摆渡人",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 197705,
+          "characterName": "摆渡人",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "摆渡人",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "摆渡人 明日方舟",
+          "resultCount": 260,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -8332,6 +9348,46 @@
       }
     },
     {
+      "key": "ak:char_4232_hbound",
+      "name": "旅骨",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 64,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 86,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 225134,
+          "characterName": "旅骨",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "旅骨",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "旅骨 明日方舟",
+          "resultCount": 293,
+          "resultCountCapped": false,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 553371,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_197_poca",
       "name": "早露",
       "work": "明日方舟",
@@ -8368,6 +9424,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4236_tmslot",
+      "name": "时隙",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 21,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 28,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 218412,
+          "characterName": "时隙",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "时隙",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "时隙 明日方舟",
+          "resultCount": 454,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 696,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -8893,6 +9989,46 @@
       }
     },
     {
+      "key": "ak:char_4230_mcnist",
+      "name": "机械师",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 60,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 77,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 193406,
+          "characterName": "机械师",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "机械师",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "机械师 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 48,
+          "recentPlaySum7d": 208668,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4105_almond",
       "name": "杏仁",
       "work": "明日方舟",
@@ -9049,6 +10185,126 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_440_pinecn",
+      "name": "松果",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 7,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 29
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 89227,
+          "characterName": "松果",
+          "collects": 8,
+          "comments": 2,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "松果",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "松果 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4199_makiri",
+      "name": "松桐",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 180862,
+          "characterName": "松桐",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "松桐",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "松桐 明日方舟",
+          "resultCount": 446,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_422_aurora",
+      "name": "极光",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 6,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 123483,
+          "characterName": "极光",
+          "collects": 5,
+          "comments": 1,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "极光",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "极光 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -9334,6 +10590,46 @@
       }
     },
     {
+      "key": "ak:char_473_mberry",
+      "name": "桑葚",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 5,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 21
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102822,
+          "characterName": "桑葚",
+          "collects": 4,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "桑葚",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "桑葚 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_133_mm",
       "name": "梅",
       "work": "明日方舟",
@@ -9494,12 +10790,52 @@
       }
     },
     {
+      "key": "ak:char_416_zumama",
+      "name": "森蚺",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 37,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 37,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 81201,
+          "characterName": "森蚺",
+          "collects": 15,
+          "comments": 5,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "森蚺",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "森蚺 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 2048,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4143_sensi",
       "name": "森西",
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null
@@ -9508,17 +10844,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "森西 明日方舟",
-          "resultCount": 0,
+          "resultCount": 428,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -9568,7 +10904,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 8,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 32
@@ -9584,7 +10920,7 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "歌蕾蒂娅",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "歌蕾蒂娅 明日方舟",
@@ -9594,11 +10930,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -9639,6 +10975,126 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_450_necras",
+      "name": "死芒",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 61,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 71,
+        "bangumi": 30
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 172515,
+          "characterName": "死芒",
+          "collects": 9,
+          "comments": 2,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "死芒",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "死芒 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 34,
+          "recentPlaySum7d": 103276,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_437_mizuki",
+      "name": "水月",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 65,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 75,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125042,
+          "characterName": "水月",
+          "collects": 15,
+          "comments": 1,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "水月",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "水月 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 45,
+          "recentPlaySum7d": 100931,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4177_brigid",
+      "name": "水灯心",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 23,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 27,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 172513,
+          "characterName": "水灯心",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "水灯心",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "水灯心 明日方舟",
+          "resultCount": 394,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 543,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -9719,6 +11175,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_487_bobb",
+      "name": "波卜",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 165705,
+          "characterName": "波卜",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "波卜",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "波卜 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -9839,6 +11335,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_464_cement",
+      "name": "洋灰",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 127698,
+          "characterName": "洋灰",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "洋灰",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "洋灰 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -10210,10 +11746,10 @@
       "name": "深巡",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 2,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 26,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 31,
         "bangumi": 9
       },
       "metrics": {
@@ -10227,21 +11763,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "深巡",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "深巡 明日方舟",
-          "resultCount": 0,
+          "resultCount": 227,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 5646,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -10326,6 +11862,46 @@
       }
     },
     {
+      "key": "ak:char_469_indigo",
+      "name": "深靛",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 7,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102393,
+          "characterName": "深靛",
+          "collects": 7,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "深靛",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "深靛 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_385_finlpp",
       "name": "清流",
       "work": "明日方舟",
@@ -10403,6 +11979,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4147_mitm",
+      "name": "渡桥",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 40,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 53,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 161211,
+          "characterName": "渡桥",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "渡桥",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "渡桥 明日方舟",
+          "resultCount": 751,
+          "resultCountCapped": false,
+          "recentVideos7d": 11,
+          "recentPlaySum7d": 18527,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -10607,6 +12223,46 @@
       }
     },
     {
+      "key": "ak:char_493_firwhl",
+      "name": "火哨",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 124308,
+          "characterName": "火哨",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "火哨",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "火哨 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_163_hpsts",
       "name": "火神",
       "work": "明日方舟",
@@ -10725,6 +12381,75 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_431_ashlok",
+      "name": "灰毫",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 18,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 20,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102823,
+          "characterName": "灰毫",
+          "collects": 2,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "灰毫",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "灰毫 明日方舟",
+          "resultCount": 869,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 207,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_456_ash",
+      "name": "灰烬",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 34,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 34,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "灰烬 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 523,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -10970,6 +12695,46 @@
       }
     },
     {
+      "key": "ak:char_420_flamtl",
+      "name": "焰尾",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 29,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 32,
+        "bangumi": 21
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125037,
+          "characterName": "焰尾",
+          "collects": 4,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "焰尾",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "焰尾 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 7256,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_1020_reed2",
       "name": "焰影苇草",
       "work": "明日方舟",
@@ -11130,6 +12895,46 @@
       }
     },
     {
+      "key": "ak:char_415_flint",
+      "name": "燧石",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 2,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 89232,
+          "characterName": "燧石",
+          "collects": 1,
+          "comments": 2,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "燧石",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "燧石 明日方舟",
+          "resultCount": 384,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_338_iris",
       "name": "爱丽丝",
       "work": "明日方舟",
@@ -11175,7 +12980,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 0
@@ -11191,21 +12996,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "特克诺",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "特克诺 明日方舟",
-          "resultCount": 0,
+          "resultCount": 360,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -11375,7 +13180,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null
@@ -11384,17 +13189,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "玛露西尔 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
+          "resultCount": 1000,
+          "resultCountCapped": true,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -11483,10 +13288,10 @@
       "name": "珊比",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 0,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 49,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 66,
         "bangumi": 0
       },
       "metrics": {
@@ -11500,21 +13305,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "珊比",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "珊比 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 21,
+          "recentPlaySum7d": 184908,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -11556,6 +13361,166 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T05:34:12Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_479_sleach",
+      "name": "琴柳",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 6,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125041,
+          "characterName": "琴柳",
+          "collects": 5,
+          "comments": 1,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "琴柳",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "琴柳 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_423_blemsh",
+      "name": "瑕光",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 31,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 29,
+        "bangumi": 35
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 89229,
+          "characterName": "瑕光",
+          "collects": 13,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "瑕光",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "瑕光 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 1669,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4163_rosesa",
+      "name": "瑰盐",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 169463,
+          "characterName": "瑰盐",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "瑰盐",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "瑰盐 明日方舟",
+          "resultCount": 611,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4195_radian",
+      "name": "电弧",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 46,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 51,
+        "bangumi": 32
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 179740,
+          "characterName": "电弧",
+          "collects": 10,
+          "comments": 2,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "电弧",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "电弧 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 11,
+          "recentPlaySum7d": 8162,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -11800,6 +13765,86 @@
       }
     },
     {
+      "key": "ak:char_4204_mantra",
+      "name": "真言",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 47,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 59,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 179936,
+          "characterName": "真言",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "真言",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "真言 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 19,
+          "recentPlaySum7d": 11399,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4221_ju",
+      "name": "矩",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 202343,
+          "characterName": "矩",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "矩",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "矩 明日方舟",
+          "resultCount": 202,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_378_asbest",
       "name": "石棉",
       "work": "明日方舟",
@@ -11916,6 +13961,35 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4185_amoris",
+      "name": "祐天寺若麦",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 25,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 25,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "祐天寺若麦 明日方舟",
+          "resultCount": 943,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 3995,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -12161,6 +14235,46 @@
       }
     },
     {
+      "key": "ak:char_436_whispr",
+      "name": "絮雨",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 33,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 33,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86756,
+          "characterName": "絮雨",
+          "collects": 11,
+          "comments": 6,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "絮雨",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "絮雨 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 1748,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_144_red",
       "name": "红",
       "work": "明日方舟",
@@ -12362,6 +14476,75 @@
       }
     },
     {
+      "key": "ak:char_4217_makoto",
+      "name": "结城理",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 81,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 81,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "结城理 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 40311,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_478_kirara",
+      "name": "绮良",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 4,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125045,
+          "characterName": "绮良",
+          "collects": 2,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "绮良",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "绮良 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_1035_wisdel",
       "name": "维什戴尔",
       "work": "明日方舟",
@@ -12399,6 +14582,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T06:28:31Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4226_veen",
+      "name": "维伊",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 32,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 42,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 210235,
+          "characterName": "维伊",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "维伊",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "维伊 明日方舟",
+          "resultCount": 514,
+          "resultCountCapped": false,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 3032,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -12643,6 +14866,46 @@
       }
     },
     {
+      "key": "ak:char_451_robin",
+      "name": "罗宾",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 20,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 23,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125055,
+          "characterName": "罗宾",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "罗宾",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "罗宾 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 1424,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4067_lolxh",
       "name": "罗小黑",
       "work": "明日方舟",
@@ -12668,6 +14931,126 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4215_buddy",
+      "name": "罗德岛隐秘队",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 212971,
+          "characterName": "罗德岛隐秘队",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "罗德岛隐秘队",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "罗德岛隐秘队 明日方舟",
+          "resultCount": 76,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_484_robrta",
+      "name": "罗比菈塔",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 6,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 110585,
+          "characterName": "罗比菈塔",
+          "collects": 5,
+          "comments": 2,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "罗比菈塔",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "罗比菈塔 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_421_crow",
+      "name": "羽毛笔",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 64,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 70,
+        "bangumi": 47
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102394,
+          "characterName": "羽毛笔",
+          "collects": 34,
+          "comments": 9,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "羽毛笔",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "羽毛笔 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 30,
+          "recentPlaySum7d": 123409,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -12828,6 +15211,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4187_graceb",
+      "name": "聆音",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 26,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 30,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 175182,
+          "characterName": "聆音",
+          "collects": 2,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "聆音",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "聆音 明日方舟",
+          "resultCount": 292,
+          "resultCountCapped": false,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 323,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -12997,28 +15420,28 @@
       "name": "艾拉",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 15,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 54,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 36,
         "bangumi": null,
-        "growth": 40
+        "growth": 85
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "艾拉 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 1584,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -13345,6 +15768,35 @@
       }
     },
     {
+      "key": "ak:char_4183_mortis",
+      "name": "若叶睦",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 50,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 50,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "若叶睦 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 8,
+          "recentPlaySum7d": 31969,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_405_absin",
       "name": "苦艾",
       "work": "明日方舟",
@@ -13430,11 +15882,12 @@
       "name": "莎草",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 5,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 16,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
-        "bangumi": 21
+        "bangumi": 21,
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -13447,21 +15900,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "莎草",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "莎草 明日方舟",
-          "resultCount": 0,
+          "resultCount": 730,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -13591,7 +16044,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null
@@ -13600,17 +16053,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "莱欧斯 明日方舟",
-          "resultCount": 0,
+          "resultCount": 821,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -13655,6 +16108,86 @@
       }
     },
     {
+      "key": "ak:char_4148_philae",
+      "name": "菲莱",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 166519,
+          "characterName": "菲莱",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "菲莱",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "菲莱 明日方舟",
+          "resultCount": 190,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4191_tippi",
+      "name": "蒂比",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 33,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 44,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 177669,
+          "characterName": "蒂比",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "蒂比",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "蒂比 明日方舟",
+          "resultCount": 578,
+          "resultCountCapped": false,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 30686,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_129_bluep",
       "name": "蓝毒",
       "work": "明日方舟",
@@ -13691,6 +16224,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-19T07:32:30Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4193_lemuen",
+      "name": "蕾缪安",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 59,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 66,
+        "bangumi": 39
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 163575,
+          "characterName": "蕾缪安",
+          "collects": 19,
+          "comments": 5,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "蕾缪安",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "蕾缪安 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 22,
+          "recentPlaySum7d": 178507,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -13775,6 +16348,75 @@
       }
     },
     {
+      "key": "ak:char_4220_kormr",
+      "name": "虎狼丸",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 20,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 20,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "虎狼丸 明日方舟",
+          "resultCount": 271,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 310,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_489_serum",
+      "name": "蚀清",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102398,
+          "characterName": "蚀清",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "蚀清",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "蚀清 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_150_snakek",
       "name": "蛇屠箱",
       "work": "明日方舟",
@@ -13811,6 +16453,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-19T07:32:30Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_449_glider",
+      "name": "蜜莓",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 22,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 23,
+        "bangumi": 18
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102397,
+          "characterName": "蜜莓",
+          "collects": 3,
+          "comments": 3,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "蜜莓",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "蜜莓 明日方舟",
+          "resultCount": 809,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 1125,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -13855,12 +16537,52 @@
       }
     },
     {
+      "key": "ak:char_4172_xingzh",
+      "name": "行箸",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 2,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 170525,
+          "characterName": "行箸",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "行箸",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "行箸 明日方舟",
+          "resultCount": 300,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4140_lasher",
       "name": "衡沙",
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 0
@@ -13876,21 +16598,101 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "衡沙",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "衡沙 明日方舟",
-          "resultCount": 0,
+          "resultCount": 222,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4155_talr",
+      "name": "裁度",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 166520,
+          "characterName": "裁度",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "裁度",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "裁度 明日方舟",
+          "resultCount": 128,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4225_tanya",
+      "name": "裂响",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 28,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 38,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 210234,
+          "characterName": "裂响",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "裂响",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "裂响 明日方舟",
+          "resultCount": 89,
+          "resultCountCapped": false,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 19637,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -14096,6 +16898,46 @@
       }
     },
     {
+      "key": "ak:char_4173_nowell",
+      "name": "诺威尔",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 19,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 25,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 171446,
+          "characterName": "诺威尔",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "诺威尔",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "诺威尔 明日方舟",
+          "resultCount": 312,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 220,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_181_flower",
       "name": "调香师",
       "work": "明日方舟",
@@ -14180,10 +17022,10 @@
       "name": "谬因",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 4,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 58,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 73,
         "bangumi": 14
       },
       "metrics": {
@@ -14197,21 +17039,61 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "谬因",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "谬因 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 35,
+          "recentPlaySum7d": 227128,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_452_bstalk",
+      "name": "豆苗",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 27,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 32,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 90481,
+          "characterName": "豆苗",
+          "collects": 2,
+          "comments": 3,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "豆苗",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "豆苗 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 763,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -14332,6 +17214,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_475_akafyu",
+      "name": "赤冬",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 4,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125047,
+          "characterName": "赤冬",
+          "collects": 2,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "赤冬",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "赤冬 明日方舟",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -14657,6 +17579,46 @@
       }
     },
     {
+      "key": "ak:char_430_fartth",
+      "name": "远牙",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 25,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 31,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 125040,
+          "characterName": "远牙",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "远牙",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "远牙 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 82620,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_391_rosmon",
       "name": "迷迭香",
       "work": "明日方舟",
@@ -14741,10 +17703,10 @@
       "name": "逻各斯",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 8,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 48,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 53,
         "bangumi": 30
       },
       "metrics": {
@@ -14758,21 +17720,61 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "逻各斯",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "逻各斯 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 12,
+          "recentPlaySum7d": 13084,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4202_haruka",
+      "name": "遥",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 57,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 65,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 180860,
+          "characterName": "遥",
+          "collects": 11,
+          "comments": 2,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "Haruka",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "遥 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 24,
+          "recentPlaySum7d": 45277,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -14893,6 +17895,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T08:51:58Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_4171_wulfen",
+      "name": "钼铅",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 172514,
+          "characterName": "钼铅",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "钼铅",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "钼铅 明日方舟",
+          "resultCount": 325,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15142,10 +18184,10 @@
       "name": "锡人",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 2,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 14,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 16,
         "bangumi": 9
       },
       "metrics": {
@@ -15159,21 +18201,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "锡人",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "锡人 明日方舟",
-          "resultCount": 0,
+          "resultCount": 980,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 32,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15214,6 +18256,35 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-20T15:20:59Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_457_blitz",
+      "name": "闪击",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "闪击 明日方舟",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15299,14 +18370,54 @@
       }
     },
     {
+      "key": "ak:char_4178_alanna",
+      "name": "阿兰娜",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 11,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 15,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 173952,
+          "characterName": "阿兰娜",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "阿兰娜",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "阿兰娜 明日方舟",
+          "resultCount": 113,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 15,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_4132_ascln",
       "name": "阿斯卡纶",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 5,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 48,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 56,
         "bangumi": 21
       },
       "metrics": {
@@ -15320,21 +18431,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "阿斯卡纶",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "阿斯卡纶 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 12,
+          "recentPlaySum7d": 70023,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15415,6 +18526,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-19T07:06:28Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_446_aroma",
+      "name": "阿罗玛",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 20,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 23,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 155208,
+          "characterName": "阿罗玛",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "阿罗玛",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "阿罗玛 明日方舟",
+          "resultCount": 238,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 1625,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15539,12 +18690,52 @@
       }
     },
     {
+      "key": "ak:char_4211_snhunt",
+      "name": "雪猎",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 22,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 29,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189369,
+          "characterName": "雪猎",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "雪猎",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "雪猎 明日方舟",
+          "resultCount": 248,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 1854,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_466_qanik",
       "name": "雪绒",
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 0
@@ -15560,7 +18751,7 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "雪绒",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "雪绒 明日方舟",
@@ -15570,11 +18761,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15743,38 +18934,27 @@
       "name": "霜华",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 4,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
-        "bangumi": 14
+        "bangumi": null
       },
       "metrics": {
-        "bangumi": {
-          "characterId": 65525,
-          "characterName": "Frost",
-          "collects": 2,
-          "comments": 1,
-          "subjectId": 225878,
-          "subjectName": "明日方舟",
-          "subjectCollect": null,
-          "airing": false,
-          "matchedBy": "霜华",
-          "fetchedAt": "2026-10-19T04:09:54Z"
-        },
+        "bangumi": null,
         "bilibili": {
           "keyword": "霜华 明日方舟",
-          "resultCount": 0,
+          "resultCount": 512,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15824,7 +19004,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 4,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 14
@@ -15840,21 +19020,61 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "露托",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "露托 明日方舟",
+          "resultCount": 617,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_488_buildr",
+      "name": "青枳",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 2,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 134278,
+          "characterName": "青枳",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "青枳",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "青枳 明日方舟",
           "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -15979,6 +19199,46 @@
       }
     },
     {
+      "key": "ak:char_4222_taraxa",
+      "name": "风絮",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 20,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 27,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 202344,
+          "characterName": "风絮",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "风絮",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "风絮 明日方舟",
+          "resultCount": 86,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 553,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
       "key": "ak:char_241_panda",
       "name": "食铁兽",
       "work": "明日方舟",
@@ -16064,7 +19324,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 0
@@ -16080,21 +19340,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "骋风",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "骋风 明日方舟",
-          "resultCount": 0,
+          "resultCount": 260,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -16103,10 +19363,10 @@
       "name": "魔王",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 8,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatScore": 60,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 69,
         "bangumi": 33
       },
       "metrics": {
@@ -16120,21 +19380,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "Civilight Eterna",
-          "fetchedAt": "2026-10-20T23:14:30Z"
+          "fetchedAt": "2026-10-21T09:24:25Z"
         },
         "bilibili": {
           "keyword": "魔王 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 25,
+          "recentPlaySum7d": 311926,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -16384,7 +19644,7 @@
       "work": "明日方舟",
       "kind": "GAME",
       "heatScore": 0,
-      "heatFetchedAt": "2026-10-20T23:14:30Z",
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null
@@ -16393,17 +19653,57 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "齐尔查克 明日方舟",
+          "resultCount": 334,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-21T09:32:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-21T09:35:41Z"
+        }
+      }
+    },
+    {
+      "key": "ak:char_486_takila",
+      "name": "龙舌兰",
+      "work": "明日方舟",
+      "kind": "GAME",
+      "heatScore": 8,
+      "heatFetchedAt": "2026-10-21T09:24:25Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102395,
+          "characterName": "龙舌兰",
+          "collects": 11,
+          "comments": 0,
+          "subjectId": 225878,
+          "subjectName": "明日方舟",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "龙舌兰",
+          "fetchedAt": "2026-10-21T09:24:25Z"
+        },
+        "bilibili": {
+          "keyword": "龙舌兰 明日方舟",
           "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-20T23:18:24Z"
+          "fetchedAt": "2026-10-21T09:32:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-20T23:21:59Z"
+          "fetchedAt": "2026-10-21T09:35:41Z"
         }
       }
     },
@@ -19775,6 +23075,963 @@
     }
   ],
   "history": [
+    {
+      "capturedAt": "2026-10-20T23:14:30Z",
+      "characters": [
+        {
+          "name": "D",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": 11557,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 65172,
+          "heatScore": 80
+        },
+        {
+          "name": "SAIGA-0／斋贺玲",
+          "bangumiCollects": 35,
+          "bangumiSubjectCollect": 908,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "ニケ",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 746,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 951,
+          "heatScore": 35
+        },
+        {
+          "name": "マス",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 746,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 21
+        },
+        {
+          "name": "七濑悠月",
+          "bangumiCollects": 100,
+          "bangumiSubjectCollect": 2174,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 12277,
+          "heatScore": 45
+        },
+        {
+          "name": "上原步梦",
+          "bangumiCollects": 200,
+          "bangumiSubjectCollect": 494,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "五河士道",
+          "bangumiCollects": 88,
+          "bangumiSubjectCollect": 769,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 677,
+          "heatScore": 35
+        },
+        {
+          "name": "亚瑟·范西尔冈／天音永远",
+          "bangumiCollects": 57,
+          "bangumiSubjectCollect": 908,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "佐多美咲",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": 1805,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "佐藤明",
+          "bangumiCollects": 24,
+          "bangumiSubjectCollect": 119,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "佐藤洋子",
+          "bangumiCollects": 26,
+          "bangumiSubjectCollect": 119,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "倪亚·利斯顿",
+          "bangumiCollects": 54,
+          "bangumiSubjectCollect": 4603,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 420417,
+          "heatScore": 70
+        },
+        {
+          "name": "内田优空",
+          "bangumiCollects": 96,
+          "bangumiSubjectCollect": 2174,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 2235,
+          "heatScore": 48
+        },
+        {
+          "name": "冰川小雪",
+          "bangumiCollects": 100,
+          "bangumiSubjectCollect": 3613,
+          "bilibiliRecentVideos7d": 10,
+          "bilibiliRecentPlaySum7d": 17847,
+          "heatScore": 67
+        },
+        {
+          "name": "古贺美月",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 280,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 19
+        },
+        {
+          "name": "古都吹寿子",
+          "bangumiCollects": 151,
+          "bangumiSubjectCollect": 15918,
+          "bilibiliRecentVideos7d": 14,
+          "bilibiliRecentPlaySum7d": 219832,
+          "heatScore": 66
+        },
+        {
+          "name": "君冢君彦",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": 1886,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "塔莉亚·杨",
+          "bangumiCollects": 34,
+          "bangumiSubjectCollect": 11557,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 7285,
+          "heatScore": 57
+        },
+        {
+          "name": "壬氏",
+          "bangumiCollects": 50,
+          "bangumiSubjectCollect": 6631,
+          "bilibiliRecentVideos7d": 23,
+          "bilibiliRecentPlaySum7d": 86039,
+          "heatScore": 60
+        },
+        {
+          "name": "夏凪渚",
+          "bangumiCollects": 50,
+          "bangumiSubjectCollect": 1886,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 3942,
+          "heatScore": 43
+        },
+        {
+          "name": "夜刀神十香",
+          "bangumiCollects": 397,
+          "bangumiSubjectCollect": 769,
+          "bilibiliRecentVideos7d": 22,
+          "bilibiliRecentPlaySum7d": 6873,
+          "heatScore": 64
+        },
+        {
+          "name": "大泽绫",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 280,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 19
+        },
+        {
+          "name": "天道茜",
+          "bangumiCollects": 196,
+          "bangumiSubjectCollect": 2887,
+          "bilibiliRecentVideos7d": 10,
+          "bilibiliRecentPlaySum7d": 19129,
+          "heatScore": 54
+        },
+        {
+          "name": "安养寺姫芽",
+          "bangumiCollects": 14,
+          "bangumiSubjectCollect": 142,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "安昙美姫",
+          "bangumiCollects": 26,
+          "bangumiSubjectCollect": 3613,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 26
+        },
+        {
+          "name": "小金萌智子",
+          "bangumiCollects": 16,
+          "bangumiSubjectCollect": 15792,
+          "bilibiliRecentVideos7d": 6,
+          "bilibiliRecentPlaySum7d": 223791,
+          "heatScore": 53
+        },
+        {
+          "name": "尾鸟绽",
+          "bangumiCollects": 98,
+          "bangumiSubjectCollect": 15918,
+          "bilibiliRecentVideos7d": 30,
+          "bilibiliRecentPlaySum7d": 354720,
+          "heatScore": 67
+        },
+        {
+          "name": "山师芽吹",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": 15792,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 350966,
+          "heatScore": 52
+        },
+        {
+          "name": "师父",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": 2284,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 175,
+          "heatScore": 38
+        },
+        {
+          "name": "希耶丝塔",
+          "bangumiCollects": 262,
+          "bangumiSubjectCollect": 1886,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 153,
+          "heatScore": 36
+        },
+        {
+          "name": "徒町小铃",
+          "bangumiCollects": 8,
+          "bangumiSubjectCollect": 142,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "微克·金斯利",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": 11557,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 153949,
+          "heatScore": 59
+        },
+        {
+          "name": "折原儿玉",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": 1805,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "斋川唯",
+          "bangumiCollects": 30,
+          "bangumiSubjectCollect": 1886,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 25
+        },
+        {
+          "name": "日野阳太",
+          "bangumiCollects": 20,
+          "bangumiSubjectCollect": 3613,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 319,
+          "heatScore": 36
+        },
+        {
+          "name": "早乙女乱马",
+          "bangumiCollects": 202,
+          "bangumiSubjectCollect": 2887,
+          "bilibiliRecentVideos7d": 8,
+          "bilibiliRecentPlaySum7d": 11397,
+          "heatScore": 51
+        },
+        {
+          "name": "明浦路司",
+          "bangumiCollects": 170,
+          "bangumiSubjectCollect": 1380,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 25
+        },
+        {
+          "name": "春立羽佐",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": 1805,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "柊夕湖",
+          "bangumiCollects": 103,
+          "bangumiSubjectCollect": 2174,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 26
+        },
+        {
+          "name": "桂城泉",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": 142,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "桑乐／阳务乐郎",
+          "bangumiCollects": 26,
+          "bangumiSubjectCollect": 908,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 471,
+          "heatScore": 34
+        },
+        {
+          "name": "樱坂雫",
+          "bangumiCollects": 132,
+          "bangumiSubjectCollect": 494,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "水之江梅",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": 15918,
+          "bilibiliRecentVideos7d": 8,
+          "bilibiliRecentPlaySum7d": 83084,
+          "heatScore": 56
+        },
+        {
+          "name": "泷壶理后",
+          "bangumiCollects": 44,
+          "bangumiSubjectCollect": 5777,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 299821,
+          "heatScore": 70
+        },
+        {
+          "name": "海利朱·亚兹",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 2371,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "清水岬",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": 119,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "猪股大喜",
+          "bangumiCollects": 31,
+          "bangumiSubjectCollect": 3247,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 26
+        },
+        {
+          "name": "猫猫",
+          "bangumiCollects": 582,
+          "bangumiSubjectCollect": 6631,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 105996,
+          "heatScore": 72
+        },
+        {
+          "name": "百生吟子",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": 142,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 222,
+          "heatScore": 34
+        },
+        {
+          "name": "矢神汐",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": 1805,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "福贺久留美",
+          "bangumiCollects": 92,
+          "bangumiSubjectCollect": 15792,
+          "bilibiliRecentVideos7d": 18,
+          "bilibiliRecentPlaySum7d": 569109,
+          "heatScore": 63
+        },
+        {
+          "name": "米拉贝尔",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": 5082,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 14
+        },
+        {
+          "name": "结束祈",
+          "bangumiCollects": 560,
+          "bangumiSubjectCollect": 1380,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 26
+        },
+        {
+          "name": "绢旗最爱",
+          "bangumiCollects": 115,
+          "bangumiSubjectCollect": 5777,
+          "bilibiliRecentVideos7d": 25,
+          "bilibiliRecentPlaySum7d": 140264,
+          "heatScore": 64
+        },
+        {
+          "name": "罗娜·哈米特",
+          "bangumiCollects": 15,
+          "bangumiSubjectCollect": 2404,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 25
+        },
+        {
+          "name": "罗尼",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 4437,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 1247,
+          "heatScore": 39
+        },
+        {
+          "name": "罗曼·卡拉克斯",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": 11557,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 122,
+          "heatScore": 39
+        },
+        {
+          "name": "罗梅莉亚·冯·格雷厄姆",
+          "bangumiCollects": 36,
+          "bangumiSubjectCollect": 2106,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 171580,
+          "heatScore": 67
+        },
+        {
+          "name": "艾玛·维尔德",
+          "bangumiCollects": 65,
+          "bangumiSubjectCollect": 494,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "芙兰",
+          "bangumiCollects": 131,
+          "bangumiSubjectCollect": 2284,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 273,
+          "heatScore": 36
+        },
+        {
+          "name": "芙兰达·赛维伦",
+          "bangumiCollects": 239,
+          "bangumiSubjectCollect": 5777,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 9548,
+          "heatScore": 43
+        },
+        {
+          "name": "莉莉·法兰贝尔",
+          "bangumiCollects": 27,
+          "bangumiSubjectCollect": 5082,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 3088,
+          "heatScore": 59
+        },
+        {
+          "name": "萝赛",
+          "bangumiCollects": 24,
+          "bangumiSubjectCollect": 2371,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 111,
+          "heatScore": 36
+        },
+        {
+          "name": "蝶野雏",
+          "bangumiCollects": 416,
+          "bangumiSubjectCollect": 3247,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 48,
+          "heatScore": 36
+        },
+        {
+          "name": "近江彼方",
+          "bangumiCollects": 111,
+          "bangumiSubjectCollect": 494,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "迪娜",
+          "bangumiCollects": 77,
+          "bangumiSubjectCollect": 2400,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 721,
+          "heatScore": 40
+        },
+        {
+          "name": "追加鲣鱼／鱼臣慧",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": 908,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "阿莫娜",
+          "bangumiCollects": 18,
+          "bangumiSubjectCollect": 4437,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 26
+        },
+        {
+          "name": "陆奥驹絽",
+          "bangumiCollects": 157,
+          "bangumiSubjectCollect": 15918,
+          "bilibiliRecentVideos7d": 13,
+          "bilibiliRecentPlaySum7d": 186275,
+          "heatScore": 63
+        },
+        {
+          "name": "雨宫凑",
+          "bangumiCollects": 23,
+          "bangumiSubjectCollect": 3613,
+          "bilibiliRecentVideos7d": 8,
+          "bilibiliRecentPlaySum7d": 33410,
+          "heatScore": 63
+        },
+        {
+          "name": "雪乃深冬",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": 2359,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 21
+        },
+        {
+          "name": "雷恩·加德兰",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": 5082,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 146,
+          "heatScore": 30
+        },
+        {
+          "name": "露法丝·玛法尔",
+          "bangumiCollects": 28,
+          "bangumiSubjectCollect": 2400,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 25
+        },
+        {
+          "name": "青海阳",
+          "bangumiCollects": 70,
+          "bangumiSubjectCollect": 2174,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 26
+        },
+        {
+          "name": "高根康子",
+          "bangumiCollects": 17,
+          "bangumiSubjectCollect": 15792,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 15764,
+          "heatScore": 51
+        },
+        {
+          "name": "高橋さとる",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 2359,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "鬼龙院枫",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": 2359,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "鹿野千夏",
+          "bangumiCollects": 235,
+          "bangumiSubjectCollect": 3247,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 2097,
+          "heatScore": 46
+        },
+        {
+          "name": "麦野沈利",
+          "bangumiCollects": 58,
+          "bangumiSubjectCollect": 5777,
+          "bilibiliRecentVideos7d": 10,
+          "bilibiliRecentPlaySum7d": 105367,
+          "heatScore": 55
+        },
+        {
+          "name": "万顷",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 2421,
+          "heatScore": 46
+        },
+        {
+          "name": "乌尔比安",
+          "bangumiCollects": 8,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 7
+        },
+        {
+          "name": "医生",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 6
+        },
+        {
+          "name": "双月",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 806,
+          "heatScore": 22
+        },
+        {
+          "name": "奥达",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "妮芙",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 7
+        },
+        {
+          "name": "娜仁图亚",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 2
+        },
+        {
+          "name": "导火索",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "小满",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 2
+        },
+        {
+          "name": "左乐",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 12,
+          "bilibiliRecentPlaySum7d": 5468,
+          "heatScore": 42
+        },
+        {
+          "name": "戴菲恩",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 2
+        },
+        {
+          "name": "杏仁",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "森西",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "深巡",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 2
+        },
+        {
+          "name": "深律",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "玛露西尔",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "维荻",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "艾拉",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "苍苔",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "莎草",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 5
+        },
+        {
+          "name": "莱伊",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 7738,
+          "heatScore": 38
+        },
+        {
+          "name": "莱欧斯",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "衡沙",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "逻各斯",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "锏",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 13,
+          "bilibiliRecentPlaySum7d": 147508,
+          "heatScore": 61
+        },
+        {
+          "name": "阿斯卡纶",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 5
+        },
+        {
+          "name": "露托",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 4
+        },
+        {
+          "name": "魔王",
+          "bangumiCollects": 11,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "齐尔查克",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "沃雅妮莎",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 29266,
+          "heatScore": 63
+        },
+        {
+          "name": "瓦列里",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 264315,
+          "heatScore": 55
+        },
+        {
+          "name": "米提亚",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 239150,
+          "heatScore": 56
+        },
+        {
+          "name": "薇斯纳",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 62587,
+          "heatScore": 66
+        },
+        {
+          "name": "星神★阿哈",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 811454,
+          "heatScore": 62
+        },
+        {
+          "name": "真珠",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 88955,
+          "heatScore": 60
+        },
+        {
+          "name": "砂金•戏浪",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 41,
+          "bilibiliRecentPlaySum7d": 632741,
+          "heatScore": 62
+        },
+        {
+          "name": "莉莉",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 139411,
+          "heatScore": 57
+        },
+        {
+          "name": "锁暝",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 163146,
+          "heatScore": 54
+        },
+        {
+          "name": "菲欧妮",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 67713,
+          "heatScore": 53
+        },
+        {
+          "name": "赛维里安",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 685006,
+          "heatScore": 55
+        }
+      ]
+    },
     {
       "capturedAt": "2026-10-20T15:11:40Z",
       "characters": [
