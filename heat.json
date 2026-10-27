@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-27T09:51:29Z",
+  "generatedAt": "2026-10-27T15:55:04Z",
   "scoreMethod": "velocity_v1",
   "sources": {
     "bangumi": {
       "status": "ok",
-      "fetchedAt": "2026-10-27T09:51:29Z",
+      "fetchedAt": "2026-10-27T15:55:04Z",
       "error": null
     },
     "bilibili": {
-      "status": "partial",
-      "fetchedAt": "2026-10-27T10:02:21Z",
-      "error": "time budget exhausted",
+      "status": "ok",
+      "fetchedAt": "2026-10-27T15:59:01Z",
+      "error": null,
       "softBlocked": 0
     },
     "weibo": {
-      "status": "failed",
-      "fetchedAt": null,
-      "error": "time budget exhausted"
+      "status": "ok",
+      "fetchedAt": "2026-10-27T16:02:48Z",
+      "error": null
     },
     "nanoka": {
       "status": "skipped",
@@ -529,6 +529,46 @@
       }
     },
     {
+      "key": "bgm:213994",
+      "name": "古河カオリ",
+      "work": "女友的朋友",
+      "kind": "ANIME",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 59
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 213994,
+          "characterName": "古河カオリ",
+          "collects": 5,
+          "comments": 2,
+          "subjectId": 647220,
+          "subjectName": "女友的朋友",
+          "subjectCollect": 1880,
+          "airing": true,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "古河カオリ 女友的朋友",
+          "resultCount": 1,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 1,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "bgm:169372",
       "name": "古贺美月",
       "work": "在意的人不是他",
@@ -604,6 +644,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-23T23:25:24Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:213995",
+      "name": "吉岡トモコ",
+      "work": "女友的朋友",
+      "kind": "ANIME",
+      "heatScore": 30,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 21,
+        "bangumi": 59
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 213995,
+          "characterName": "吉岡トモコ",
+          "collects": 6,
+          "comments": 3,
+          "subjectId": 647220,
+          "subjectName": "女友的朋友",
+          "subjectCollect": 1880,
+          "airing": true,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "吉岡トモコ 女友的朋友",
+          "resultCount": 5,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 391,
+          "sampledVideos": 5,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -1346,6 +1426,46 @@
         "weibo": {
           "onHotSearch": false,
           "fetchedAt": "2026-10-21T23:33:31Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:213993",
+      "name": "日高タケル",
+      "work": "女友的朋友",
+      "kind": "ANIME",
+      "heatScore": 13,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 53
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 213993,
+          "characterName": "日高タケル",
+          "collects": 0,
+          "comments": 1,
+          "subjectId": 647220,
+          "subjectName": "女友的朋友",
+          "subjectCollect": 1880,
+          "airing": true,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "日高タケル 女友的朋友",
+          "resultCount": 3,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 3,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -28151,6 +28271,46 @@
       }
     },
     {
+      "key": "bgm:169197",
+      "name": "伊冯",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 70,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 81,
+        "bangumi": 39
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 169197,
+          "characterName": "伊冯",
+          "collects": 19,
+          "comments": 8,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "伊冯 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 38160,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "bgm:142105",
       "name": "余烬",
       "work": "明日方舟：终末地",
@@ -28225,6 +28385,726 @@
       }
     },
     {
+      "key": "bgm:189431",
+      "name": "别礼",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 52,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 61,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189431,
+          "characterName": "别礼",
+          "collects": 5,
+          "comments": 7,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "别礼 明日方舟：终末地",
+          "resultCount": 28,
+          "resultCountCapped": false,
+          "recentVideos7d": 16,
+          "recentPlaySum7d": 124482,
+          "sampledVideos": 28,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:189436",
+      "name": "卡契尔",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 37,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 47,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189436,
+          "characterName": "卡契尔",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "卡契尔 明日方舟：终末地",
+          "resultCount": 501,
+          "resultCountCapped": false,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 104075,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:208374",
+      "name": "卡缪",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 64,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 81,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 208374,
+          "characterName": "卡缪",
+          "collects": 2,
+          "comments": 3,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "卡缪 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 37772,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:220349",
+      "name": "噗切娜",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 34,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 46,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 220349,
+          "characterName": "噗切娜",
+          "collects": 0,
+          "comments": 1,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "噗切娜 明日方舟：终末地",
+          "resultCount": 889,
+          "resultCountCapped": false,
+          "recentVideos7d": 7,
+          "recentPlaySum7d": 7425,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:189437",
+      "name": "埃特拉",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 55,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 63,
+        "bangumi": 30
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189437,
+          "characterName": "埃特拉",
+          "collects": 9,
+          "comments": 5,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "埃特拉 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 19,
+          "recentPlaySum7d": 83177,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:142460",
+      "name": "大山",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 0,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 142460,
+          "characterName": "大山",
+          "collects": 0,
+          "comments": 2,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "大山 明日方舟：终末地",
+          "resultCount": 65,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:169194",
+      "name": "大潘",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 54,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 68,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 169194,
+          "characterName": "大潘",
+          "collects": 1,
+          "comments": 8,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "大潘 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 38,
+          "recentPlaySum7d": 12190,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:189435",
+      "name": "安塔尔",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 20,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189435,
+          "characterName": "安塔尔",
+          "collects": 0,
+          "comments": 1,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "安塔尔 明日方舟：终末地",
+          "resultCount": 520,
+          "resultCountCapped": false,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 228,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:190554",
+      "name": "庄方宜",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 41
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 190554,
+          "characterName": "庄方宜",
+          "collects": 22,
+          "comments": 13,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "庄方宜 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 141441,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:169196",
+      "name": "弧光",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 48,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 61,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 169196,
+          "characterName": "弧光",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "弧光 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 27,
+          "recentPlaySum7d": 2187,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:190619",
+      "name": "弭弗",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 69,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 26
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 190619,
+          "characterName": "弭弗",
+          "collects": 6,
+          "comments": 2,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "弭弗 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 135286,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:216715",
+      "name": "提弗洛斯",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 67,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 80,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 216715,
+          "characterName": "提弗洛斯",
+          "collects": 7,
+          "comments": 2,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "提弗洛斯 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 34265,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:216714",
+      "name": "明河",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 62,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 82,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 216714,
+          "characterName": "明河",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "明河 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 80286,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:184164",
+      "name": "昼雪",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 57,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 72,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 184164,
+          "characterName": "昼雪",
+          "collects": 2,
+          "comments": 1,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "昼雪 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 46,
+          "recentPlaySum7d": 18295,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:212113",
+      "name": "梨诺",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 69,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 82,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 212113,
+          "characterName": "梨诺",
+          "collects": 7,
+          "comments": 2,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "梨诺 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 95699,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:190912",
+      "name": "汤汤",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 68,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 190912,
+          "characterName": "汤汤",
+          "collects": 5,
+          "comments": 10,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "汤汤 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 118148,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:184165",
+      "name": "洁尔佩塔",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 71,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 184165,
+          "characterName": "洁尔佩塔",
+          "collects": 15,
+          "comments": 3,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "洁尔佩塔 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 120932,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:190910",
+      "name": "洛茜",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 45
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 190910,
+          "characterName": "洛茜",
+          "collects": 29,
+          "comments": 11,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "洛茜 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 121046,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "bgm:141266",
       "name": "狼卫",
       "work": "明日方舟：终末地",
@@ -28259,6 +29139,86 @@
           "fetchedAt": "2026-10-27T10:02:21Z"
         },
         "weibo": null
+      }
+    },
+    {
+      "key": "bgm:208373",
+      "name": "祀",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 70,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 79,
+        "bangumi": 42
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 208373,
+          "characterName": "祀",
+          "collects": 23,
+          "comments": 11,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "祀 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 19953,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:189434",
+      "name": "秋栗",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 51,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 63,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189434,
+          "characterName": "秋栗",
+          "collects": 2,
+          "comments": 7,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "秋栗 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 23,
+          "recentPlaySum7d": 28237,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
       }
     },
     {
@@ -28336,6 +29296,86 @@
       }
     },
     {
+      "key": "bgm:190913",
+      "name": "聂菲斯",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 60,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 75,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 190913,
+          "characterName": "聂菲斯",
+          "collects": 2,
+          "comments": 7,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "聂菲斯 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 46,
+          "recentPlaySum7d": 80426,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:189429",
+      "name": "艾尔黛拉",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 62,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 70,
+        "bangumi": 37
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189429,
+          "characterName": "艾尔黛拉",
+          "collects": 16,
+          "comments": 7,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "艾尔黛拉 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 36,
+          "recentPlaySum7d": 48923,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "bgm:142284",
       "name": "艾维文娜",
       "work": "明日方舟：终末地",
@@ -28370,6 +29410,166 @@
           "fetchedAt": "2026-10-27T10:02:21Z"
         },
         "weibo": null
+      }
+    },
+    {
+      "key": "bgm:184163",
+      "name": "莱万汀",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 70,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 184163,
+          "characterName": "莱万汀",
+          "collects": 11,
+          "comments": 10,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "莱万汀 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 119010,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:204000",
+      "name": "莱西娅",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 27,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 33,
+        "bangumi": 9
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 204000,
+          "characterName": "莱西娅",
+          "collects": 1,
+          "comments": 0,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "莱西娅 明日方舟：终末地",
+          "resultCount": 31,
+          "resultCountCapped": false,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 13314,
+          "sampledVideos": 31,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:189438",
+      "name": "萤石",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 54,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 65,
+        "bangumi": 21
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189438,
+          "characterName": "萤石",
+          "collects": 4,
+          "comments": 4,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "萤石 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 24,
+          "recentPlaySum7d": 64602,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:208372",
+      "name": "诀",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 66,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 79,
+        "bangumi": 29
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 208372,
+          "characterName": "诀",
+          "collects": 8,
+          "comments": 2,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "诀 明日方舟：终末地",
+          "resultCount": 123,
+          "resultCountCapped": false,
+          "recentVideos7d": 44,
+          "recentPlaySum7d": 1125275,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
       }
     },
     {
@@ -28410,14 +29610,334 @@
       }
     },
     {
+      "key": "bgm:189433",
+      "name": "阿列什",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 24,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 32,
+        "bangumi": 0
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189433,
+          "characterName": "阿列什",
+          "collects": 0,
+          "comments": 0,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "阿列什 明日方舟：终末地",
+          "resultCount": 494,
+          "resultCountCapped": false,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 943,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:190911",
+      "name": "阿达希尔",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 66,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 190911,
+          "characterName": "阿达希尔",
+          "collects": 2,
+          "comments": 5,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "阿达希尔 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 125899,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:142397",
+      "name": "陈千语",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 76,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 86,
+        "bangumi": 47
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 142397,
+          "characterName": "陈千语",
+          "collects": 34,
+          "comments": 12,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "陈千语 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 605070,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:189432",
+      "name": "骏卫",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 45,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 54,
+        "bangumi": 18
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 189432,
+          "characterName": "骏卫",
+          "collects": 3,
+          "comments": 3,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "骏卫 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 12,
+          "recentPlaySum7d": 15173,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "bgm:169195",
+      "name": "黎风",
+      "work": "明日方舟：终末地",
+      "kind": "GAME",
+      "heatScore": 56,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 67,
+        "bangumi": 21
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 169195,
+          "characterName": "黎风",
+          "collects": 4,
+          "comments": 1,
+          "subjectId": null,
+          "subjectName": null,
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "catalog",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "黎风 明日方舟：终末地",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 30,
+          "recentPlaySum7d": 31280,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000035",
+      "name": "七七",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 71,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 81,
+        "bangumi": 43
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85987,
+          "characterName": "七七",
+          "collects": 26,
+          "comments": 12,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "七七",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "七七 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 37262,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000006",
+      "name": "丽莎",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 40,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 39,
+        "bangumi": 44
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85764,
+          "characterName": "丽莎",
+          "collects": 27,
+          "comments": 9,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "丽莎",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "丽莎 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 6841,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000065",
+      "name": "久岐忍",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 23,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 19,
+        "bangumi": 34
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 108990,
+          "characterName": "久岐忍",
+          "collects": 12,
+          "comments": 6,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "久岐忍",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "久岐忍 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 133,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "gi:10000056",
       "name": "九条裟罗",
       "work": "原神 7.1",
       "kind": "GAME",
-      "heatScore": 10,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 42,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 44,
         "bangumi": 38
       },
       "metrics": {
@@ -28431,21 +29951,101 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "九条裟罗",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-27T15:55:04Z"
         },
         "bilibili": {
           "keyword": "九条裟罗 原神",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 7,
+          "recentPlaySum7d": 2745,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-27T15:59:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000064",
+      "name": "云堇",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 47,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 49,
+        "bangumi": 42
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102832,
+          "characterName": "云堇",
+          "collects": 23,
+          "comments": 8,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "云堇",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "云堇 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 10,
+          "recentPlaySum7d": 3671,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000055",
+      "name": "五郎",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 41,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 45,
+        "bangumi": 30
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 99210,
+          "characterName": "五郎",
+          "collects": 9,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "五郎",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "五郎 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 15546,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -28530,6 +30130,126 @@
       }
     },
     {
+      "key": "gi:10000051",
+      "name": "优菈",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 80,
+        "bangumi": 51
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 94890,
+          "characterName": "优菈",
+          "collects": 46,
+          "comments": 15,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "优菈",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "优菈 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 33934,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000098",
+      "name": "克洛琳德",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 8,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 132775,
+          "characterName": "克洛琳德",
+          "collects": 11,
+          "comments": 6,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "克洛琳德",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "克洛琳德 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000058",
+      "name": "八重神子",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 77,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 84,
+        "bangumi": 55
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 99209,
+          "characterName": "八重神子",
+          "collects": 63,
+          "comments": 23,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "八重神子",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "八重神子 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 198690,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "gi:10000126",
       "name": "兹白",
       "work": "原神 7.1",
@@ -28574,10 +30294,10 @@
       "name": "凝光",
       "work": "原神 7.1",
       "kind": "GAME",
-      "heatScore": 11,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 71,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 80,
         "bangumi": 45
       },
       "metrics": {
@@ -28591,21 +30311,410 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "凝光",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-27T15:55:04Z"
         },
         "bilibili": {
           "keyword": "凝光 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 49,
+          "recentPlaySum7d": 992917,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000015",
+      "name": "凯亚",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 52,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 58,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85765,
+          "characterName": "凯亚",
+          "collects": 14,
+          "comments": 13,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "凯亚",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "凯亚 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 14,
+          "recentPlaySum7d": 46496,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000042",
+      "name": "刻晴",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 75,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 80,
+        "bangumi": 62
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85986,
+          "characterName": "刻晴",
+          "collects": 109,
+          "comments": 48,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "刻晴",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "刻晴 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 25492,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000024",
+      "name": "北斗",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 51,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 56,
+        "bangumi": 35
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85981,
+          "characterName": "北斗",
+          "collects": 13,
+          "comments": 3,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "北斗",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "北斗 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 12,
+          "recentPlaySum7d": 62720,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000094",
+      "name": "千织",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 10,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 40
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 147835,
+          "characterName": "千织",
+          "collects": 20,
+          "comments": 11,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "千织",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "千织 原神",
           "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-27T15:59:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000081",
+      "name": "卡维",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 60,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 74,
+        "bangumi": 21
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 126118,
+          "characterName": "卡维",
+          "collects": 4,
+          "comments": 3,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "卡维",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "卡维 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 39,
+          "recentPlaySum7d": 153225,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000100",
+      "name": "卡齐娜",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 6,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 161148,
+          "characterName": "卡齐娜",
+          "collects": 5,
+          "comments": 1,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "卡齐娜",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "卡齐娜 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000029",
+      "name": "可莉",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 75,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 51
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85766,
+          "characterName": "可莉",
+          "collects": 49,
+          "comments": 18,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "可莉",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "可莉 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 107416,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000092",
+      "name": "嘉明",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 7,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 148640,
+          "characterName": "嘉明",
+          "collects": 7,
+          "comments": 5,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "嘉明",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "嘉明 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000072",
+      "name": "坎蒂丝",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 35,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 36,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 115322,
+          "characterName": "坎蒂丝",
+          "collects": 11,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "坎蒂丝",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "坎蒂丝 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 8136,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000062",
+      "name": "埃洛伊",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 25,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 25,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "埃洛伊 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 163,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -28615,7 +30724,7 @@
       "work": "原神 7.1",
       "kind": "GAME",
       "heatScore": 7,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 27
@@ -28631,7 +30740,7 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "基尼奇",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-27T15:55:04Z"
         },
         "bilibili": {
           "keyword": "基尼奇 原神",
@@ -28641,11 +30750,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-27T15:59:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -28695,7 +30804,7 @@
       "work": "原神 7.1",
       "kind": "GAME",
       "heatScore": 6,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 26
@@ -28711,7 +30820,7 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "夏沃蕾",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-27T15:55:04Z"
         },
         "bilibili": {
           "keyword": "夏沃蕾 原神",
@@ -28721,11 +30830,131 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-27T15:59:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000088",
+      "name": "夏洛蒂",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 8,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 34
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 129744,
+          "characterName": "夏洛蒂",
+          "collects": 12,
+          "comments": 5,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "夏洛蒂",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "夏洛蒂 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000068",
+      "name": "多莉",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 40,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 44,
+        "bangumi": 29
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 113128,
+          "characterName": "多莉",
+          "collects": 8,
+          "comments": 13,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "多莉",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "多莉 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 7,
+          "recentPlaySum7d": 3188,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000060",
+      "name": "夜兰",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 64,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 71,
+        "bangumi": 44
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 108989,
+          "characterName": "夜兰",
+          "collects": 27,
+          "comments": 13,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "夜兰",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "夜兰 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 32,
+          "recentPlaySum7d": 176267,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -28770,6 +30999,286 @@
       }
     },
     {
+      "key": "gi:10000091",
+      "name": "娜维娅",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 10,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 41
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 132774,
+          "characterName": "娜维娅",
+          "collects": 22,
+          "comments": 13,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "娜维娅",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "娜维娅 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000021",
+      "name": "安柏",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 70,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 77,
+        "bangumi": 48
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85762,
+          "characterName": "安柏",
+          "collects": 36,
+          "comments": 21,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "安柏",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "安柏 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 44,
+          "recentPlaySum7d": 428203,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000049",
+      "name": "宵宫",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 69,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 74,
+        "bangumi": 55
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 98864,
+          "characterName": "宵宫",
+          "collects": 66,
+          "comments": 15,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "宵宫",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "宵宫 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 42,
+          "recentPlaySum7d": 97574,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000095",
+      "name": "希格雯",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 9,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 132776,
+          "characterName": "希格雯",
+          "collects": 14,
+          "comments": 10,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "希格雯",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "希格雯 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000050",
+      "name": "托马",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 41,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 43,
+        "bangumi": 34
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 99208,
+          "characterName": "托马",
+          "collects": 12,
+          "comments": 4,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "托马",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "托马 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 4637,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000069",
+      "name": "提纳里",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 53,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 59,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 113127,
+          "characterName": "提纳里",
+          "collects": 11,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "提纳里",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "提纳里 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 19,
+          "recentPlaySum7d": 13494,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000053",
+      "name": "早柚",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 39,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 39,
+        "bangumi": 38
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 98865,
+          "characterName": "早柚",
+          "collects": 17,
+          "comments": 9,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "早柚",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "早柚 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 2255,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "gi:10000123",
       "name": "杜林",
       "work": "原神 7.1",
@@ -28804,6 +31313,126 @@
           "fetchedAt": "2026-10-21T15:35:12Z"
         },
         "weibo": null
+      }
+    },
+    {
+      "key": "gi:10000084",
+      "name": "林尼",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 53,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 62,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86327,
+          "characterName": "林尼",
+          "collects": 7,
+          "comments": 6,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "林尼",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "林尼 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 18,
+          "recentPlaySum7d": 69634,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000047",
+      "name": "枫原万叶",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 76,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 85,
+        "bangumi": 47
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 96352,
+          "characterName": "枫原万叶",
+          "collects": 35,
+          "comments": 21,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "枫原万叶",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "枫原万叶 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 438285,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000067",
+      "name": "柯莱",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 50,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 56,
+        "bangumi": 30
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 111520,
+          "characterName": "柯莱",
+          "collects": 9,
+          "comments": 8,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "柯莱",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "柯莱 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 13,
+          "recentPlaySum7d": 32863,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
       }
     },
     {
@@ -28842,6 +31471,366 @@
           "fetchedAt": "2026-10-27T00:08:49Z"
         },
         "weibo": null
+      }
+    },
+    {
+      "key": "gi:10000075",
+      "name": "流浪者",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 74,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 85,
+        "bangumi": 41
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 94892,
+          "characterName": "流浪者",
+          "collects": 21,
+          "comments": 69,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "流浪者",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "流浪者 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 498891,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000022",
+      "name": "温迪",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 74,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 49
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85767,
+          "characterName": "温迪",
+          "collects": 42,
+          "comments": 27,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "温迪",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "温迪 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 101600,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000048",
+      "name": "烟绯",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 51,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 54,
+        "bangumi": 43
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 94889,
+          "characterName": "烟绯",
+          "collects": 25,
+          "comments": 16,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "烟绯",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "烟绯 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 12,
+          "recentPlaySum7d": 22281,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000054",
+      "name": "珊瑚宫心海",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 71,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 76,
+        "bangumi": 55
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 98861,
+          "characterName": "珊瑚宫心海",
+          "collects": 62,
+          "comments": 49,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "珊瑚宫心海",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "珊瑚宫心海 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 48,
+          "recentPlaySum7d": 148696,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000076",
+      "name": "珐露珊",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 53,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 57,
+        "bangumi": 40
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 119351,
+          "characterName": "珐露珊",
+          "collects": 20,
+          "comments": 20,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "珐露珊",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "珐露珊 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 17,
+          "recentPlaySum7d": 10434,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000032",
+      "name": "班尼特",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 56,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 64,
+        "bangumi": 32
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85973,
+          "characterName": "班尼特",
+          "collects": 10,
+          "comments": 11,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "班尼特",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "班尼特 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 22,
+          "recentPlaySum7d": 57961,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000083",
+      "name": "琳妮特",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 66,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 73,
+        "bangumi": 47
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86328,
+          "characterName": "琳妮特",
+          "collects": 34,
+          "comments": 14,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "琳妮特",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "琳妮特 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 42,
+          "recentPlaySum7d": 61045,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000003",
+      "name": "琴",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 75,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 85,
+        "bangumi": 46
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85763,
+          "characterName": "琴",
+          "collects": 31,
+          "comments": 11,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "琴",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "琴 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 317884,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000077",
+      "name": "瑶瑶",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 49,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 53,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86317,
+          "characterName": "瑶瑶",
+          "collects": 15,
+          "comments": 19,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "瑶瑶",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "瑶瑶 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 13,
+          "recentPlaySum7d": 5544,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
       }
     },
     {
@@ -28923,6 +31912,286 @@
       }
     },
     {
+      "key": "gi:10000037",
+      "name": "甘雨",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 75,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 80,
+        "bangumi": 61
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86312,
+          "characterName": "甘雨",
+          "collects": 99,
+          "comments": 32,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "甘雨",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "甘雨 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 27861,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000063",
+      "name": "申鹤",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 75,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 82,
+        "bangumi": 52
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 102831,
+          "characterName": "申鹤",
+          "collects": 51,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "申鹤",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "申鹤 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 100072,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000082",
+      "name": "白术",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 37,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 43,
+        "bangumi": 18
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86311,
+          "characterName": "白术",
+          "collects": 3,
+          "comments": 3,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "白术",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "白术 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 5887,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000043",
+      "name": "砂糖",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 62,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 68,
+        "bangumi": 44
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85976,
+          "characterName": "砂糖",
+          "collects": 27,
+          "comments": 20,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "砂糖",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "砂糖 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 26,
+          "recentPlaySum7d": 127781,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000066",
+      "name": "神里绫人",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 60,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 69,
+        "bangumi": 34
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 104088,
+          "characterName": "神里绫人",
+          "collects": 12,
+          "comments": 11,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "神里绫人",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "神里绫人 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 23,
+          "recentPlaySum7d": 531444,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000002",
+      "name": "神里绫华",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 76,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 82,
+        "bangumi": 59
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86294,
+          "characterName": "神里绫华",
+          "collects": 87,
+          "comments": 45,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "神里绫华",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "神里绫华 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 63562,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000080",
+      "name": "米卡",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 36,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 40,
+        "bangumi": 26
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 116431,
+          "characterName": "米卡",
+          "collects": 6,
+          "comments": 5,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "米卡",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "米卡 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 12168,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "gi:10000136",
       "name": "米提亚",
       "work": "原神 7.1",
@@ -28961,42 +32230,483 @@
       }
     },
     {
+      "key": "gi:10000073",
+      "name": "纳西妲",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 79,
+        "bangumi": 56
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 112644,
+          "characterName": "纳西妲",
+          "collects": 70,
+          "comments": 66,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "纳西妲",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "纳西妲 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 14875,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000061",
+      "name": "绮良良",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 47,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 48,
+        "bangumi": 44
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 127808,
+          "characterName": "绮良良",
+          "collects": 28,
+          "comments": 13,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "绮良良",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "绮良良 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 9,
+          "recentPlaySum7d": 5040,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000045",
+      "name": "罗莎莉亚",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 40,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 40,
+        "bangumi": 40
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 89100,
+          "characterName": "罗莎莉亚",
+          "collects": 20,
+          "comments": 12,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "罗莎莉亚",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "罗莎莉亚 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 10339,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "gi:10000046",
       "name": "胡桃",
       "work": "原神 7.1",
       "kind": "GAME",
-      "heatScore": 15,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatScore": 69,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
       "heatComponents": {
-        "bilibili": 0,
-        "bangumi": 60
+        "bilibili": 81,
+        "bangumi": 61,
+        "growth": 53
       },
       "metrics": {
         "bangumi": {
           "characterId": 91909,
           "characterName": "胡桃",
-          "collects": 98,
+          "collects": 100,
           "comments": 33,
           "subjectId": 284157,
           "subjectName": "原神",
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "胡桃",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-27T15:55:04Z"
         },
         "bilibili": {
           "keyword": "胡桃 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 45510,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000078",
+      "name": "艾尔海森",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 61,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 70,
+        "bangumi": 34
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 115744,
+          "characterName": "艾尔海森",
+          "collects": 12,
+          "comments": 17,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "艾尔海森",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "艾尔海森 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 33,
+          "recentPlaySum7d": 82608,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000099",
+      "name": "艾梅莉埃",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 4,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 14
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 158753,
+          "characterName": "艾梅莉埃",
+          "collects": 2,
+          "comments": 5,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "艾梅莉埃",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "艾梅莉埃 原神",
           "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-27T15:59:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000089",
+      "name": "芙宁娜",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 61
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 132779,
+          "characterName": "芙宁娜",
+          "collects": 100,
+          "comments": 63,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "芙宁娜",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "芙宁娜 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000014",
+      "name": "芭芭拉",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 64,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 66,
+        "bangumi": 57
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85970,
+          "characterName": "芭芭拉",
+          "collects": 73,
+          "comments": 26,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "芭芭拉",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "芭芭拉 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 29,
+          "recentPlaySum7d": 28650,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000057",
+      "name": "荒泷一斗",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 39,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 46,
+        "bangumi": 18
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 101819,
+          "characterName": "荒泷一斗",
+          "collects": 3,
+          "comments": 12,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "荒泷一斗",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "荒泷一斗 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 8,
+          "recentPlaySum7d": 4765,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000041",
+      "name": "莫娜",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 66,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 71,
+        "bangumi": 53
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85977,
+          "characterName": "莫娜",
+          "collects": 55,
+          "comments": 16,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "莫娜",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "莫娜 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 31,
+          "recentPlaySum7d": 189203,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000074",
+      "name": "莱依拉",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 47,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 50,
+        "bangumi": 38
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 116915,
+          "characterName": "莱依拉",
+          "collects": 17,
+          "comments": 8,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "莱依拉",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "莱依拉 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 10,
+          "recentPlaySum7d": 7681,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000086",
+      "name": "莱欧斯利",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 8,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 30
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 132777,
+          "characterName": "莱欧斯利",
+          "collects": 9,
+          "comments": 5,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "莱欧斯利",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "莱欧斯利 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -29081,6 +32791,86 @@
       }
     },
     {
+      "key": "gi:10000085",
+      "name": "菲米尼",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 44,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 50,
+        "bangumi": 26
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 132773,
+          "characterName": "菲米尼",
+          "collects": 6,
+          "comments": 1,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "菲米尼",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "菲米尼 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 9,
+          "recentPlaySum7d": 19207,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000031",
+      "name": "菲谢尔",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 57,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 57,
+        "bangumi": 54
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85975,
+          "characterName": "菲谢尔",
+          "collects": 60,
+          "comments": 27,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "菲谢尔",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "菲谢尔 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 17,
+          "recentPlaySum7d": 10842,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "gi:10000143",
       "name": "薇斯纳",
       "work": "原神 7.1",
@@ -29119,12 +32909,532 @@
       }
     },
     {
+      "key": "gi:10000025",
+      "name": "行秋",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 56,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 64,
+        "bangumi": 32
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85984,
+          "characterName": "行秋",
+          "collects": 10,
+          "comments": 16,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "行秋",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "行秋 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 24,
+          "recentPlaySum7d": 30875,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000034",
+      "name": "诺艾尔",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 59,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 61,
+        "bangumi": 53
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85974,
+          "characterName": "诺艾尔",
+          "collects": 54,
+          "comments": 18,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "诺艾尔",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "诺艾尔 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 23,
+          "recentPlaySum7d": 8686,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000097",
+      "name": "赛索斯",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 5,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 18
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 155205,
+          "characterName": "赛索斯",
+          "collects": 3,
+          "comments": 2,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "赛索斯",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "赛索斯 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000071",
+      "name": "赛诺",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 64,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 77,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86326,
+          "characterName": "赛诺",
+          "collects": 5,
+          "comments": 9,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "赛诺",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "赛诺 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 48,
+          "recentPlaySum7d": 277781,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000044",
+      "name": "辛焱",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 32,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 35,
+        "bangumi": 24
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86309,
+          "characterName": "辛焱",
+          "collects": 5,
+          "comments": 4,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "辛焱",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "辛焱 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 4569,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000033",
+      "name": "达达利亚",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 84,
+        "bangumi": 41
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86308,
+          "characterName": "达达利亚",
+          "collects": 22,
+          "comments": 16,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "达达利亚",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "达达利亚 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 178534,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000016",
+      "name": "迪卢克",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 61,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 70,
+        "bangumi": 32
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85971,
+          "characterName": "迪卢克",
+          "collects": 10,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "迪卢克",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "迪卢克 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 32,
+          "recentPlaySum7d": 110863,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000039",
+      "name": "迪奥娜",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 58,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 64,
+        "bangumi": 39
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86310,
+          "characterName": "迪奥娜",
+          "collects": 19,
+          "comments": 3,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "迪奥娜",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "迪奥娜 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 23,
+          "recentPlaySum7d": 40413,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000079",
+      "name": "迪希雅",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 28,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 26,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 115743,
+          "characterName": "迪希雅",
+          "collects": 15,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "迪希雅",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "迪希雅 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 5051,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000087",
+      "name": "那维莱特",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 7,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 132778,
+          "characterName": "那维莱特",
+          "collects": 7,
+          "comments": 14,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "那维莱特",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "那维莱特 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000036",
+      "name": "重云",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 61,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 70,
+        "bangumi": 33
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85985,
+          "characterName": "重云",
+          "collects": 11,
+          "comments": 7,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "重云",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "重云 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 26,
+          "recentPlaySum7d": 402013,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000030",
+      "name": "钟离",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 76,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 85,
+        "bangumi": 49
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 86292,
+          "characterName": "钟离",
+          "collects": 42,
+          "comments": 41,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "钟离",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "钟离 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 337422,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000093",
+      "name": "闲云",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 9,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 0,
+        "bangumi": 36
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 99211,
+          "characterName": "闲云",
+          "collects": 14,
+          "comments": 16,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "闲云",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "闲云 原神",
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
       "key": "gi:10000096",
       "name": "阿蕾奇诺",
       "work": "原神 7.1",
       "kind": "GAME",
       "heatScore": 10,
-      "heatFetchedAt": "2026-10-19T04:09:53Z",
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 41
@@ -29133,14 +33443,14 @@
         "bangumi": {
           "characterId": 113132,
           "characterName": "阿蕾奇诺",
-          "collects": 22,
+          "collects": 21,
           "comments": 12,
           "subjectId": 284157,
           "subjectName": "原神",
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "阿蕾奇诺",
-          "fetchedAt": "2026-10-19T04:09:54Z"
+          "fetchedAt": "2026-10-27T15:55:04Z"
         },
         "bilibili": {
           "keyword": "阿蕾奇诺 原神",
@@ -29150,11 +33460,251 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-19T04:41:22Z"
+          "fetchedAt": "2026-10-27T15:59:01Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-19T05:16:31Z"
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000038",
+      "name": "阿贝多",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 58,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 65,
+        "bangumi": 37
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 89988,
+          "characterName": "阿贝多",
+          "collects": 16,
+          "comments": 4,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "阿贝多",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "阿贝多 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 20,
+          "recentPlaySum7d": 154182,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000020",
+      "name": "雷泽",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 38,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 42,
+        "bangumi": 27
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85972,
+          "characterName": "雷泽",
+          "collects": 7,
+          "comments": 4,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "雷泽",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "雷泽 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 10372,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000052",
+      "name": "雷电将军",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 77,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 82,
+        "bangumi": 61
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 98862,
+          "characterName": "雷电将军",
+          "collects": 103,
+          "comments": 47,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "雷电将军",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "雷电将军 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 90190,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000023",
+      "name": "香菱",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 62,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 68,
+        "bangumi": 44
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85983,
+          "characterName": "香菱",
+          "collects": 28,
+          "comments": 11,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "香菱",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "香菱 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 31,
+          "recentPlaySum7d": 54068,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000026",
+      "name": "魈",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 83,
+        "bangumi": 41
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 85980,
+          "characterName": "魈",
+          "collects": 22,
+          "comments": 16,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "魈",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "魈 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 161458,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
+        }
+      }
+    },
+    {
+      "key": "gi:10000059",
+      "name": "鹿野院平藏",
+      "work": "原神 7.1",
+      "kind": "GAME",
+      "heatScore": 47,
+      "heatFetchedAt": "2026-10-27T15:55:04Z",
+      "heatComponents": {
+        "bilibili": 53,
+        "bangumi": 29
+      },
+      "metrics": {
+        "bangumi": {
+          "characterId": 110693,
+          "characterName": "鹿野院平藏",
+          "collects": 8,
+          "comments": 3,
+          "subjectId": 284157,
+          "subjectName": "原神",
+          "subjectCollect": null,
+          "airing": false,
+          "matchedBy": "鹿野院平藏",
+          "fetchedAt": "2026-10-27T15:55:04Z"
+        },
+        "bilibili": {
+          "keyword": "鹿野院平藏 原神",
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 10,
+          "recentPlaySum7d": 46598,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T15:59:01Z"
+        },
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-10-27T16:02:48Z"
         }
       }
     },
@@ -30494,6 +35044,32 @@
       }
     },
     {
+      "key": "zzz:1491",
+      "name": "千夏",
+      "work": "绝区零 3.3",
+      "kind": "GAME",
+      "heatScore": 48,
+      "heatFetchedAt": "2026-10-27T09:51:29Z",
+      "heatComponents": {
+        "bilibili": 48,
+        "bangumi": null
+      },
+      "metrics": {
+        "bangumi": null,
+        "bilibili": {
+          "keyword": "千夏 碧蓝档案",
+          "resultCount": 631,
+          "resultCountCapped": false,
+          "recentVideos7d": 9,
+          "recentPlaySum7d": 5393,
+          "sampledVideos": 50,
+          "windowSaturated": false,
+          "fetchedAt": "2026-10-27T10:02:21Z"
+        },
+        "weibo": null
+      }
+    },
+    {
       "key": "zzz:1061",
       "name": "可琳",
       "work": "绝区零 3.3",
@@ -31000,7 +35576,7 @@
   ],
   "history": [
     {
-      "capturedAt": "2026-10-26T23:57:34Z",
+      "capturedAt": "2026-10-27T09:51:29Z",
       "characters": [
         {
           "name": "D",
@@ -31697,6 +36273,798 @@
           "bilibiliRecentVideos7d": 50,
           "bilibiliRecentPlaySum7d": 62963,
           "heatScore": 56
+        },
+        {
+          "name": "一花（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 60,
+          "heatScore": 17
+        },
+        {
+          "name": "三森（泳装）",
+          "bangumiCollects": 20,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 10
+        },
+        {
+          "name": "亚子",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 20,
+          "bilibiliRecentPlaySum7d": 216273,
+          "heatScore": 65
+        },
+        {
+          "name": "亚津子（泳装）",
+          "bangumiCollects": 39,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 12
+        },
+        {
+          "name": "伊吕波",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 3677,
+          "heatScore": 44
+        },
+        {
+          "name": "伊吹（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 1539,
+          "heatScore": 23
+        },
+        {
+          "name": "佐天泪子",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "八云",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 447,
+          "heatScore": 27
+        },
+        {
+          "name": "兰舞",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 2731,
+          "heatScore": 24
+        },
+        {
+          "name": "切里诺（温泉）",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "初音未来",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 1772,
+          "heatScore": 29
+        },
+        {
+          "name": "千夏",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 5393,
+          "heatScore": 48
+        },
+        {
+          "name": "千寻",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "千明（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "吹雪（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 1177,
+          "heatScore": 32
+        },
+        {
+          "name": "和香",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "和香（温泉）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "咲",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 110777,
+          "heatScore": 83
+        },
+        {
+          "name": "响",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 4381,
+          "heatScore": 45
+        },
+        {
+          "name": "堇（打工）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "好美",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 6,
+          "bilibiliRecentPlaySum7d": 9096,
+          "heatScore": 44
+        },
+        {
+          "name": "妃咲",
+          "bangumiCollects": 95,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 128682,
+          "heatScore": 77
+        },
+        {
+          "name": "实梨",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 1269,
+          "heatScore": 24
+        },
+        {
+          "name": "小玉",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 2421,
+          "heatScore": 27
+        },
+        {
+          "name": "小雪（睡衣）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "尼娅",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "巴（旗袍）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "康娜",
+          "bangumiCollects": 18,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 1006,
+          "heatScore": 38
+        },
+        {
+          "name": "律",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "御伽",
+          "bangumiCollects": 8,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 7
+        },
+        {
+          "name": "志美子",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 11932,
+          "heatScore": 34
+        },
+        {
+          "name": "日向（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "日和",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 21,
+          "bilibiliRecentPlaySum7d": 65505,
+          "heatScore": 64
+        },
+        {
+          "name": "日富美（泳装）",
+          "bangumiCollects": 112,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 374,
+          "heatScore": 31
+        },
+        {
+          "name": "日鞠",
+          "bangumiCollects": 40,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 4193,
+          "heatScore": 38
+        },
+        {
+          "name": "日鞠（武装）",
+          "bangumiCollects": 40,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 12
+        },
+        {
+          "name": "时雨（温泉）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "时（武装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "明里（新年）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "春香（新年）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "晴",
+          "bangumiCollects": 23,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 55115,
+          "heatScore": 50
+        },
+        {
+          "name": "晴奈（体操服）",
+          "bangumiCollects": 25,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 893,
+          "heatScore": 27
+        },
+        {
+          "name": "朱莉",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 8295,
+          "heatScore": 42
+        },
+        {
+          "name": "枫",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 3379,
+          "heatScore": 38
+        },
+        {
+          "name": "柚子（女仆）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "柚子（武装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 20030,
+          "heatScore": 38
+        },
+        {
+          "name": "桐乃（泳装）",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 472,
+          "heatScore": 23
+        },
+        {
+          "name": "桔梗（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 5297,
+          "heatScore": 26
+        },
+        {
+          "name": "椿（导游）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "歌原",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 1111,
+          "heatScore": 26
+        },
+        {
+          "name": "泉（正月）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "渚",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 14,
+          "bilibiliRecentPlaySum7d": 24757,
+          "heatScore": 57
+        },
+        {
+          "name": "渚（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "满（礼服）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "濑名",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 300,
+          "heatScore": 20
+        },
+        {
+          "name": "爱理",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "玛丽",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 22,
+          "bilibiliRecentPlaySum7d": 40975,
+          "heatScore": 63
+        },
+        {
+          "name": "玲纱（魔法）",
+          "bangumiCollects": 53,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 13
+        },
+        {
+          "name": "白子（泳装）",
+          "bangumiCollects": 25,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 111926,
+          "heatScore": 38
+        },
+        {
+          "name": "皋月",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 2209,
+          "heatScore": 39
+        },
+        {
+          "name": "真琴",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 6,
+          "bilibiliRecentPlaySum7d": 5772,
+          "heatScore": 43
+        },
+        {
+          "name": "真白",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "真白（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "真纪（露营）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "睦月（礼服）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "纱绫",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "纱绫（便服）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "绘梨香",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 6
+        },
+        {
+          "name": "绫音",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 190,
+          "heatScore": 19
+        },
+        {
+          "name": "绫音（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "美咲（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "美游（泳装）",
+          "bangumiCollects": 87,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 5401,
+          "heatScore": 34
+        },
+        {
+          "name": "艾米（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "艾莉娜",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 62,
+          "heatScore": 17
+        },
+        {
+          "name": "花凛",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 4746,
+          "heatScore": 35
+        },
+        {
+          "name": "花凛（制服）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 326,
+          "heatScore": 20
+        },
+        {
+          "name": "花子",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 11,
+          "bilibiliRecentPlaySum7d": 28827,
+          "heatScore": 54
+        },
+        {
+          "name": "花江",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 700,
+          "heatScore": 24
+        },
+        {
+          "name": "花江（圣诞）",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "芹娜",
+          "bangumiCollects": 31,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 1889,
+          "heatScore": 33
+        },
+        {
+          "name": "芹香（新年）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 10,
+          "bilibiliRecentPlaySum7d": 3556,
+          "heatScore": 49
+        },
+        {
+          "name": "芹香（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "茜（制服）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "茜（邦妮）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "莉音",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 41,
+          "bilibiliRecentPlaySum7d": 58145,
+          "heatScore": 72
+        },
+        {
+          "name": "菲娜（导游）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "萌绘",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 760,
+          "heatScore": 28
+        },
+        {
+          "name": "霞（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "静子",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 7
+        },
+        {
+          "name": "静子（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "风香",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "风香（新年）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 0
+        },
+        {
+          "name": "余烬",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 24736,
+          "heatScore": 64
+        },
+        {
+          "name": "佩丽卡",
+          "bangumiCollects": 34,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 100989,
+          "heatScore": 74
+        },
+        {
+          "name": "狼卫",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 40,
+          "bilibiliRecentPlaySum7d": 235143,
+          "heatScore": 58
+        },
+        {
+          "name": "管理员·女",
+          "bangumiCollects": 19,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 37,
+          "bilibiliRecentPlaySum7d": 91115,
+          "heatScore": 64
+        },
+        {
+          "name": "管理员·男",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 20,
+          "bilibiliRecentPlaySum7d": 53987,
+          "heatScore": 49
+        },
+        {
+          "name": "艾维文娜",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 24,
+          "bilibiliRecentPlaySum7d": 10529,
+          "heatScore": 52
+        },
+        {
+          "name": "赛希",
+          "bangumiCollects": 17,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 255295,
+          "heatScore": 73
         }
       ]
     },
