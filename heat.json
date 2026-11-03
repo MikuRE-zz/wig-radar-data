@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T20:24:53Z",
+  "generatedAt": "2026-11-03T02:30:49Z",
   "scoreMethod": "velocity_v1",
   "sources": {
     "bangumi": {
-      "status": "ok",
-      "fetchedAt": "2026-11-02T20:24:53Z",
-      "error": null
+      "status": "partial",
+      "fetchedAt": "2026-11-03T02:30:49Z",
+      "error": "time budget exhausted"
     },
     "bilibili": {
       "status": "partial",
-      "fetchedAt": "2026-11-02T20:30:54Z",
-      "error": "suspected rate limit: 1 empty searches",
-      "softBlocked": 1
+      "fetchedAt": "2026-11-03T02:44:51Z",
+      "error": "time budget exhausted",
+      "softBlocked": 0
     },
     "weibo": {
-      "status": "ok",
-      "fetchedAt": "2026-11-02T20:34:39Z",
-      "error": null
+      "status": "failed",
+      "fetchedAt": null,
+      "error": "time budget exhausted"
     },
     "nanoka": {
       "status": "skipped",
@@ -31209,7 +31209,7 @@
     {
       "key": "gi:10000035",
       "name": "七七",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 70,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31250,7 +31250,7 @@
     {
       "key": "gi:10000114",
       "name": "丝柯克",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 69,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31291,7 +31291,7 @@
     {
       "key": "gi:10000006",
       "name": "丽莎",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 55,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31332,7 +31332,7 @@
     {
       "key": "gi:10000065",
       "name": "久岐忍",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31373,7 +31373,7 @@
     {
       "key": "gi:10000056",
       "name": "九条裟罗",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 56,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31414,7 +31414,7 @@
     {
       "key": "gi:10000064",
       "name": "云堇",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 66,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31455,7 +31455,7 @@
     {
       "key": "gi:10000055",
       "name": "五郎",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 45,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31496,7 +31496,7 @@
     {
       "key": "gi:10000110",
       "name": "伊安珊",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 22,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31537,7 +31537,7 @@
     {
       "key": "gi:10000113",
       "name": "伊法",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 39,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31578,7 +31578,7 @@
     {
       "key": "gi:10000116",
       "name": "伊涅芙",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 74,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31619,7 +31619,7 @@
     {
       "key": "gi:10000051",
       "name": "优菈",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 71,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31660,7 +31660,7 @@
     {
       "key": "gi:10000098",
       "name": "克洛琳德",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 51,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31701,7 +31701,7 @@
     {
       "key": "gi:10000058",
       "name": "八重神子",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 58,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31742,7 +31742,7 @@
     {
       "key": "gi:10000126",
       "name": "兹白",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 55,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31783,7 +31783,7 @@
     {
       "key": "gi:10000027",
       "name": "凝光",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 55,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31824,7 +31824,7 @@
     {
       "key": "gi:10000015",
       "name": "凯亚",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 63,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31865,7 +31865,7 @@
     {
       "key": "gi:10000042",
       "name": "刻晴",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 74,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31906,7 +31906,7 @@
     {
       "key": "gi:10000024",
       "name": "北斗",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 48,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -31947,7 +31947,7 @@
     {
       "key": "gi:10000094",
       "name": "千织",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 64,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -31988,7 +31988,7 @@
     {
       "key": "gi:10000081",
       "name": "卡维",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 62,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32029,7 +32029,7 @@
     {
       "key": "gi:10000100",
       "name": "卡齐娜",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 50,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32070,7 +32070,7 @@
     {
       "key": "gi:10000029",
       "name": "可莉",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 62,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -32111,7 +32111,7 @@
     {
       "key": "gi:10000127",
       "name": "叶洛亚",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 52,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32152,7 +32152,7 @@
     {
       "key": "gi:10000125",
       "name": "哥伦比娅",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 68,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32193,7 +32193,7 @@
     {
       "key": "gi:10000092",
       "name": "嘉明",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 35,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32234,7 +32234,7 @@
     {
       "key": "gi:10000072",
       "name": "坎蒂丝",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 36,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32275,7 +32275,7 @@
     {
       "key": "gi:10000062",
       "name": "埃洛伊",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 32,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32305,7 +32305,7 @@
     {
       "key": "gi:10000101",
       "name": "基尼奇",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 51,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32346,7 +32346,7 @@
     {
       "key": "gi:10000115",
       "name": "塔利雅",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 45,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32387,7 +32387,7 @@
     {
       "key": "gi:10000090",
       "name": "夏沃蕾",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32428,7 +32428,7 @@
     {
       "key": "gi:10000088",
       "name": "夏洛蒂",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 54,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32469,7 +32469,7 @@
     {
       "key": "gi:10000068",
       "name": "多莉",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 38,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32510,7 +32510,7 @@
     {
       "key": "gi:10000060",
       "name": "夜兰",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 52,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -32551,7 +32551,7 @@
     {
       "key": "gi:10000122",
       "name": "奈芙尔",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 67,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32592,7 +32592,7 @@
     {
       "key": "gi:10000150",
       "name": "奥黛塔",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 60,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32633,7 +32633,7 @@
     {
       "key": "gi:10000070",
       "name": "妮露",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 70,
       "heatFetchedAt": "2026-10-30T16:43:49Z",
@@ -32671,7 +32671,7 @@
     {
       "key": "gi:10000091",
       "name": "娜维娅",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 52,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32712,7 +32712,7 @@
     {
       "key": "gi:10000021",
       "name": "安柏",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 46,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -32753,7 +32753,7 @@
     {
       "key": "gi:10000049",
       "name": "宵宫",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 69,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -32794,7 +32794,7 @@
     {
       "key": "gi:10000131",
       "name": "尼可",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 70,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32835,7 +32835,7 @@
     {
       "key": "gi:10000132",
       "name": "布伦妮",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32876,7 +32876,7 @@
     {
       "key": "gi:10000095",
       "name": "希格雯",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 45,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32917,7 +32917,7 @@
     {
       "key": "gi:10000103",
       "name": "希诺宁",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 57,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32958,7 +32958,7 @@
     {
       "key": "gi:10000104",
       "name": "恰斯卡",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 56,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -32999,7 +32999,7 @@
     {
       "key": "gi:10000050",
       "name": "托马",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 57,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -33040,7 +33040,7 @@
     {
       "key": "gi:10000069",
       "name": "提纳里",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 61,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33081,7 +33081,7 @@
     {
       "key": "gi:10000053",
       "name": "早柚",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 50,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -33122,7 +33122,7 @@
     {
       "key": "gi:10000123",
       "name": "杜林",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 72,
       "heatFetchedAt": "2026-10-30T16:43:49Z",
@@ -33160,7 +33160,7 @@
     {
       "key": "gi:10000084",
       "name": "林尼",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 48,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33201,7 +33201,7 @@
     {
       "key": "gi:10000047",
       "name": "枫原万叶",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 57,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -33242,7 +33242,7 @@
     {
       "key": "gi:10000067",
       "name": "柯莱",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 48,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33283,7 +33283,7 @@
     {
       "key": "gi:10000133",
       "name": "桑多涅",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 60,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33324,7 +33324,7 @@
     {
       "key": "gi:10000109",
       "name": "梦见月瑞希",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33365,7 +33365,7 @@
     {
       "key": "gi:10000105",
       "name": "欧洛伦",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33406,7 +33406,7 @@
     {
       "key": "gi:10000140",
       "name": "沃雅妮莎",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 55,
       "heatFetchedAt": "2026-10-31T23:27:29Z",
@@ -33447,7 +33447,7 @@
     {
       "key": "gi:10000128",
       "name": "法尔伽",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33488,7 +33488,7 @@
     {
       "key": "gi:10000129",
       "name": "洛恩",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 52,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33529,7 +33529,7 @@
     {
       "key": "gi:10000075",
       "name": "流浪者",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 55,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33570,7 +33570,7 @@
     {
       "key": "gi:10000022",
       "name": "温迪",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 63,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -33611,7 +33611,7 @@
     {
       "key": "gi:10000048",
       "name": "烟绯",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 43,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -33652,7 +33652,7 @@
     {
       "key": "gi:10000112",
       "name": "爱可菲",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 56,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33693,7 +33693,7 @@
     {
       "key": "gi:10000121",
       "name": "爱诺",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 69,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33734,7 +33734,7 @@
     {
       "key": "gi:10000102",
       "name": "玛拉妮",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 64,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33775,7 +33775,7 @@
     {
       "key": "gi:10000106",
       "name": "玛薇卡",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 57,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33816,7 +33816,7 @@
     {
       "key": "gi:10000054",
       "name": "珊瑚宫心海",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 52,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -33857,7 +33857,7 @@
     {
       "key": "gi:10000076",
       "name": "珐露珊",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 58,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33898,7 +33898,7 @@
     {
       "key": "gi:10000032",
       "name": "班尼特",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 64,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -33939,7 +33939,7 @@
     {
       "key": "gi:10000083",
       "name": "琳妮特",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 52,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -33980,7 +33980,7 @@
     {
       "key": "gi:10000003",
       "name": "琴",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 56,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34021,7 +34021,7 @@
     {
       "key": "gi:10000077",
       "name": "瑶瑶",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 61,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34062,7 +34062,7 @@
     {
       "key": "gi:10000137",
       "name": "瓦列里",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 56,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34103,7 +34103,7 @@
     {
       "key": "gi:10000111",
       "name": "瓦雷莎",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 58,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34144,7 +34144,7 @@
     {
       "key": "gi:10000037",
       "name": "甘雨",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 74,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34185,7 +34185,7 @@
     {
       "key": "gi:10000063",
       "name": "申鹤",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 69,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34226,7 +34226,7 @@
     {
       "key": "gi:10000082",
       "name": "白术",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 49,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34267,7 +34267,7 @@
     {
       "key": "gi:10000043",
       "name": "砂糖",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 60,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34308,7 +34308,7 @@
     {
       "key": "gi:10000066",
       "name": "神里绫人",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 45,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34349,7 +34349,7 @@
     {
       "key": "gi:10000002",
       "name": "神里绫华",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 64,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34390,7 +34390,7 @@
     {
       "key": "gi:10000080",
       "name": "米卡",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 41,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34431,7 +34431,7 @@
     {
       "key": "gi:10000136",
       "name": "米提亚",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 64,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34472,7 +34472,7 @@
     {
       "key": "gi:10000073",
       "name": "纳西妲",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 72,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34513,7 +34513,7 @@
     {
       "key": "gi:10000061",
       "name": "绮良良",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 54,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34554,7 +34554,7 @@
     {
       "key": "gi:10000045",
       "name": "罗莎莉亚",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 43,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34595,7 +34595,7 @@
     {
       "key": "gi:10000046",
       "name": "胡桃",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 77,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34636,7 +34636,7 @@
     {
       "key": "gi:10000078",
       "name": "艾尔海森",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 58,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34677,7 +34677,7 @@
     {
       "key": "gi:10000099",
       "name": "艾梅莉埃",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 51,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34718,7 +34718,7 @@
     {
       "key": "gi:10000089",
       "name": "芙宁娜",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 66,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34759,7 +34759,7 @@
     {
       "key": "gi:10000014",
       "name": "芭芭拉",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 58,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34800,7 +34800,7 @@
     {
       "key": "gi:10000107",
       "name": "茜特菈莉",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 60,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34841,7 +34841,7 @@
     {
       "key": "gi:10000057",
       "name": "荒泷一斗",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34882,7 +34882,7 @@
     {
       "key": "gi:10000130",
       "name": "莉奈娅",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 57,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -34923,7 +34923,7 @@
     {
       "key": "gi:10000041",
       "name": "莫娜",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 46,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -34964,7 +34964,7 @@
     {
       "key": "gi:10000074",
       "name": "莱依拉",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 39,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35005,7 +35005,7 @@
     {
       "key": "gi:10000086",
       "name": "莱欧斯利",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 63,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35046,7 +35046,7 @@
     {
       "key": "gi:10000119",
       "name": "菈乌玛",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 53,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35087,7 +35087,7 @@
     {
       "key": "gi:10000120",
       "name": "菲林斯",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 53,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35128,7 +35128,7 @@
     {
       "key": "gi:10000085",
       "name": "菲米尼",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 45,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35169,7 +35169,7 @@
     {
       "key": "gi:10000031",
       "name": "菲谢尔",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 53,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35210,7 +35210,7 @@
     {
       "key": "gi:10000108",
       "name": "蓝砚",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 47,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35251,7 +35251,7 @@
     {
       "key": "gi:10000143",
       "name": "薇斯纳",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 55,
       "heatFetchedAt": "2026-10-31T23:27:29Z",
@@ -35292,7 +35292,7 @@
     {
       "key": "gi:10000025",
       "name": "行秋",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 49,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35333,7 +35333,7 @@
     {
       "key": "gi:10000034",
       "name": "诺艾尔",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 61,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35374,7 +35374,7 @@
     {
       "key": "gi:10000097",
       "name": "赛索斯",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 32,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35415,7 +35415,7 @@
     {
       "key": "gi:10000071",
       "name": "赛诺",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 68,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35456,7 +35456,7 @@
     {
       "key": "gi:10000044",
       "name": "辛焱",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 56,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35497,7 +35497,7 @@
     {
       "key": "gi:10000033",
       "name": "达达利亚",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 58,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35538,7 +35538,7 @@
     {
       "key": "gi:10000016",
       "name": "迪卢克",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 58,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35579,7 +35579,7 @@
     {
       "key": "gi:10000039",
       "name": "迪奥娜",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 42,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35620,7 +35620,7 @@
     {
       "key": "gi:10000079",
       "name": "迪希雅",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 47,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35661,7 +35661,7 @@
     {
       "key": "gi:10000087",
       "name": "那维莱特",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 57,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35702,7 +35702,7 @@
     {
       "key": "gi:10000036",
       "name": "重云",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 35,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35743,7 +35743,7 @@
     {
       "key": "gi:10000030",
       "name": "钟离",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 68,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35784,7 +35784,7 @@
     {
       "key": "gi:10000093",
       "name": "闲云",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 59,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35825,7 +35825,7 @@
     {
       "key": "gi:10000148",
       "name": "阿罗夏",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 50,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35866,7 +35866,7 @@
     {
       "key": "gi:10000096",
       "name": "阿蕾奇诺",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 62,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35907,7 +35907,7 @@
     {
       "key": "gi:10000038",
       "name": "阿贝多",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 56,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -35948,7 +35948,7 @@
     {
       "key": "gi:10000124",
       "name": "雅珂达",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 50,
       "heatFetchedAt": "2026-11-02T12:30:52Z",
@@ -35989,7 +35989,7 @@
     {
       "key": "gi:10000020",
       "name": "雷泽",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 33,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -36030,7 +36030,7 @@
     {
       "key": "gi:10000052",
       "name": "雷电将军",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 62,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -36071,7 +36071,7 @@
     {
       "key": "gi:10000023",
       "name": "香菱",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 60,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -36112,7 +36112,7 @@
     {
       "key": "gi:10000026",
       "name": "魈",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 60,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -36153,7 +36153,7 @@
     {
       "key": "gi:10000059",
       "name": "鹿野院平藏",
-      "work": "原神 7.1",
+      "work": "原神 7.2",
       "kind": "GAME",
       "heatScore": 48,
       "heatFetchedAt": "2026-11-01T23:40:35Z",
@@ -44974,6 +44974,963 @@
     }
   ],
   "history": [
+    {
+      "capturedAt": "2026-11-02T20:24:53Z",
+      "characters": [
+        {
+          "name": "万敌",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 24,
+          "bilibiliRecentPlaySum7d": 101979,
+          "heatScore": 45
+        },
+        {
+          "name": "三月七",
+          "bangumiCollects": 75,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 45,
+          "bilibiliRecentPlaySum7d": 902835,
+          "heatScore": 70
+        },
+        {
+          "name": "不死途",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 320672,
+          "heatScore": 57
+        },
+        {
+          "name": "丹恒•腾荒",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 13479,
+          "heatScore": 45
+        },
+        {
+          "name": "丹恒•饮月",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 29,
+          "bilibiliRecentPlaySum7d": 405643,
+          "heatScore": 64
+        },
+        {
+          "name": "乱破",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 17971,
+          "heatScore": 54
+        },
+        {
+          "name": "云璃",
+          "bangumiCollects": 23,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 48,
+          "bilibiliRecentPlaySum7d": 193335,
+          "heatScore": 57
+        },
+        {
+          "name": "刻律德菈",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 91650,
+          "heatScore": 58
+        },
+        {
+          "name": "加拉赫",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 8184,
+          "heatScore": 45
+        },
+        {
+          "name": "千冶•刃",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 322254,
+          "heatScore": 59
+        },
+        {
+          "name": "吉尔伽美什",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 1185,
+          "heatScore": 32
+        },
+        {
+          "name": "大丽花",
+          "bangumiCollects": 11,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 13,
+          "bilibiliRecentPlaySum7d": 15236,
+          "heatScore": 39
+        },
+        {
+          "name": "大黑塔",
+          "bangumiCollects": 21,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 209263,
+          "heatScore": 67
+        },
+        {
+          "name": "姬子•启行",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 25,
+          "bilibiliRecentPlaySum7d": 67845,
+          "heatScore": 52
+        },
+        {
+          "name": "寒鸦",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 13,
+          "bilibiliRecentPlaySum7d": 2445,
+          "heatScore": 34
+        },
+        {
+          "name": "开拓者·星",
+          "bangumiCollects": 47,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 173996,
+          "heatScore": 68
+        },
+        {
+          "name": "开拓者·穹",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 152610,
+          "heatScore": 61
+        },
+        {
+          "name": "彦卿",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 832851,
+          "heatScore": 62
+        },
+        {
+          "name": "忘归人",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 10,
+          "bilibiliRecentPlaySum7d": 11570,
+          "heatScore": 32
+        },
+        {
+          "name": "昔涟",
+          "bangumiCollects": 33,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 75562,
+          "heatScore": 65
+        },
+        {
+          "name": "星期日",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 40501,
+          "heatScore": 53
+        },
+        {
+          "name": "桂乃芬",
+          "bangumiCollects": 15,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 19686,
+          "heatScore": 33
+        },
+        {
+          "name": "椒丘",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 49,
+          "bilibiliRecentPlaySum7d": 814566,
+          "heatScore": 63
+        },
+        {
+          "name": "波提欧",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 19,
+          "bilibiliRecentPlaySum7d": 56961,
+          "heatScore": 58
+        },
+        {
+          "name": "流萤",
+          "bangumiCollects": 102,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 15043,
+          "heatScore": 59
+        },
+        {
+          "name": "海瑟音",
+          "bangumiCollects": 17,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 20,
+          "bilibiliRecentPlaySum7d": 22799,
+          "heatScore": 49
+        },
+        {
+          "name": "火花",
+          "bangumiCollects": 17,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 209965,
+          "heatScore": 68
+        },
+        {
+          "name": "灵砂",
+          "bangumiCollects": 14,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 18,
+          "bilibiliRecentPlaySum7d": 65848,
+          "heatScore": 41
+        },
+        {
+          "name": "爻光",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 55470,
+          "heatScore": 54
+        },
+        {
+          "name": "白厄",
+          "bangumiCollects": 11,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 18645,
+          "heatScore": 54
+        },
+        {
+          "name": "白露",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 20,
+          "bilibiliRecentPlaySum7d": 789570,
+          "heatScore": 56
+        },
+        {
+          "name": "真理医生",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 97,
+          "heatScore": 14
+        },
+        {
+          "name": "知更鸟",
+          "bangumiCollects": 41,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 60526,
+          "heatScore": 63
+        },
+        {
+          "name": "知更鸟•晴歌",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 41,
+          "bilibiliRecentPlaySum7d": 182150,
+          "heatScore": 54
+        },
+        {
+          "name": "砂金",
+          "bangumiCollects": 15,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 67977,
+          "heatScore": 60
+        },
+        {
+          "name": "符玄",
+          "bangumiCollects": 38,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 158300,
+          "heatScore": 71
+        },
+        {
+          "name": "米沙",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 18491,
+          "heatScore": 35
+        },
+        {
+          "name": "绯英",
+          "bangumiCollects": 15,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 50559,
+          "heatScore": 59
+        },
+        {
+          "name": "缇宝",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 46264,
+          "heatScore": 55
+        },
+        {
+          "name": "翡翠",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 87978,
+          "heatScore": 41
+        },
+        {
+          "name": "花火",
+          "bangumiCollects": 67,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 45,
+          "bilibiliRecentPlaySum7d": 547942,
+          "heatScore": 69
+        },
+        {
+          "name": "藿藿",
+          "bangumiCollects": 18,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 88930,
+          "heatScore": 65
+        },
+        {
+          "name": "貊泽",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 270,
+          "heatScore": 29
+        },
+        {
+          "name": "赛飞儿",
+          "bangumiCollects": 14,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 43,
+          "bilibiliRecentPlaySum7d": 97241,
+          "heatScore": 66
+        },
+        {
+          "name": "远坂凛",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 21,
+          "bilibiliRecentPlaySum7d": 86280,
+          "heatScore": 63
+        },
+        {
+          "name": "遐蝶",
+          "bangumiCollects": 37,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 79779,
+          "heatScore": 59
+        },
+        {
+          "name": "那刻夏",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 33,
+          "bilibiliRecentPlaySum7d": 78121,
+          "heatScore": 54
+        },
+        {
+          "name": "银枝",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 330060,
+          "heatScore": 66
+        },
+        {
+          "name": "镜流",
+          "bangumiCollects": 30,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 295052,
+          "heatScore": 71
+        },
+        {
+          "name": "长夜月",
+          "bangumiCollects": 23,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 26820,
+          "heatScore": 56
+        },
+        {
+          "name": "阮•梅",
+          "bangumiCollects": 27,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 26134,
+          "heatScore": 45
+        },
+        {
+          "name": "阿格莱雅",
+          "bangumiCollects": 16,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 704605,
+          "heatScore": 70
+        },
+        {
+          "name": "雪衣",
+          "bangumiCollects": 11,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 17,
+          "bilibiliRecentPlaySum7d": 25189,
+          "heatScore": 53
+        },
+        {
+          "name": "风堇",
+          "bangumiCollects": 33,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 81373,
+          "heatScore": 63
+        },
+        {
+          "name": "飞霄",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 80027,
+          "heatScore": 55
+        },
+        {
+          "name": "驭空",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 23,
+          "bilibiliRecentPlaySum7d": 29627,
+          "heatScore": 50
+        },
+        {
+          "name": "黄泉",
+          "bangumiCollects": 26,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 259017,
+          "heatScore": 70
+        },
+        {
+          "name": "黑天鹅",
+          "bangumiCollects": 16,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 37,
+          "bilibiliRecentPlaySum7d": 117787,
+          "heatScore": 60
+        },
+        {
+          "name": "丹瑾",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "丽贝卡",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 17,
+          "bilibiliRecentPlaySum7d": 8557,
+          "heatScore": 38
+        },
+        {
+          "name": "仇远",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 113263,
+          "heatScore": 59
+        },
+        {
+          "name": "今汐",
+          "bangumiCollects": 62,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 136745,
+          "heatScore": 65
+        },
+        {
+          "name": "凌阳",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 15,
+          "bilibiliRecentPlaySum7d": 5571,
+          "heatScore": 34
+        },
+        {
+          "name": "千咲",
+          "bangumiCollects": 56,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 11
+        },
+        {
+          "name": "卜灵",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 33,
+          "bilibiliRecentPlaySum7d": 85112,
+          "heatScore": 54
+        },
+        {
+          "name": "卡卡罗",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 18,
+          "bilibiliRecentPlaySum7d": 93096,
+          "heatScore": 47
+        },
+        {
+          "name": "卡提希娅",
+          "bangumiCollects": 70,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 33227,
+          "heatScore": 60
+        },
+        {
+          "name": "吟霖",
+          "bangumiCollects": 20,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 143255,
+          "heatScore": 69
+        },
+        {
+          "name": "嘉贝莉娜",
+          "bangumiCollects": 14,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 30,
+          "bilibiliRecentPlaySum7d": 55804,
+          "heatScore": 47
+        },
+        {
+          "name": "坎特蕾拉",
+          "bangumiCollects": 36,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 10
+        },
+        {
+          "name": "夏空",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 27,
+          "bilibiliRecentPlaySum7d": 23727,
+          "heatScore": 41
+        },
+        {
+          "name": "奥古斯塔",
+          "bangumiCollects": 11,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 31,
+          "bilibiliRecentPlaySum7d": 44322,
+          "heatScore": 48
+        },
+        {
+          "name": "守岸人",
+          "bangumiCollects": 50,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 11
+        },
+        {
+          "name": "安可",
+          "bangumiCollects": 16,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 41,
+          "bilibiliRecentPlaySum7d": 70824,
+          "heatScore": 54
+        },
+        {
+          "name": "尤诺",
+          "bangumiCollects": 42,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 56203,
+          "heatScore": 60
+        },
+        {
+          "name": "布兰特",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 18,
+          "bilibiliRecentPlaySum7d": 15978,
+          "heatScore": 44
+        },
+        {
+          "name": "弗洛洛",
+          "bangumiCollects": 55,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 11
+        },
+        {
+          "name": "心月狐",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 55704,
+          "heatScore": 66
+        },
+        {
+          "name": "忌炎",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 26,
+          "bilibiliRecentPlaySum7d": 18174,
+          "heatScore": 39
+        },
+        {
+          "name": "折枝",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 42,
+          "bilibiliRecentPlaySum7d": 20286,
+          "heatScore": 50
+        },
+        {
+          "name": "散华",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 17,
+          "bilibiliRecentPlaySum7d": 69063,
+          "heatScore": 44
+        },
+        {
+          "name": "景燃",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 35,
+          "bilibiliRecentPlaySum7d": 164895,
+          "heatScore": 55
+        },
+        {
+          "name": "桃祈",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 5
+        },
+        {
+          "name": "椿",
+          "bangumiCollects": 51,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 11
+        },
+        {
+          "name": "洛可可",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 7
+        },
+        {
+          "name": "洛瑟菈",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 44,
+          "bilibiliRecentPlaySum7d": 230734,
+          "heatScore": 63
+        },
+        {
+          "name": "清宵",
+          "bangumiCollects": 16,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "渊武",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 96,
+          "heatScore": 10
+        },
+        {
+          "name": "漂泊者·女",
+          "bangumiCollects": 34,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 16,
+          "bilibiliRecentPlaySum7d": 47912,
+          "heatScore": 46
+        },
+        {
+          "name": "漂泊者·导电",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 5
+        },
+        {
+          "name": "漂泊者·气动",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 17
+        },
+        {
+          "name": "漂泊者·湮灭",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 9
+        },
+        {
+          "name": "漂泊者·男",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 17,
+          "bilibiliRecentPlaySum7d": 34466,
+          "heatScore": 41
+        },
+        {
+          "name": "漂泊者·衍射",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 17
+        },
+        {
+          "name": "灯灯",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 3
+        },
+        {
+          "name": "炽霞",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 9084,
+          "heatScore": 41
+        },
+        {
+          "name": "爱弥斯",
+          "bangumiCollects": 86,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 40398,
+          "heatScore": 63
+        },
+        {
+          "name": "珂莱塔",
+          "bangumiCollects": 44,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 212473,
+          "heatScore": 65
+        },
+        {
+          "name": "琳奈",
+          "bangumiCollects": 23,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 9
+        },
+        {
+          "name": "白芷",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 972,
+          "heatScore": 34
+        },
+        {
+          "name": "相里要",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 16,
+          "bilibiliRecentPlaySum7d": 80260,
+          "heatScore": 53
+        },
+        {
+          "name": "秋水",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 1046,
+          "heatScore": 25
+        },
+        {
+          "name": "秧秧",
+          "bangumiCollects": 20,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 91565,
+          "heatScore": 59
+        },
+        {
+          "name": "秧秧·玄翎",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "穗穗",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 92670,
+          "heatScore": 66
+        },
+        {
+          "name": "绯雪",
+          "bangumiCollects": 14,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 106882,
+          "heatScore": 67
+        },
+        {
+          "name": "维里奈",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "莫宁",
+          "bangumiCollects": 29,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 126749,
+          "heatScore": 70
+        },
+        {
+          "name": "莫特斐",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 5664,
+          "heatScore": 27
+        },
+        {
+          "name": "菲比",
+          "bangumiCollects": 68,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 12
+        },
+        {
+          "name": "西格莉卡",
+          "bangumiCollects": 15,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "赞妮",
+          "bangumiCollects": 22,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 9
+        },
+        {
+          "name": "达妮娅",
+          "bangumiCollects": 50,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 64914,
+          "heatScore": 70
+        },
+        {
+          "name": "釉瑚",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 49121,
+          "heatScore": 33
+        },
+        {
+          "name": "鉴心",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 15,
+          "bilibiliRecentPlaySum7d": 2369,
+          "heatScore": 34
+        },
+        {
+          "name": "长离",
+          "bangumiCollects": 60,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 276914,
+          "heatScore": 66
+        },
+        {
+          "name": "陆·赫斯",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 3
+        },
+        {
+          "name": "露帕",
+          "bangumiCollects": 15,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 82657,
+          "heatScore": 56
+        },
+        {
+          "name": "安比",
+          "bangumiCollects": 26,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 9
+        }
+      ]
+    },
     {
       "capturedAt": "2026-11-02T12:30:52Z",
       "characters": [
