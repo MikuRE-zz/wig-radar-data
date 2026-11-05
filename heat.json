@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T00:57:46Z",
+  "generatedAt": "2026-11-05T12:26:47Z",
   "scoreMethod": "velocity_v1",
   "sources": {
     "bangumi": {
       "status": "ok",
-      "fetchedAt": "2026-11-05T00:57:46Z",
+      "fetchedAt": "2026-11-05T12:26:48Z",
       "error": null
     },
     "bilibili": {
       "status": "partial",
-      "fetchedAt": "2026-11-05T01:05:41Z",
-      "error": "suspected rate limit: 1 empty searches",
-      "softBlocked": 1
+      "fetchedAt": "2026-11-05T12:40:19Z",
+      "error": "time budget exhausted",
+      "softBlocked": 0
     },
     "weibo": {
-      "status": "ok",
-      "fetchedAt": "2026-11-05T01:09:06Z",
-      "error": null
+      "status": "failed",
+      "fetchedAt": null,
+      "error": "time budget exhausted"
     },
     "nanoka": {
       "status": "skipped",
@@ -6835,12 +6835,12 @@
       "name": "夜刀",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 3,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 42,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 56,
         "bangumi": 14,
-        "growth": 2
+        "growth": 36
       },
       "metrics": {
         "bangumi": {
@@ -6853,22 +6853,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "夜刀",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "夜刀 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 13,
+          "recentPlaySum7d": 36940,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -8062,12 +8059,12 @@
       "name": "巡林者",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 11,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 31,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 26,
         "bangumi": 14,
-        "growth": 29
+        "growth": 52
       },
       "metrics": {
         "bangumi": {
@@ -8080,22 +8077,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "巡林者",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "巡林者 明日方舟",
-          "resultCount": 0,
+          "resultCount": 490,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 2,
+          "recentPlaySum7d": 279,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -10581,12 +10575,12 @@
       "name": "杜林",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 5,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 43,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 50,
         "bangumi": 21,
-        "growth": 2
+        "growth": 47
       },
       "metrics": {
         "bangumi": {
@@ -10599,22 +10593,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "杜林",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "杜林 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 595412,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -20378,12 +20369,12 @@
       "name": "黑角",
       "work": "明日方舟",
       "kind": "GAME",
-      "heatScore": 8,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 45,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 42,
         "bangumi": 21,
-        "growth": 12
+        "growth": 65
       },
       "metrics": {
         "bangumi": {
@@ -20396,22 +20387,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "黑角",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "黑角 明日方舟",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 216817,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -21132,29 +21120,26 @@
       "name": "伊织",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 1,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 37,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 42,
         "bangumi": null,
-        "growth": 2
+        "growth": 27
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "伊织 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 11460,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -22628,12 +22613,12 @@
       "name": "妮露",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 8,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 20,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 22,
         "bangumi": 38,
-        "growth": 2
+        "growth": 3
       },
       "metrics": {
         "bangumi": {
@@ -22646,22 +22631,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "妮露",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "妮露 碧蓝档案",
-          "resultCount": 0,
+          "resultCount": 901,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 840,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -23650,29 +23632,26 @@
       "name": "日奈",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 1,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 73,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 84,
         "bangumi": null,
-        "growth": 2
+        "growth": 54
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "日奈 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
-          "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 185472,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -23737,12 +23716,12 @@
       "name": "日富美",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 13,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 70,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 84,
         "bangumi": 62,
-        "growth": 2
+        "growth": 51
       },
       "metrics": {
         "bangumi": {
@@ -23755,22 +23734,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "日富美",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "日富美 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
-          "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 270886,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -24180,29 +24156,26 @@
       "name": "星野",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 1,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 59,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 80,
         "bangumi": null,
-        "growth": 2
+        "growth": 23
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "星野 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
-          "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 50,
+          "recentPlaySum7d": 26806,
+          "sampledVideos": 50,
+          "windowSaturated": true,
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -24458,12 +24431,12 @@
       "name": "晴奈",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 9,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 35,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 42,
         "bangumi": 43,
-        "growth": 2
+        "growth": 19
       },
       "metrics": {
         "bangumi": {
@@ -24476,22 +24449,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "晴奈",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "晴奈 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 33386,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -25520,29 +25490,26 @@
       "name": "泉",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 1,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 36,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 47,
         "bangumi": null,
-        "growth": 2
+        "growth": 19
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "泉 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 7,
+          "recentPlaySum7d": 12798,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -26050,12 +26017,12 @@
       "name": "爱露",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 12,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 45,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 43,
         "bangumi": 55,
-        "growth": 2
+        "growth": 43
       },
       "metrics": {
         "bangumi": {
@@ -26068,22 +26035,19 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "爱露",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-05T12:26:48Z"
         },
         "bilibili": {
           "keyword": "爱露 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 4247,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -26796,29 +26760,26 @@
       "name": "真纪",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 3,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 55,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 42,
         "bangumi": null,
-        "growth": 7
+        "growth": 76
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "真纪 碧蓝档案",
-          "resultCount": 0,
-          "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "resultCount": 1000,
+          "resultCountCapped": true,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 3176,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -27843,29 +27804,26 @@
       "name": "艾米",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 15,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 39,
+      "heatFetchedAt": "2026-11-05T12:26:47Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 23,
         "bangumi": null,
-        "growth": 40
+        "growth": 67
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "艾米 碧蓝档案",
-          "resultCount": 0,
+          "resultCount": 726,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 1025,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-05T12:40:19Z"
         },
-        "weibo": {
-          "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
-        }
+        "weibo": null
       }
     },
     {
@@ -44970,7 +44928,7 @@
   ],
   "history": [
     {
-      "capturedAt": "2026-11-04T18:04:07Z",
+      "capturedAt": "2026-11-05T00:57:46Z",
       "characters": [
         {
           "name": "泷壶理后",
@@ -45048,9 +45006,9 @@
           "name": "乌啾",
           "bangumiCollects": 2,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 3
+          "bilibiliRecentVideos7d": 26,
+          "bilibiliRecentPlaySum7d": 241159,
+          "heatScore": 64
         },
         {
           "name": "乌尔比安",
@@ -45064,9 +45022,9 @@
           "name": "乌有",
           "bangumiCollects": 2,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 15
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 1905,
+          "heatScore": 41
         },
         {
           "name": "云迹",
@@ -45088,9 +45046,9 @@
           "name": "伺夜",
           "bangumiCollects": 2,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 3
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 3070,
+          "heatScore": 30
         },
         {
           "name": "佩德洛",
@@ -45112,9 +45070,9 @@
           "name": "克莱门莎",
           "bangumiCollects": 1,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 2
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 261631,
+          "heatScore": 51
         },
         {
           "name": "八幡海铃",
@@ -45152,9 +45110,9 @@
           "name": "卡涅利安",
           "bangumiCollects": 3,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 8
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 344,
+          "heatScore": 27
         },
         {
           "name": "双月",
@@ -45168,9 +45126,9 @@
           "name": "可露希尔",
           "bangumiCollects": 15,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 8
+          "bilibiliRecentVideos7d": 48,
+          "bilibiliRecentPlaySum7d": 1210396,
+          "heatScore": 67
         },
         {
           "name": "吉星",
@@ -45192,17 +45150,17 @@
           "name": "嘉辛塔",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 1
+          "bilibiliRecentVideos7d": 37,
+          "bilibiliRecentPlaySum7d": 21408,
+          "heatScore": 61
         },
         {
           "name": "埃癸斯",
           "bangumiCollects": null,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 11
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 6334,
+          "heatScore": 52
         },
         {
           "name": "天空盒",
@@ -45280,9 +45238,9 @@
           "name": "异客",
           "bangumiCollects": 2,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 3
+          "bilibiliRecentVideos7d": 8,
+          "bilibiliRecentPlaySum7d": 7024,
+          "heatScore": 53
         },
         {
           "name": "录武官",
@@ -45296,9 +45254,9 @@
           "name": "战车",
           "bangumiCollects": null,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 15
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 110355,
+          "heatScore": 60
         },
         {
           "name": "折桠",
@@ -45312,9 +45270,9 @@
           "name": "掠风",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 12
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 118,
+          "heatScore": 25
         },
         {
           "name": "摆渡人",
@@ -45328,33 +45286,33 @@
           "name": "旅骨",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 1
+          "bilibiliRecentVideos7d": 14,
+          "bilibiliRecentPlaySum7d": 220912,
+          "heatScore": 46
         },
         {
           "name": "时隙",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 3
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 2421,
+          "heatScore": 36
         },
         {
           "name": "机械师",
           "bangumiCollects": 1,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 2
+          "bilibiliRecentVideos7d": 31,
+          "bilibiliRecentPlaySum7d": 235786,
+          "heatScore": 46
         },
         {
           "name": "松果",
           "bangumiCollects": 9,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 8
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 468,
+          "heatScore": 27
         },
         {
           "name": "松桐",
@@ -45368,9 +45326,9 @@
           "name": "极光",
           "bangumiCollects": 5,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 5
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 1542,
+          "heatScore": 26
         },
         {
           "name": "森蚺",
@@ -45392,17 +45350,17 @@
           "name": "死芒",
           "bangumiCollects": 9,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 7
+          "bilibiliRecentVideos7d": 19,
+          "bilibiliRecentPlaySum7d": 108229,
+          "heatScore": 55
         },
         {
           "name": "水月",
           "bangumiCollects": 15,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 8
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 321154,
+          "heatScore": 72
         },
         {
           "name": "水灯心",
@@ -45432,9 +45390,9 @@
           "name": "深靛",
           "bangumiCollects": 7,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 17
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 668,
+          "heatScore": 43
         },
         {
           "name": "渡桥",
@@ -45448,17 +45406,17 @@
           "name": "灰毫",
           "bangumiCollects": 2,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 8
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 301,
+          "heatScore": 23
         },
         {
           "name": "灰烬",
           "bangumiCollects": null,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 2
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 8328,
+          "heatScore": 54
         },
         {
           "name": "焰尾",
@@ -45504,9 +45462,9 @@
           "name": "珊比",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 1
+          "bilibiliRecentVideos7d": 21,
+          "bilibiliRecentPlaySum7d": 53579,
+          "heatScore": 40
         },
         {
           "name": "瑕光",
@@ -45544,9 +45502,9 @@
           "name": "矩",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 12
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 114,
+          "heatScore": 25
         },
         {
           "name": "祐天寺若麦",
@@ -45560,9 +45518,9 @@
           "name": "絮雨",
           "bangumiCollects": 11,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 9
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 1995,
+          "heatScore": 50
         },
         {
           "name": "结城理",
@@ -45576,17 +45534,17 @@
           "name": "维伊",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 4
+          "bilibiliRecentVideos7d": 21,
+          "bilibiliRecentPlaySum7d": 136007,
+          "heatScore": 60
         },
         {
           "name": "罗宾",
           "bangumiCollects": 1,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 4
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 1206,
+          "heatScore": 29
         },
         {
           "name": "罗德岛隐秘队",
@@ -45600,9 +45558,9 @@
           "name": "羽毛笔",
           "bangumiCollects": 34,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 10
+          "bilibiliRecentVideos7d": 38,
+          "bilibiliRecentPlaySum7d": 56830,
+          "heatScore": 62
         },
         {
           "name": "聆音",
@@ -45680,9 +45638,9 @@
           "name": "蜜莓",
           "bangumiCollects": 3,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 8
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 37,
+          "heatScore": 19
         },
         {
           "name": "行箸",
@@ -45712,9 +45670,9 @@
           "name": "裂响",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 4
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 6056,
+          "heatScore": 45
         },
         {
           "name": "诺威尔",
@@ -45728,25 +45686,25 @@
           "name": "谬因",
           "bangumiCollects": 2,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 3
+          "bilibiliRecentVideos7d": 37,
+          "bilibiliRecentPlaySum7d": 52999,
+          "heatScore": 47
         },
         {
           "name": "豆苗",
           "bangumiCollects": 2,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 7
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 2906,
+          "heatScore": 39
         },
         {
           "name": "远牙",
           "bangumiCollects": 1,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 2
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 2894,
+          "heatScore": 31
         },
         {
           "name": "逻各斯",
@@ -45784,9 +45742,9 @@
           "name": "闪击",
           "bangumiCollects": null,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 1
+          "bilibiliRecentVideos7d": 12,
+          "bilibiliRecentPlaySum7d": 2308,
+          "heatScore": 36
         },
         {
           "name": "阿兰娜",
@@ -45808,9 +45766,9 @@
           "name": "阿罗玛",
           "bangumiCollects": 1,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 2
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 302,
+          "heatScore": 14
         },
         {
           "name": "雪猎",
@@ -45824,9 +45782,9 @@
           "name": "雪绒",
           "bangumiCollects": 0,
           "bangumiSubjectCollect": null,
-          "bilibiliRecentVideos7d": 0,
-          "bilibiliRecentPlaySum7d": 0,
-          "heatScore": 2
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 217,
+          "heatScore": 19
         },
         {
           "name": "霜华",
@@ -45891,6 +45849,614 @@
           "bilibiliRecentVideos7d": 50,
           "bilibiliRecentPlaySum7d": 232020,
           "heatScore": 61
+        },
+        {
+          "name": "D",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": 14971,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 855765,
+          "heatScore": 71
+        },
+        {
+          "name": "SAIGA-0／斋贺玲",
+          "bangumiCollects": 35,
+          "bangumiSubjectCollect": 947,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "ニケ",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 758,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 21
+        },
+        {
+          "name": "マス",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 758,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 21
+        },
+        {
+          "name": "上原步梦",
+          "bangumiCollects": 200,
+          "bangumiSubjectCollect": 501,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "五河士道",
+          "bangumiCollects": 88,
+          "bangumiSubjectCollect": 841,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "亚瑟·范西尔冈／天音永远",
+          "bangumiCollects": 57,
+          "bangumiSubjectCollect": 947,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 24
+        },
+        {
+          "name": "佐藤明",
+          "bangumiCollects": 24,
+          "bangumiSubjectCollect": 132,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "佐藤洋子",
+          "bangumiCollects": 26,
+          "bangumiSubjectCollect": 132,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 21
+        },
+        {
+          "name": "古贺美月",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 310,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 19
+        },
+        {
+          "name": "塔莉亚·杨",
+          "bangumiCollects": 73,
+          "bangumiSubjectCollect": 14971,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 10502,
+          "heatScore": 40
+        },
+        {
+          "name": "夜刀神十香",
+          "bangumiCollects": 399,
+          "bangumiSubjectCollect": 841,
+          "bilibiliRecentVideos7d": 22,
+          "bilibiliRecentPlaySum7d": 20932,
+          "heatScore": 52
+        },
+        {
+          "name": "大泽绫",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": 310,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 19
+        },
+        {
+          "name": "安养寺姫芽",
+          "bangumiCollects": 15,
+          "bangumiSubjectCollect": 156,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "徒町小铃",
+          "bangumiCollects": 9,
+          "bangumiSubjectCollect": 156,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "微克·金斯利",
+          "bangumiCollects": 6,
+          "bangumiSubjectCollect": 14971,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 2212,
+          "heatScore": 50
+        },
+        {
+          "name": "明浦路司",
+          "bangumiCollects": 170,
+          "bangumiSubjectCollect": 1421,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 25
+        },
+        {
+          "name": "桂城泉",
+          "bangumiCollects": 11,
+          "bangumiSubjectCollect": 156,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "桑乐／阳务乐郎",
+          "bangumiCollects": 26,
+          "bangumiSubjectCollect": 947,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "樱坂雫",
+          "bangumiCollects": 132,
+          "bangumiSubjectCollect": 501,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "清水岬",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": 132,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "瓦拉克·克拉拉",
+          "bangumiCollects": 62,
+          "bangumiSubjectCollect": 119,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 21
+        },
+        {
+          "name": "百生吟子",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": 156,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "结束祈",
+          "bangumiCollects": 562,
+          "bangumiSubjectCollect": 1421,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 26
+        },
+        {
+          "name": "罗曼·卡拉克斯",
+          "bangumiCollects": 33,
+          "bangumiSubjectCollect": 14971,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 452,
+          "heatScore": 39
+        },
+        {
+          "name": "艾玛·维尔德",
+          "bangumiCollects": 65,
+          "bangumiSubjectCollect": 501,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "近江彼方",
+          "bangumiCollects": 111,
+          "bangumiSubjectCollect": 501,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "追加鲣鱼／鱼臣慧",
+          "bangumiCollects": 13,
+          "bangumiSubjectCollect": 947,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 23
+        },
+        {
+          "name": "铃木入间",
+          "bangumiCollects": 36,
+          "bangumiSubjectCollect": 119,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 8849,
+          "heatScore": 46
+        },
+        {
+          "name": "阿斯莫德·艾利斯",
+          "bangumiCollects": 17,
+          "bangumiSubjectCollect": 119,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "阿萨兹勒·艾梅莉",
+          "bangumiCollects": 52,
+          "bangumiSubjectCollect": 119,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "休谟斯",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 2699,
+          "heatScore": 25
+        },
+        {
+          "name": "刺玫",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 200,
+          "heatScore": 18
+        },
+        {
+          "name": "夏栎",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 14
+        },
+        {
+          "name": "夜刀",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 3
+        },
+        {
+          "name": "夜半",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 65986,
+          "heatScore": 55
+        },
+        {
+          "name": "巡林者",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 11
+        },
+        {
+          "name": "帕拉斯",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 2701,
+          "heatScore": 42
+        },
+        {
+          "name": "折光",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 12
+        },
+        {
+          "name": "晓歌",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 12,
+          "bilibiliRecentPlaySum7d": 29853,
+          "heatScore": 39
+        },
+        {
+          "name": "杜林",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 5
+        },
+        {
+          "name": "桑葚",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 6,
+          "bilibiliRecentPlaySum7d": 9603,
+          "heatScore": 35
+        },
+        {
+          "name": "歌蕾蒂娅",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 13,
+          "bilibiliRecentPlaySum7d": 5159,
+          "heatScore": 45
+        },
+        {
+          "name": "波卜",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 2,
+          "bilibiliRecentPlaySum7d": 357,
+          "heatScore": 32
+        },
+        {
+          "name": "火哨",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 1280,
+          "heatScore": 25
+        },
+        {
+          "name": "琴柳",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 15043,
+          "heatScore": 43
+        },
+        {
+          "name": "绮良",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 5
+        },
+        {
+          "name": "罗比菈塔",
+          "bangumiCollects": 5,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 2699,
+          "heatScore": 34
+        },
+        {
+          "name": "蚀清",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 12
+        },
+        {
+          "name": "赤冬",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 211,
+          "heatScore": 29
+        },
+        {
+          "name": "野鬃",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 301,
+          "heatScore": 18
+        },
+        {
+          "name": "隐现",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 12
+        },
+        {
+          "name": "青枳",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 6869,
+          "heatScore": 28
+        },
+        {
+          "name": "黑角",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "龙舌兰",
+          "bangumiCollects": 11,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 3976,
+          "heatScore": 28
+        },
+        {
+          "name": "伊织",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 1
+        },
+        {
+          "name": "堇",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "妮露",
+          "bangumiCollects": 17,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 8
+        },
+        {
+          "name": "日奈",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 1
+        },
+        {
+          "name": "日富美",
+          "bangumiCollects": 113,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 13
+        },
+        {
+          "name": "星野",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 1
+        },
+        {
+          "name": "晴奈",
+          "bangumiCollects": 25,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 9
+        },
+        {
+          "name": "泉",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 1
+        },
+        {
+          "name": "爱露",
+          "bangumiCollects": 65,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 12
+        },
+        {
+          "name": "白子",
+          "bangumiCollects": 25,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 9
+        },
+        {
+          "name": "真纪",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 3
+        },
+        {
+          "name": "瞬",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 1
+        },
+        {
+          "name": "艾米",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "鹤城",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 7
+        },
+        {
+          "name": "安娜丝塔夏",
+          "bangumiCollects": 8,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 79524,
+          "heatScore": 69
+        },
+        {
+          "name": "瓦列里",
+          "bangumiCollects": 0,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 179388,
+          "heatScore": 51
+        },
+        {
+          "name": "米提亚",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 14119,
+          "heatScore": 50
+        },
+        {
+          "name": "达妮卡",
+          "bangumiCollects": 2,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 197403,
+          "heatScore": 66
+        },
+        {
+          "name": "星神★阿哈",
+          "bangumiCollects": 4,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 548368,
+          "heatScore": 63
+        },
+        {
+          "name": "真珠",
+          "bangumiCollects": 10,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 51774,
+          "heatScore": 55
+        },
+        {
+          "name": "莉莉",
+          "bangumiCollects": 1,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 83010,
+          "heatScore": 51
         }
       ]
     },
