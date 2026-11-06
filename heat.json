@@ -1,23 +1,23 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T18:07:13Z",
+  "generatedAt": "2026-11-06T01:00:14Z",
   "scoreMethod": "velocity_v1",
   "sources": {
     "bangumi": {
       "status": "ok",
-      "fetchedAt": "2026-11-05T18:07:13Z",
+      "fetchedAt": "2026-11-06T01:00:14Z",
       "error": null
     },
     "bilibili": {
       "status": "partial",
-      "fetchedAt": "2026-11-05T18:19:49Z",
-      "error": "suspected rate limit: 1 empty searches; time budget exhausted",
+      "fetchedAt": "2026-11-06T01:08:42Z",
+      "error": "suspected rate limit: 1 empty searches",
       "softBlocked": 1
     },
     "weibo": {
-      "status": "failed",
-      "fetchedAt": null,
-      "error": "time budget exhausted"
+      "status": "ok",
+      "fetchedAt": "2026-11-06T01:12:12Z",
+      "error": null
     },
     "nanoka": {
       "status": "skipped",
@@ -37,7 +37,7 @@
       "work": "赛博朋克：边缘行者 2",
       "kind": "ANIME",
       "heatScore": 71,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 87,
         "bangumi": 75,
@@ -51,24 +51,24 @@
           "comments": 81,
           "subjectId": 513878,
           "subjectName": "赛博朋克：边缘行者 2",
-          "subjectCollect": 14971,
+          "subjectCollect": 15029,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "D 赛博朋克：边缘行者",
-          "resultCount": 690,
+          "resultCount": 689,
           "resultCountCapped": false,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 855765,
+          "recentPlaySum7d": 923481,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -78,7 +78,7 @@
       "work": "香格里拉边境 第三季",
       "kind": "ANIME",
       "heatScore": 23,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 56,
@@ -92,10 +92,10 @@
           "comments": 29,
           "subjectId": 548905,
           "subjectName": "香格里拉边境 第三季",
-          "subjectCollect": 947,
+          "subjectCollect": 951,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "SAIGA-0／斋贺玲 香格里拉边境",
@@ -105,11 +105,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 12,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -119,7 +119,7 @@
       "work": "ghost / 夜之尽头",
       "kind": "ANIME",
       "heatScore": 21,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 43,
@@ -136,7 +136,7 @@
           "subjectCollect": 758,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "ニケ ghost",
@@ -146,11 +146,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 14,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -160,7 +160,7 @@
       "work": "ghost / 夜之尽头",
       "kind": "ANIME",
       "heatScore": 21,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 43,
@@ -177,7 +177,7 @@
           "subjectCollect": 758,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "マス ghost",
@@ -187,11 +187,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -242,7 +242,7 @@
       "work": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
       "kind": "ANIME",
       "heatScore": 24,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 58,
@@ -256,10 +256,10 @@
           "comments": 62,
           "subjectId": 442616,
           "subjectName": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
-          "subjectCollect": 501,
+          "subjectCollect": 502,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "上原步梦 电影",
@@ -269,11 +269,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 18,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -283,7 +283,7 @@
       "work": "约会大作战F Last Date",
       "kind": "ANIME",
       "heatScore": 24,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 59,
@@ -297,10 +297,10 @@
           "comments": 40,
           "subjectId": 551559,
           "subjectName": "约会大作战F Last Date",
-          "subjectCollect": 841,
+          "subjectCollect": 842,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "五河士道 约会大作战F",
@@ -310,11 +310,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -324,7 +324,7 @@
       "work": "香格里拉边境 第三季",
       "kind": "ANIME",
       "heatScore": 24,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 58,
@@ -338,10 +338,10 @@
           "comments": 18,
           "subjectId": 548905,
           "subjectName": "香格里拉边境 第三季",
-          "subjectCollect": 947,
+          "subjectCollect": 951,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "亚瑟·范西尔冈／天音永远 香格里拉边境",
@@ -351,11 +351,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 2,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -365,7 +365,7 @@
       "work": "杀手寓言 第二季",
       "kind": "ANIME",
       "heatScore": 20,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 42,
@@ -379,10 +379,10 @@
           "comments": 12,
           "subjectId": 639020,
           "subjectName": "杀手寓言 第二季",
-          "subjectCollect": 132,
+          "subjectCollect": 133,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "佐藤明 杀手寓言",
@@ -392,11 +392,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 18,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -406,7 +406,7 @@
       "work": "杀手寓言 第二季",
       "kind": "ANIME",
       "heatScore": 21,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 43,
@@ -420,10 +420,10 @@
           "comments": 18,
           "subjectId": 639020,
           "subjectName": "杀手寓言 第二季",
-          "subjectCollect": 132,
+          "subjectCollect": 133,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "佐藤洋子 杀手寓言",
@@ -433,11 +433,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 11,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -525,12 +525,12 @@
       "name": "冰川小雪",
       "work": "冰之城墙 第二季",
       "kind": "ANIME",
-      "heatScore": 66,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 54,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 49,
+        "bilibili": 46,
         "bangumi": 73,
-        "growth": 88
+        "growth": 53
       },
       "metrics": {
         "bangumi": {
@@ -540,22 +540,25 @@
           "comments": 23,
           "subjectId": 665390,
           "subjectName": "冰之城墙 第二季",
-          "subjectCollect": 3954,
+          "subjectCollect": 4107,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "冰川小雪 冰之城墙",
-          "resultCount": 171,
+          "resultCount": 183,
           "resultCountCapped": false,
-          "recentVideos7d": 10,
-          "recentPlaySum7d": 5777,
+          "recentVideos7d": 5,
+          "recentPlaySum7d": 88191,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -564,7 +567,7 @@
       "work": "在意的人不是他",
       "kind": "ANIME",
       "heatScore": 19,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 37,
@@ -578,10 +581,10 @@
           "comments": 1,
           "subjectId": 538296,
           "subjectName": "在意的人不是他",
-          "subjectCollect": 310,
+          "subjectCollect": 309,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "古贺美月 在意的人不是他",
@@ -591,11 +594,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 9,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -686,12 +689,12 @@
       "name": "塔莉亚·杨",
       "work": "赛博朋克：边缘行者 2",
       "kind": "ANIME",
-      "heatScore": 40,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 48,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 33,
+        "bilibili": 36,
         "bangumi": 81,
-        "growth": 24
+        "growth": 47
       },
       "metrics": {
         "bangumi": {
@@ -701,24 +704,24 @@
           "comments": 74,
           "subjectId": 513878,
           "subjectName": "赛博朋克：边缘行者 2",
-          "subjectCollect": 14971,
+          "subjectCollect": 15029,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "塔莉亚·杨 赛博朋克：边缘行者",
-          "resultCount": 39,
+          "resultCount": 41,
           "resultCountCapped": false,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 10502,
-          "sampledVideos": 39,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 9997,
+          "sampledVideos": 41,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -727,12 +730,12 @@
       "name": "壬氏",
       "work": "药屋少女的呢喃 第三季",
       "kind": "ANIME",
-      "heatScore": 62,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 55,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 67,
+        "bilibili": 64,
         "bangumi": 75,
-        "growth": 45
+        "growth": 28
       },
       "metrics": {
         "bangumi": {
@@ -742,22 +745,25 @@
           "comments": 97,
           "subjectId": 568244,
           "subjectName": "药屋少女的呢喃 第三季",
-          "subjectCollect": 7271,
+          "subjectCollect": 7554,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "壬氏 药屋少女的呢喃",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 26,
-          "recentPlaySum7d": 105609,
+          "recentVideos7d": 22,
+          "recentPlaySum7d": 67785,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -806,39 +812,39 @@
       "name": "夜刀神十香",
       "work": "约会大作战F Last Date",
       "kind": "ANIME",
-      "heatScore": 52,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 58,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 62,
+        "bilibili": 63,
         "bangumi": 64,
-        "growth": 28
+        "growth": 45
       },
       "metrics": {
         "bangumi": {
           "characterId": 19525,
           "characterName": "夜刀神十香",
-          "collects": 399,
+          "collects": 400,
           "comments": 47,
           "subjectId": 551559,
           "subjectName": "约会大作战F Last Date",
-          "subjectCollect": 841,
+          "subjectCollect": 842,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "夜刀神十香 约会大作战F",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 22,
-          "recentPlaySum7d": 20932,
+          "recentVideos7d": 24,
+          "recentPlaySum7d": 23076,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -848,7 +854,7 @@
       "work": "在意的人不是他",
       "kind": "ANIME",
       "heatScore": 19,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 37,
@@ -862,10 +868,10 @@
           "comments": 3,
           "subjectId": 538296,
           "subjectName": "在意的人不是他",
-          "subjectCollect": 310,
+          "subjectCollect": 309,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "大泽绫 在意的人不是他",
@@ -875,11 +881,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 8,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -930,7 +936,7 @@
       "work": "LoveLive！莲之空女学院学园偶像俱乐部",
       "kind": "ANIME",
       "heatScore": 20,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 42,
@@ -944,10 +950,10 @@
           "comments": 5,
           "subjectId": 638773,
           "subjectName": "LoveLive！莲之空女学院学园偶像俱乐部",
-          "subjectCollect": 156,
+          "subjectCollect": 155,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "安养寺姫芽 LoveLive！莲之空女学院学园偶像俱乐部",
@@ -957,11 +963,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 18,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -970,12 +976,12 @@
       "name": "安昙美姫",
       "work": "冰之城墙 第二季",
       "kind": "ANIME",
-      "heatScore": 26,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 38,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 0,
-        "bangumi": 68,
-        "growth": 40
+        "bilibili": 18,
+        "bangumi": 69,
+        "growth": 51
       },
       "metrics": {
         "bangumi": {
@@ -985,22 +991,25 @@
           "comments": 8,
           "subjectId": 665390,
           "subjectName": "冰之城墙 第二季",
-          "subjectCollect": 3954,
+          "subjectCollect": 4107,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "安昙美姫 冰之城墙",
-          "resultCount": 6,
+          "resultCount": 7,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
-          "sampledVideos": 6,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 105,
+          "sampledVideos": 7,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -1008,37 +1017,40 @@
       "name": "小金萌智子",
       "work": "FX战士久留美",
       "kind": "ANIME",
-      "heatScore": 53,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 44,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 48,
-        "bangumi": 77,
-        "growth": 46
+        "bilibili": 41,
+        "bangumi": 78,
+        "growth": 26
       },
       "metrics": {
         "bangumi": {
           "characterId": 202880,
           "characterName": "小金萌智子",
-          "collects": 19,
-          "comments": 46,
+          "collects": 23,
+          "comments": 48,
           "subjectId": 622288,
           "subjectName": "FX战士久留美",
-          "subjectCollect": 17459,
+          "subjectCollect": 18126,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "小金萌智子 FX战士久留美",
-          "resultCount": 25,
+          "resultCount": 31,
           "resultCountCapped": false,
-          "recentVideos7d": 5,
-          "recentPlaySum7d": 228949,
-          "sampledVideos": 25,
+          "recentVideos7d": 6,
+          "recentPlaySum7d": 1807,
+          "sampledVideos": 31,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -1087,37 +1099,40 @@
       "name": "山师芽吹",
       "work": "FX战士久留美",
       "kind": "ANIME",
-      "heatScore": 51,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 72,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 49,
-        "bangumi": 75,
-        "growth": 37
+        "bilibili": 63,
+        "bangumi": 76,
+        "growth": 84
       },
       "metrics": {
         "bangumi": {
           "characterId": 202881,
           "characterName": "山師芽吹",
-          "collects": 10,
-          "comments": 24,
+          "collects": 13,
+          "comments": 27,
           "subjectId": 622288,
           "subjectName": "FX战士久留美",
-          "subjectCollect": 17459,
+          "subjectCollect": 18126,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "山师芽吹 FX战士久留美",
-          "resultCount": 25,
+          "resultCount": 41,
           "resultCountCapped": false,
-          "recentVideos7d": 6,
-          "recentPlaySum7d": 120296,
-          "sampledVideos": 25,
+          "recentVideos7d": 17,
+          "recentPlaySum7d": 253290,
+          "sampledVideos": 41,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -1208,7 +1223,7 @@
       "work": "LoveLive！莲之空女学院学园偶像俱乐部",
       "kind": "ANIME",
       "heatScore": 20,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 40,
@@ -1222,10 +1237,10 @@
           "comments": 6,
           "subjectId": 638773,
           "subjectName": "LoveLive！莲之空女学院学园偶像俱乐部",
-          "subjectCollect": 156,
+          "subjectCollect": 155,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "徒町小铃 LoveLive！莲之空女学院学园偶像俱乐部",
@@ -1235,11 +1250,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -1248,12 +1263,12 @@
       "name": "微克·金斯利",
       "work": "赛博朋克：边缘行者 2",
       "kind": "ANIME",
-      "heatScore": 50,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 46,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 30,
+        "bilibili": 34,
         "bangumi": 73,
-        "growth": 69
+        "growth": 49
       },
       "metrics": {
         "bangumi": {
@@ -1263,24 +1278,24 @@
           "comments": 74,
           "subjectId": 513878,
           "subjectName": "赛博朋克：边缘行者 2",
-          "subjectCollect": 14971,
+          "subjectCollect": 15029,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "微克·金斯利 赛博朋克：边缘行者",
-          "resultCount": 5,
+          "resultCount": 6,
           "resultCountCapped": false,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 2212,
-          "sampledVideos": 5,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 2322,
+          "sampledVideos": 6,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -1330,12 +1345,12 @@
       "name": "日野阳太",
       "work": "冰之城墙 第二季",
       "kind": "ANIME",
-      "heatScore": 61,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 24,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 41,
+        "bilibili": 18,
         "bangumi": 68,
-        "growth": 88
+        "growth": 4
       },
       "metrics": {
         "bangumi": {
@@ -1345,22 +1360,25 @@
           "comments": 8,
           "subjectId": 665390,
           "subjectName": "冰之城墙 第二季",
-          "subjectCollect": 3954,
+          "subjectCollect": 4107,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "日野阳太 冰之城墙",
-          "resultCount": 65,
+          "resultCount": 66,
           "resultCountCapped": false,
-          "recentVideos7d": 6,
-          "recentPlaySum7d": 1953,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 105,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -1410,7 +1428,7 @@
       "work": "剧场版 金牌得主",
       "kind": "ANIME",
       "heatScore": 25,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 64,
@@ -1424,10 +1442,10 @@
           "comments": 57,
           "subjectId": 621939,
           "subjectName": "剧场版 金牌得主",
-          "subjectCollect": 1421,
+          "subjectCollect": 1426,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "明浦路司 剧场版",
@@ -1437,11 +1455,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 6,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -1492,7 +1510,7 @@
       "work": "LoveLive！莲之空女学院学园偶像俱乐部",
       "kind": "ANIME",
       "heatScore": 20,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 41,
@@ -1506,10 +1524,10 @@
           "comments": 3,
           "subjectId": 638773,
           "subjectName": "LoveLive！莲之空女学院学园偶像俱乐部",
-          "subjectCollect": 156,
+          "subjectCollect": 155,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "桂城泉 LoveLive！莲之空女学院学园偶像俱乐部",
@@ -1519,11 +1537,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -1533,7 +1551,7 @@
       "work": "香格里拉边境 第三季",
       "kind": "ANIME",
       "heatScore": 23,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 55,
@@ -1547,10 +1565,10 @@
           "comments": 13,
           "subjectId": 548905,
           "subjectName": "香格里拉边境 第三季",
-          "subjectCollect": 947,
+          "subjectCollect": 951,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "桑乐／阳务乐郎 香格里拉边境",
@@ -1560,11 +1578,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 36,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -1574,7 +1592,7 @@
       "work": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
       "kind": "ANIME",
       "heatScore": 23,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 57,
@@ -1588,10 +1606,10 @@
           "comments": 31,
           "subjectId": 442616,
           "subjectName": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
-          "subjectCollect": 501,
+          "subjectCollect": 502,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "樱坂雫 电影",
@@ -1601,11 +1619,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 15,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -1775,7 +1793,7 @@
       "work": "杀手寓言 第二季",
       "kind": "ANIME",
       "heatScore": 20,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 40,
@@ -1789,10 +1807,10 @@
           "comments": 9,
           "subjectId": 639020,
           "subjectName": "杀手寓言 第二季",
-          "subjectCollect": 132,
+          "subjectCollect": 133,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "清水岬 杀手寓言",
@@ -1802,11 +1820,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 3,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -1856,37 +1874,40 @@
       "name": "猫猫",
       "work": "药屋少女的呢喃 第三季",
       "kind": "ANIME",
-      "heatScore": 74,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 63,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 84,
+        "bilibili": 80,
         "bangumi": 83,
-        "growth": 52
+        "growth": 23
       },
       "metrics": {
         "bangumi": {
           "characterId": 61330,
           "characterName": "猫猫",
-          "collects": 587,
+          "collects": 588,
           "comments": 168,
           "subjectId": 568244,
           "subjectName": "药屋少女的呢喃 第三季",
-          "subjectCollect": 7271,
+          "subjectCollect": 7554,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "猫猫 药屋少女的呢喃",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 197635,
+          "recentPlaySum7d": 26652,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -1975,7 +1996,7 @@
       "work": "入间同学入魔了！ if Episode of 魔手党",
       "kind": "ANIME",
       "heatScore": 21,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 45,
@@ -1989,10 +2010,10 @@
           "comments": 16,
           "subjectId": 625303,
           "subjectName": "入间同学入魔了！ if Episode of 魔手党",
-          "subjectCollect": 119,
+          "subjectCollect": 120,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "瓦拉克·克拉拉 入间同学入魔了！",
@@ -2002,11 +2023,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2016,7 +2037,7 @@
       "work": "LoveLive！莲之空女学院学园偶像俱乐部",
       "kind": "ANIME",
       "heatScore": 20,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 41,
@@ -2030,10 +2051,10 @@
           "comments": 4,
           "subjectId": 638773,
           "subjectName": "LoveLive！莲之空女学院学园偶像俱乐部",
-          "subjectCollect": 156,
+          "subjectCollect": 155,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "百生吟子 LoveLive！莲之空女学院学园偶像俱乐部",
@@ -2043,11 +2064,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2056,37 +2077,40 @@
       "name": "福贺久留美",
       "work": "FX战士久留美",
       "kind": "ANIME",
-      "heatScore": 49,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 65,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 55,
+        "bilibili": 58,
         "bangumi": 83,
-        "growth": 17
+        "growth": 63
       },
       "metrics": {
         "bangumi": {
           "characterId": 136036,
           "characterName": "福賀くるみ",
-          "collects": 100,
-          "comments": 100,
+          "collects": 106,
+          "comments": 104,
           "subjectId": 622288,
           "subjectName": "FX战士久留美",
-          "subjectCollect": 17459,
+          "subjectCollect": 18126,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "福贺久留美 FX战士久留美",
-          "resultCount": 123,
+          "resultCount": 133,
           "resultCountCapped": false,
-          "recentVideos7d": 13,
-          "recentPlaySum7d": 16868,
+          "recentVideos7d": 12,
+          "recentPlaySum7d": 203222,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -2133,7 +2157,7 @@
       "work": "剧场版 金牌得主",
       "kind": "ANIME",
       "heatScore": 26,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 68,
@@ -2143,14 +2167,14 @@
         "bangumi": {
           "characterId": 92177,
           "characterName": "結束いのり",
-          "collects": 562,
+          "collects": 563,
           "comments": 168,
           "subjectId": 621939,
           "subjectName": "剧场版 金牌得主",
-          "subjectCollect": 1421,
+          "subjectCollect": 1426,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "结束祈 剧场版",
@@ -2160,11 +2184,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 25,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2293,12 +2317,12 @@
       "name": "罗曼·卡拉克斯",
       "work": "赛博朋克：边缘行者 2",
       "kind": "ANIME",
-      "heatScore": 39,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 38,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 21,
         "bangumi": 78,
-        "growth": 42
+        "growth": 41
       },
       "metrics": {
         "bangumi": {
@@ -2308,24 +2332,24 @@
           "comments": 57,
           "subjectId": 513878,
           "subjectName": "赛博朋克：边缘行者 2",
-          "subjectCollect": 14971,
+          "subjectCollect": 15029,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "罗曼·卡拉克斯 赛博朋克：边缘行者",
           "resultCount": 7,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 452,
+          "recentPlaySum7d": 480,
           "sampledVideos": 7,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2376,7 +2400,7 @@
       "work": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
       "kind": "ANIME",
       "heatScore": 23,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 54,
@@ -2390,10 +2414,10 @@
           "comments": 10,
           "subjectId": 442616,
           "subjectName": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
-          "subjectCollect": 501,
+          "subjectCollect": 502,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "艾玛·维尔德 电影",
@@ -2403,11 +2427,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 8,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2616,7 +2640,7 @@
       "work": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
       "kind": "ANIME",
       "heatScore": 23,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 56,
@@ -2630,10 +2654,10 @@
           "comments": 27,
           "subjectId": 442616,
           "subjectName": "电影 Love Live! 虹咲学园校园偶像同好会 完结篇 最终章",
-          "subjectCollect": 501,
+          "subjectCollect": 502,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "近江彼方 电影",
@@ -2643,11 +2667,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 14,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2698,7 +2722,7 @@
       "work": "香格里拉边境 第三季",
       "kind": "ANIME",
       "heatScore": 23,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 53,
@@ -2712,10 +2736,10 @@
           "comments": 14,
           "subjectId": 548905,
           "subjectName": "香格里拉边境 第三季",
-          "subjectCollect": 947,
+          "subjectCollect": 951,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "追加鲣鱼／鱼臣慧 香格里拉边境",
@@ -2725,11 +2749,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 10,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2739,7 +2763,7 @@
       "work": "入间同学入魔了！ if Episode of 魔手党",
       "kind": "ANIME",
       "heatScore": 46,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 49,
         "bangumi": 43,
@@ -2753,24 +2777,24 @@
           "comments": 5,
           "subjectId": 625303,
           "subjectName": "入间同学入魔了！ if Episode of 魔手党",
-          "subjectCollect": 119,
+          "subjectCollect": 120,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "铃木入间 入间同学入魔了！",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 9,
-          "recentPlaySum7d": 8849,
+          "recentPlaySum7d": 9904,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2780,7 +2804,7 @@
       "work": "入间同学入魔了！ if Episode of 魔手党",
       "kind": "ANIME",
       "heatScore": 20,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 41,
@@ -2794,10 +2818,10 @@
           "comments": 4,
           "subjectId": 625303,
           "subjectName": "入间同学入魔了！ if Episode of 魔手党",
-          "subjectCollect": 119,
+          "subjectCollect": 120,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "阿斯莫德·艾利斯 入间同学入魔了！",
@@ -2807,11 +2831,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2861,12 +2885,12 @@
       "name": "阿萨兹勒·艾梅莉",
       "work": "入间同学入魔了！ if Episode of 魔手党",
       "kind": "ANIME",
-      "heatScore": 15,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 21,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 44,
-        "growth": 22
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -2876,10 +2900,10 @@
           "comments": 11,
           "subjectId": 625303,
           "subjectName": "入间同学入魔了！ if Episode of 魔手党",
-          "subjectCollect": 119,
+          "subjectCollect": 120,
           "airing": false,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "阿萨兹勒·艾梅莉 入间同学入魔了！",
@@ -2889,11 +2913,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -2943,37 +2967,40 @@
       "name": "雨宫凑",
       "work": "冰之城墙 第二季",
       "kind": "ANIME",
-      "heatScore": 55,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 58,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 53,
-        "bangumi": 68,
-        "growth": 50
+        "bangumi": 69,
+        "growth": 58
       },
       "metrics": {
         "bangumi": {
           "characterId": 185506,
           "characterName": "雨宮湊",
           "collects": 24,
-          "comments": 33,
+          "comments": 34,
           "subjectId": 665390,
           "subjectName": "冰之城墙 第二季",
-          "subjectCollect": 3954,
+          "subjectCollect": 4107,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "雨宫凑 冰之城墙",
-          "resultCount": 138,
+          "resultCount": 144,
           "resultCountCapped": false,
-          "recentVideos7d": 13,
-          "recentPlaySum7d": 5701,
+          "recentVideos7d": 9,
+          "recentPlaySum7d": 89229,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -3145,37 +3172,40 @@
       "name": "高根康子",
       "work": "FX战士久留美",
       "kind": "ANIME",
-      "heatScore": 51,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 43,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 37,
-        "bangumi": 77,
-        "growth": 57
+        "bangumi": 78,
+        "growth": 31
       },
       "metrics": {
         "bangumi": {
           "characterId": 202882,
           "characterName": "高根やす子",
-          "collects": 20,
-          "comments": 14,
+          "collects": 21,
+          "comments": 15,
           "subjectId": 622288,
           "subjectName": "FX战士久留美",
-          "subjectCollect": 17459,
+          "subjectCollect": 18126,
           "airing": true,
           "matchedBy": "catalog",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "高根康子 FX战士久留美",
-          "resultCount": 12,
+          "resultCount": 15,
           "resultCountCapped": false,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 84253,
-          "sampledVideos": 12,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 11190,
+          "sampledVideos": 15,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -20633,12 +20663,12 @@
       "name": "一花",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 46,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 61,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 53,
+        "bilibili": 57,
         "bangumi": null,
-        "growth": 36
+        "growth": 69
       },
       "metrics": {
         "bangumi": null,
@@ -20646,13 +20676,16 @@
           "keyword": "一花 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 12,
-          "recentPlaySum7d": 10108,
+          "recentVideos7d": 14,
+          "recentPlaySum7d": 32172,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -20769,28 +20802,28 @@
       "name": "丽",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 38,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 6,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 22,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 64
+        "growth": 16
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "丽 碧蓝档案",
-          "resultCount": 457,
+          "resultCount": 0,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 782,
-          "sampledVideos": 50,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -20830,7 +20863,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 16,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 21,
@@ -20847,21 +20880,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "丽情",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "丽情 碧蓝档案",
-          "resultCount": 108,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -20897,12 +20930,12 @@
       "name": "亚子（礼服）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 43,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 24,
         "bangumi": null,
-        "growth": 40
+        "growth": 73
       },
       "metrics": {
         "bangumi": null,
@@ -20910,15 +20943,15 @@
           "keyword": "亚子（礼服） 碧蓝档案",
           "resultCount": 253,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 2623,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -21204,12 +21237,12 @@
       "name": "优香（体操服）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 21,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 26,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 19,
+        "bilibili": 18,
         "bangumi": null,
-        "growth": 25
+        "growth": 38
       },
       "metrics": {
         "bangumi": null,
@@ -21218,12 +21251,15 @@
           "resultCount": 842,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 170,
+          "recentPlaySum7d": 102,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -21231,28 +21267,28 @@
       "name": "优香（睡衣）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 42,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 5,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 27,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 66
+        "growth": 14
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "优香（睡衣） 碧蓝档案",
-          "resultCount": 349,
+          "resultCount": 0,
           "resultCountCapped": false,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 491,
-          "sampledVideos": 50,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -21332,12 +21368,12 @@
       "name": "佳代子（新年）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 52,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 54,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 63,
+        "bilibili": 64,
         "bangumi": 57,
-        "growth": 30
+        "growth": 35
       },
       "metrics": {
         "bangumi": {
@@ -21350,19 +21386,22 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "佳代子（新年）",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "佳代子（新年） 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 22,
-          "recentPlaySum7d": 27510,
+          "recentVideos7d": 25,
+          "recentPlaySum7d": 18355,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -21370,12 +21409,12 @@
       "name": "佳代子（礼服）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 20,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 23,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 57,
-        "growth": 30
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -21388,21 +21427,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "佳代子（礼服）",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "佳代子（礼服） 碧蓝档案",
-          "resultCount": 361,
+          "resultCount": 364,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -21411,28 +21450,28 @@
       "name": "光",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 75,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 1,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 71,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 81
+        "growth": 2
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "光 碧蓝档案",
-          "resultCount": 1000,
-          "resultCountCapped": true,
-          "recentVideos7d": 34,
-          "recentPlaySum7d": 98760,
-          "sampledVideos": 50,
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -21772,28 +21811,28 @@
       "name": "千明",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 19,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 8,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 21,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 17
+        "growth": 21
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "千明 碧蓝档案",
-          "resultCount": 112,
+          "resultCount": 0,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 486,
-          "sampledVideos": 50,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -21832,12 +21871,12 @@
       "name": "南",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 42,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 33,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 29,
         "bangumi": null,
-        "growth": 65
+        "growth": 42
       },
       "metrics": {
         "bangumi": null,
@@ -21846,12 +21885,15 @@
           "resultCount": 429,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 23932,
+          "recentPlaySum7d": 25419,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -21859,12 +21901,12 @@
       "name": "名草",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 46,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 7,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 47,
+        "bilibili": 0,
         "bangumi": 30,
-        "growth": 55
+        "growth": 2
       },
       "metrics": {
         "bangumi": {
@@ -21877,21 +21919,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "名草",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "名草 碧蓝档案",
-          "resultCount": 608,
+          "resultCount": 0,
           "resultCountCapped": false,
-          "recentVideos7d": 8,
-          "recentPlaySum7d": 6934,
-          "sampledVideos": 50,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -22037,11 +22079,11 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 36,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 31,
+        "bilibili": 30,
         "bangumi": 58,
-        "growth": 29
+        "growth": 32
       },
       "metrics": {
         "bangumi": {
@@ -22054,21 +22096,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "和纱（乐队）",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "和纱（乐队） 碧蓝档案",
-          "resultCount": 374,
+          "resultCount": 376,
           "resultCountCapped": false,
           "recentVideos7d": 3,
-          "recentPlaySum7d": 666,
+          "recentPlaySum7d": 341,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -22161,26 +22203,29 @@
       "name": "咲（泳装）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 21,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 6,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 29,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 8
+        "growth": 16
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "咲（泳装） 碧蓝档案",
-          "resultCount": 438,
+          "resultCount": 437,
           "resultCountCapped": false,
-          "recentVideos7d": 3,
-          "recentPlaySum7d": 187,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -22242,12 +22287,12 @@
       "name": "圣娅",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 50,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 11,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 65,
+        "bilibili": 0,
         "bangumi": 54,
-        "growth": 22
+        "growth": 2
       },
       "metrics": {
         "bangumi": {
@@ -22260,21 +22305,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "圣娅",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "圣娅 碧蓝档案",
-          "resultCount": 1000,
-          "resultCountCapped": true,
-          "recentVideos7d": 26,
-          "recentPlaySum7d": 32554,
-          "sampledVideos": 50,
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -22468,12 +22513,12 @@
       "name": "好美（乐队）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 36,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 7,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 22,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 61
+        "growth": 19
       },
       "metrics": {
         "bangumi": null,
@@ -22481,15 +22526,15 @@
           "keyword": "好美（乐队） 碧蓝档案",
           "resultCount": 180,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 582,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -22648,12 +22693,12 @@
       "name": "妮露（制服）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 37,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 11,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 23,
+        "bilibili": 0,
         "bangumi": 38,
-        "growth": 61
+        "growth": 13
       },
       "metrics": {
         "bangumi": {
@@ -22666,21 +22711,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "妮露（制服）",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "妮露（制服） 碧蓝档案",
-          "resultCount": 106,
+          "resultCount": 0,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 1330,
-          "sampledVideos": 50,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -22825,26 +22870,29 @@
       "name": "宫子（泳装）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 21,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 11,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 17,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 28
+        "growth": 30
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "宫子（泳装） 碧蓝档案",
-          "resultCount": 254,
+          "resultCount": 255,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 62,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -22947,12 +22995,12 @@
       "name": "小玉（露营）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 6,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
-        "growth": 17
+        "growth": 40
       },
       "metrics": {
         "bangumi": null,
@@ -22964,11 +23012,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -22977,12 +23025,12 @@
       "name": "小雪",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 30,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 59,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 42,
+        "bilibili": 50,
         "bangumi": null,
-        "growth": 9
+        "growth": 76
       },
       "metrics": {
         "bangumi": null,
@@ -22990,13 +23038,16 @@
           "keyword": "小雪 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 6,
-          "recentPlaySum7d": 3778,
+          "recentVideos7d": 9,
+          "recentPlaySum7d": 12031,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -23189,12 +23240,12 @@
       "name": "康娜（泳装）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 30,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 39,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 19,
+        "bilibili": 24,
         "bangumi": 39,
-        "growth": 42
+        "growth": 65
       },
       "metrics": {
         "bangumi": {
@@ -23207,21 +23258,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "康娜（泳装）",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "康娜（泳装） 碧蓝档案",
-          "resultCount": 38,
+          "resultCount": 39,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 185,
-          "sampledVideos": 38,
+          "recentPlaySum7d": 2578,
+          "sampledVideos": 39,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -23298,12 +23349,12 @@
       "name": "御坂美琴",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 2,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 32,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 19,
         "bangumi": null,
-        "growth": 6
+        "growth": 52
       },
       "metrics": {
         "bangumi": null,
@@ -23311,13 +23362,16 @@
           "keyword": "御坂美琴 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 163,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -23462,7 +23516,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -23472,15 +23526,18 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "忧（泳装） 碧蓝档案",
-          "resultCount": 125,
+          "resultCount": 124,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -23488,12 +23545,12 @@
       "name": "惠",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 7,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
-        "growth": 20
+        "growth": 40
       },
       "metrics": {
         "bangumi": null,
@@ -23505,9 +23562,12 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -23600,7 +23660,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -23610,17 +23670,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "日和（泳装） 碧蓝档案",
-          "resultCount": 172,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -23683,12 +23743,12 @@
       "name": "日奈（礼服）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 40,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 34,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 29,
+        "bilibili": 32,
         "bangumi": null,
-        "growth": 58
+        "growth": 37
       },
       "metrics": {
         "bangumi": null,
@@ -23696,15 +23756,15 @@
           "keyword": "日奈（礼服） 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 1453,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 792,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -23868,12 +23928,12 @@
       "name": "时",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 80,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 57,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 85,
+        "bilibili": 76,
         "bangumi": null,
-        "growth": 72
+        "growth": 25
       },
       "metrics": {
         "bangumi": null,
@@ -23881,13 +23941,16 @@
           "keyword": "时 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 50,
-          "recentPlaySum7d": 450741,
+          "recentVideos7d": 45,
+          "recentPlaySum7d": 212609,
           "sampledVideos": 50,
-          "windowSaturated": true,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "windowSaturated": false,
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -23895,26 +23958,29 @@
       "name": "时雨",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 44,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 55,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 29,
+        "bilibili": 40,
         "bangumi": null,
-        "growth": 70
+        "growth": 80
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "时雨 碧蓝档案",
-          "resultCount": 976,
+          "resultCount": 978,
           "resultCountCapped": false,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 1323,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 9711,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -23980,7 +24046,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -23996,9 +24062,12 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 17,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -24037,7 +24106,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -24047,17 +24116,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "明日奈（制服） 碧蓝档案",
-          "resultCount": 85,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -24181,7 +24250,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -24191,17 +24260,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "星野（武装） 碧蓝档案",
-          "resultCount": 87,
+          "resultCount": 84,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -24211,7 +24280,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -24221,17 +24290,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "星野（武装） 碧蓝档案",
-          "resultCount": 87,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -24507,12 +24576,12 @@
       "name": "晴奈（新年）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 18,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 21,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 43,
-        "growth": 30
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -24525,19 +24594,22 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "晴奈（新年）",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "晴奈（新年） 碧蓝档案",
-          "resultCount": 537,
+          "resultCount": 536,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -24546,7 +24618,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -24556,17 +24628,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "晴（露营） 碧蓝档案",
-          "resultCount": 296,
+          "resultCount": 294,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -24703,37 +24775,40 @@
       "name": "未花",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 72,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 62,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 84,
+        "bilibili": 82,
         "bangumi": 66,
-        "growth": 57
+        "growth": 26
       },
       "metrics": {
         "bangumi": {
           "characterId": 114601,
           "characterName": "聖園ミカ",
-          "collects": 150,
+          "collects": 151,
           "comments": 42,
           "subjectId": 300648,
           "subjectName": "蔚蓝档案",
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "未花",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "未花 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 233876,
+          "recentPlaySum7d": 79723,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -24812,28 +24887,28 @@
       "name": "朱莉（打工）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 1,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
-        "growth": 2
+        "growth": 40
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "朱莉（打工） 碧蓝档案",
-          "resultCount": 129,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -24842,12 +24917,12 @@
       "name": "果穗",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 9,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 17,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 24,
-        "growth": 13
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -24860,7 +24935,7 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "果穗",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "果穗 碧蓝档案",
@@ -24870,9 +24945,12 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -25065,12 +25143,12 @@
       "name": "桃（女仆）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 30,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 35,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 18,
+        "bilibili": 22,
         "bangumi": null,
-        "growth": 50
+        "growth": 57
       },
       "metrics": {
         "bangumi": null,
@@ -25079,14 +25157,14 @@
           "resultCount": 186,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 84,
+          "recentPlaySum7d": 889,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -25177,12 +25255,12 @@
       "name": "桔梗",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 48,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 28,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 45,
+        "bilibili": 35,
         "bangumi": null,
-        "growth": 54
+        "growth": 16
       },
       "metrics": {
         "bangumi": null,
@@ -25190,15 +25268,15 @@
           "keyword": "桔梗 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 5,
-          "recentPlaySum7d": 42955,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 837,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -25351,12 +25429,12 @@
       "name": "樱子",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 74,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 24,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 64,
+        "bilibili": 36,
         "bangumi": null,
-        "growth": 90
+        "growth": 4
       },
       "metrics": {
         "bangumi": null,
@@ -25364,13 +25442,16 @@
           "keyword": "樱子 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 15,
-          "recentPlaySum7d": 778444,
-          "sampledVideos": 20,
+          "recentVideos7d": 3,
+          "recentPlaySum7d": 6962,
+          "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -25379,7 +25460,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -25389,17 +25470,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "樱子（偶像） 碧蓝档案",
-          "resultCount": 328,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -25647,12 +25728,12 @@
       "name": "海香",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 12,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 32,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 22,
         "bangumi": 14,
-        "growth": 31
+        "growth": 61
       },
       "metrics": {
         "bangumi": {
@@ -25665,21 +25746,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "海香",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "海香 碧蓝档案",
-          "resultCount": 112,
+          "resultCount": 113,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 577,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -25833,7 +25914,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -25849,11 +25930,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 10,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -25900,12 +25981,12 @@
       "name": "爱丽丝（女仆）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 22,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 20,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 29,
+        "bilibili": 22,
         "bangumi": null,
-        "growth": 9
+        "growth": 17
       },
       "metrics": {
         "bangumi": null,
@@ -25913,13 +25994,16 @@
           "keyword": "爱丽丝（女仆） 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 1928,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 645,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -26090,12 +26174,12 @@
       "name": "爱露（礼服）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 23,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 32,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 0,
+        "bilibili": 14,
         "bangumi": 55,
-        "growth": 40
+        "growth": 48
       },
       "metrics": {
         "bangumi": {
@@ -26108,21 +26192,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "爱露（礼服）",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "爱露（礼服） 碧蓝档案",
-          "resultCount": 110,
+          "resultCount": 113,
           "resultCountCapped": false,
-          "recentVideos7d": 0,
-          "recentPlaySum7d": 0,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 8,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -26161,26 +26245,29 @@
       "name": "玛丽（体操服）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 16,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 37,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 16,
+        "bilibili": 23,
         "bangumi": null,
-        "growth": 16
+        "growth": 60
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "玛丽（体操服） 碧蓝档案",
-          "resultCount": 546,
+          "resultCount": 547,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 38,
+          "recentPlaySum7d": 1175,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -26188,28 +26275,28 @@
       "name": "玛丽（偶像）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 51,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 1,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 40,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 69
+        "growth": 2
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "玛丽（偶像） 碧蓝档案",
-          "resultCount": 1000,
-          "resultCountCapped": true,
-          "recentVideos7d": 4,
-          "recentPlaySum7d": 13442,
-          "sampledVideos": 50,
+          "resultCount": 0,
+          "resultCountCapped": false,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -26218,12 +26305,12 @@
       "name": "玲纱",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 53,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 49,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 51,
+        "bilibili": 53,
         "bangumi": 52,
-        "growth": 57
+        "growth": 41
       },
       "metrics": {
         "bangumi": {
@@ -26236,19 +26323,22 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "玲纱",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "玲纱 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 10,
-          "recentPlaySum7d": 10493,
+          "recentVideos7d": 12,
+          "recentPlaySum7d": 8875,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -26328,7 +26418,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -26344,9 +26434,12 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 12,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -26384,12 +26477,12 @@
       "name": "瑠海",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 11,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 16,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 21,
-        "growth": 22
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -26402,7 +26495,7 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "瑠海",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "瑠海 碧蓝档案",
@@ -26412,9 +26505,12 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 35,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -26539,12 +26635,12 @@
       "name": "白子＊恐怖",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 21,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 43,
-        "growth": 21
+        "growth": 40
       },
       "metrics": {
         "bangumi": {
@@ -26557,21 +26653,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "白子＊恐怖",
-          "fetchedAt": "2026-10-30T23:51:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "白子＊恐怖 碧蓝档案",
-          "resultCount": 510,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -26839,7 +26935,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -26849,17 +26945,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "真里奈（旗袍） 碧蓝档案",
-          "resultCount": 10,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 10,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -27039,12 +27135,12 @@
       "name": "紫",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 31,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 72,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 45,
+        "bilibili": 62,
         "bangumi": null,
-        "growth": 9
+        "growth": 89
       },
       "metrics": {
         "bangumi": null,
@@ -27052,15 +27148,15 @@
           "keyword": "紫 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 7,
-          "recentPlaySum7d": 4995,
+          "recentVideos7d": 22,
+          "recentPlaySum7d": 17602,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -27213,28 +27309,28 @@
       "name": "纱织（泳装）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 5,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
-        "growth": 13
+        "growth": 40
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "纱织（泳装） 碧蓝档案",
-          "resultCount": 104,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -27244,7 +27340,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -27254,17 +27350,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "纱织（礼服） 碧蓝档案",
-          "resultCount": 135,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -27458,12 +27554,12 @@
       "name": "绮罗罗",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 11,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 15,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
-        "growth": 29
+        "growth": 40
       },
       "metrics": {
         "bangumi": null,
@@ -27475,11 +27571,11 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -27515,28 +27611,28 @@
       "name": "绿（女仆）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 35,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 31,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 21,
+        "bilibili": 22,
         "bangumi": null,
-        "growth": 58
+        "growth": 46
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "绿（女仆） 碧蓝档案",
-          "resultCount": 309,
+          "resultCount": 308,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 405,
+          "recentPlaySum7d": 645,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -27711,12 +27807,12 @@
       "name": "美祢",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 48,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 29,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 30,
+        "bilibili": 24,
         "bangumi": null,
-        "growth": 79
+        "growth": 37
       },
       "metrics": {
         "bangumi": null,
@@ -27724,13 +27820,16 @@
           "keyword": "美祢 碧蓝档案",
           "resultCount": 118,
           "resultCountCapped": false,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 2016,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 2412,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -28026,26 +28125,29 @@
       "name": "花子（泳装）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 40,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 37,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 23,
+        "bilibili": 24,
         "bangumi": null,
-        "growth": 68
+        "growth": 58
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "花子（泳装） 碧蓝档案",
-          "resultCount": 333,
+          "resultCount": 329,
           "resultCountCapped": false,
           "recentVideos7d": 1,
-          "recentPlaySum7d": 1136,
+          "recentPlaySum7d": 2200,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -28174,7 +28276,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 21,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": 46,
@@ -28191,7 +28293,7 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "芹娜（圣诞）",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "芹娜（圣诞） 碧蓝档案",
@@ -28201,9 +28303,12 @@
           "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -28298,12 +28403,12 @@
       "name": "芽瑠",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 40,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 5,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 23,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 68
+        "growth": 13
       },
       "metrics": {
         "bangumi": null,
@@ -28311,13 +28416,16 @@
           "keyword": "芽瑠 碧蓝档案",
           "resultCount": 35,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 1090,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
           "sampledVideos": 35,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -28548,28 +28656,28 @@
       "name": "莲华",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 49,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 17,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 30,
+        "bilibili": 19,
         "bangumi": null,
-        "growth": 80
+        "growth": 13
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "莲华 碧蓝档案",
-          "resultCount": 347,
+          "resultCount": 348,
           "resultCountCapped": false,
-          "recentVideos7d": 2,
-          "recentPlaySum7d": 3388,
+          "recentVideos7d": 1,
+          "recentPlaySum7d": 131,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -28779,12 +28887,12 @@
       "name": "萌绘（泳装）",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 21,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 11,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 17,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 27
+        "growth": 31
       },
       "metrics": {
         "bangumi": null,
@@ -28792,15 +28900,15 @@
           "keyword": "萌绘（泳装） 碧蓝档案",
           "resultCount": 40,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 56,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
           "sampledVideos": 40,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -28809,12 +28917,12 @@
       "name": "诺亚",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 41,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 63,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 55,
+        "bilibili": 63,
         "bangumi": null,
-        "growth": 19
+        "growth": 62
       },
       "metrics": {
         "bangumi": null,
@@ -28822,13 +28930,16 @@
           "keyword": "诺亚 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 10,
-          "recentPlaySum7d": 95090,
+          "recentVideos7d": 19,
+          "recentPlaySum7d": 111411,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -28837,7 +28948,7 @@
       "work": "碧蓝档案",
       "kind": "GAME",
       "heatScore": 15,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 0,
         "bangumi": null,
@@ -28847,17 +28958,17 @@
         "bangumi": null,
         "bilibili": {
           "keyword": "诺亚（睡衣） 碧蓝档案",
-          "resultCount": 199,
+          "resultCount": 0,
           "resultCountCapped": false,
           "recentVideos7d": 0,
           "recentPlaySum7d": 0,
-          "sampledVideos": 50,
+          "sampledVideos": 0,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -29087,12 +29198,12 @@
       "name": "霞",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 13,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 57,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 19,
+        "bilibili": 40,
         "bangumi": null,
-        "growth": 3
+        "growth": 84
       },
       "metrics": {
         "bangumi": null,
@@ -29100,13 +29211,16 @@
           "keyword": "霞 碧蓝档案",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 146,
+          "recentVideos7d": 4,
+          "recentPlaySum7d": 16195,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -29299,28 +29413,28 @@
       "name": "食蜂操祈",
       "work": "碧蓝档案",
       "kind": "GAME",
-      "heatScore": 34,
-      "heatFetchedAt": "2026-10-30T23:51:49Z",
+      "heatScore": 9,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 21,
+        "bilibili": 0,
         "bangumi": null,
-        "growth": 57
+        "growth": 23
       },
       "metrics": {
         "bangumi": null,
         "bilibili": {
           "keyword": "食蜂操祈 碧蓝档案",
-          "resultCount": 247,
+          "resultCount": 248,
           "resultCountCapped": false,
-          "recentVideos7d": 1,
-          "recentPlaySum7d": 371,
+          "recentVideos7d": 0,
+          "recentPlaySum7d": 0,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T23:59:56Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-10-31T00:03:33Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -32428,10 +32542,10 @@
       "name": "妮露",
       "work": "原神 7.2",
       "kind": "GAME",
-      "heatScore": 70,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 71,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 66,
+        "bilibili": 68,
         "bangumi": 51,
         "growth": 90
       },
@@ -32439,26 +32553,29 @@
         "bangumi": {
           "characterId": 115321,
           "characterName": "妮露",
-          "collects": 48,
+          "collects": 47,
           "comments": 37,
           "subjectId": 284157,
           "subjectName": "原神",
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "妮露",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "妮露 原神",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 29,
-          "recentPlaySum7d": 28278,
+          "recentVideos7d": 34,
+          "recentPlaySum7d": 25661,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -32507,11 +32624,12 @@
       "name": "安娜丝塔夏",
       "work": "原神 7.2",
       "kind": "GAME",
-      "heatScore": 69,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 61,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 82,
-        "bangumi": 29
+        "bilibili": 83,
+        "bangumi": 29,
+        "growth": 47
       },
       "metrics": {
         "bangumi": {
@@ -32524,21 +32642,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "安娜丝塔夏",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "安娜丝塔夏 原神",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 79524,
+          "recentPlaySum7d": 101214,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -32957,12 +33075,12 @@
       "name": "杜林",
       "work": "原神 7.2",
       "kind": "GAME",
-      "heatScore": 72,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 62,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 83,
+        "bilibili": 84,
         "bangumi": 26,
-        "growth": 83
+        "growth": 50
       },
       "metrics": {
         "bangumi": {
@@ -32975,19 +33093,22 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "杜林",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "杜林 原神",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 160764,
+          "recentPlaySum7d": 172884,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -33897,12 +34018,12 @@
       "name": "瓦列里",
       "work": "原神 7.2",
       "kind": "GAME",
-      "heatScore": 51,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 55,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 84,
         "bangumi": 0,
-        "growth": 32
+        "growth": 45
       },
       "metrics": {
         "bangumi": {
@@ -33915,21 +34036,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "瓦列里",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "瓦列里 原神",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 179388,
+          "recentPlaySum7d": 212352,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -34266,12 +34387,12 @@
       "name": "米提亚",
       "work": "原神 7.2",
       "kind": "GAME",
-      "heatScore": 50,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 60,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 79,
+        "bilibili": 80,
         "bangumi": 14,
-        "growth": 26
+        "growth": 56
       },
       "metrics": {
         "bangumi": {
@@ -34284,21 +34405,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "米提亚",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "米提亚 原神",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 14119,
+          "recentPlaySum7d": 25102,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -35332,11 +35453,12 @@
       "name": "达妮卡",
       "work": "原神 7.2",
       "kind": "GAME",
-      "heatScore": 66,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 62,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 84,
-        "bangumi": 14
+        "bilibili": 85,
+        "bangumi": 14,
+        "growth": 56
       },
       "metrics": {
         "bangumi": {
@@ -35349,21 +35471,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "达妮卡",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "达妮卡 原神",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 197403,
+          "recentPlaySum7d": 344571,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -37553,12 +37675,12 @@
       "name": "星神★阿哈",
       "work": "崩坏：星穹铁道 4.6",
       "kind": "GAME",
-      "heatScore": 63,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 53,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 86,
+        "bilibili": 83,
         "bangumi": 21,
-        "growth": 53
+        "growth": 24
       },
       "metrics": {
         "bangumi": {
@@ -37571,21 +37693,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "星神★阿哈",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "星神★阿哈 崩坏：星穹铁道",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 548368,
+          "recentPlaySum7d": 123310,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -38209,12 +38331,12 @@
       "name": "真珠",
       "work": "崩坏：星穹铁道 4.6",
       "kind": "GAME",
-      "heatScore": 55,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 68,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 81,
+        "bilibili": 84,
         "bangumi": 32,
-        "growth": 28
+        "growth": 65
       },
       "metrics": {
         "bangumi": {
@@ -38227,21 +38349,21 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "真珠",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "真珠 崩坏：星穹铁道",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 51774,
+          "recentPlaySum7d": 234070,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -38414,12 +38536,12 @@
       "name": "砂金•戏浪",
       "work": "崩坏：星穹铁道 4.6",
       "kind": "GAME",
-      "heatScore": 32,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 44,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 57,
+        "bilibili": 61,
         "bangumi": 0,
-        "growth": 13
+        "growth": 44
       },
       "metrics": {
         "bangumi": {
@@ -38432,19 +38554,22 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "砂金•戏浪",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "砂金•戏浪 崩坏：星穹铁道",
           "resultCount": 1000,
           "resultCountCapped": true,
-          "recentVideos7d": 13,
-          "recentPlaySum7d": 48687,
+          "recentVideos7d": 19,
+          "recentPlaySum7d": 35062,
           "sampledVideos": 50,
           "windowSaturated": false,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -41710,39 +41835,39 @@
       "name": "莉莉",
       "work": "鸣潮 3.7",
       "kind": "GAME",
-      "heatScore": 51,
-      "heatFetchedAt": "2026-11-05T00:57:46Z",
+      "heatScore": 55,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
         "bilibili": 82,
-        "bangumi": 9,
-        "growth": 28
+        "bangumi": 14,
+        "growth": 38
       },
       "metrics": {
         "bangumi": {
           "characterId": 224841,
           "characterName": "莉莉",
-          "collects": 1,
+          "collects": 2,
           "comments": 2,
           "subjectId": 385208,
           "subjectName": "鸣潮",
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "莉莉",
-          "fetchedAt": "2026-11-05T00:57:46Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "莉莉 鸣潮",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 83010,
+          "recentPlaySum7d": 76099,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-11-05T01:05:41Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
         "weibo": {
           "onHotSearch": false,
-          "fetchedAt": "2026-11-05T01:09:06Z"
+          "fetchedAt": "2026-11-06T01:12:12Z"
         }
       }
     },
@@ -42079,12 +42204,12 @@
       "name": "锁暝",
       "work": "鸣潮 3.7",
       "kind": "GAME",
-      "heatScore": 67,
-      "heatFetchedAt": "2026-10-30T16:43:49Z",
+      "heatScore": 65,
+      "heatFetchedAt": "2026-11-06T01:00:14Z",
       "heatComponents": {
-        "bilibili": 84,
+        "bilibili": 85,
         "bangumi": 26,
-        "growth": 65
+        "growth": 56
       },
       "metrics": {
         "bangumi": {
@@ -42097,19 +42222,22 @@
           "subjectCollect": null,
           "airing": false,
           "matchedBy": "锁暝",
-          "fetchedAt": "2026-10-30T16:43:49Z"
+          "fetchedAt": "2026-11-06T01:00:14Z"
         },
         "bilibili": {
           "keyword": "锁暝 鸣潮",
           "resultCount": 1000,
           "resultCountCapped": true,
           "recentVideos7d": 50,
-          "recentPlaySum7d": 246633,
+          "recentPlaySum7d": 434332,
           "sampledVideos": 50,
           "windowSaturated": true,
-          "fetchedAt": "2026-10-30T16:54:28Z"
+          "fetchedAt": "2026-11-06T01:08:42Z"
         },
-        "weibo": null
+        "weibo": {
+          "onHotSearch": false,
+          "fetchedAt": "2026-11-06T01:12:12Z"
+        }
       }
     },
     {
@@ -44915,6 +45043,347 @@
     }
   ],
   "history": [
+    {
+      "capturedAt": "2026-11-05T18:07:13Z",
+      "characters": [
+        {
+          "name": "三森",
+          "bangumiCollects": 20,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "亚津子",
+          "bangumiCollects": 39,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 5,
+          "bilibiliRecentPlaySum7d": 1899,
+          "heatScore": 34
+        },
+        {
+          "name": "伊织（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 126,
+          "heatScore": 31
+        },
+        {
+          "name": "切里诺",
+          "bangumiCollects": 12,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 943,
+          "heatScore": 25
+        },
+        {
+          "name": "千世（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 701,
+          "heatScore": 37
+        },
+        {
+          "name": "千夏（温泉）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "和纱",
+          "bangumiCollects": 81,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 22,
+          "bilibiliRecentPlaySum7d": 45691,
+          "heatScore": 63
+        },
+        {
+          "name": "堇",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 519,
+          "heatScore": 36
+        },
+        {
+          "name": "夏",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 17,
+          "bilibiliRecentPlaySum7d": 34455,
+          "heatScore": 62
+        },
+        {
+          "name": "妮露（邦妮）",
+          "bangumiCollects": 17,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "宫子",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 8,
+          "bilibiliRecentPlaySum7d": 35521,
+          "heatScore": 47
+        },
+        {
+          "name": "小春",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 24,
+          "bilibiliRecentPlaySum7d": 58159,
+          "heatScore": 56
+        },
+        {
+          "name": "心奈",
+          "bangumiCollects": 27,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 231224,
+          "heatScore": 56
+        },
+        {
+          "name": "忧",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 9,
+          "bilibiliRecentPlaySum7d": 19371,
+          "heatScore": 64
+        },
+        {
+          "name": "日向",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 7,
+          "bilibiliRecentPlaySum7d": 4645,
+          "heatScore": 61
+        },
+        {
+          "name": "日奈（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 952,
+          "heatScore": 47
+        },
+        {
+          "name": "明日奈（邦妮）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "星野（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 898,
+          "heatScore": 28
+        },
+        {
+          "name": "月咏",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "柚子",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 6,
+          "bilibiliRecentPlaySum7d": 9548,
+          "heatScore": 35
+        },
+        {
+          "name": "梓",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 111563,
+          "heatScore": 68
+        },
+        {
+          "name": "梓（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 3,
+          "bilibiliRecentPlaySum7d": 4327,
+          "heatScore": 38
+        },
+        {
+          "name": "歌原（应援团）",
+          "bangumiCollects": 3,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 16
+        },
+        {
+          "name": "泉奈",
+          "bangumiCollects": 42,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 8,
+          "bilibiliRecentPlaySum7d": 12945,
+          "heatScore": 40
+        },
+        {
+          "name": "泉奈（泳装）",
+          "bangumiCollects": 42,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 22
+        },
+        {
+          "name": "爱丽丝",
+          "bangumiCollects": 133,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 99345,
+          "heatScore": 81
+        },
+        {
+          "name": "爱露（新年）",
+          "bangumiCollects": 65,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 198,
+          "heatScore": 33
+        },
+        {
+          "name": "白子",
+          "bangumiCollects": 25,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 50,
+          "bilibiliRecentPlaySum7d": 89696,
+          "heatScore": 63
+        },
+        {
+          "name": "白子（骑行）",
+          "bangumiCollects": 25,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 53,
+          "heatScore": 22
+        },
+        {
+          "name": "真里奈",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 177,
+          "heatScore": 32
+        },
+        {
+          "name": "睦月（新年）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "瞬",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 11,
+          "bilibiliRecentPlaySum7d": 187376,
+          "heatScore": 59
+        },
+        {
+          "name": "瞬（小）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 28537,
+          "heatScore": 59
+        },
+        {
+          "name": "纱织",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 6,
+          "bilibiliRecentPlaySum7d": 2879,
+          "heatScore": 41
+        },
+        {
+          "name": "绿",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 17,
+          "bilibiliRecentPlaySum7d": 110092,
+          "heatScore": 64
+        },
+        {
+          "name": "美咲",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 10,
+          "bilibiliRecentPlaySum7d": 6657,
+          "heatScore": 39
+        },
+        {
+          "name": "美游",
+          "bangumiCollects": 87,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 18,
+          "bilibiliRecentPlaySum7d": 131021,
+          "heatScore": 60
+        },
+        {
+          "name": "花凛（邦妮）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 15
+        },
+        {
+          "name": "若藻",
+          "bangumiCollects": 20,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 24,
+          "bilibiliRecentPlaySum7d": 37615,
+          "heatScore": 62
+        },
+        {
+          "name": "若藻（泳装）",
+          "bangumiCollects": 20,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 0,
+          "bilibiliRecentPlaySum7d": 0,
+          "heatScore": 20
+        },
+        {
+          "name": "野宫（泳装）",
+          "bangumiCollects": null,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 1,
+          "bilibiliRecentPlaySum7d": 111,
+          "heatScore": 26
+        },
+        {
+          "name": "鹤城",
+          "bangumiCollects": 7,
+          "bangumiSubjectCollect": null,
+          "bilibiliRecentVideos7d": 4,
+          "bilibiliRecentPlaySum7d": 21936,
+          "heatScore": 42
+        }
+      ]
+    },
     {
       "capturedAt": "2026-11-05T12:26:47Z",
       "characters": [
